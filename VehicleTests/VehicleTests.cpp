@@ -1,3 +1,9 @@
+/*
+CSCN7230-22F: Project III: Software Development Life Cycle
+Ford-Assembly-Plant HMI
+
+
+*/
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "Vehicle.h"
@@ -12,7 +18,7 @@ namespace VehicleTests
 		
 		TEST_METHOD(TestMethod1)
 		{
-			
+			Vehicle car1;
 		}
 	};
 }
