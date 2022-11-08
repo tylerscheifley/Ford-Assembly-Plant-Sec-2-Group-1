@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
+#include "BodyMachine.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
