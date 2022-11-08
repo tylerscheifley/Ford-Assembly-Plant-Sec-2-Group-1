@@ -167,6 +167,11 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ford-Assembly-Plant-Sec-2-Group-1\Ford-Assembly-Plant-Sec-2-Group-1.vcxproj">
+      <Project>{6b7af844-f844-45b6-b53e-25538e0c9baf}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
