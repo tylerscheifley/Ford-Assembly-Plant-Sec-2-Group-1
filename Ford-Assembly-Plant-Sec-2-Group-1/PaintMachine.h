@@ -5,31 +5,14 @@
 
 #pragma once
 #include <iostream>
+#include <string.h>
 using namespace std;
 
-class PaintMachine
-{
-private:
-	string colour;
-	//string paintType;
-	int paintVolume;
-	int maxpaintVolume;
-
-public:
-	void setcolour(string colour);
-	string getcolour();
-	//void setpaintType(string paintType);
-	//string getpaintType();
-	void setpaintVolume(int paintVolume);
-	int getpaintVolume();
-	void setmaxpaintVolume(int maxpaintVolume);
-	int getmaxpaintVolume();
-	//load random values, save: write changes taken out
-};
 
 class DipTank
 {
 private:
+
 	int fluidLevel;
 	double temperature;
 	double minimumTemperature;
@@ -37,6 +20,8 @@ private:
 	int maximumfluidLevel;
 
 public:
+
+	DipTank();
 	void setfluidLevel(int fluidLevel);
 	int getfluidLevel();
 	void settemperature(double temperature);
@@ -53,6 +38,7 @@ public:
 class PaintChamber
 {
 private:
+
 	double humidity;
 	double temperature;
 	double minimumHumidity;
@@ -61,13 +47,14 @@ private:
 	double maximumTemperature;
 
 public:
+
+	PaintChamber();
 	void setminimumTemperature(double minTemp);
 	double getminimumTemperature();
-	void settemperature(double temperature);
-	double gettemperature();
+	void setTemperature(double temperature);
+	double getTemperature();
 	void setmaximumTemperature(double maxTemp);
 	double getmaximumTemperature();
-
 	void setminimumHumidity(double humidity);
 	double getminimumHumidity();
 	void setHumidity(double humidity);
@@ -79,6 +66,7 @@ public:
 class DryingChamber
 {
 private:
+
 	double humidity;
 	double temperature;
 	double minimumHumidity;
@@ -87,5 +75,48 @@ private:
 	double maximumTemperature;
 public:
 
+	DryingChamber();
+	void setminimumTemperature(double minTemp);
+	double getminimumTemperature();
+	void setTemperature(double temperature);
+	double getTemperature();
+	void setmaximumTemperature(double maxTemp);
+	double getmaximumTemperature();
+	void setminimumHumidity(double humidity);
+	double getminimumHumidity();
+	void setHumidity(double humidity);
+	double getHumidity();
+	void setmaximumHumidity(double humidity);
+	double getmaximumHumidity();
 };
+
+class PaintMachine
+{
+private:
+
+	string colour;
+	int paintVolumeRED;
+	int paintVolumeBLUE;
+	int paintVolumeGREEN;
+	int maxpaintVolume;
+	//DryingChamber* dryingChamber;
+	//PaintChamber* paintChamber;
+	//DipTank* dipTank;
+
+public:
+
+	PaintMachine();
+	void setcolour(string colour);
+	string getcolour();
+	void setpaintVolumeBLUE(int paintVolume);
+	int getpaintVolumeBLUE();
+	void setpaintVolumeRED(int paintVolume);
+	int getpaintVolumeRED();
+	void setpaintVolumeGREEN(int paintVolume);
+	int getpaintVolumeGREEN();
+	void setmaxpaintVolume(int max);
+	int getmaxpaintVolume();
+
+};
+
 
