@@ -1,4 +1,9 @@
 #pragma once
+//#include "BodyMachine.h"
+//#include "ChassisMachine.h"
+//#include "InteriorMachine.h"
+//#include "PaintingMachine.h"
+
 
 using namespace std;
 
