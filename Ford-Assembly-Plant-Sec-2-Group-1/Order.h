@@ -27,5 +27,7 @@ public:
 	void setColour(string);
 	string getDestination(void);
 	void setDestination(string);
+	bool saveOrder(FILE);
+	bool loadOrder(FILE);
 	
 };
