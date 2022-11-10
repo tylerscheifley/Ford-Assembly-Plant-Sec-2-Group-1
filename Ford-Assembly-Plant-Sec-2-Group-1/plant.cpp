@@ -97,5 +97,20 @@ void Plant::setAssemblyLineStatus(bool assemblyLineStatus)
 
 void Plant::runPlant()
 {
+	bool result = false;
+
+	while (result == false)
+	{
+		//BodyMachine.runMachine();
+		//PaintMachine.runMachine();
+		//ChassisMAchine.runMachine();
+		//InteriorMachine.runMachine();
+		//result = Vehicle.CheckQAQC();
+
+		if (result == true)
+		{
+
+		}
+	}
 
 }

@@ -22,6 +22,7 @@ class Plant
 
 public:
 
+	//Vehicle vehicle;
 	//PaintingMachine paintingMachine;
 	//BodyMachine bodyMachine;
 	//ChassisMachine chassisMachine;
@@ -49,8 +50,8 @@ public:
 	void setVehicleQuota(int vehicleQuota);
 	void setAssemblyLineStatus(bool assemblyLineStatus);
 
-	// 
+
 	void runPlant();
-}
+};
 
 #endif // !PLANT_H
