@@ -38,12 +38,12 @@ namespace BodyMachineTests
 
 			newBodyMachine.UpdateRegularF150InventoryAmount(100, "BayOne");
 
-			newBodyMachine.RunBodyMachine(placedOrder, vehiclePlaceholder);
+			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
 			//confirm that the correct body type was added to the correct spot (The vehicle)
 			//also confirm that the correct inventory levels and amount was edited
 			
-			string expectedBody = "F150Regular";
+			string expectedBody = "RegularF150";
 
 			Assert::AreEqual(expectedBody,vehiclePlaceholder.body);
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetRegularF150InventoryAmount());
@@ -65,12 +65,12 @@ namespace BodyMachineTests
 
 			newBodyMachine.UpdateSuperCabF150InventoryAmount(100, "BayOne");
 
-			newBodyMachine.RunBodyMachine(placedOrder, vehiclePlaceholder);
+			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
 			//confirm that the correct body type was added to the correct spot (The vehicle)
 			//also confirm that the correct inventory levels and amount was edited
 
-			string expectedBody = "F150SuperCab";
+			string expectedBody = "SuperCabF150";
 
 			Assert::AreEqual(expectedBody, vehiclePlaceholder.body);
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetSuperCabF150InventoryAmount());
@@ -91,12 +91,12 @@ namespace BodyMachineTests
 
 			newBodyMachine.UpdateSuperCrewF150InventoryAmount(100, "BayOne");
 
-			newBodyMachine.RunBodyMachine(placedOrder, vehiclePlaceholder);
+			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
 			//confirm that the correct body type was added to the correct spot (The vehicle)
 			//also confirm that the correct inventory levels and amount was edited
 
-			string expectedBody = "F150SuperCrew";
+			string expectedBody = "SuperCrewF150";
 
 			Assert::AreEqual(expectedBody, vehiclePlaceholder.body);
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
@@ -117,12 +117,12 @@ namespace BodyMachineTests
 
 			newBodyMachine.UpdateRegularExpeditionInventoryAmount(100, "BayOne");
 
-			newBodyMachine.RunBodyMachine(placedOrder, vehiclePlaceholder);
+			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
 			//confirm that the correct body type was added to the correct spot (The vehicle)
 			//also confirm that the correct inventory levels and amount was edited
 
-			string expectedBody = "EXPRegular";
+			string expectedBody = "RegularExpedition";
 
 			Assert::AreEqual(expectedBody, vehiclePlaceholder.body);
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
@@ -143,12 +143,12 @@ namespace BodyMachineTests
 
 			newBodyMachine.UpdateMaxExpeditionInventoryAmount(100, "BayOne");
 
-			newBodyMachine.RunBodyMachine(placedOrder, vehiclePlaceholder);
+			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
 			//confirm that the correct body type was added to the correct spot (The vehicle)
 			//also confirm that the correct inventory levels and amount was edited
 
-			string expectedBody = "EXPMax";
+			string expectedBody = "MaxExpedition";
 
 			Assert::AreEqual(expectedBody, vehiclePlaceholder.body);
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
@@ -169,7 +169,7 @@ namespace BodyMachineTests
 
 			newBodyMachine.UpdateMaxExpeditionInventoryAmount(10, "BayOne"); //default low level limit is 10
 
-			newBodyMachine.RunBodyMachine(placedOrder, vehiclePlaceholder);
+			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
 			//confirm that the machine noticed an inventory level being too low
 			Assert::AreEqual(false, newBodyMachine.inventoryLevelsValid);

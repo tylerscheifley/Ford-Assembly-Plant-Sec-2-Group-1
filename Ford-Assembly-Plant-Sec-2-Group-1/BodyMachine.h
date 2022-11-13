@@ -12,7 +12,10 @@
 
 #pragma once
 
+#include <fstream>
+#include <sstream>
 #include <iostream>
+#include <ctime>
 #include <string.h>
 #include "VehiclePanelsBay.h"
 
@@ -25,6 +28,11 @@ class Vehicle
 public:
 
 	string body;
+
+	void setBody(string bodyType)
+	{
+		body = bodyType;
+	}
 
 };
 
@@ -56,7 +64,7 @@ public:
 	BodyMachine();
 
 	//this method will run the bodymachine where an order and a vehicle outline will be provided
-	bool RunBodyMachine(Order, Vehicle);
+	bool RunBodyMachine(Order, Vehicle*);
 
 	//switch the inventory inlet into the bodyMachine from the current bay to another valid bay to allow the original bay to be restocked 
 
@@ -76,7 +84,7 @@ public:
 
 	//record activity to the log (will write inventory levels and time to a text file **should be called every time any change is made**) 
 
-	bool WriteTakenInventoryToLog(int, string);
+	bool WriteTakenInventoryToLog();
 
 	//set the notification threshold for the amount of inventory 
 

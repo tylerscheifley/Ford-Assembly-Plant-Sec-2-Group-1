@@ -16,59 +16,109 @@
 //constructor for a vehicle bay
 VehiclePanelsBay::VehiclePanelsBay()
 {
-
+	bayInUse = false;
+	RegularF150PanelInventoryAmount = 0;
+	SuperCabF150PanelInventoryAmount = 0;
+	SuperCrewF150PanelInventoryAmount = 0;
+	RegularExpeditionPanelInventoryAmount = 0;
+	MaxExpeditionPanelInventoryAmount = 0;
 }
 
 //read the inventory amounts 
 
 int VehiclePanelsBay::GetRegularF150InventoryAmount()
 {
-
+	return RegularF150PanelInventoryAmount;
 }
 
 int VehiclePanelsBay::GetSuperCabF150InventoryAmount()
 {
-
+	return SuperCabF150PanelInventoryAmount;
 }
 
 int VehiclePanelsBay::GetSuperCrewF150InventoryAmount()
 {
-
+	return SuperCrewF150PanelInventoryAmount;
 }
 
 int VehiclePanelsBay::GetRegularExpeditionInventoryAmount()
 {
-
+	return RegularExpeditionPanelInventoryAmount;
 }
 
 int VehiclePanelsBay::GetMaxExpeditionInventoryAmount()
 {
-
+	return MaxExpeditionPanelInventoryAmount;
 }
 
 //adjust the values of the inventory (as the attributes are private to ensure integrity) 
 
 bool VehiclePanelsBay::SetRegularF150InventoryAmount(int setInvTo)
 {
-
+	//these inventory levels are not allowed so dont assign them
+	if (setInvTo < 0 || setInvTo > 500)
+	{
+		return false;
+	}
+	else
+	{
+		RegularF150PanelInventoryAmount = setInvTo;
+		return true;
+	}
 }
 
-void VehiclePanelsBay::SetSuperCabF150InventoryAmount(int setInvTo)
+bool VehiclePanelsBay::SetSuperCabF150InventoryAmount(int setInvTo)
 {
-
+	//these inventory levels are not allowed so dont assign them
+	if (setInvTo < 0 || setInvTo > 500)
+	{
+		return false;
+	}
+	else
+	{
+		SuperCabF150PanelInventoryAmount = setInvTo;
+		return true;
+	}
 }
 
-void VehiclePanelsBay::SetSuperCrewF150InventoryAmount(int setInvTo)
+bool VehiclePanelsBay::SetSuperCrewF150InventoryAmount(int setInvTo)
 {
-
+	//these inventory levels are not allowed so dont assign them
+	if (setInvTo < 0 || setInvTo > 500)
+	{
+		return false;
+	}
+	else
+	{
+		SuperCrewF150PanelInventoryAmount = setInvTo;
+		return true;
+	}
 }
 
-void VehiclePanelsBay::SetRegularExpeditionInventoryAmount(int setInvTo)
+bool VehiclePanelsBay::SetRegularExpeditionInventoryAmount(int setInvTo)
 {
-
+	//these inventory levels are not allowed so dont assign them
+	if (setInvTo < 0 || setInvTo > 500)
+	{
+		return false;
+	}
+	else
+	{
+		RegularExpeditionPanelInventoryAmount = setInvTo;
+		return true;
+	}
 }
 
-void VehiclePanelsBay::SetMaxExpeditionInventoryAmount(int)
+bool VehiclePanelsBay::SetMaxExpeditionInventoryAmount(int setInvTo)
 {
-
+	//these inventory levels are not allowed so dont assign them
+	if (setInvTo < 0 || setInvTo > 500)
+	{
+		return false;
+	}
+	else
+	{
+		MaxExpeditionPanelInventoryAmount = setInvTo;
+		return true;
+	}
 }
