@@ -1,0 +1,8 @@
+(M) High Level Expedition Interior Inventory Level Amount Updated To: 100 In: BayOne @ Mon Nov 14 11:53:36 2022
+(M) High Level Expedition Interior Inventory Level Amount Updated To: 100 In: BayOne @ Mon Nov 14 11:54:46 2022
+(M) High Level Expedition Interior Inventory Level Amount Updated To: 100 In: BayOne @ Mon Nov 14 11:55:07 2022
+(M) High Level Expedition Interior Inventory Level Amount Updated To: 100 In: BayOne @ Mon Nov 14 11:56:00 2022
+(M) High Level Expedition Interior Inventory Level Amount Updated To: 100 In: BayOne @ Mon Nov 14 11:58:23 2022
+(A) Inventory Level Update @ Mon Nov 14 11:58:26 2022
+    Bay 1: BaseF150InteriorInvLvl: 500 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 500 BaseExpeditionInteriorInvLvl: 500 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 99
+    Bay 2: BaseF150InteriorInvLvl: 500 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 500 BaseExpeditionInteriorInvLvl: 500 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 500

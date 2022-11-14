@@ -21,9 +21,15 @@
     <ClCompile Include="InteriorMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VehicleInteriorsBay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InteriorMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VehicleInteriorsBay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="InteriorMachine.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="VehicleInteriorsBay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InteriorMachine.h" />
+    <ClInclude Include="VehicleInteriorsBay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
