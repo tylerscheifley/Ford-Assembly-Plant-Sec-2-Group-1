@@ -20,7 +20,7 @@ private:
 	double temperature;
 	double minimumTemperature;
 	double maximumTemperature;
-	double maximumfluidLevel;
+	int maximumfluidLevel;
 
 public:
 
@@ -33,11 +33,15 @@ public:
 	double getmaximumTemperature();
 	void setminimumTemperature(double minTemp);
 	double getminimumTemperature();
-	void setmaximumfluidLevel(double maxfluid);
-	double getmaximumfluidLevel();
+	void setmaximumfluidLevel(int maxfluid);
+	int getmaximumfluidLevel();
 	void updateTemperature(double temp);
 	void validateTemperature(void);
 	double readTemperature(void);
+	int readfluidLevel(void);
+	void updatefluidLevel(int fluidLevel);
+	void validatefluidLevel(void);
+
 	
 };
 

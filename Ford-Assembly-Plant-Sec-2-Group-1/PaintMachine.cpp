@@ -70,17 +70,31 @@ void PaintMachine::setpaintVolumeRED(int paintVolume)
 
 void PaintMachine::validatepaintVolume(string RGBcolour)
 {
+	int paintVolume;
+	if (RGBcolour == "RED")
+	{
+		paintVolume = getpaintVolumeRED();
+	}
+	else if (RGBcolour == "BLUE")
+	{
+		paintVolume = getpaintVolumeBLUE();
+	}
+	else
+	{
+		paintVolume = getpaintVolumeGREEN();
+	}
+
 	//calculating 20% of maximum capacity to warn user
 	int lowVolume = (getmaxpaintVolume() * 20) / 100;
-	int remainingVolume = (getmaxpaintVolume() / getpaintVolumeRED()) * 100;
+	int remainingVolume = (getmaxpaintVolume() / paintVolume) * 100;
 
-	if (getpaintVolumeRED() == 0)
+	if (paintVolume== 0)
 	{
 		cout << RGBcolour << " Paint Vat is empty" << endl;
 		//resupply
 		// if resupply is false, loop until user decides to resupply
 	}
-	else if (getpaintVolumeRED() == lowVolume)
+	else if (paintVolume == lowVolume)
 	{
 		cout << RGBcolour << " Paint Vat Is At 20% Capacity" << endl;
 		//resupply
@@ -183,6 +197,7 @@ double PaintChamber::readTemperature(void)
 		}
 
 		result = stod(temp);
+		fin.close();
 	}
 	else
 	{
@@ -212,6 +227,7 @@ int PaintChamber::readHumidity(void)
 		}
 
 		result = stoi(humidity);
+		fin.close();
 	}
 	else
 	{
@@ -421,6 +437,7 @@ double DryingChamber::readTemperature(void)
 		}
 
 		result = stod(temp);
+		fin.close();
 	}
 	else
 	{
@@ -450,6 +467,7 @@ int DryingChamber::readHumidity(void)
 		}
 
 		result = stoi(humidity);
+		fin.close();
 	}
 	else
 	{
@@ -587,12 +605,12 @@ void DipTank::setfluidLevel(int level)
 	this->fluidLevel = level;
 }
 
-double DipTank::getmaximumfluidLevel()
+int DipTank::getmaximumfluidLevel()
 {
 	return this->maximumfluidLevel;
 }
 
-void DipTank::setmaximumfluidLevel(double level)
+void DipTank::setmaximumfluidLevel(int level)
 {
 	this->maximumfluidLevel = level;
 }
@@ -647,6 +665,7 @@ double DipTank::readTemperature(void)
 		}
 
 		result = stod(temp);
+		fin.close();
 	}
 	else
 	{
@@ -708,5 +727,90 @@ void DipTank::updateTemperature(double temp)
 			cout << "Enter Temperature:" << endl;
 			cin >> temp;
 		}
+	}
+}
+
+int DipTank::readfluidLevel(void)
+{
+	int result = 0;
+	string fileName = "DipTankFluidLevel.txt";
+	string fluidLevel;
+	srand((unsigned)time(NULL));
+	int random = 1 + (rand() % 100);
+
+
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		for (int index = 0; index < random; index++)
+		{
+			getline(fin, fluidLevel);
+		}
+
+		result = stoi(fluidLevel);
+		fin.close();
+	}
+	else
+	{
+		cout << "Error reading fluid level of Dip Tank" << endl;
+	}
+
+	return result;
+}
+
+void DipTank::updatefluidLevel(int fluidLevel)
+{
+	bool running = true;
+
+	while (running)
+	{
+		if (isdigit(fluidLevel))
+		{
+			if (fluidLevel > 0 && fluidLevel <= getmaximumfluidLevel())
+			{
+				setTemperature(fluidLevel);
+				running = false;
+			}
+			else
+			{
+				cout << "Fluid Level not between permitted range"<< endl;
+				cout << "Enter Fluid Level:" << endl;
+				cin >> fluidLevel;
+			}
+		}
+		else
+		{
+			cout << "Invalid Fluid level entered" << endl;
+			cout << "Enter Fluid level:" << endl;
+			cin >> fluidLevel;
+		}
+	}
+}
+
+void DipTank::validatefluidLevel(void)
+{
+	double fluidLevel = getfluidLevel();
+	double input;
+	int lowVolume = (getmaximumfluidLevel() * 20) / 100;
+
+	if (fluidLevel<= lowVolume)
+	{
+		cout << "[WARNING] Current Fluid level of: " << fluidLevel << "is below minimum permitted level of " << getmaximumfluidLevel() << endl;
+		cout << "Enter Fluid level:" << endl;
+		cin >> input;
+		updatefluidLevel(input);
+	}
+	else if (fluidLevel > getmaximumfluidLevel())
+	{
+		cout << "[WARNING] Current Fluid level of: " << fluidLevel << "is above maximum permitted level of " << getmaximumfluidLevel() << endl;
+		cout << "Enter Fluid level:" << endl;
+		cin >> input;
+		updatefluidLevel(input);
+	}
+	else
+	{
+		cout << "Current Fluid level of Dip Tank: " << fluidLevel << endl;
 	}
 }
