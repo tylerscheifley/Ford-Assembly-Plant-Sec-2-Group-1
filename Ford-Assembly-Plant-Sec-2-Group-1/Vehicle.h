@@ -48,7 +48,7 @@ public:
 	string GenerateVIN(void);
 	bool checkQAQC();
 	Vehicle();
-	Vehicle(int, string, string, string, string, string, string, string, string, string, string);
+	Vehicle(int, Order, bool, string, string, string, string, string, string, string, string, string, string);
 
 };
 

@@ -6,7 +6,7 @@ using namespace std;
 
 class Order
 {
-	
+
 	string year;
 	string make;
 	string trim;
@@ -29,5 +29,5 @@ public:
 	void setDestination(string);
 	bool saveOrder(FILE);
 	bool loadOrder(FILE);
-	
+
 };
