@@ -626,3 +626,87 @@ void DipTank::setTemperature(double temp)
 {
 	this->temperature = temp;
 }
+
+double DipTank::readTemperature(void)
+{
+	double result = 0;
+	string fileName = "DipTankTemperature.txt";
+	string temp;
+	srand((unsigned)time(NULL));
+	int random = 1 + (rand() % 100);
+
+
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		for (int index = 0; index < random; index++)
+		{
+			getline(fin, temp);
+		}
+
+		result = stod(temp);
+	}
+	else
+	{
+		cout << "Error reading temperature of Dip Tank" << endl;
+	}
+
+	return result;
+}
+
+void DipTank::validateTemperature(void)
+{
+	double temp = getTemperature();
+	double input;
+
+	if (temp < getminimumTemperature())
+	{
+		cout << "[WARNING] Current Temperature of: " << temp << "is below minimum permitted temperature of " << getminimumTemperature() << endl;
+		cout << "Enter Temperature:" << endl;
+		cin >> input;
+		updateTemperature(input);
+	}
+	else if (temp > getmaximumTemperature())
+	{
+		cout << "[WARNING] Current Temperature of: " << temp << "is above maximum permitted temperature of " << getmaximumTemperature() << endl;
+		cout << "Enter Temperature:" << endl;
+		cin >> input;
+		updateTemperature(input);
+	}
+	else
+	{
+		cout << "Current Temperature of Dip Tank: " << temp << endl;
+	}
+}
+
+void DipTank::updateTemperature(double temp)
+{
+
+	bool running = true;
+
+	while (running)
+	{
+		if (isdigit(temp))
+		{
+			if (temp >= getminimumTemperature() && temp <= getmaximumTemperature())
+			{
+				setTemperature(temp);
+				running = false;
+			}
+			else
+			{
+				cout << "Tempearture not between range of " << getminimumTemperature() << "-" << getmaximumTemperature() << endl;
+				cout << "Enter Temperature:" << endl;
+				cin >> temp;
+			}
+		}
+		else
+		{
+			cout << "Invalid Temperature entered" << endl;
+			cout << "Enter Temperature:" << endl;
+			cin >> temp;
+		}
+	}
+}

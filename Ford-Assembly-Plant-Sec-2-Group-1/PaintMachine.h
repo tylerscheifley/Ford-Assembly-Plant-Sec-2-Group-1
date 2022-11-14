@@ -35,6 +35,9 @@ public:
 	double getminimumTemperature();
 	void setmaximumfluidLevel(double maxfluid);
 	double getmaximumfluidLevel();
+	void updateTemperature(double temp);
+	void validateTemperature(void);
+	double readTemperature(void);
 	
 };
 
