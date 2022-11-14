@@ -646,11 +646,11 @@ bool BodyMachine::WriteTakenInventoryToLog()
 	{
 		fout << "(A) Inventory Level Update @ " << dateAndTime;
 		fout << "    Bay 1: RegF150InvLvl: " << bayOne.GetRegularF150InventoryAmount() << " SprCaF150InvLvl: " << bayOne.GetSuperCabF150InventoryAmount() <<
-			" SprCrF150InvLvl; " << bayOne.GetSuperCrewF150InventoryAmount() << " RegExpInvLvl: " << bayOne.GetRegularExpeditionInventoryAmount() <<
-			" MaxExpInvLvl; " << bayOne.GetMaxExpeditionInventoryAmount() << endl;
+			" SprCrF150InvLvl: " << bayOne.GetSuperCrewF150InventoryAmount() << " RegExpInvLvl: " << bayOne.GetRegularExpeditionInventoryAmount() <<
+			" MaxExpInvLvl: " << bayOne.GetMaxExpeditionInventoryAmount() << endl;
 		fout << "    Bay 2: RegF150InvLvl: " << bayTwo.GetRegularF150InventoryAmount() << " SprCaF150InvLvl: " << bayTwo.GetSuperCabF150InventoryAmount() <<
-			" SprCrF150InvLvl; " << bayTwo.GetSuperCrewF150InventoryAmount() << " RegExpInvLvl: " << bayTwo.GetRegularExpeditionInventoryAmount() <<
-			" MaxExpInvLvl; " << bayTwo.GetMaxExpeditionInventoryAmount() << endl;
+			" SprCrF150InvLvl: " << bayTwo.GetSuperCrewF150InventoryAmount() << " RegExpInvLvl: " << bayTwo.GetRegularExpeditionInventoryAmount() <<
+			" MaxExpInvLvl: " << bayTwo.GetMaxExpeditionInventoryAmount() << endl;
 		fout.close();
 	}
 	else
