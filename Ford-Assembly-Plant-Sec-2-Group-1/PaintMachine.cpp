@@ -221,6 +221,115 @@ double PaintChamber::readHumidity(void)
 	return result;
 }
 
+void PaintChamber::validateTemperature(void)
+{
+	double temp = getTemperature();
+	double input;
+
+	if (temp < getminimumTemperature())
+	{
+		cout << "[WARNING] Current Temperature of: " << temp << "is below minimum permitted temperature of " <<  getminimumTemperature() << endl;
+		cout << "Enter Temperature:" << endl;
+		cin >> input;
+		updateTemperature(input);
+	}
+	else if (temp > getmaximumTemperature())
+	{
+		cout << "[WARNING] Current Temperature of: " << temp << "is above maximum permitted temperature of " << getmaximumTemperature() << endl;
+		cout << "Enter Temperature:" << endl;
+		cin >> input;
+		updateTemperature(input);
+	}
+	else
+	{
+		cout << "Current Temperature of Paint Chamber: " << temp << endl;
+	}
+}
+
+void PaintChamber::updateTemperature(double temp)
+{
+	bool running = true;
+	
+	while (running)
+	{
+		if (isdigit(temp))
+		{
+			if (temp >= getminimumTemperature() && temp <= getmaximumTemperature())
+			{
+				setTemperature(temp);
+				running = false;
+			}
+			else
+			{
+				cout << "Tempearture not between range of " << getminimumTemperature() << "-" << getmaximumTemperature() << endl;
+				cout << "Enter Temperature:" << endl;
+				cin >> temp;
+			}
+		}
+		else
+		{
+			cout << "Invalid Temperature entered" << endl;
+			cout << "Enter Temperature:" << endl;
+			cin >> temp;
+		}
+	}
+}
+
+void PaintChamber::updateHumidity(int humidity)
+{
+	bool running = true;
+
+	while (running)
+	{
+		if (isdigit(humidity))
+		{
+			if (humidity>= getminimumHumidity() && humidity<= getmaximumHumidity())
+			{
+				setHumidity(humidity);
+				running = false;
+			}
+			else
+			{
+				cout << "Humidity not between range of " << getminimumHumidity() << "-" << getmaximumHumidity() << endl;
+				cout << "Enter Humidity:" << endl;
+				cin >> humidity;
+			}
+		}
+		else
+		{
+			cout << "Invalid Humidity entered" << endl;
+			cout << "Enter Humidity:" << endl;
+			cin >> humidity;
+		}
+	}
+
+}
+
+void PaintChamber::validateHumidity(void)
+{
+	int humidity = getHumidity();
+	int input;
+
+	if (humidity < getminimumHumidity())
+	{
+		cout << "[WARNING] Current Humidity of: " << humidity << "is below minimum permitted humidity of " << getminimumHumidity() << endl;
+		cout << "Enter Humidity:" << endl;
+		cin >> input;
+		updateHumidity(input);
+	}
+	else if (humidity> getmaximumHumidity())
+	{
+		cout << "[WARNING] Current Humidity of: " << humidity << "is above maximum permitted humidity of " << getmaximumHumidity() << endl;
+		cout << "Enter Humidity:" << endl;
+		cin >> input;
+		updateHumidity(input);
+	}
+	else
+	{
+		cout << "Current Humidity of Paint Chamber: " << humidity << endl;
+	}
+}
+
 // DryingChamber Class Methods:
 DryingChamber::DryingChamber()
 {

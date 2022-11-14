@@ -66,6 +66,10 @@ public:
 	int getmaximumHumidity();
 	double readTemperature(void);
 	double readHumidity(void);
+	void validateTemperature(void);
+	void validateHumidity(void);
+	void updateTemperature(double temp);
+	void updateHumidity(int humidity);
 };
 
 class DryingChamber
