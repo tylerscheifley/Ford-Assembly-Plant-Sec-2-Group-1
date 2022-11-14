@@ -214,38 +214,78 @@ bool BodyMachine::RunBodyMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 	//update the vehicle to have the right body
 	vehiclePlaceHolder->setBody(bodyType);
 
+	bool didAdd = false;
+
 	//update inventory levels
 	if (vehiclePlaceHolder->body == "RegularF150")
 	{
 		currentBay->SetRegularF150InventoryAmount((currentBay->GetRegularF150InventoryAmount() - 1 ));
 		WriteTakenInventoryToLog();
-		return true;
+		didAdd = true;
 	}
 	else if (vehiclePlaceHolder->body == "SuperCabF150")
 	{
 		currentBay->SetSuperCabF150InventoryAmount((currentBay->GetSuperCabF150InventoryAmount() - 1));
 		WriteTakenInventoryToLog();
-		return true;
+		didAdd = true;
 	}
 	else if (vehiclePlaceHolder->body == "SuperCrewF150")
 	{
 		currentBay->SetSuperCrewF150InventoryAmount((currentBay->GetSuperCrewF150InventoryAmount() - 1));
 		WriteTakenInventoryToLog();
-		return true;
+		didAdd = true;
 	}
 	else if (vehiclePlaceHolder->body == "RegularExpedition")
 	{
 		currentBay->SetRegularExpeditionInventoryAmount((currentBay->GetRegularExpeditionInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
-		return true;
+		didAdd = true;
 	}
 	else if (vehiclePlaceHolder->body == "MaxExpedition")
 	{
 		currentBay->SetMaxExpeditionInventoryAmount((currentBay->GetMaxExpeditionInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
+		didAdd = true;
+	}
+	//Only save the inventory in each bay if the inventory was changed
+	if (didAdd == true)
+	{
+		ofstream fout;
+		fout.open("BodyMachineBay1Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
+		if (fout.is_open())
+		{
+			fout << bayOne.GetRegularF150InventoryAmount()
+				<< "," << bayOne.GetSuperCabF150InventoryAmount()
+				<< "," << bayOne.GetSuperCrewF150InventoryAmount()
+				<< "," << bayOne.GetRegularExpeditionInventoryAmount()
+				<< "," << bayOne.GetMaxExpeditionInventoryAmount() << endl;
+			fout.close();
+		}
+		else
+		{
+			cout << "file cannot be opened!\n" << "Filename : BodyMachineBay1Inv.txt" << endl;
+		}
+		ofstream fout1;
+		fout1.open("BodyMachineBay2Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
+		if (fout1.is_open())
+		{
+			fout1 << bayTwo.GetRegularF150InventoryAmount()
+				<< "," << bayTwo.GetSuperCabF150InventoryAmount()
+				<< "," << bayTwo.GetSuperCrewF150InventoryAmount()
+				<< "," << bayTwo.GetRegularExpeditionInventoryAmount()
+				<< "," << bayTwo.GetMaxExpeditionInventoryAmount() << endl;
+			fout1.close();
+		}
+		else
+		{
+			cout << "file cannot be opened!\n" << "Filename : BodyMachineBay2Inv.txt" << endl;
+		}
 		return true;
 	}
-	return false;
+	else
+	{
+		return false;
+	}
 }
 
 //switch the inventory inlet into the bodyMachine from the current bay to another valid bay to allow the original bay to be restocked 
@@ -256,11 +296,15 @@ bool BodyMachine::SwitchVehiclePanelsBays(string switchToBay)
 	if (switchToBay == "BayOne")
 	{
 		currentBay = &bayOne;
+		bayOne.bayInUse();
+		bayTwo.bayNotInUse();
 		return true;
 	}
 	else if (switchToBay == "BayTwo")
 	{
 		currentBay = &bayTwo;
+		bayTwo.bayInUse();
+		bayOne.bayNotInUse();
 		return true;
 	}
 	else
@@ -272,22 +316,42 @@ bool BodyMachine::SwitchVehiclePanelsBays(string switchToBay)
 
 //adjust the inventory counts 
 
-bool BodyMachine::UpdateRegularF150InventoryAmount(int setInvLevelTo, string currentBay)
+bool BodyMachine::UpdateRegularF150InventoryAmount(int setInvLevelTo, string givenBay)
 {
 	//only update the information if it is 100% valid
 	if (setInvLevelTo < 0 || setInvLevelTo > 500)
 	{
 		return false;
 	}
-	if (currentBay == "BayOne" || currentBay == "BayTwo")
+
+	//convert currentBay into string
+	string currentBayString = "N/A";
+	if (currentBay == &bayOne)
+	{
+		currentBayString = "BayOne";
+	}
+	else if (currentBay == &bayTwo)
+	{
+		currentBayString = "BayTwo";
+	}
+
+	//cannot restock if bay is in use
+	if (givenBay == currentBayString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentBayString << " cannot be restocked while it is in use please switch bays" << endl;
+		return false;
+	}
+
+	//restock only valid bays
+	if (givenBay == "BayOne" || givenBay == "BayTwo")
 	{
 		
 		//set the correct value
-		if (currentBay == "BayOne")
+		if (givenBay == "BayOne")
 		{
 			bayOne.SetRegularF150InventoryAmount(setInvLevelTo);
 		}
-		else if (currentBay == "BayTwo")
+		else if (givenBay == "BayTwo")
 		{
 			bayTwo.SetRegularF150InventoryAmount(setInvLevelTo);
 		}
@@ -301,7 +365,7 @@ bool BodyMachine::UpdateRegularF150InventoryAmount(int setInvLevelTo, string cur
 		fout.open("BodyMachineInventoryLog.txt", ios::app); //we want to append to the file or essentially add a line to the file
 		if (fout.is_open())
 		{
-			fout << "(M) Regular F150 Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << currentBay << " @ " << dateAndTime;
+			fout << "(M) Regular F150 Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << givenBay << " @ " << dateAndTime;
 			fout.close();
 		}
 		else
@@ -311,25 +375,46 @@ bool BodyMachine::UpdateRegularF150InventoryAmount(int setInvLevelTo, string cur
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
-bool BodyMachine::UpdateSuperCabF150InventoryAmount(int setInvLevelTo, string currentBay)
+bool BodyMachine::UpdateSuperCabF150InventoryAmount(int setInvLevelTo, string givenBay)
 {
 	//only update the information if it is 100% valid
 	if (setInvLevelTo < 0 || setInvLevelTo > 500)
 	{
 		return false;
 	}
-	if (currentBay == "BayOne" || currentBay == "BayTwo")
+
+	//convert currentBay into string
+	string currentBayString = "N/A";
+	if (currentBay == &bayOne)
+	{
+		currentBayString = "BayOne";
+	}
+	else if (currentBay == &bayTwo)
+	{
+		currentBayString = "BayTwo";
+	}
+
+	//cannot restock if bay is in use
+	if (givenBay == currentBayString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentBayString << " cannot be restocked while it is in use please switch bays" << endl;
+		return false;
+	}
+
+	//restock only valid bays
+	if (givenBay == "BayOne" || givenBay == "BayTwo")
 	{
 
 		//set the correct value
-		if (currentBay == "BayOne")
+		if (givenBay == "BayOne")
 		{
 			bayOne.SetSuperCabF150InventoryAmount(setInvLevelTo);
 		}
-		else if (currentBay == "BayTwo")
+		else if (givenBay == "BayTwo")
 		{
 			bayTwo.SetSuperCabF150InventoryAmount(setInvLevelTo);
 		}
@@ -343,7 +428,7 @@ bool BodyMachine::UpdateSuperCabF150InventoryAmount(int setInvLevelTo, string cu
 		fout.open("BodyMachineInventoryLog.txt", ios::app); //we want to append to the file or essentially add a line to the file
 		if (fout.is_open())
 		{
-			fout << "(M) SuperCab F150 Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << currentBay << " @ " << dateAndTime;
+			fout << "(M) SuperCab F150 Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << givenBay << " @ " << dateAndTime;
 			fout.close();
 		}
 		else
@@ -353,25 +438,46 @@ bool BodyMachine::UpdateSuperCabF150InventoryAmount(int setInvLevelTo, string cu
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
-bool BodyMachine::UpdateSuperCrewF150InventoryAmount(int setInvLevelTo, string currentBay)
+bool BodyMachine::UpdateSuperCrewF150InventoryAmount(int setInvLevelTo, string givenBay)
 {
 	//only update the information if it is 100% valid
 	if (setInvLevelTo < 0 || setInvLevelTo > 500)
 	{
 		return false;
 	}
-	if (currentBay == "BayOne" || currentBay == "BayTwo")
+
+	//convert currentBay into string
+	string currentBayString = "N/A";
+	if (currentBay == &bayOne)
+	{
+		currentBayString = "BayOne";
+	}
+	else if (currentBay == &bayTwo)
+	{
+		currentBayString = "BayTwo";
+	}
+
+	//cannot restock if bay is in use
+	if (givenBay == currentBayString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentBayString << " cannot be restocked while it is in use please switch bays" << endl;
+		return false;
+	}
+
+	//restock only valid bays
+	if (givenBay == "BayOne" || givenBay == "BayTwo")
 	{
 
 		//set the correct value
-		if (currentBay == "BayOne")
+		if (givenBay == "BayOne")
 		{
 			bayOne.SetSuperCrewF150InventoryAmount(setInvLevelTo);
 		}
-		else if (currentBay == "BayTwo")
+		else if (givenBay == "BayTwo")
 		{
 			bayTwo.SetSuperCrewF150InventoryAmount(setInvLevelTo);
 		}
@@ -385,7 +491,7 @@ bool BodyMachine::UpdateSuperCrewF150InventoryAmount(int setInvLevelTo, string c
 		fout.open("BodyMachineInventoryLog.txt", ios::app); //we want to append to the file or essentially add a line to the file
 		if (fout.is_open())
 		{
-			fout << "(M) SuperCrew F150 Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << currentBay << " @ " << dateAndTime;
+			fout << "(M) SuperCrew F150 Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << givenBay << " @ " << dateAndTime;
 			fout.close();
 		}
 		else
@@ -395,25 +501,46 @@ bool BodyMachine::UpdateSuperCrewF150InventoryAmount(int setInvLevelTo, string c
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
-bool BodyMachine::UpdateRegularExpeditionInventoryAmount(int setInvLevelTo, string currentBay)
+bool BodyMachine::UpdateRegularExpeditionInventoryAmount(int setInvLevelTo, string givenBay)
 {
 	//only update the information if it is 100% valid
 	if (setInvLevelTo < 0 || setInvLevelTo > 500)
 	{
 		return false;
 	}
-	if (currentBay == "BayOne" || currentBay == "BayTwo")
+
+	//convert currentBay into string
+	string currentBayString = "N/A";
+	if (currentBay == &bayOne)
+	{
+		currentBayString = "BayOne";
+	}
+	else if (currentBay == &bayTwo)
+	{
+		currentBayString = "BayTwo";
+	}
+
+	//cannot restock if bay is in use
+	if (givenBay == currentBayString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentBayString << " cannot be restocked while it is in use please switch bays" << endl;
+		return false;
+	}
+
+	//restock only valid bays
+	if (givenBay == "BayOne" || givenBay == "BayTwo")
 	{
 
 		//set the correct value
-		if (currentBay == "BayOne")
+		if (givenBay == "BayOne")
 		{
 			bayOne.SetRegularExpeditionInventoryAmount(setInvLevelTo);
 		}
-		else if (currentBay == "BayTwo")
+		else if (givenBay == "BayTwo")
 		{
 			bayTwo.SetRegularExpeditionInventoryAmount(setInvLevelTo);
 		}
@@ -427,7 +554,7 @@ bool BodyMachine::UpdateRegularExpeditionInventoryAmount(int setInvLevelTo, stri
 		fout.open("BodyMachineInventoryLog.txt", ios::app); //we want to append to the file or essentially add a line to the file
 		if (fout.is_open())
 		{
-			fout << "(M) Regular Expedition Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << currentBay << " @ " << dateAndTime;
+			fout << "(M) Regular Expedition Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << givenBay << " @ " << dateAndTime;
 			fout.close();
 		}
 		else
@@ -437,25 +564,46 @@ bool BodyMachine::UpdateRegularExpeditionInventoryAmount(int setInvLevelTo, stri
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
-bool BodyMachine::UpdateMaxExpeditionInventoryAmount(int setInvLevelTo, string currentBay)
+bool BodyMachine::UpdateMaxExpeditionInventoryAmount(int setInvLevelTo, string givenBay)
 {
 	//only update the information if it is 100% valid
 	if (setInvLevelTo < 0 || setInvLevelTo > 500)
 	{
 		return false;
 	}
-	if (currentBay == "BayOne" || currentBay == "BayTwo")
+
+	//convert currentBay into string
+	string currentBayString = "N/A";
+	if (currentBay == &bayOne)
+	{
+		currentBayString = "BayOne";
+	}
+	else if (currentBay == &bayTwo)
+	{
+		currentBayString = "BayTwo";
+	}
+
+	//cannot restock if bay is in use
+	if (givenBay == currentBayString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentBayString << " cannot be restocked while it is in use please switch bays" << endl;
+		return false;
+	}
+
+	//restock only valid bays
+	if (givenBay == "BayOne" || givenBay == "BayTwo")
 	{
 
 		//set the correct value
-		if (currentBay == "BayOne")
+		if (givenBay == "BayOne")
 		{
 			bayOne.SetMaxExpeditionInventoryAmount(setInvLevelTo);
 		}
-		else if (currentBay == "BayTwo")
+		else if (givenBay == "BayTwo")
 		{
 			bayTwo.SetMaxExpeditionInventoryAmount(setInvLevelTo);
 		}
@@ -469,7 +617,7 @@ bool BodyMachine::UpdateMaxExpeditionInventoryAmount(int setInvLevelTo, string c
 		fout.open("BodyMachineInventoryLog.txt", ios::app); //we want to append to the file or essentially add a line to the file
 		if (fout.is_open())
 		{
-			fout << "(M) Max Expedition Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << currentBay  << " @ " << dateAndTime;
+			fout << "(M) Max Expedition Inventory Level Amount Updated To: " << setInvLevelTo << " In: " << givenBay << " @ " << dateAndTime;
 			fout.close();
 		}
 		else
@@ -479,6 +627,7 @@ bool BodyMachine::UpdateMaxExpeditionInventoryAmount(int setInvLevelTo, string c
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 

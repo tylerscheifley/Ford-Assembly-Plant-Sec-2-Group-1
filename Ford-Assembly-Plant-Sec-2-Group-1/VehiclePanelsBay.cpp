@@ -16,7 +16,7 @@
 //constructor for a vehicle bay
 VehiclePanelsBay::VehiclePanelsBay()
 {
-	bayInUse = false;
+	bayBeingUsed = false;
 	RegularF150PanelInventoryAmount = 0;
 	SuperCabF150PanelInventoryAmount = 0;
 	SuperCrewF150PanelInventoryAmount = 0;
@@ -121,4 +121,19 @@ bool VehiclePanelsBay::SetMaxExpeditionInventoryAmount(int setInvTo)
 		MaxExpeditionPanelInventoryAmount = setInvTo;
 		return true;
 	}
+}
+
+void VehiclePanelsBay::bayInUse()
+{
+	bayBeingUsed = true;
+}
+
+void VehiclePanelsBay::bayNotInUse()
+{
+	bayBeingUsed = false;
+}
+
+bool VehiclePanelsBay::bayThisLineInUse()
+{
+	return bayBeingUsed;
 }

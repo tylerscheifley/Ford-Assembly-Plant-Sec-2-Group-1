@@ -16,7 +16,7 @@ class VehiclePanelsBay
 {
 private:
 	
-	bool bayInUse;
+	bool bayBeingUsed;
 	int RegularF150PanelInventoryAmount;
 	int SuperCabF150PanelInventoryAmount;
 	int SuperCrewF150PanelInventoryAmount;
@@ -51,5 +51,10 @@ public:
 	bool SetRegularExpeditionInventoryAmount(int);
 
 	bool SetMaxExpeditionInventoryAmount(int);
+
+	//show bay in use value
+	void bayInUse();
+	void bayNotInUse();
+	bool bayThisLineInUse();
 };
 

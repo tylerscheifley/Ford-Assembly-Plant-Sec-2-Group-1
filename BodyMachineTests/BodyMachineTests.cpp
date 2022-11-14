@@ -36,7 +36,11 @@ namespace BodyMachineTests
 			placedOrder.model = "F150";
 			vehiclePlaceholder.body = "N/A";
 
+			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+
 			newBodyMachine.UpdateRegularF150InventoryAmount(100, "BayOne");
+
+			newBodyMachine.SwitchVehiclePanelsBays("BayOne");
 
 			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
@@ -63,7 +67,11 @@ namespace BodyMachineTests
 			placedOrder.model = "F150";
 			vehiclePlaceholder.body = "N/A";
 
+			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+
 			newBodyMachine.UpdateSuperCabF150InventoryAmount(100, "BayOne");
+
+			newBodyMachine.SwitchVehiclePanelsBays("BayOne");
 
 			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
@@ -89,7 +97,11 @@ namespace BodyMachineTests
 			placedOrder.model = "F150";
 			vehiclePlaceholder.body = "N/A";
 
+			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+
 			newBodyMachine.UpdateSuperCrewF150InventoryAmount(100, "BayOne");
+
+			newBodyMachine.SwitchVehiclePanelsBays("BayOne");
 
 			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
@@ -115,7 +127,11 @@ namespace BodyMachineTests
 			placedOrder.model = "Expedition";
 			vehiclePlaceholder.body = "N/A";
 
+			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+
 			newBodyMachine.UpdateRegularExpeditionInventoryAmount(100, "BayOne");
+
+			newBodyMachine.SwitchVehiclePanelsBays("BayOne");
 
 			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
@@ -141,7 +157,11 @@ namespace BodyMachineTests
 			placedOrder.model = "Expedition";
 			vehiclePlaceholder.body = "N/A";
 
+			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+
 			newBodyMachine.UpdateMaxExpeditionInventoryAmount(100, "BayOne");
+
+			newBodyMachine.SwitchVehiclePanelsBays("BayOne");
 
 			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
@@ -167,7 +187,11 @@ namespace BodyMachineTests
 			placedOrder.model = "Expedition";
 			vehiclePlaceholder.body = "N/A";
 
+			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+
 			newBodyMachine.UpdateMaxExpeditionInventoryAmount(10, "BayOne"); //default low level limit is 10
+
+			newBodyMachine.SwitchVehiclePanelsBays("BayOne");
 
 			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 

@@ -17,7 +17,11 @@ int main(void)
 	placedOrder.model = "Expedition";
 	vehiclePlaceholder.body = "N/A";
 
-	newBodyMachine.UpdateRegularExpeditionInventoryAmount(100, "BayOne");
+	newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+
+	newBodyMachine.UpdateRegularExpeditionInventoryAmount(10, "BayOne");
+
+	newBodyMachine.SwitchVehiclePanelsBays("BayOne");
 
 	newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
 
