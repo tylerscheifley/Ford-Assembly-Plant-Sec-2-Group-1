@@ -192,9 +192,9 @@ double PaintChamber::readTemperature(void)
 	return result;
 }
 
-double PaintChamber::readHumidity(void)
+int PaintChamber::readHumidity(void)
 {
-	double result = 0;
+	int result = 0;
 	string fileName = "PaintChamberHumidity.txt";
 	string humidity;
 	srand((unsigned)time(NULL));
@@ -211,7 +211,7 @@ double PaintChamber::readHumidity(void)
 			getline(fin, humidity);
 		}
 
-		result = stod(humidity);
+		result = stoi(humidity);
 	}
 	else
 	{
@@ -401,6 +401,171 @@ void DryingChamber::setminimumHumidity(int humidity)
 	this->minimumHumidity = humidity;
 }
 
+double DryingChamber::readTemperature(void)
+{
+	double result = 0;
+	string fileName = "DryingChamberTemperature.txt";
+	string temp;
+	srand((unsigned)time(NULL));
+	int random = 1 + (rand() % 100);
+
+
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		for (int index = 0; index < random; index++)
+		{
+			getline(fin, temp);
+		}
+
+		result = stod(temp);
+	}
+	else
+	{
+		cout << "Error reading temperature of Drying Chamber" << endl;
+	}
+
+	return result;
+}
+
+int DryingChamber::readHumidity(void)
+{
+	int result = 0;
+	string fileName = "DryingChamberHumidity.txt";
+	string humidity;
+	srand((unsigned)time(NULL));
+	int random = 1 + (rand() % 100);
+
+
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		for (int index = 0; index < random; index++)
+		{
+			getline(fin, humidity);
+		}
+
+		result = stoi(humidity);
+	}
+	else
+	{
+		cout << "Error reading humidity of Paint Chamber" << endl;
+	}
+
+	return result;
+}
+
+void DryingChamber::updateTemperature(double temp)
+{
+	bool running = true;
+
+	while (running)
+	{
+		if (isdigit(temp))
+		{
+			if (temp >= getminimumTemperature() && temp <= getmaximumTemperature())
+			{
+				setTemperature(temp);
+				running = false;
+			}
+			else
+			{
+				cout << "Tempearture not between range of " << getminimumTemperature() << "-" << getmaximumTemperature() << endl;
+				cout << "Enter Temperature:" << endl;
+				cin >> temp;
+			}
+		}
+		else
+		{
+			cout << "Invalid Temperature entered" << endl;
+			cout << "Enter Temperature:" << endl;
+			cin >> temp;
+		}
+	}
+}
+
+void DryingChamber::validateTemperature(void)
+{
+	double temp = getTemperature();
+	double input;
+
+	if (temp < getminimumTemperature())
+	{
+		cout << "[WARNING] Current Temperature of: " << temp << "is below minimum permitted temperature of " << getminimumTemperature() << endl;
+		cout << "Enter Temperature:" << endl;
+		cin >> input;
+		updateTemperature(input);
+	}
+	else if (temp > getmaximumTemperature())
+	{
+		cout << "[WARNING] Current Temperature of: " << temp << "is above maximum permitted temperature of " << getmaximumTemperature() << endl;
+		cout << "Enter Temperature:" << endl;
+		cin >> input;
+		updateTemperature(input);
+	}
+	else
+	{
+		cout << "Current Temperature of Drying Chamber: " << temp << endl;
+	}
+}
+
+void DryingChamber::validateHumidity(void)
+{
+	int humidity = getHumidity();
+	int input;
+
+	if (humidity < getminimumHumidity())
+	{
+		cout << "[WARNING] Current Humidity of: " << humidity << "is below minimum permitted humidity of " << getminimumHumidity() << endl;
+		cout << "Enter Humidity:" << endl;
+		cin >> input;
+		updateHumidity(input);
+	}
+	else if (humidity > getmaximumHumidity())
+	{
+		cout << "[WARNING] Current Humidity of: " << humidity << "is above maximum permitted humidity of " << getmaximumHumidity() << endl;
+		cout << "Enter Humidity:" << endl;
+		cin >> input;
+		updateHumidity(input);
+	}
+	else
+	{
+		cout << "Current Humidity of Drying Chamber: " << humidity << endl;
+	}
+}
+
+void DryingChamber::updateHumidity(int humidity)
+{
+	bool running = true;
+
+	while (running)
+	{
+		if (isdigit(humidity))
+		{
+			if (humidity >= getminimumHumidity() && humidity <= getmaximumHumidity())
+			{
+				setHumidity(humidity);
+				running = false;
+			}
+			else
+			{
+				cout << "Humidity not between range of " << getminimumHumidity() << "-" << getmaximumHumidity() << endl;
+				cout << "Enter Humidity:" << endl;
+				cin >> humidity;
+			}
+		}
+		else
+		{
+			cout << "Invalid Humidity entered" << endl;
+			cout << "Enter Humidity:" << endl;
+			cin >> humidity;
+		}
+	}
+}
 // DipTank Class Methods:
 
 DipTank::DipTank()

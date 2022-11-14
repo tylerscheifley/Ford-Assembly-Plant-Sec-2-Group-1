@@ -65,7 +65,7 @@ public:
 	void setmaximumHumidity(int humidity);
 	int getmaximumHumidity();
 	double readTemperature(void);
-	double readHumidity(void);
+	int readHumidity(void);
 	void validateTemperature(void);
 	void validateHumidity(void);
 	void updateTemperature(double temp);
@@ -97,6 +97,12 @@ public:
 	int getHumidity();
 	void setmaximumHumidity(int humidity);
 	int getmaximumHumidity();
+	double readTemperature(void);
+	int readHumidity(void);
+	void validateTemperature(void);
+	void validateHumidity(void);
+	void updateTemperature(double temp);
+	void updateHumidity(int humidity);
 };
 
 class PaintMachine
