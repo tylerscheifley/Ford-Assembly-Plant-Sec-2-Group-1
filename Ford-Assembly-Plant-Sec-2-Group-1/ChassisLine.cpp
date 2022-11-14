@@ -162,3 +162,19 @@ bool ChassisLine::SetExpedition35LV6HOCInventoryAmount(int setInvTo)
 		return true;
 	}
 }
+
+//show line in use value
+void ChassisLine::lineInUse()
+{
+	lineBeingUsed = true;
+}
+
+void ChassisLine::lineNotInUse()
+{
+	lineBeingUsed = false;
+}
+
+bool ChassisLine::isThisLineInUse()
+{
+	return lineBeingUsed;
+}

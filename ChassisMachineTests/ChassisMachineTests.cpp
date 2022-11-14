@@ -36,7 +36,13 @@ namespace ChassisMachineTests
 			placedOrder.model = "F150";
 			vehiclePlaceholder.chassis = "N/A";
 
-			newChassisMachine.UpdateF15050LV8CInventoryAmount(100, "lineOne");
+			//Switch off current bay to update bay and then switch back
+
+			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+			newChassisMachine.UpdateF15050LV8CInventoryAmount(100, "LineOne");
+
+			newChassisMachine.SwitchVehicleChassisLines("LineOne");
 
 			newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 
@@ -45,7 +51,7 @@ namespace ChassisMachineTests
 
 			string expectedChassis = "F15050LV8C";
 
-			//Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
+			Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
 			Assert::AreEqual(99, newChassisMachine.lineOne.GetF15050LV8CInventoryAmount());
 
 		}
@@ -63,7 +69,13 @@ namespace ChassisMachineTests
 			placedOrder.model = "F150";
 			vehiclePlaceholder.chassis = "N/A";
 
-			newChassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(100, "lineOne");
+			//Switch off current bay to update bay and then switch back
+
+			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+			newChassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(100, "LineOne");
+
+			newChassisMachine.SwitchVehicleChassisLines("LineOne");
 
 			newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 
@@ -90,7 +102,13 @@ namespace ChassisMachineTests
 			placedOrder.model = "F150";
 			vehiclePlaceholder.chassis = "N/A";
 
-			newChassisMachine.UpdateF15035LV6EcoCInventoryAmount(100, "lineOne");
+			//Switch off current bay to update bay and then switch back
+
+			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+			newChassisMachine.UpdateF15035LV6EcoCInventoryAmount(100, "LineOne");
+
+			newChassisMachine.SwitchVehicleChassisLines("LineOne");
 
 			newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 
@@ -117,7 +135,13 @@ namespace ChassisMachineTests
 			placedOrder.model = "F150";
 			vehiclePlaceholder.chassis = "N/A";
 
-			newChassisMachine.UpdateF15033LV6CInventoryAmount(100, "lineOne");
+			//Switch off current bay to update bay and then switch back
+
+			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+			newChassisMachine.UpdateF15033LV6CInventoryAmount(100, "LineOne");
+
+			newChassisMachine.SwitchVehicleChassisLines("LineOne");
 
 			newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 
@@ -143,7 +167,13 @@ namespace ChassisMachineTests
 			placedOrder.model = "F150";
 			vehiclePlaceholder.chassis = "N/A";
 
-			newChassisMachine.UpdateF15027LV6CInventoryAmount(100, "lineOne");
+			//Switch off current bay to update bay and then switch back
+
+			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+			newChassisMachine.UpdateF15027LV6CInventoryAmount(100, "LineOne");
+
+			newChassisMachine.SwitchVehicleChassisLines("LineOne");
 
 			newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 
@@ -169,7 +199,13 @@ namespace ChassisMachineTests
 			placedOrder.model = "Expedition";
 			vehiclePlaceholder.chassis = "N/A";
 
-			newChassisMachine.UpdateExpedition35LV6HOCInventoryAmount(100, "lineOne");
+			//Switch off current bay to update bay and then switch back
+
+			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+			newChassisMachine.UpdateExpedition35LV6HOCInventoryAmount(100, "LineOne");
+
+			newChassisMachine.SwitchVehicleChassisLines("LineOne");
 
 			newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 
@@ -195,7 +231,13 @@ namespace ChassisMachineTests
 			placedOrder.model = "Expedition";
 			vehiclePlaceholder.chassis = "N/A";
 
-			newChassisMachine.UpdateExpedition35LV6CInventoryAmount(100, "lineOne");
+			//Switch off current bay to update bay and then switch back
+
+			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+			newChassisMachine.UpdateExpedition35LV6CInventoryAmount(100, "LineOne");
+
+			newChassisMachine.SwitchVehicleChassisLines("LineOne");
 
 			newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 
@@ -221,7 +263,11 @@ namespace ChassisMachineTests
 			placedOrder.model = "Expedition";
 			vehiclePlaceholder.chassis = "N/A";
 
-			newChassisMachine.UpdateExpedition35LV6HOCInventoryAmount(10, "LineOne"); //default low level limit is 10
+			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+			newChassisMachine.UpdateExpedition35LV6HOCInventoryAmount(9, "LineOne"); //default low level limit is 10
+
+			newChassisMachine.SwitchVehicleChassisLines("LineOne");
 
 			newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 

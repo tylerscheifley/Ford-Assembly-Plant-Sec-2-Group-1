@@ -26,6 +26,7 @@ ChassisMachine::ChassisMachine()
 	lineOne = newLineOne;
 	ChassisLine newLineTwo;
 	lineTwo = newLineTwo;
+	lineOne.lineInUse();
 	//read inventory levels in from the bay (the text file)
 
 	//Bay 1-----------------------
@@ -354,11 +355,15 @@ bool ChassisMachine::SwitchVehicleChassisLines(string switchToBay)
 	if (switchToBay == "LineOne")
 	{
 		currentLine = &lineOne;
+		lineOne.lineInUse();
+		lineTwo.lineNotInUse();
 		return true;
 	}
 	else if (switchToBay == "LineTwo")
 	{
 		currentLine = &lineTwo;
+		lineTwo.lineInUse();
+		lineOne.lineNotInUse();
 		return true;
 	}
 	else
@@ -377,16 +382,26 @@ bool ChassisMachine::UpdateF15033LV6CInventoryAmount(int setInvLevelTo, string g
 	{
 		return false;
 	}
-	//cannot restock bay1 if its in use
-	if (givenLine == "LineOne" && currentLine == &lineOne)
+
+	//convert currentLine into string
+	string currentLineString = "N/A";
+	if (currentLine == &lineOne)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line1 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineOne";
 	}
-	//cannot restock bay2 if its in use
-	if (givenLine == "LineTwo" && currentLine == &lineTwo)
+	else if (currentLine == &lineTwo)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line2 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineTwo";
 	}
+
+	//cannot restock if bay is in use
+	if (givenLine == currentLineString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentLineString << " cannot be restocked while it is in use please switch lines" << endl;
+		return false;
+	}
+
+	//restock only valid bays
 	if (givenLine == "LineOne" || givenLine == "LineTwo")
 	{
 
@@ -419,6 +434,7 @@ bool ChassisMachine::UpdateF15033LV6CInventoryAmount(int setInvLevelTo, string g
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
@@ -429,16 +445,26 @@ bool ChassisMachine::UpdateF15027LV6CInventoryAmount(int setInvLevelTo, string g
 	{
 		return false;
 	}
-	//cannot restock bay1 if its in use
-	if (givenLine == "LineOne" && currentLine == &lineOne)
+
+	//convert currentLine into string
+	string currentLineString = "N/A";
+	if (currentLine == &lineOne)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line1 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineOne";
 	}
-	//cannot restock bay2 if its in use
-	if (givenLine == "LineTwo" && currentLine == &lineTwo)
+	else if (currentLine == &lineTwo)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line2 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineTwo";
 	}
+
+	//cannot restock if bay is in use
+	if (givenLine == currentLineString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentLineString << " cannot be restocked while it is in use please switch lines" << endl;
+		return false;
+	}
+
+	//restock only valid bays
 	if (givenLine == "LineOne" || givenLine == "LineTwo")
 	{
 
@@ -471,6 +497,7 @@ bool ChassisMachine::UpdateF15027LV6CInventoryAmount(int setInvLevelTo, string g
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
@@ -481,16 +508,26 @@ bool ChassisMachine::UpdateF15050LV8CInventoryAmount(int setInvLevelTo, string g
 	{
 		return false;
 	}
-	//cannot restock bay1 if its in use
-	if (givenLine == "LineOne" && currentLine == &lineOne)
+
+	//convert currentLine into string
+	string currentLineString = "N/A";
+	if (currentLine == &lineOne)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line1 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineOne";
 	}
-	//cannot restock bay2 if its in use
-	if (givenLine == "LineTwo" && currentLine == &lineTwo)
+	else if (currentLine == &lineTwo)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line2 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineTwo";
 	}
+
+	//cannot restock if bay is in use
+	if (givenLine == currentLineString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentLineString << " cannot be restocked while it is in use please switch lines" << endl;
+		return false;
+	}
+
+	//restock only valid bays
 	if (givenLine == "LineOne" || givenLine == "LineTwo")
 	{
 
@@ -523,6 +560,7 @@ bool ChassisMachine::UpdateF15050LV8CInventoryAmount(int setInvLevelTo, string g
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
@@ -533,16 +571,26 @@ bool ChassisMachine::UpdateF15035LV6EcoCInventoryAmount(int setInvLevelTo, strin
 	{
 		return false;
 	}
-	//cannot restock bay1 if its in use
-	if (givenLine == "LineOne" && currentLine == &lineOne)
+
+	//convert currentLine into string
+	string currentLineString = "N/A";
+	if (currentLine == &lineOne)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line1 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineOne";
 	}
-	//cannot restock bay2 if its in use
-	if (givenLine == "LineTwo" && currentLine == &lineTwo)
+	else if (currentLine == &lineTwo)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line2 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineTwo";
 	}
+
+	//cannot restock if bay is in use
+	if (givenLine == currentLineString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentLineString << " cannot be restocked while it is in use please switch lines" << endl;
+		return false;
+	}
+
+	//restock only valid bays
 	if (givenLine == "LineOne" || givenLine == "LineTwo")
 	{
 
@@ -575,6 +623,7 @@ bool ChassisMachine::UpdateF15035LV6EcoCInventoryAmount(int setInvLevelTo, strin
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
@@ -585,16 +634,26 @@ bool ChassisMachine::UpdateF15035LV6PwrBstCInventoryAmount(int setInvLevelTo, st
 	{
 		return false;
 	}
-	//cannot restock bay1 if its in use
-	if (givenLine == "LineOne" && currentLine == &lineOne)
+
+	//convert currentLine into string
+	string currentLineString = "N/A";
+	if (currentLine == &lineOne)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line1 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineOne";
 	}
-	//cannot restock bay2 if its in use
-	if (givenLine == "LineTwo" && currentLine == &lineTwo)
+	else if (currentLine == &lineTwo)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line2 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineTwo";
 	}
+
+	//cannot restock if bay is in use
+	if (givenLine == currentLineString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentLineString << " cannot be restocked while it is in use please switch lines" << endl;
+		return false;
+	}
+
+	//restock only valid bays
 	if (givenLine == "LineOne" || givenLine == "LineTwo")
 	{
 
@@ -627,6 +686,7 @@ bool ChassisMachine::UpdateF15035LV6PwrBstCInventoryAmount(int setInvLevelTo, st
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
@@ -637,16 +697,26 @@ bool ChassisMachine::UpdateExpedition35LV6CInventoryAmount(int setInvLevelTo, st
 	{
 		return false;
 	}
-	//cannot restock bay1 if its in use
-	if (givenLine == "LineOne" && currentLine == &lineOne)
+
+	//convert currentLine into string
+	string currentLineString = "N/A";
+	if (currentLine == &lineOne)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line1 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineOne";
 	}
-	//cannot restock bay2 if its in use
-	if (givenLine == "LineTwo" && currentLine == &lineTwo)
+	else if (currentLine == &lineTwo)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line2 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineTwo";
 	}
+
+	//cannot restock if bay is in use
+	if (givenLine == currentLineString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentLineString << " cannot be restocked while it is in use please switch lines" << endl;
+		return false;
+	}
+
+	//restock only valid bays
 	if (givenLine == "LineOne" || givenLine == "LineTwo")
 	{
 
@@ -679,6 +749,7 @@ bool ChassisMachine::UpdateExpedition35LV6CInventoryAmount(int setInvLevelTo, st
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 
@@ -689,16 +760,26 @@ bool ChassisMachine::UpdateExpedition35LV6HOCInventoryAmount(int setInvLevelTo, 
 	{
 		return false;
 	}
-	//cannot restock bay1 if its in use
-	if (givenLine == "LineOne" && currentLine == &lineOne)
+
+	//convert currentLine into string
+	string currentLineString = "N/A";
+	if (currentLine == &lineOne)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line1 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineOne";
 	}
-	//cannot restock bay2 if its in use
-	if (givenLine == "LineTwo" && currentLine == &lineTwo)
+	else if (currentLine == &lineTwo)
 	{
-		cout << "WARNING Inventory Levels NOT Updated! Line2 cannot be restocked while it is in use please switch lines" << endl;
+		currentLineString = "LineTwo";
 	}
+
+	//cannot restock if bay is in use
+	if (givenLine == currentLineString)
+	{
+		cout << "WARNING Inventory Levels NOT Updated! " << currentLineString << " cannot be restocked while it is in use please switch lines" << endl;
+		return false;
+	}
+
+	//restock only valid bays
 	if (givenLine == "LineOne" || givenLine == "LineTwo")
 	{
 
@@ -731,6 +812,7 @@ bool ChassisMachine::UpdateExpedition35LV6HOCInventoryAmount(int setInvLevelTo, 
 
 		return true;
 	}
+	//there wasnt a valid bay selected so inv not updated 
 	return false;
 }
 

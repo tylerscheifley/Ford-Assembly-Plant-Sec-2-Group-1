@@ -7,7 +7,7 @@ int main(void)
 {
 	cout << "Chassis" << endl;
 
-	ChassisMachine newBodyMachine;//notably a new chassis machine WILL NOT be created for every vehicle just for use in this test
+	ChassisMachine newChassisMachine;//notably a new chassis machine WILL NOT be created for every vehicle just for use in this test
 
 	//This information will normally be handeled in the plant object
 	Order placedOrder;
@@ -17,9 +17,13 @@ int main(void)
 	placedOrder.model = "Expedition";
 	vehiclePlaceholder.chassis = "N/A";
 
-	newBodyMachine.UpdateExpedition35LV6CInventoryAmount(100, "BayOne");
+	newChassisMachine.SwitchVehicleChassisLines("LineTwo");
 
-	newBodyMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
+	newChassisMachine.UpdateExpedition35LV6CInventoryAmount(10, "LineOne");
+
+	newChassisMachine.SwitchVehicleChassisLines("LineOne");
+
+	newChassisMachine.RunChassisMachine(placedOrder, &vehiclePlaceholder);
 
 	return 0;
 }
