@@ -6,6 +6,9 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include <fstream>
+#include <cstdlib>
+
 using namespace std;
 
 
@@ -17,15 +20,15 @@ private:
 	double temperature;
 	double minimumTemperature;
 	double maximumTemperature;
-	int maximumfluidLevel;
+	double maximumfluidLevel;
 
 public:
 
 	DipTank();
 	void setfluidLevel(int fluidLevel);
 	int getfluidLevel();
-	void settemperature(double temperature);
-	double gettemperature();
+	void setTemperature(double temperature);
+	double getTemperature();
 	void setmaximumTemperature(double maxTemp);
 	double getmaximumTemperature();
 	void setminimumTemperature(double minTemp);
@@ -39,10 +42,10 @@ class PaintChamber
 {
 private:
 
-	double humidity;
+	int humidity;
 	double temperature;
-	double minimumHumidity;
-	double maximumHumidity;
+	int minimumHumidity;
+	int maximumHumidity;
 	double minimumTemperature;
 	double maximumTemperature;
 
@@ -55,22 +58,24 @@ public:
 	double getTemperature();
 	void setmaximumTemperature(double maxTemp);
 	double getmaximumTemperature();
-	void setminimumHumidity(double humidity);
-	double getminimumHumidity();
-	void setHumidity(double humidity);
-	double getHumidity();
-	void setmaximumHumidity(double humidity);
-	double getmaximumHumidity();
+	void setminimumHumidity(int humidity);
+	int getminimumHumidity();
+	void setHumidity(int humidity);
+	int getHumidity();
+	void setmaximumHumidity(int humidity);
+	int getmaximumHumidity();
+	double readTemperature(void);
+	double readHumidity(void);
 };
 
 class DryingChamber
 {
 private:
 
-	double humidity;
+	int humidity;
 	double temperature;
-	double minimumHumidity;
-	double maximumHumidity;
+	int minimumHumidity;
+	int maximumHumidity;
 	double minimumTemperature;
 	double maximumTemperature;
 public:
@@ -82,12 +87,12 @@ public:
 	double getTemperature();
 	void setmaximumTemperature(double maxTemp);
 	double getmaximumTemperature();
-	void setminimumHumidity(double humidity);
-	double getminimumHumidity();
-	void setHumidity(double humidity);
-	double getHumidity();
-	void setmaximumHumidity(double humidity);
-	double getmaximumHumidity();
+	void setminimumHumidity(int humidity);
+	int getminimumHumidity();
+	void setHumidity(int humidity);
+	int getHumidity();
+	void setmaximumHumidity(int humidity);
+	int getmaximumHumidity();
 };
 
 class PaintMachine
@@ -116,6 +121,7 @@ public:
 	int getpaintVolumeGREEN();
 	void setmaxpaintVolume(int max);
 	int getmaxpaintVolume();
+	void validatepaintVolume(string RGBcolor);
 
 };
 

@@ -4,6 +4,7 @@
 // Author: Tyler Scheifley
 
 #include "PaintMachine.h"
+#include <string>
 
 using namespace std;
 
@@ -52,7 +53,7 @@ int PaintMachine::getpaintVolumeGREEN()
 	return this->paintVolumeGREEN;
 }
 
-void PaintMachine::setpaintVolumeBLUE(int paintVolume)
+void PaintMachine::setpaintVolumeGREEN(int paintVolume)
 {
 	this->paintVolumeGREEN = paintVolume;
 }
@@ -62,9 +63,32 @@ int PaintMachine::getpaintVolumeRED()
 	return this->paintVolumeRED;
 }
 
-void PaintMachine::setpaintVolumeBLUE(int paintVolume)
+void PaintMachine::setpaintVolumeRED(int paintVolume)
 {
 	this->paintVolumeRED = paintVolume;
+}
+
+void PaintMachine::validatepaintVolume(string RGBcolour)
+{
+	//calculating 20% of maximum capacity to warn user
+	int lowVolume = (getmaxpaintVolume() * 20) / 100;
+	int remainingVolume = (getmaxpaintVolume() / getpaintVolumeRED()) * 100;
+
+	if (getpaintVolumeRED() == 0)
+	{
+		cout << RGBcolour << " Paint Vat is empty" << endl;
+		//resupply
+		// if resupply is false, loop until user decides to resupply
+	}
+	else if (getpaintVolumeRED() == lowVolume)
+	{
+		cout << RGBcolour << " Paint Vat Is At 20% Capacity" << endl;
+		//resupply
+	}
+	else
+	{
+		cout << RGBcolour << " Paint Vat is at " << remainingVolume << "% Capacity" << endl;
+	}
 }
 
 // PaintChamber Class Methods:
@@ -79,12 +103,12 @@ PaintChamber::PaintChamber()
 	this->minimumHumidity = 0;
 }
 
-double PaintChamber::getHumidity()
+int PaintChamber::getHumidity()
 {
 	return this->humidity;
 }
 
-void PaintChamber::setHumidity(double humidity)
+void PaintChamber::setHumidity(int humidity)
 {
 	this->humidity = humidity;
 }
@@ -119,24 +143,82 @@ void PaintChamber::setminimumTemperature(double temp)
 	this->minimumTemperature = temp;
 }
 
-double PaintChamber::getmaximumHumidity()
+int PaintChamber::getmaximumHumidity()
 {
 	return this->maximumHumidity;
 }
 
-void PaintChamber::setmaximumHumidity(double humidity)
+void PaintChamber::setmaximumHumidity(int humidity)
 {
 	this->maximumHumidity = humidity;
 }
 
-double PaintChamber::getminimumHumidity()
+int PaintChamber::getminimumHumidity()
 {
 	return this->minimumHumidity;
 }
 
-void PaintChamber::setminimumHumidity(double humidity)
+void PaintChamber::setminimumHumidity(int humidity)
 {
 	this->minimumHumidity = humidity;
+}
+
+double PaintChamber::readTemperature(void)
+{
+	double result = 0;
+	string fileName = "PaintChamberTemperature.txt";
+	string temp;
+	srand((unsigned)time(NULL));
+	int random = 1 + (rand() % 100);
+	
+
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		for (int index = 0; index < random; index++)
+		{
+			getline(fin, temp);
+		}
+
+		result = stod(temp);
+	}
+	else
+	{
+		cout << "Error reading temperature of Paint Chamber" << endl;
+	}
+
+	return result;
+}
+
+double PaintChamber::readHumidity(void)
+{
+	double result = 0;
+	string fileName = "PaintChamberHumidity.txt";
+	string humidity;
+	srand((unsigned)time(NULL));
+	int random = 1 + (rand() % 100);
+	
+
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		for (int index = 0; index < random; index++)
+		{
+			getline(fin, humidity);
+		}
+
+		result = stod(humidity);
+	}
+	else
+	{
+		cout << "Error reading humidity of Paint Chamber" << endl;
+	}
+
+	return result;
 }
 
 // DryingChamber Class Methods:
@@ -150,12 +232,12 @@ DryingChamber::DryingChamber()
 	this->minimumHumidity = 0;
 }
 
-double DryingChamber::getHumidity()
+int DryingChamber::getHumidity()
 {
 	return this->humidity;
 }
 
-void DryingChamber::setHumidity(double humidity)
+void DryingChamber::setHumidity(int humidity)
 {
 	this->humidity = humidity;
 }
@@ -190,22 +272,22 @@ void DryingChamber::setminimumTemperature(double temp)
 	this->minimumTemperature = temp;
 }
 
-double DryingChamber::getmaximumHumidity()
+int DryingChamber::getmaximumHumidity()
 {
 	return this->maximumHumidity;
 }
 
-void DryingChamber::setmaximumHumidity(double humidity)
+void DryingChamber::setmaximumHumidity(int humidity)
 {
 	this->maximumHumidity = humidity;
 }
 
-double DryingChamber::getminimumHumidity()
+int DryingChamber::getminimumHumidity()
 {
 	return this->minimumHumidity;
 }
 
-void DryingChamber::setminimumHumidity(double humidity)
+void DryingChamber::setminimumHumidity(int humidity)
 {
 	this->minimumHumidity = humidity;
 }
@@ -259,4 +341,14 @@ double DipTank::getminimumTemperature()
 void DipTank::setminimumTemperature(double temp)
 {
 	this->minimumTemperature = temp;
+}
+
+double DipTank::getTemperature()
+{
+	return this->temperature;
+}
+
+void DipTank::setTemperature(double temp)
+{
+	this->temperature = temp;
 }
