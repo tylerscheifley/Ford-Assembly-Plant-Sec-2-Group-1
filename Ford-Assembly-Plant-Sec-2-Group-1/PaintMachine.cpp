@@ -17,6 +17,9 @@ PaintMachine::PaintMachine()
 	this->paintVolumeRED = 0;
 	this->paintVolumeBLUE = 0;
 	this->paintVolumeGREEN = 0;
+	this->RED = 0;
+	this->BLUE = 0;
+	this->GREEN = 0;
 }
 
 string PaintMachine::getcolour()
@@ -145,25 +148,24 @@ void PaintMachine::readRGBpaintVat(void)
 	}
 
 }
-void PaintMachine::resupplyRGBpaintVat(void)
+void PaintMachine::updateRGBpaintVat(void)
 {
-	int newGREENvolume = getpaintVolumeGREEN() - MAX_PAINT_NEEDED;
-	int newBluevolume = getpaintVolumeBLUE() - MAX_PAINT_NEEDED;
 	ofstream fout;
 	string fileName = "RGBPaintVats.txt";
-	string RED;
 
 	fout.open(fileName);
 
 	if (fout.is_open())
 	{
-		// add RED attribute instead
-		if (getpaintVolumeRED() != 0)
-		{
-			int newREDvolume = getpaintVolumeRED() - MAX_PAINT_NEEDED;
-			//fout.seekp()
-		}
+		int newREDvolume = getpaintVolumeRED() - getRED();
+		fout << "R: " << newREDvolume << endl;
+		
+		int newGREENvolume = getpaintVolumeGREEN() - getGREEN();
+		fout << "G: " << newGREENvolume << endl;
 
+		int newBLUEvolume = getpaintVolumeBLUE() - getBLUE();
+		fout << "B: " << newBLUEvolume << endl;
+		
 		fout.close();
 	}
 	else
