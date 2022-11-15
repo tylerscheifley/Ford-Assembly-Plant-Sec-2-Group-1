@@ -121,6 +121,9 @@ private:
 	int paintVolumeBLUE;
 	int paintVolumeGREEN;
 	int maxpaintVolume;
+	int RED;
+	int GREEN;
+	int BLUE;
 	//DryingChamber* dryingChamber;
 	//PaintChamber* paintChamber;
 	//DipTank* dipTank;
@@ -139,7 +142,14 @@ public:
 	void setmaxpaintVolume(int max);
 	int getmaxpaintVolume();
 	void validatepaintVolume(string RGBcolor);
-
+	void readRGBpaintVat(void);
+	void resupplyRGBpaintVat(void);
+	void setRED(int amount);
+	void setGREEN(int amount);
+	void setBLUE(int amount);
+	int getRED(void);
+	int getGREEN(void);
+	int getBLUE(void);
 };
 
 

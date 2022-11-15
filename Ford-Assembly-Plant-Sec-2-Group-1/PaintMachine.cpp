@@ -5,6 +5,7 @@
 
 #include "PaintMachine.h"
 #include <string>
+#define MAX_PAINT_NEEDED 5
 
 using namespace std;
 
@@ -103,6 +104,102 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 	{
 		cout << RGBcolour << " Paint Vat is at " << remainingVolume << "% Capacity" << endl;
 	}
+}
+void PaintMachine::readRGBpaintVat(void)
+{
+	string RED;
+	string BLUE;
+	string GREEN;
+	string fileName = "RGBPaintVats.txt";
+	string temp;
+	
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		
+		getline(fin, RED);
+		int REDLength = RED.length() - 3;
+		string REDResult = RED.substr(3, REDLength);
+		int REDConversion = stoi(REDResult);
+		setpaintVolumeRED(REDConversion);
+
+		getline(fin, GREEN);
+		int GREENLength = GREEN.length() - 3;
+		string GREENResult = GREEN.substr(3, GREENLength);
+		int GREENConversion = stoi(GREENResult);
+		setpaintVolumeGREEN(GREENConversion);
+
+		getline(fin, BLUE);
+		int BLUELength = BLUE.length() - 3;
+		string BLUEResult = BLUE.substr(3, BLUELength);
+		int BLUEConversion = stoi(BLUEResult);
+		setpaintVolumeBLUE(BLUEConversion);
+
+		fin.close();
+	}
+	else
+	{
+		cout << "Error reading RGB Paint Vats" << endl;
+	}
+
+}
+void PaintMachine::resupplyRGBpaintVat(void)
+{
+	int newGREENvolume = getpaintVolumeGREEN() - MAX_PAINT_NEEDED;
+	int newBluevolume = getpaintVolumeBLUE() - MAX_PAINT_NEEDED;
+	ofstream fout;
+	string fileName = "RGBPaintVats.txt";
+	string RED;
+
+	fout.open(fileName);
+
+	if (fout.is_open())
+	{
+		// add RED attribute instead
+		if (getpaintVolumeRED() != 0)
+		{
+			int newREDvolume = getpaintVolumeRED() - MAX_PAINT_NEEDED;
+			//fout.seekp()
+		}
+
+		fout.close();
+	}
+	else
+	{
+		cout << "Error reading RGB Paint Vats" << endl;
+	}
+}
+
+int PaintMachine::getRED()
+{
+	return RED;
+}
+
+void PaintMachine::setRED(int amount)
+{
+	this->RED = amount;
+}
+
+int PaintMachine::getBLUE()
+{
+	return BLUE;
+}
+
+void PaintMachine::setBLUE(int amount)
+{
+	this->BLUE = amount;
+}
+
+int PaintMachine::getGREEN()
+{
+	return GREEN;
+}
+
+void PaintMachine::setGREEN(int amount)
+{
+	this->GREEN = amount;
 }
 
 // PaintChamber Class Methods:
