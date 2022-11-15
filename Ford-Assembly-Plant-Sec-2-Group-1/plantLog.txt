@@ -1,0 +1,11 @@
+
+
+ --------------------
+ Date: 9/9/2022
+ CO2 Concentration: 281ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  895
+ Plant's global temperature: 87F
+ Plant's global humidity: 47%
+ Assembly line running:0
+ --------------------
