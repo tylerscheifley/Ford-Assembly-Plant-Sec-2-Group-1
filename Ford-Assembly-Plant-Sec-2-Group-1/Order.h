@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-
+#include <fstream>
+#include <array>
 
 using namespace std;
 
@@ -12,6 +13,9 @@ class Order
 	string trim;
 	string model;
 	string colour;
+	string bodyPanelSet;
+	string engineType;
+	string interiorLevel;
 	string destination;
 public:
 
@@ -27,7 +31,14 @@ public:
 	void setColour(string);
 	string getDestination(void);
 	void setDestination(string);
-	bool saveOrder(FILE);
-	bool loadOrder(FILE);
+	string getBodyPanelSet();
+	void setBodyPanelSet(string);
+	string getEngineType(void);
+	void setEngineType(string);
+	string getInteriorLevel(void);
+	void setInteriorLevel(string);
+	Order();
+	bool saveOrder(string);
+	bool loadOrder(string);
 
 };

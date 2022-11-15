@@ -73,15 +73,53 @@ void Vehicle::setDate(string date) {
 	this->date = date;
 }
 
-string Vehicle::GenerateVIN(void) {
 
+string Vehicle::GenerateVIN(void) {
+	string vin;
+
+	vin += getModel();
+	vin += getYear();
+	int count = getCount();
+	string sCount = std::to_string(count);
+	vin += sCount;
+
+	while (vin.length() != 17) {
+		vin.insert(vin.length() - sCount.length(), "0");
+	}
+
+	return vin;
+	
 }
 
 bool Vehicle::checkQAQC() {
 
+	bool qaqc = false;
+
+	if (getYear() == this->order.getYear()) {
+		qaqc = true;
+		if (getMake() == this->order.getMake()) {
+			qaqc = true;
+			if (getTrim() == this->order.getTrim()) {
+				qaqc = true;
+				if (getModel() == this->order.getModel()) {
+					qaqc = true;
+					if (getColour() == this->order.getColour()) {
+						qaqc = true;
+					
+					}
+				}
+			}
+		}
+
+	}
+
+	return qaqc;
+
 }
 
+
 Vehicle::Vehicle() {
+
 
 }
 
