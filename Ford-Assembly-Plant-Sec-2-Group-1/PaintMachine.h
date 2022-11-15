@@ -25,6 +25,7 @@ private:
 public:
 
 	DipTank();
+	void startDipTank(void);
 	void setfluidLevel(int fluidLevel);
 	int getfluidLevel();
 	void setTemperature(double temperature);
@@ -59,6 +60,7 @@ private:
 public:
 
 	PaintChamber();
+	void startPaintChamber();
 	void setminimumTemperature(double minTemp);
 	double getminimumTemperature();
 	void setTemperature(double temperature);
@@ -92,6 +94,7 @@ private:
 public:
 
 	DryingChamber();
+	void startDryingChamber(void);
 	void setminimumTemperature(double minTemp);
 	double getminimumTemperature();
 	void setTemperature(double temperature);
@@ -131,6 +134,7 @@ private:
 public:
 
 	PaintMachine();
+	void startMachine(void);
 	void setcolour(string colour);
 	string getcolour();
 	void setpaintVolumeBLUE(int paintVolume);
@@ -143,6 +147,7 @@ public:
 	int getmaxpaintVolume();
 	void validatepaintVolume(string RGBcolor);
 	int checkValidresupply(int volume);
+	void identifyRGBvalues(void);
 	void readRGBpaintVat(void);
 	void updateRGBpaintVat(void);
 	void resupplyRGBpaintVat(string vat, int volume);

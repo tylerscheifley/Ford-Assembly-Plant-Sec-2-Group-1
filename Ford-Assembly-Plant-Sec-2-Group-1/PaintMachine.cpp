@@ -75,19 +75,23 @@ void PaintMachine::setpaintVolumeRED(int paintVolume)
 void PaintMachine::validatepaintVolume(string RGBcolour)
 {
 	int paintVolume;
+	int requestVolume;
 	int volume;
 
 	if (RGBcolour == "RED")
 	{
 		paintVolume = getpaintVolumeRED();
+		requestVolume = getRED();
 	}
 	else if (RGBcolour == "BLUE")
 	{
 		paintVolume = getpaintVolumeBLUE();
+		requestVolume = getBLUE();
 	}
 	else
 	{
 		paintVolume = getpaintVolumeGREEN();
+		requestVolume = getGREEN();
 	}
 
 	//calculating 20% of maximum capacity to warn user
@@ -121,6 +125,15 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 			resupplyRGBpaintVat(RGBcolour, volume);
 
 		}	
+	}
+	else if (requestVolume > paintVolume)
+	{
+		cout << RGBcolour << " Paint Vat's volume is too low to complete request" << endl;
+		cout << "Enter Paint Volume" << endl;
+		cin >> volume;
+
+		volume = checkValidresupply(volume);
+		resupplyRGBpaintVat(RGBcolour, volume);
 	}
 	else
 	{
@@ -273,6 +286,49 @@ int PaintMachine::checkValidresupply(int volume)
 	return volume;
 }
 
+void PaintMachine::identifyRGBvalues(void)
+{
+	int position;
+	int RGBvalue;
+	string fileName = "PlantColours.txt";
+	string input;
+	
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		while (!fin.eof())
+		{
+			getline(fin, input);
+			position = input.find(":");
+			string result = input.substr(0, position);
+			
+			if (result == getcolour())
+			{
+				result = input.substr(position + 3, 1);
+				RGBvalue = stoi(result);
+				setRED(RGBvalue);
+
+				result = input.substr(position + 6, 1);
+				RGBvalue = stoi(result);
+				setGREEN(RGBvalue);
+
+				result = input.substr(position + 9, 1);
+				RGBvalue = stoi(result);
+				setBLUE(RGBvalue);
+
+				break;
+			}
+		}
+		fin.close();
+	}
+	else
+	{
+		cout << "Error Identifying Plant Colours" << endl;
+	}
+}
+
 int PaintMachine::getRED()
 {
 	return RED;
@@ -303,6 +359,18 @@ void PaintMachine::setGREEN(int amount)
 	this->GREEN = amount;
 }
 
+void PaintMachine::startMachine(void)
+{
+	setmaxpaintVolume(500);
+
+	identifyRGBvalues();
+	readRGBpaintVat();
+	validatepaintVolume("RED");
+	validatepaintVolume("GREEN");
+	validatepaintVolume("BLUE");
+	updateRGBpaintVat();
+
+}
 // PaintChamber Class Methods:
 
 PaintChamber::PaintChamber()
@@ -544,7 +612,24 @@ void PaintChamber::validateHumidity(void)
 	}
 }
 
+void PaintChamber::startPaintChamber(void)
+{
+	setmaximumTemperature(24);
+	setminimumTemperature(19);
+	setmaximumHumidity(50);
+	setminimumHumidity(40);
+
+	double temp = readTemperature();
+	setTemperature(temp);
+	validateTemperature();
+
+	int humidity = readHumidity();
+	setHumidity(humidity);
+	validateHumidity();
+}
+
 // DryingChamber Class Methods:
+
 DryingChamber::DryingChamber()
 {
 	this->temperature = 0;
@@ -782,6 +867,23 @@ void DryingChamber::updateHumidity(int humidity)
 		}
 	}
 }
+
+void DryingChamber::startDryingChamber(void)
+{
+	setmaximumTemperature(24);
+	setminimumTemperature(19);
+	setmaximumHumidity(50);
+	setminimumHumidity(40);
+
+	double temp = readTemperature();
+	setTemperature(temp);
+	validateTemperature();
+
+	int humidity = readHumidity();
+	setHumidity(humidity);
+	validateHumidity();
+}
+
 // DipTank Class Methods:
 
 DipTank::DipTank()
@@ -1011,4 +1113,19 @@ void DipTank::validatefluidLevel(void)
 	{
 		cout << "Current Fluid level of Dip Tank: " << fluidLevel << endl;
 	}
+}
+
+void DipTank::startDipTank(void)
+{
+	setmaximumfluidLevel(50);
+	setmaximumTemperature(24);
+	setminimumTemperature(19);
+
+	double temp = readTemperature();
+	setTemperature(temp);
+	validateTemperature();
+
+	int level = readfluidLevel();
+	setfluidLevel(level);
+	validateTemperature();
 }
