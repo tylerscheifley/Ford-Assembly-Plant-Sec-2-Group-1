@@ -99,7 +99,7 @@ void Plant::runPlant()
 {
 	bool result = false;
 
-	while (result == false)
+	while ((result == false) && (getAssemblyLineStatus() == true))
 	{
 		//BodyMachine.runMachine();
 		//PaintMachine.runMachine();

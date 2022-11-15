@@ -6,9 +6,9 @@
 
 using namespace std;
 
-
 void updateLog(Plant plant)
 {
+
 	ofstream plantSave;
 	plantSave.open("plantLog.txt", ios_base::app);
 
@@ -40,6 +40,7 @@ void updateLog(Plant plant)
 
 void readLog(Plant plant)
 {
+
 	ifstream plantLoad;
 	plantLoad.open("plantSensors.txt");
 
@@ -70,6 +71,7 @@ void readLog(Plant plant)
 
 void stopPlant(Plant plant)
 {
+
 	cout << "Plant is shutting down..." << endl;
 	updateLog(plant);
 	plant.setAssemblyLineStatus(false);
