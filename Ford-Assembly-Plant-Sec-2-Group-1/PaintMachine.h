@@ -142,8 +142,10 @@ public:
 	void setmaxpaintVolume(int max);
 	int getmaxpaintVolume();
 	void validatepaintVolume(string RGBcolor);
+	int checkValidresupply(int volume);
 	void readRGBpaintVat(void);
 	void updateRGBpaintVat(void);
+	void resupplyRGBpaintVat(string vat, int volume);
 	void setRED(int amount);
 	void setGREEN(int amount);
 	void setBLUE(int amount);

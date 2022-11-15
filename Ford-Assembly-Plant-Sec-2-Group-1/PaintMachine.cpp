@@ -75,6 +75,8 @@ void PaintMachine::setpaintVolumeRED(int paintVolume)
 void PaintMachine::validatepaintVolume(string RGBcolour)
 {
 	int paintVolume;
+	int volume;
+
 	if (RGBcolour == "RED")
 	{
 		paintVolume = getpaintVolumeRED();
@@ -95,13 +97,30 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 	if (paintVolume== 0)
 	{
 		cout << RGBcolour << " Paint Vat is empty" << endl;
-		//resupply
-		// if resupply is false, loop until user decides to resupply
+		
+		cout << "Enter Paint Volume" << endl;
+		cin >> volume;
+
+		volume = checkValidresupply(volume);
+		resupplyRGBpaintVat(RGBcolour, volume);
+		
 	}
 	else if (paintVolume == lowVolume)
 	{
 		cout << RGBcolour << " Paint Vat Is At 20% Capacity" << endl;
-		//resupply
+
+		cout << "Do you want to resupply the " << RGBcolour << "[Y/N]" << endl;
+		string choice;
+
+		if (choice == "Y" || choice == "y")
+		{
+			cout << "Enter Paint Volume" << endl;
+			cin >> volume;
+
+			volume = checkValidresupply(volume);
+			resupplyRGBpaintVat(RGBcolour, volume);
+
+		}	
 	}
 	else
 	{
@@ -170,8 +189,88 @@ void PaintMachine::updateRGBpaintVat(void)
 	}
 	else
 	{
-		cout << "Error reading RGB Paint Vats" << endl;
+		cout << "Error updating RGB Paint Vats" << endl;
 	}
+}
+
+void PaintMachine::resupplyRGBpaintVat(string vat, int amount)
+{
+	ofstream fout;
+	string fileName = "RGBPaintVats.txt";
+
+	fout.open(fileName);
+
+	if (fout.is_open())
+	{
+		if (vat == "RED")
+		{
+			int newREDvolume = getpaintVolumeRED() + amount;
+			fout << "R: " << newREDvolume << endl;
+
+			int newGREENvolume = getpaintVolumeGREEN();
+			fout << "G: " << newGREENvolume << endl;
+
+			int newBLUEvolume = getpaintVolumeBLUE();
+			fout << "B: " << newBLUEvolume << endl;
+		}
+		else if (vat == "GREEN")
+		{
+			int newREDvolume = getpaintVolumeRED();
+			fout << "R: " << newREDvolume << endl;
+
+			int newGREENvolume = getpaintVolumeGREEN() + amount;
+			fout << "G: " << newGREENvolume << endl;
+
+			int newBLUEvolume = getpaintVolumeBLUE();
+			fout << "B: " << newBLUEvolume << endl;
+		}
+		else
+		{
+			int newREDvolume = getpaintVolumeRED();
+			fout << "R: " << newREDvolume << endl;
+
+			int newGREENvolume = getpaintVolumeGREEN();
+			fout << "G: " << newGREENvolume << endl;
+
+			int newBLUEvolume = getpaintVolumeBLUE() + amount;
+			fout << "B: " << newBLUEvolume << endl;
+		}
+
+		fout.close();
+	}
+	else
+	{
+		cout << "Error updating RGB Paint Vats" << endl;
+	}
+}
+
+int PaintMachine::checkValidresupply(int volume)
+{
+	bool running = true;
+
+	while (running)
+	{
+		if (isdigit(volume))
+		{
+			if (volume > 0 && volume <= getmaxpaintVolume())
+			{
+				running = false;
+			}
+			else
+			{
+				cout << "Paint Volume is not between range of " << 0 << "-" << getmaxpaintVolume() << endl;
+				cout << "Enter Paint Volume" << endl;
+				cin >> volume;
+			}
+		}
+		else
+		{
+			cout << "Invalid Paint Volume entered" << endl;
+			cout << "Enter Paint Volume:" << endl;
+			cin >> volume;
+		}
+	}
+	return volume;
 }
 
 int PaintMachine::getRED()
