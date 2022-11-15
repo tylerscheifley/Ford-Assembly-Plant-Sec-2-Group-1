@@ -41,7 +41,7 @@ void updateLog(Plant plant[])
 void readLog(Plant plant[])
 {
 	ifstream plantLoad;
-	plantLoad.open("plantLog.txt");
+	plantLoad.open("plantSensors.txt");
 
 
 	string date;
