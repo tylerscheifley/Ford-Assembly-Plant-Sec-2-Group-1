@@ -6,7 +6,7 @@ using namespace std;
 
 int main(void)
 {
-	Plant* plant = new Plant[MAXPLANTS];
+	//Plant* plant = new Plant[MAXPLANTS];
 	cout << "Plant" << endl;
 
 	return 0;
