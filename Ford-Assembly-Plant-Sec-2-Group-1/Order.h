@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <array>
+#include <windows.h>
+#include <ctime>
 
 using namespace std;
 

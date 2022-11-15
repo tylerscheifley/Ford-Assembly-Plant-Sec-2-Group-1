@@ -64,13 +64,14 @@ Order::Order() {
 
 	string model[2] = { "F150", "Expedition" };
 
-	string F150Trims[8] = { "RAPTOR", "TREMOR", "LIMITED"
+	string F150Trims[8] = { "RAPTOR", "TREMOR", "LIMITED",
 	"PLATINUM", "KING RANCH", "LARIAT", "XLT", "XL" };
 
-	string ExpeditionTrims[5] = { "XLT", "LIMITED"
-	,"TIMBERLINE", "KING RANCH", "PLATINUM" };
+	string superCabtrims[] = { "LARIAT", "XLT", "XL" };
+	string ExpeditionTrims[5] = { "XLT", "LIMITED","TIMBERLINE", "KING RANCH", "PLATINUM" };
 
-	string F150Body[3] = { "Regular Cab", "Super Cab", "SuperCrew" };
+	string F150Body[3] = { "Regular", "SuperCab", "SuperCrew" };
+	string regCabTrims[] = { "XL", "XLT" };
 
 	string ExpeditionBodys[2] = { "MAX", "REG" };
 
@@ -156,8 +157,10 @@ Order::Order() {
 	string Destinations[] = { "Kitchener", "Waterloo", "Walkerton", "Harriston","Owen Sound", "Toronto", "London"};
 
 	int randomVal = 0;
+	randomVal = rand();
 
-	srand(time(NULL));
+	srand(clock() % rand()* rand());
+
 
 	randomVal = rand() % size(years);
 
@@ -168,23 +171,27 @@ Order::Order() {
 		randomVal = rand() % size(InteriorLevels);
 
 		setInteriorLevel(InteriorLevels[randomVal]);
-
+		
 		randomVal = rand() % size(F150Engine);
 
 		setEngineType(F150Engine[randomVal]);
-		
-		if (F150Body[randomVal] == "Regular Cab") {
-			setBodyPanelSet(F150Body[0]);
 
-			randomVal = rand() % size(F150Trims);
-			setTrim(F150Trims[randomVal]);
+		randomVal = rand() % size(F150Body);
+
+		if (F150Body[randomVal] == "Regular") {
+			setBodyPanelSet(F150Body[randomVal]);
+			
+			randomVal = rand() % size(regCabTrims);
+			setTrim(regCabTrims[randomVal]);
 
 			if (getTrim() == "XL") {
+				
 				randomVal = rand() % size(F150XLReg);
 
 				setColour(F150XLReg[randomVal]);
 			}
 			else if (getTrim() == "XLT") {
+				
 				randomVal = rand() % size(F150XLTReg);
 
 				setColour(F150XLTReg[randomVal]);
@@ -192,71 +199,82 @@ Order::Order() {
 
 
 		}
-		else if (F150Body[randomVal] == "Super Cab") {
-			setBodyPanelSet(F150Body[1]);
-
-			randomVal = rand() % size(F150Trims);
-			setTrim(F150Trims[randomVal]);
+		if (F150Body[randomVal] == "SuperCab") {
+			setBodyPanelSet(F150Body[randomVal]);
+			
+			randomVal = rand() % size(superCabtrims);
+			setTrim(superCabtrims[randomVal]);
 
 			if (getTrim() == "XL") {
+				
 				randomVal = rand() % size(F150XLSup);
 
 				setColour(F150XLSup[randomVal]);
 			}
-			else if (getTrim() == "XLT") {
+			if (getTrim() == "XLT") {
+				
 				randomVal = rand() % size(F150XLTSup);
 
 				setColour(F150XLTSup[randomVal]);
 			}
-			else if (getTrim() == "LARIAT") {
+			if (getTrim() == "LARIAT") {
+				
 				randomVal = rand() % size(F150LarSup);
 
 				setColour(F150LarSup[randomVal]);
 			}
 
 		}
-		else if (F150Body[randomVal] == "Super Crew") {
-			setBodyPanelSet(F150Body[2]);
-
+		if (F150Body[randomVal] == "SuperCrew") {
+			setBodyPanelSet(F150Body[randomVal]);
+			
 			randomVal = rand() % size(F150Trims);
 			setTrim(F150Trims[randomVal]);
 
 			if (getTrim() == "XL") {
+				
 				randomVal = rand() % size(F150XLSupCrew);
 
 				setColour(F150XLSupCrew[randomVal]);
 			}
-			else if (getTrim() == "XLT") {
+			if (getTrim() == "XLT") {
+				
 				randomVal = rand() % size(F150XLTCrew);
 
 				setColour(F150XLTCrew[randomVal]);
 			}
-			else if (getTrim() == "LARIAT") {
+			if (getTrim() == "LARIAT") {
+				
 				randomVal = rand() % size(F150LarCrew);
 
 				setColour(F150LarCrew[randomVal]);
 			}
-			else if (getTrim() == "KING RANCH") {
+			if (getTrim() == "KING RANCH") {
+				
 				randomVal = rand() % size(F150KingRanchCrew);
 
 				setColour(F150KingRanchCrew[randomVal]);
 			}
-			else if (getTrim() == "PLATINUM") {
+			if (getTrim() == "PLATINUM") {
+				
 				randomVal = rand() % size(F150PlatCrew);
 
 				setColour(F150PlatCrew[randomVal]);
 			}
-			else if (getTrim() == "LIMITED") {
+			if (getTrim() == "LIMITED") {
+				
 				randomVal = rand() % size(F150LimitCrew);
 
 				setColour(F150LimitCrew[randomVal]);
 			}
-			else if (getTrim() == "TREMOR") {
+			if (getTrim() == "TREMOR") {
+				
 				randomVal = rand() % size(F150TremorCrew);
 
 				setColour(F150TremorCrew[randomVal]);
 			}
-			else if (getTrim() == "RAPTOR") {
+			if (getTrim() == "RAPTOR") {
+				
 				randomVal = rand() % size(F150RaptorCrew);
 
 				setColour(F150RaptorCrew[randomVal]);
@@ -265,22 +283,24 @@ Order::Order() {
 		
 
 		}
-
-		randomVal = rand() % size(destination);
+		
+		randomVal = rand() % size(Destinations);
 
 		setDestination(Destinations[randomVal]);
 
+
 	}
-	else if(years[randomVal] == "2023") {
+	if(years[randomVal] == "2023") {
 		setYear(years[1]);
 		setMake("FORD");
 		setModel(model[1]);
+		
 		randomVal = rand() % size(InteriorLevels);
 
 		
 		setInteriorLevel(InteriorLevels[randomVal]);
 
-
+		
 		randomVal = rand() % size(ExpeditionEngine);
 
 		setEngineType(ExpeditionEngine[randomVal]);
@@ -289,31 +309,36 @@ Order::Order() {
 
 		if (ExpeditionBodys[randomVal] == "MAX") {
 			setBodyPanelSet(ExpeditionBodys[0]);
-
+			
 			randomVal = rand() % size(ExpeditionTrims);
 			setTrim(ExpeditionTrims[randomVal]);
 
 			if (getTrim() == "XLT") {
+				
 				randomVal = rand() % size(ExpXLTReg);
 
 				setColour(ExpXLTReg[randomVal]);
 			}
-			else if (getTrim() == "LIMITED") {
+			if (getTrim() == "LIMITED") {
+				
 				randomVal = rand() % size(ExpLimMAX);
 
 				setColour(ExpLimMAX[randomVal]);
 			}
-			else if (getTrim() == "TIMBERLINE") {
+			if (getTrim() == "TIMBERLINE") {
+				
 				randomVal = rand() % size(ExpTimReg);
 
 				setColour(ExpTimReg[randomVal]);
 			}
-			else if (getTrim() == "KING RANCH") {
+			if (getTrim() == "KING RANCH") {
+				
 				randomVal = rand() % size(ExpKRMAX);
 
 				setColour(ExpKRMAX[randomVal]);
 			}
-			else if (getTrim() == "PLATINUM") {
+			if (getTrim() == "PLATINUM") {
+				
 				randomVal = rand() % size(ExpPlatMAX);
 
 				setColour(ExpPlatMAX[randomVal]);
@@ -324,40 +349,48 @@ Order::Order() {
 		else if (ExpeditionBodys[randomVal] == "REG") {
 			setBodyPanelSet(ExpeditionBodys[1]);
 
+			
 			randomVal = rand() % size(ExpeditionTrims);
 			setTrim(ExpeditionTrims[randomVal]);
 
 			if (getTrim() == "XLT") {
+				
 				randomVal = rand() % size(ExpXLTReg);
 
 				setColour(ExpXLTReg[randomVal]);
 			}
 			else if (getTrim() == "LIMITED") {
+				
 				randomVal = rand() % size(ExpLimReg);
 
 				setColour(ExpLimReg[randomVal]);
 			}
 			else if (getTrim() == "TIMBERLINE") {
+				
 				randomVal = rand() % size(ExpTimReg);
 
 				setColour(ExpTimReg[randomVal]);
 			}
 			else if (getTrim() == "KING RANCH") {
+				
 				randomVal = rand() % size(ExpKRReg);
 
 				setColour(ExpKRReg[randomVal]);
 			}
 			else if (getTrim() == "PLATINUM") {
+				
 				randomVal = rand() % size(ExpPlatReg);
 
 				setColour(ExpPlatReg[randomVal]);
 			}
 
 		}
-
-		randomVal = rand() % size(destination);
+		
+		randomVal = rand() % size(Destinations);
 
 		setDestination(Destinations[randomVal]);
+
+
 	
 
 
@@ -366,9 +399,24 @@ Order::Order() {
 }
 
 bool Order::saveOrder(string fileName) {
+	ofstream fout;
 
+	fout.open(fileName, ios::out | ios::app);
+
+	if (fout.is_open()) {
+		
+		fout << getMake() << "|" << getYear() << "|" << getModel()<< "|" << getTrim()<< "|" << getBodyPanelSet()<< "|" << getColour() << "|" << getEngineType() << "|" << getInteriorLevel() << "|" << getDestination() << endl;
+
+
+		fout.close();
+		return true;
+	}
+	else {
+		cout << "ERROR" << endl;
+		return false;
+	}
 }
 
 bool Order::loadOrder(string fileName) {
-
+	return true;
 }
