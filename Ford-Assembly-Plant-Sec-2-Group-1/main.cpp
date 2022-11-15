@@ -16,10 +16,13 @@ int main(void)
 	//result = p.readTemperature();
 
 	//cout << "Temperature: " << result << endl;
-
-	PaintMachine p;
-	p.setcolour("Stone Grey Metallic");
-	p.identifyRGBvalues();
+	DryingChamber d;
+	PaintChamber paint;
+	DipTank Dip;
+	PaintMachine p(&d,&paint,&Dip);
+	p.setcolour("Antimatter Blue");
+	p.startMachine(&d,&paint,&Dip);
+	//p.identifyRGBvalues();
 
 	return 0;
 }

@@ -10,7 +10,7 @@
 using namespace std;
 
 // PaintMachine Class Methods
-PaintMachine::PaintMachine()
+PaintMachine::PaintMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank)
 {
 	this->colour = "N/A";
 	this->maxpaintVolume = 0;
@@ -39,7 +39,7 @@ int PaintMachine::getmaxpaintVolume()
 
 void PaintMachine::setmaxpaintVolume(int max)
 {
-	this->maxpaintVolume = maxpaintVolume;
+	this->maxpaintVolume = max;
 }
 
 int PaintMachine::getpaintVolumeBLUE()
@@ -105,7 +105,7 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 		cout << "Enter Paint Volume" << endl;
 		cin >> volume;
 
-		volume = checkValidresupply(volume);
+		volume = checkValidresupply(volume,RGBcolour);
 		resupplyRGBpaintVat(RGBcolour, volume);
 		
 	}
@@ -115,13 +115,12 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 
 		cout << "Do you want to resupply the " << RGBcolour << "[Y/N]" << endl;
 		string choice;
+		cout << "Enter Paint Volume" << endl;
+		cin >> volume;
 
 		if (choice == "Y" || choice == "y")
 		{
-			cout << "Enter Paint Volume" << endl;
-			cin >> volume;
-
-			volume = checkValidresupply(volume);
+			volume = checkValidresupply(volume,RGBcolour);
 			resupplyRGBpaintVat(RGBcolour, volume);
 
 		}	
@@ -132,7 +131,7 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 		cout << "Enter Paint Volume" << endl;
 		cin >> volume;
 
-		volume = checkValidresupply(volume);
+		volume = checkValidresupply(volume,RGBcolour);
 		resupplyRGBpaintVat(RGBcolour, volume);
 	}
 	else
@@ -257,15 +256,28 @@ void PaintMachine::resupplyRGBpaintVat(string vat, int amount)
 	}
 }
 
-int PaintMachine::checkValidresupply(int volume)
+int PaintMachine::checkValidresupply(int volume, string RGBcolour)
 {
 	bool running = true;
+	int paintVolume;
+	if (RGBcolour == "RED")
+	{
+		paintVolume = getpaintVolumeRED();
+	}
+	else if (RGBcolour == "BLUE")
+	{
+		paintVolume = getpaintVolumeBLUE();
+	}
+	else
+	{
+		paintVolume = getpaintVolumeGREEN();
+	}
 
 	while (running)
 	{
 		if (isdigit(volume))
 		{
-			if (volume > 0 && volume <= getmaxpaintVolume())
+			if (volume > 0 && volume <= getmaxpaintVolume() && volume + paintVolume < getmaxpaintVolume())
 			{
 				running = false;
 			}
@@ -280,6 +292,8 @@ int PaintMachine::checkValidresupply(int volume)
 		{
 			cout << "Invalid Paint Volume entered" << endl;
 			cout << "Enter Paint Volume:" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cin >> volume;
 		}
 	}
@@ -359,8 +373,9 @@ void PaintMachine::setGREEN(int amount)
 	this->GREEN = amount;
 }
 
-void PaintMachine::startMachine(void)
+void PaintMachine::startMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank)
 {
+	//dryingChamber->s;
 	setmaxpaintVolume(500);
 
 	identifyRGBvalues();
@@ -369,6 +384,10 @@ void PaintMachine::startMachine(void)
 	validatepaintVolume("GREEN");
 	validatepaintVolume("BLUE");
 	updateRGBpaintVat();
+
+	dipTank->startDipTank();
+	paintChamber->startPaintChamber();
+	dryingChamber->startDryingChamber();
 
 }
 // PaintChamber Class Methods:
@@ -534,7 +553,7 @@ void PaintChamber::updateTemperature(double temp)
 	
 	while (running)
 	{
-		if (isdigit(temp))
+		if (!cin.fail())
 		{
 			if (temp >= getminimumTemperature() && temp <= getmaximumTemperature())
 			{
@@ -552,6 +571,8 @@ void PaintChamber::updateTemperature(double temp)
 		{
 			cout << "Invalid Temperature entered" << endl;
 			cout << "Enter Temperature:" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cin >> temp;
 		}
 	}
@@ -581,6 +602,8 @@ void PaintChamber::updateHumidity(int humidity)
 		{
 			cout << "Invalid Humidity entered" << endl;
 			cout << "Enter Humidity:" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cin >> humidity;
 		}
 	}
@@ -766,7 +789,7 @@ void DryingChamber::updateTemperature(double temp)
 
 	while (running)
 	{
-		if (isdigit(temp))
+		if (!cin.fail())
 		{
 			if (temp >= getminimumTemperature() && temp <= getmaximumTemperature())
 			{
@@ -784,6 +807,8 @@ void DryingChamber::updateTemperature(double temp)
 		{
 			cout << "Invalid Temperature entered" << endl;
 			cout << "Enter Temperature:" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cin >> temp;
 		}
 	}
@@ -863,6 +888,8 @@ void DryingChamber::updateHumidity(int humidity)
 		{
 			cout << "Invalid Humidity entered" << endl;
 			cout << "Enter Humidity:" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cin >> humidity;
 		}
 	}
@@ -1007,9 +1034,9 @@ void DipTank::updateTemperature(double temp)
 
 	while (running)
 	{
-		if (isdigit(temp))
+		if (!cin.fail())
 		{
-			if (temp >= getminimumTemperature() && temp <= getmaximumTemperature())
+			if (temp > getminimumTemperature() && temp < getmaximumTemperature())
 			{
 				setTemperature(temp);
 				running = false;
@@ -1025,6 +1052,8 @@ void DipTank::updateTemperature(double temp)
 		{
 			cout << "Invalid Temperature entered" << endl;
 			cout << "Enter Temperature:" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cin >> temp;
 		}
 	}
@@ -1068,7 +1097,7 @@ void DipTank::updatefluidLevel(int fluidLevel)
 	{
 		if (isdigit(fluidLevel))
 		{
-			if (fluidLevel > 0 && fluidLevel <= getmaximumfluidLevel())
+			if (fluidLevel > 0 && fluidLevel < getmaximumfluidLevel())
 			{
 				setTemperature(fluidLevel);
 				running = false;
@@ -1084,6 +1113,8 @@ void DipTank::updatefluidLevel(int fluidLevel)
 		{
 			cout << "Invalid Fluid level entered" << endl;
 			cout << "Enter Fluid level:" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cin >> fluidLevel;
 		}
 	}
@@ -1127,5 +1158,5 @@ void DipTank::startDipTank(void)
 
 	int level = readfluidLevel();
 	setfluidLevel(level);
-	validateTemperature();
+	validatefluidLevel();
 }

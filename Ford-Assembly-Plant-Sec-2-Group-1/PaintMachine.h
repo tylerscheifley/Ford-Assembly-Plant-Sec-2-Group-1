@@ -14,16 +14,12 @@ using namespace std;
 
 class DipTank
 {
-private:
-
+public:
 	int fluidLevel;
 	double temperature;
 	double minimumTemperature;
 	double maximumTemperature;
 	int maximumfluidLevel;
-
-public:
-
 	DipTank();
 	void startDipTank(void);
 	void setfluidLevel(int fluidLevel);
@@ -48,17 +44,14 @@ public:
 
 class PaintChamber
 {
-private:
 
+public:
 	int humidity;
 	double temperature;
 	int minimumHumidity;
 	int maximumHumidity;
 	double minimumTemperature;
 	double maximumTemperature;
-
-public:
-
 	PaintChamber();
 	void startPaintChamber();
 	void setminimumTemperature(double minTemp);
@@ -83,16 +76,14 @@ public:
 
 class DryingChamber
 {
-private:
 
+public:
 	int humidity;
 	double temperature;
 	int minimumHumidity;
 	int maximumHumidity;
 	double minimumTemperature;
 	double maximumTemperature;
-public:
-
 	DryingChamber();
 	void startDryingChamber(void);
 	void setminimumTemperature(double minTemp);
@@ -127,14 +118,14 @@ private:
 	int RED;
 	int GREEN;
 	int BLUE;
-	//DryingChamber* dryingChamber;
-	//PaintChamber* paintChamber;
-	//DipTank* dipTank;
+	DryingChamber* dryingChamber;
+	PaintChamber* paintChamber;
+	DipTank* dipTank;
 
 public:
 
-	PaintMachine();
-	void startMachine(void);
+	PaintMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank);
+	void startMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank);
 	void setcolour(string colour);
 	string getcolour();
 	void setpaintVolumeBLUE(int paintVolume);
@@ -146,7 +137,7 @@ public:
 	void setmaxpaintVolume(int max);
 	int getmaxpaintVolume();
 	void validatepaintVolume(string RGBcolor);
-	int checkValidresupply(int volume);
+	int checkValidresupply(int volume, string RGBcolor);
 	void identifyRGBvalues(void);
 	void readRGBpaintVat(void);
 	void updateRGBpaintVat(void);
