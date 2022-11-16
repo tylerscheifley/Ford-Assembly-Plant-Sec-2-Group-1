@@ -16,7 +16,7 @@ namespace PaintMachineTests
 		
 		TEST_METHOD(TestMethod1)
 		{
-			PaintMachine paint;
+			//PaintMachine paint;
 		}
 	};
 }

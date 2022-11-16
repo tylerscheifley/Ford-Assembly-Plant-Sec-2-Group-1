@@ -14,7 +14,7 @@ Stone Grey Metallic: R3 G2 B1
 
 Space White Metallic: R1 G3 B2 
 
-Red Metallic Tinted Clearcoat: R5 G1 B0 
+Rapid Red Metallic Tinted Clearcoat: R5 G1 B0 
 
 Atlas Blue Metallic: R0 G1 B5 
 

@@ -21,7 +21,7 @@ public:
 	double maximumTemperature;
 	int maximumfluidLevel;
 	DipTank();
-	void startDipTank(void);
+	void startDipTank(string temperatureFile, string fluidFile);
 	void setfluidLevel(int fluidLevel);
 	int getfluidLevel();
 	void setTemperature(double temperature);
@@ -34,8 +34,8 @@ public:
 	int getmaximumfluidLevel();
 	void updateTemperature(double temp);
 	void validateTemperature(void);
-	double readTemperature(void);
-	int readfluidLevel(void);
+	double readTemperature(string filename);
+	int readfluidLevel(string fileName);
 	void updatefluidLevel(int fluidLevel);
 	void validatefluidLevel(void);
 
@@ -53,7 +53,7 @@ public:
 	double minimumTemperature;
 	double maximumTemperature;
 	PaintChamber();
-	void startPaintChamber();
+	void startPaintChamber(string temperatureFile, string humidityFile);
 	void setminimumTemperature(double minTemp);
 	double getminimumTemperature();
 	void setTemperature(double temperature);
@@ -66,8 +66,8 @@ public:
 	int getHumidity();
 	void setmaximumHumidity(int humidity);
 	int getmaximumHumidity();
-	double readTemperature(void);
-	int readHumidity(void);
+	double readTemperature(string fileName);
+	int readHumidity(string fileName);
 	void validateTemperature(void);
 	void validateHumidity(void);
 	void updateTemperature(double temp);
@@ -85,7 +85,7 @@ public:
 	double minimumTemperature;
 	double maximumTemperature;
 	DryingChamber();
-	void startDryingChamber(void);
+	void startDryingChamber(string temperatureFile, string humidityFile);
 	void setminimumTemperature(double minTemp);
 	double getminimumTemperature();
 	void setTemperature(double temperature);
@@ -98,8 +98,8 @@ public:
 	int getHumidity();
 	void setmaximumHumidity(int humidity);
 	int getmaximumHumidity();
-	double readTemperature(void);
-	int readHumidity(void);
+	double readTemperature(string fileName);
+	int readHumidity(string fileName);
 	void validateTemperature(void);
 	void validateHumidity(void);
 	void updateTemperature(double temp);

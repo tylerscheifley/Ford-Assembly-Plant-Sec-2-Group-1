@@ -385,9 +385,9 @@ void PaintMachine::startMachine(DryingChamber* dryingChamber, PaintChamber* pain
 	validatepaintVolume("BLUE");
 	updateRGBpaintVat();
 
-	dipTank->startDipTank();
-	paintChamber->startPaintChamber();
-	dryingChamber->startDryingChamber();
+	dipTank->startDipTank("DipTankTemperature.txt","DipTankFluidLevel.txt");
+	paintChamber->startPaintChamber("PaintChamberTemperature.txt", "PaintChamberHumidity.txt");
+	dryingChamber->startDryingChamber("DryingChamberTemperature.txt", "DryingChamberHumidity.txt");
 
 }
 // PaintChamber Class Methods:
@@ -462,10 +462,9 @@ void PaintChamber::setminimumHumidity(int humidity)
 	this->minimumHumidity = humidity;
 }
 
-double PaintChamber::readTemperature(void)
+double PaintChamber::readTemperature(string fileName)
 {
 	double result = 0;
-	string fileName = "PaintChamberTemperature.txt";
 	string temp;
 	srand((unsigned)time(NULL));
 	int random = 1 + (rand() % 100);
@@ -492,10 +491,9 @@ double PaintChamber::readTemperature(void)
 	return result;
 }
 
-int PaintChamber::readHumidity(void)
+int PaintChamber::readHumidity(string fileName)
 {
 	int result = 0;
-	string fileName = "PaintChamberHumidity.txt";
 	string humidity;
 	srand((unsigned)time(NULL));
 	int random = 1 + (rand() % 100);
@@ -635,18 +633,18 @@ void PaintChamber::validateHumidity(void)
 	}
 }
 
-void PaintChamber::startPaintChamber(void)
+void PaintChamber::startPaintChamber(string temperatureFile, string humidityFile)
 {
 	setmaximumTemperature(24);
 	setminimumTemperature(19);
 	setmaximumHumidity(50);
 	setminimumHumidity(40);
 
-	double temp = readTemperature();
+	double temp = readTemperature(temperatureFile);
 	setTemperature(temp);
 	validateTemperature();
 
-	int humidity = readHumidity();
+	int humidity = readHumidity(humidityFile);
 	setHumidity(humidity);
 	validateHumidity();
 }
@@ -723,10 +721,9 @@ void DryingChamber::setminimumHumidity(int humidity)
 	this->minimumHumidity = humidity;
 }
 
-double DryingChamber::readTemperature(void)
+double DryingChamber::readTemperature(string fileName)
 {
 	double result = 0;
-	string fileName = "DryingChamberTemperature.txt";
 	string temp;
 	srand((unsigned)time(NULL));
 	int random = 1 + (rand() % 100);
@@ -753,10 +750,9 @@ double DryingChamber::readTemperature(void)
 	return result;
 }
 
-int DryingChamber::readHumidity(void)
+int DryingChamber::readHumidity(string fileName)
 {
 	int result = 0;
-	string fileName = "DryingChamberHumidity.txt";
 	string humidity;
 	srand((unsigned)time(NULL));
 	int random = 1 + (rand() % 100);
@@ -895,18 +891,18 @@ void DryingChamber::updateHumidity(int humidity)
 	}
 }
 
-void DryingChamber::startDryingChamber(void)
+void DryingChamber::startDryingChamber(string temperatureFile, string humidityFile)
 {
 	setmaximumTemperature(24);
 	setminimumTemperature(19);
 	setmaximumHumidity(50);
 	setminimumHumidity(40);
 
-	double temp = readTemperature();
+	double temp = readTemperature(temperatureFile);
 	setTemperature(temp);
 	validateTemperature();
 
-	int humidity = readHumidity();
+	int humidity = readHumidity(humidityFile);
 	setHumidity(humidity);
 	validateHumidity();
 }
@@ -972,10 +968,9 @@ void DipTank::setTemperature(double temp)
 	this->temperature = temp;
 }
 
-double DipTank::readTemperature(void)
+double DipTank::readTemperature(string fileName)
 {
 	double result = 0;
-	string fileName = "DipTankTemperature.txt";
 	string temp;
 	srand((unsigned)time(NULL));
 	int random = 1 + (rand() % 100);
@@ -1059,10 +1054,9 @@ void DipTank::updateTemperature(double temp)
 	}
 }
 
-int DipTank::readfluidLevel(void)
+int DipTank::readfluidLevel(string fileName)
 {
 	int result = 0;
-	string fileName = "DipTankFluidLevel.txt";
 	string fluidLevel;
 	srand((unsigned)time(NULL));
 	int random = 1 + (rand() % 100);
@@ -1122,8 +1116,8 @@ void DipTank::updatefluidLevel(int fluidLevel)
 
 void DipTank::validatefluidLevel(void)
 {
-	double fluidLevel = getfluidLevel();
-	double input;
+	int fluidLevel = getfluidLevel();
+	int input;
 	int lowVolume = (getmaximumfluidLevel() * 20) / 100;
 
 	if (fluidLevel<= lowVolume)
@@ -1146,17 +1140,17 @@ void DipTank::validatefluidLevel(void)
 	}
 }
 
-void DipTank::startDipTank(void)
+void DipTank::startDipTank(string temperatureFile, string fluidFile)
 {
 	setmaximumfluidLevel(50);
 	setmaximumTemperature(24);
 	setminimumTemperature(19);
 
-	double temp = readTemperature();
+	double temp = readTemperature(temperatureFile);
 	setTemperature(temp);
 	validateTemperature();
 
-	int level = readfluidLevel();
+	int level = readfluidLevel(fluidFile);
 	setfluidLevel(level);
 	validatefluidLevel();
 }
