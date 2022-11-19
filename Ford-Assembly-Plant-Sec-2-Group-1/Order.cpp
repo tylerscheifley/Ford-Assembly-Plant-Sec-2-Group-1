@@ -58,7 +58,7 @@ void Order::setInteriorLevel(string level) {
 	this->interiorLevel = level;
 }
 
-Order::Order() {
+void Order::GenerateOrder() {
 
 	string years[2] = { "2022", "2023" };
 
@@ -418,5 +418,69 @@ bool Order::saveOrder(string fileName) {
 }
 
 bool Order::loadOrder(string fileName) {
-	return true;
+	ifstream fin;
+	string line = " ";
+	int count = 0;
+	fin.open(fileName, ios::in);
+
+	if (fin.is_open()) {
+		//GET count of the lines in file
+		while (fin.peek() != EOF) {
+			getline(fin, line);
+			count++;
+		}
+		fin.close();
+
+		srand(clock() * rand());
+
+		int randomLine = rand() % count;
+
+		count = 0;
+		
+		//open file again looking for the same line
+		fin.open(fileName, ios::in);
+		line = "";
+		if (fin.is_open()) {
+			while (getline(fin, line)) {
+				count++;
+
+				if (count == randomLine) {
+					//brak if line number = random line in the file
+					break;
+				}
+
+			}
+			vector<string> v;
+			//sets the string grabbed from the line to a string stream
+			stringstream ss(line);
+
+			//loops through grabbing all the good data and putting it into a vector.
+			while (ss.good()) {
+				string substr;
+				getline(ss, substr, '|');
+				v.push_back(substr);
+			}
+
+			setMake(v[0]);
+			setYear(v[1]);
+			setModel(v[2]);
+			setTrim(v[3]);
+			setBodyPanelSet(v[4]);
+			setColour(v[5]);
+			setEngineType(v[6]);
+			setInteriorLevel(v[7]);
+			setDestination(v[8]);
+			return true;
+		}
+		else {
+			return false;
+
+		}
+
+	}
+	else {
+		return false;
+	}
+
+	
 }

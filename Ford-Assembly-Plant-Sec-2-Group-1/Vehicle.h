@@ -21,6 +21,7 @@ class Vehicle
 	string model;
 	string VIN;
 	string date;
+
 public:
 	int getCount();
 	void setCount(int);
@@ -48,8 +49,7 @@ public:
 	void setDate(string);
 	string GenerateVIN(void);
 	bool checkQAQC();
-	Vehicle();
-	Vehicle(int, Order, bool, string, string, string, string, string, string, string, string, string, string);
-
+	
+	
 };
 

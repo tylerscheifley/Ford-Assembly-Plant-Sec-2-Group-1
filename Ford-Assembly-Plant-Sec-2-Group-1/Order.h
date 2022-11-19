@@ -2,8 +2,11 @@
 #include <iostream>
 #include <fstream>
 #include <array>
+#include <string>
 #include <windows.h>
 #include <ctime>
+#include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -39,7 +42,8 @@ public:
 	void setEngineType(string);
 	string getInteriorLevel(void);
 	void setInteriorLevel(string);
-	Order();
+
+	void GenerateOrder();
 	bool saveOrder(string);
 	bool loadOrder(string);
 

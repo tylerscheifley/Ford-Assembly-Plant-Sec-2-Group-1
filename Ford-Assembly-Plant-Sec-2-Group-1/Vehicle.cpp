@@ -80,7 +80,7 @@ string Vehicle::GenerateVIN(void) {
 	vin += getModel();
 	vin += getYear();
 	int count = getCount();
-	string sCount = std::to_string(count);
+	string sCount = to_string(count);
 	vin += sCount;
 
 	while (vin.length() != 17) {
@@ -118,11 +118,5 @@ bool Vehicle::checkQAQC() {
 }
 
 
-Vehicle::Vehicle() {
 
 
-}
-
-Vehicle::Vehicle(int count, Order order, bool QAQC, string colour, string body, string chassis, string interior, string year, string make, string trim, string model, string VIN, string date) {
-
-}
