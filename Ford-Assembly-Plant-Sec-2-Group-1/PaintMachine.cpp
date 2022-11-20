@@ -20,6 +20,18 @@ PaintMachine::PaintMachine(DryingChamber* dryingChamber, PaintChamber* paintCham
 	this->RED = 0;
 	this->BLUE = 0;
 	this->GREEN = 0;
+
+	dryingChamber->setmaximumTemperature(24);
+	dryingChamber->setminimumTemperature(19);
+	dryingChamber->setmaximumHumidity(50);
+	dryingChamber->setminimumHumidity(40);
+	paintChamber->setmaximumTemperature(24);
+	paintChamber->setminimumTemperature(19);
+	paintChamber->setmaximumHumidity(50);
+	paintChamber->setminimumHumidity(40);
+	dipTank->setmaximumfluidLevel(50);
+	dipTank->setmaximumTemperature(24);
+	dipTank->setminimumTemperature(19);
 }
 
 string PaintMachine::getcolour()
@@ -635,10 +647,10 @@ void PaintChamber::validateHumidity(void)
 
 void PaintChamber::startPaintChamber(string temperatureFile, string humidityFile)
 {
-	setmaximumTemperature(24);
-	setminimumTemperature(19);
-	setmaximumHumidity(50);
-	setminimumHumidity(40);
+	//setmaximumTemperature(24);
+	//setminimumTemperature(19);
+	//setmaximumHumidity(50);
+	//setminimumHumidity(40);
 
 	double temp = readTemperature(temperatureFile);
 	setTemperature(temp);
@@ -893,10 +905,10 @@ void DryingChamber::updateHumidity(int humidity)
 
 void DryingChamber::startDryingChamber(string temperatureFile, string humidityFile)
 {
-	setmaximumTemperature(24);
-	setminimumTemperature(19);
-	setmaximumHumidity(50);
-	setminimumHumidity(40);
+	//setmaximumTemperature(24);
+	//setminimumTemperature(19);
+	//setmaximumHumidity(50);
+	//setminimumHumidity(40);
 
 	double temp = readTemperature(temperatureFile);
 	setTemperature(temp);
@@ -1142,9 +1154,9 @@ void DipTank::validatefluidLevel(void)
 
 void DipTank::startDipTank(string temperatureFile, string fluidFile)
 {
-	setmaximumfluidLevel(50);
-	setmaximumTemperature(24);
-	setminimumTemperature(19);
+	//setmaximumfluidLevel(50);
+	//setmaximumTemperature(24);
+	//setminimumTemperature(19);
 
 	double temp = readTemperature(temperatureFile);
 	setTemperature(temp);
