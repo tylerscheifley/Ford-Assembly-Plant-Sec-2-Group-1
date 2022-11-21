@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "plantFiles.Tests", "plantFi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PaintMachine Tests", "PaintMachine Tests\PaintMachine Tests.vcxproj", "{67200547-1FFB-4A94-A897-7F2B1B0C0F9D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChassisMachineTests", "ChassisMachineTests\ChassisMachineTests.vcxproj", "{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,14 @@ Global
 		{67200547-1FFB-4A94-A897-7F2B1B0C0F9D}.Release|x64.Build.0 = Release|x64
 		{67200547-1FFB-4A94-A897-7F2B1B0C0F9D}.Release|x86.ActiveCfg = Release|Win32
 		{67200547-1FFB-4A94-A897-7F2B1B0C0F9D}.Release|x86.Build.0 = Release|Win32
+		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Debug|x64.ActiveCfg = Debug|x64
+		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Debug|x64.Build.0 = Debug|x64
+		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Debug|x86.ActiveCfg = Debug|Win32
+		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Debug|x86.Build.0 = Debug|Win32
+		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Release|x64.ActiveCfg = Release|x64
+		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Release|x64.Build.0 = Release|x64
+		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Release|x86.ActiveCfg = Release|Win32
+		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

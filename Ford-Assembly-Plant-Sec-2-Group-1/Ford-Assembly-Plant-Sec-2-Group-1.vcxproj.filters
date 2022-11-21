@@ -32,8 +32,20 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClCompile Include="plantFiles.cpp">
+    <ClCompile Include="ChassisMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ChassisLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChassisMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChassisLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PaintMachine.h">

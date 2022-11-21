@@ -143,6 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PaintMachine.h" />
+    <ClCompile Include="ChassisLine.cpp" />
+    <ClCompile Include="ChassisMachine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChassisLine.h" />
+    <ClInclude Include="ChassisMachine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,8 @@
+(A) Inventory Level Update @ Sun Nov 13 20:14:48 2022
+    Line 1: F15033LV6CInvLvl: 500 F15027LV6CInvLvl: 500 F15050LV8CInvLvl: 500 F15035LV6EcoCInvLvl: 500 F15035LV6PwrBstCInvLvl: 500 Expedition35LV6CInvLvl: 497 Expedition35LV6HOCInvLvl: 500
+    Line 2: F15033LV6CInvLvl: 321 F15027LV6CInvLvl: 432 F15050LV8CInvLvl: 123 F15035LV6EcoCInvLvl: 345 F15035LV6PwrBstCInvLvl: 89 Expedition35LV6CInvLvl: 99 Expedition35LV6HOCInvLvl: 99
+(A) Inventory Level Update @ Sun Nov 13 20:16:07 2022
+    Line 1: F15033LV6CInvLvl: 500 F15027LV6CInvLvl: 500 F15050LV8CInvLvl: 500 F15035LV6EcoCInvLvl: 500 F15035LV6PwrBstCInvLvl: 500 Expedition35LV6CInvLvl: 496 Expedition35LV6HOCInvLvl: 500
+    Line 2: F15033LV6CInvLvl: 321 F15027LV6CInvLvl: 432 F15050LV8CInvLvl: 123 F15035LV6EcoCInvLvl: 345 F15035LV6PwrBstCInvLvl: 89 Expedition35LV6CInvLvl: 99 Expedition35LV6HOCInvLvl: 99
+(M) Expedition 3.5L Ecoboost V6 Chassis Inventory Level Amount Updated To: 100 In: LineOne @ Sun Nov 13 20:45:56 2022
+(M) Expedition 3.5L Ecoboost V6 Chassis Inventory Level Amount Updated To: 10 In: LineOne @ Sun Nov 13 20:46:56 2022
