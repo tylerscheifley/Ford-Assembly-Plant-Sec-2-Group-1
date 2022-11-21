@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BodyMachine.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="VehiclePanelsBay.cpp" />
   </ItemGroup>
   <ItemGroup>
