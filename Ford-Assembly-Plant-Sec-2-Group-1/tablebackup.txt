@@ -1,0 +1,288 @@
+CREATE DATABASE arnolda_8747628;
+
+USE arnolda_8747628;
+
+CREATE TABLE person (
+person_id INT NOT NULL,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+address VARCHAR(50) NOT NULL,
+city VARCHAR(50) NOT NULL,
+province VARCHAR(50) NOT NULL,
+postal_code VARCHAR(10) NOT NULL,
+telephone VARCHAR(20) NOT NULL,
+PRIMARY KEY (person_id)
+);
+
+CREATE TABLE branch (
+branch_id INT NOT NULL,
+city VARCHAR(50),
+province VARCHAR(50),
+country VARCHAR(50),
+PRIMARY KEY (branch_id)
+);
+CREATE TABLE department (
+department_id INT NOT NULL,
+department_name VARCHAR(50),
+location VARCHAR(50),
+PRIMARY KEY (department_id)
+);
+
+CREATE TABLE employee (
+employee_id INT NOT NULL,
+department_id INT NOT NULL,
+branch_id INT NOT NULL,
+salary INT,
+title VARCHAR(50),
+date_hired DATE,
+PRIMARY KEY (employee_id),
+FOREIGN KEY (employee_id) REFERENCES person(person_id),
+FOREIGN KEY (department_id) REFERENCES department(department_id),
+FOREIGN KEY (branch_id) REFERENCES branch(branch_id)
+);
+CREATE TABLE skill (
+skill_id INT NOT NULL,
+employee_id INT NOT NULL,
+name VARCHAR(30),
+PRIMARY KEY (skill_id),
+FOREIGN KEY (employee_id) REFERENCES employee(employee_id)
+);
+
+CREATE TABLE payment_method (
+payment_id INT NOT NULL,
+cvv INT,
+expiration_date DATE,
+card_number INT,
+PRIMARY KEY (payment_id)
+);
+
+CREATE TABLE customer (
+customer_id INT NOT NULL,
+primary_language VARCHAR(30),
+birth_date DATE,
+PRIMARY KEY (customer_id),
+FOREIGN KEY (customer_id) REFERENCES person(person_id)
+);
+
+CREATE TABLE customer_account (
+account_id INT NOT NULL,
+payment_id INT NOT NULL,
+branch_id INT NOT NULL,
+customer_id INT NOT NULL,
+payment_date DATE,
+payment_amount INT,
+account_type VARCHAR(30),
+PRIMARY KEY (account_id),
+FOREIGN KEY (payment_id) REFERENCES payment_method(payment_id),
+FOREIGN KEY (branch_id) REFERENCES branch(branch_id),
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);
+
+CREATE TABLE items (
+item_id INT NOT NULL,
+branch_id INT NOT NULL,
+item_description VARCHAR(50),
+colour VARCHAR(30),
+size INT,
+item_type VARCHAR(30),
+pattern VARCHAR(30),
+PRIMARY KEY (item_id),
+FOREIGN KEY (branch_id) REFERENCES branch(branch_id)
+);
+
+CREATE TABLE orders (
+order_id INT NOT NULL,
+account_id INT NOT NULL,
+item_id INT NOT NULL,
+branch_id INT NOT NULL,
+credit_authorization VARCHAR(15),
+order_status VARCHAR(30),
+order_date DATE,
+PRIMARY KEY (order_id),
+FOREIGN KEY (account_id) REFERENCES customer_account(account_id),
+FOREIGN KEY (item_id) REFERENCES items(item_id),
+FOREIGN KEY (branch_id) REFERENCES branch(branch_id)
+);
+
+INSERT INTO branch
+         (branch_id, city, province, country)
+  VALUES (1, 'Kitchener-Waterloo', 'Ontario', 'Canada'),
+         (2, 'Columbus', 'Ohio', 'USA'),
+         (3, 'Joensuu', 'North Karelia', 'Finland');
+         
+INSERT INTO person
+         (person_id, first_name, last_name, address, city, province, postal_code, telephone)
+  VALUES (1, 'Ashton', 'Philips', '1493 Cost Avenue', 'Damascus', 'Maryland', '20872', '301-482-0057' ),
+         (2, 'Walter', 'Adams', '287 Kerry Way', 'Irvine', 'California', '92614', '
+		 562-787-8124' ),
+         (3, 'Linda', 'Crawdford', '1513 Bungalow Road', 'Johnson', 'New England', '68378', '402-868-7664' ),
+         (4, 'Kayla', 'Smith', '2389 Custer Street', 'Hopewell', 'Pennsylvania', '16650', '
+		814-928-2187' ),
+         (5, 'Chris', 'Dressler', '547 Cody Road', 'Cleo Springs', 'Oklahoma', '73729', '580-438-2614' ),
+		 (6, 'Shelby', 'Hawkins', '2024 Richford Road', 'Henryville', 'Quebec', 'J0J 1E0', '450-299-6418' ),
+         (7, 'Mike', 'Holt', '4295 Beaver Creek', 'Thornhill', 'Ontario', 'L4J 1W2', '905-881-1383' ),
+         (8, 'Trevor', 'Gamboa', '99 Seguin Street', 'Parry Sound', 'Ontario', 'P2A 1W9', '705-773-9671' ),
+         (9, 'Luis', 'Freeman', '3580 Carling Avenue', 'Ottawa', 'Ontario', 'K1Z 7B5', '613-798-0304' ),
+         (10, 'Larry', 'Mondor', '8101 Dundas Street', 'Toronto', 'Ontario', 'M2N 2G8', '416-226-4805' ),
+         (11, 'Candice', 'Finley', '4930 Meadow Street', 'Edmonton', 'Alberta', 'T5J 0K7', '780-429-0123' ),
+         (12, 'Garry', 'Sanders', '1299 Reserve Street', 'Harrowsmith', 'Ontario', 'K0H 1V0', '613-372-4287' ),
+         (13, 'Brad', 'Brown', '131 Bloor Street', 'Provost', 'Albert', 'T0B 3S0', '780-704-0399' ),
+         (14, 'Edward', 'Pinkston', '3284 Finwood Road', 'Trenton', 'New Jersey', '08901', '732-419-8988' ), 
+         (15, 'Lisa', 'Hernandez', '2172 Benedum Drive', 'Green Falls', 'New York', '12590', '845-296-3487' ),
+         (16, 'Ashton', 'Philips', '1493 Cost Avenue', 'Damascus', 'Maryland', '20872', '301-482-0057' ),
+         (17, 'Walter', 'Adams', '287 Kerry Way', 'Irvine', 'California', '92614', '
+		 562-787-8124' ),
+         (18, 'Kevin', 'Rogers', '113 Bungalow Road', 'Johnson', 'Texas', '68378', '402-868-7664' ),
+         (19, 'Celeste', 'Mclean', '2369 Custer Street', 'Hopewell', 'Ohio', '19650', '
+		814-928-2187' ),
+         (20, 'Vera', 'Gambles', '4547 Cody Road', 'Cleo Springs', 'Kentucky', '73729', '580-438-2614' ),
+		 (21, 'Edna', 'Sanders', '2024 Richford Road', 'Henryville', 'Quebec', 'J0J 1E0', '450-299-6418' ),
+         (22, 'Gleen', 'Gomez', '4295 Beaver Creek', 'Thornhill', 'Ontario', 'L4J 1W2', '905-881-1383' ),
+         (23, 'Trevor', 'Gamboa', '299 Seguin Street', 'Parry Sound', 'Ontario', 'P2A 1W9', '705-773-9671' ),
+         (24, 'Kieran', 'Zimmer', '3580 Carling Avenue', 'Ottawa', 'Ontario', 'K1Z 7B5', '613-798-0304' ),
+         (25, 'Robert', 'Davis', '8101 Dundas Street', 'Toronto', 'Ontario', 'M2N 2G8', '416-226-4805' ),
+         (26, 'Doug', 'Moore', '21 main st', 'Owen Sound', 'Ontario', 'N5J 0K7', '780-429-0123' ),
+         (27, 'James', 'Baker', '1299 Reserve Street', 'Winnipeg', 'Manitoba', 'K0H 1V0', '613-372-4287' ),
+         (28, 'Alex', 'Carter', '441 Bloor Street', 'Waterloo', 'Ontario', 'T0B 3S0', '780-704-0399' ),
+         (29, 'Susan', 'Reid', '2284 Fin Street', 'Trenton', 'Georgia', '08901', '732-419-8988' ), 
+         (30, 'David', 'Simpson', '2172 Benedum Drive', 'Green Falls', 'Alaska', '12590', '845-296-3487' );
+         
+INSERT INTO payment_method
+         (payment_id, cvv, expiration_date, card_number)
+  VALUES (1, 123, '2023-02-23', 453950465),
+         (2, 421, '2022-04-23', 553950465),
+         (3, 519, '2023-05-23', 153950465),
+         (4, 636, '2025-08-23', 553950465),
+         (5, 709, '2023-06-23', 253950465),
+         (6, 777, '2022-11-24', 553950465), 
+         (7, 603, '2023-09-23', 553950465),
+         (8, 222, '2022-01-23', 553950465),
+         (9, 230, '2022-01-23', 553950465),
+         (10, 053, '2022-01-23', 553950465),
+         (11, 111, '2022-01-23', 053950465),
+         (12, 444, '2023-01-23', 55395046),
+         (13, 121, '2022-01-23', 55395046),
+         (14, 677, '2024-01-23', 753950465),
+         (15, 145, '2025-01-23', 653950465),
+         (16, 567, '2024-01-23', 553950465),
+         (17, 098, '2022-01-23', 553950465);
+ 
+ INSERT INTO department
+         (department_id, department_name, location)
+  VALUES (1, 'Marketing', 'East Wing'),
+		 (2, 'Sales', 'West Wing'),
+         (3, 'Operations', 'North Wing'),
+         (4, 'Finace', 'South Wing');
+         
+ INSERT INTO customer
+         (customer_id, primary_language, birth_date)
+  VALUES (1, 'English', '1978-01-14'), 
+		 (2, 'English', '1965-09-16'),
+         (3, 'Finnish', '1956-04-11'),
+         (4, 'English', '1990-11-17'),
+         (5, 'English', '1987-07-31'),
+         (6, 'French', '1949-08-06'),
+         (7, 'English', '1969-12-19'),
+         (8, 'Finnish', '1978-01-14'),
+         (9, 'English', '1999-04-15'),
+         (10, 'English', '1973-07-19'),
+         (11, 'Finnish', '1964-12-13'),
+         (12, 'English', '1946-04-14'),
+         (13, 'French', '1992-01-01'),
+         (14, 'Finnish', '1981-06-14'),
+         (15, 'Finnish', '1977-02-03'),
+         (16, 'French', '1952-04-25'),
+         (17, 'English', '2000-01-16');
+         
+INSERT INTO customer_account
+         (account_id, payment_id, branch_id, customer_id, payment_date, payment_amount, account_type)
+  VALUES (1, 1, 2, 1, '2021-02-11', 50000, 'Enterprise'),
+		 (2, 1, 2, 1, '2020-05-08', 25000, 'Enterprise'),
+         (3, 1, 2, 1, '2022-07-12', 175000, 'Enterprise'),
+         (4, 2, 2, 2, '2019-04-10', 4000, 'Individual'),
+         (5, 3, 3, 3, '2022-11-18', 70500, 'Business'),
+         (6, 4, 2, 4, '2020-06-22', 19000, 'Enterprise'),
+         (7, 5, 2, 5, '2021-03-01', 35000, 'Enterprise'),
+         (8, 5, 2, 5, '2021-04-10', 46750, 'Enterprise'),
+         (9, 6, 1, 6, '2022-02-21', 18500, 'Individual'),
+         (10, 7, 2, 7, '2019-01-07', 30000, 'Business'),
+         (11, 8, 3, 8, '2018-02-23', 67000, 'Enterprise'),
+         (12, 9, 1, 9, '2020-06-14', 1400, 'Individual'),
+         (13, 10, 1, 10, '2022-09-15', 240500, 'Business'),
+         (14, 11, 3, 11, '2019-08-19', 71000, 'Business'),
+         (15, 12, 1, 12, '2021-03-04', 11100, 'Enterprise'),
+         (16, 13, 1, 13, '2020-02-11', 5570, 'Individual'),
+         (17, 14, 3, 14, '2018-02-19', 9990, 'Individual'),
+         (18, 15, 3, 15, '2020-05-01', 110000, 'Enterprise'),
+         (19, 16, 2, 16, '2019-02-21', 5570, 'Individual'),
+         (20, 17, 1, 17, '2020-02-27', 23000, 'Business');
+
+  INSERT INTO items
+         (item_id, branch_id, item_description, colour, size, item_type, pattern)
+  VALUES (1, 1, 'ATV Sprayer', 'Red', 25, 'Mount', 'Small' ), 
+		 (2, 1, 'Field Sprayer', 'Red/White', 300, 'Machinery', 'Large' ), 
+         (3, 2, 'ATV Sprayer', 'Red', 25, 'Mount', 'Small' ),
+         (4, 3, 'Boom Sprayer', 'Black', 80, 'Attachment', 'Medium' ),
+		 (5, 3, 'Field Sprayer', 'Red/White', 300, 'Machinery', 'Large' ),
+         (6, 2, 'Hydraulic X-Fold Sprayer Boom', 'Sliver', 155, 'Attachment', 'Large'),
+         (7, 1, 'DTB Series Truss Sprayer Booms', 'Green', 100, 'Mount', 'Medium'),
+         (8, 2, 'Boom Sprayer', 'Black', 80, 'Attachment', 'Medium' );
+         
+INSERT INTO orders
+         (order_id, account_id, item_id, branch_id, credit_authorization, order_status, order_date)
+  VALUES (1, 1, 6, 2, 'Approved', 'Delivered', '2021-02-11'),
+		 (2, 2, 3, 2, 'Approved', 'Delivered', '2020-05-08'),
+         (3, 3, 8, 2, 'Approved', 'Shipping', '2022-07-12'),
+         (4, 4, 1, 1, 'Approved', 'Delivered', '2019-04-10'),
+         (5, 5, 6, 2,  'Pending', 'Processing', '2022-11-18'),
+         (6, 6, 4, 3, 'Approved', 'Delivered','2020-06-22'),
+         (7, 7, 5, 3, 'Approved', 'Delivered','2021-03-01'),
+         (8, 8, 8, 2, 'Approved', 'Delivered','2021-04-10'),
+         (9, 9, 4, 3, 'Approved', 'Shipping','2022-02-21'),
+         (10, 10, 1, 1, 'Approved', 'Delivered','2019-01-07'),
+         (11, 11, 2, 1, 'Approved', 'Delivered','2018-02-23'),
+         (12, 12, 5, 3, 'Approved', 'Delivered','2020-06-14'),
+         (13, 13, 1, 1, 'Approved', 'Shipping','2022-09-15'),
+         (14, 14, 4, 3, 'Approved', 'Delivered','2019-08-19'),
+         (15, 15, 3, 2, 'Pending', 'Processing','2021-03-04'),
+         (16, 16, 3, 2, 'Approved', 'Delivered','2020-02-11'),
+         (17, 17, 6, 2, 'Approved', 'Delivered','2018-02-19'),
+         (18, 18, 8, 2, 'Approved', 'Delivered','2020-05-01'),
+         (19, 19, 7, 1, 'Approved', 'Delivered','2019-02-21'),
+         (20, 20, 1, 1, 'Approved', 'Delivered','2020-02-27');
+         
+ INSERT INTO employee
+         (employee_id, department_id, branch_id, salary, title, date_hired)
+  VALUES (18, 1, 1, 60000, 'Head of Marketing', '2008-04-11'), 
+		 (19, 2, 1, 45000, ' Junior Sales Associate', '2019-05-03'),
+         (20, 3, 1, 80000,'Shipment Manager', '2011-12-02'),
+         (21, 4, 1, 75000, 'Accountant', '2007-08-08'),
+         (22, 2, 1, 100000, 'Sales Coordinator', '2015-06-27'),
+         (23, 1, 2, 60000, 'Head of Marketing', '2019-07-01'), 
+		 (24, 2, 2, 45000, ' Junior Sales Associate', '2010-09-25'),
+         (25, 3, 2, 80000,'Shipment Manager', '2020-02-12'),
+         (26, 4, 2, 75000, 'Accountant', '2017-09-08'),
+         (28, 2, 3, 85000, 'Senior Sales Associate', '2020-09-04'),
+         (29, 3, 3, 80000, 'Shippment Manager', '2022-01-24'),
+         (30, 4, 3, 75000, 'Accountant', '2020-09-13');
+         
+INSERT INTO skill
+         (skill_id, employee_id, name)
+  VALUES (1, 21,'Accounting'),
+         (2, 18, 'Marketing'),
+         (3, 19,'Customer Service'),
+         (4, 18,'Leadership'), 
+         (5, 20,'Data Administration'),
+         (6, 20,'Project Management'),
+         (7, 22,'Accounting'),
+         (8, 23, 'Marketing'),
+         (9, 22,'Customer Service'),
+         (10, 23,'Leadership'), 
+         (11, 29,'Data Administration'),
+         (12, 25,'Project Management'),
+         (13, 24,'Accounting'),
+         (14, 30, 'Accounting'),
+         (15, 29,'Customer Service'),
+         (16, 28,'Leadership'), 
+         (17, 28,'Project Management');
+  

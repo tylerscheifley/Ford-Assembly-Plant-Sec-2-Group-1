@@ -139,6 +139,10 @@
   <ItemGroup>
     <ClInclude Include="plant.h" />
     <ClInclude Include="plantFiles.h" />
+    <ClCompile Include="PaintMachine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PaintMachine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
