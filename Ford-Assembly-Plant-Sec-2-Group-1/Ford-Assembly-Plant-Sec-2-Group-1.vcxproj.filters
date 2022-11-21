@@ -77,5 +77,8 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{99f3335f-c471-4a26-8550-a027ca59621c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{cd8764aa-2f50-488f-a8ef-11d8c30cceae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
