@@ -22,7 +22,7 @@ PaintMachine::PaintMachine(DryingChamber* dryingChamber, PaintChamber* paintCham
 	this->GREEN = 0;
 
 	dryingChamber->setmaximumTemperature(24);
-	dryingChamber->setminimumTemperature(19);
+	dryingChamber->setminimumTemperature(19);//
 	dryingChamber->setmaximumHumidity(50);
 	dryingChamber->setminimumHumidity(40);
 	paintChamber->setmaximumTemperature(24);
