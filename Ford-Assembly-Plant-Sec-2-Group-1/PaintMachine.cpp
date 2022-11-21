@@ -10,6 +10,30 @@
 using namespace std;
 
 // PaintMachine Class Methods
+PaintMachine::PaintMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank)
+{
+	this->colour = "N/A";
+	this->maxpaintVolume = 0;
+	this->paintVolumeRED = 0;
+	this->paintVolumeBLUE = 0;
+	this->paintVolumeGREEN = 0;
+	this->RED = 0;
+	this->BLUE = 0;
+	this->GREEN = 0;
+
+	dryingChamber->setmaximumTemperature(24);
+	dryingChamber->setminimumTemperature(19);
+	dryingChamber->setmaximumHumidity(50);
+	dryingChamber->setminimumHumidity(40);
+	paintChamber->setmaximumTemperature(24);
+	paintChamber->setminimumTemperature(19);
+	paintChamber->setmaximumHumidity(50);
+	paintChamber->setminimumHumidity(40);
+	dipTank->setmaximumfluidLevel(50);
+	dipTank->setmaximumTemperature(24);
+	dipTank->setminimumTemperature(19);
+}
+
 string PaintMachine::getcolour()
 {
 	return this->colour;
@@ -20,26 +44,360 @@ void PaintMachine::setcolour(string colour)
 	this->colour = colour;
 }
 
-PaintMachine::PaintMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank)
+int PaintMachine::getmaxpaintVolume()
 {
-	this->colour = "N/A";
+	return this->maxpaintVolume;
+}
 
-	dryingChamber->setmaximumTemperature(24);
-	dryingChamber->setminimumTemperature(19);
-	dryingChamber->setmaximumHumidity(50);
-	dryingChamber->setminimumHumidity(40);
-	paintChamber->setmaximumTemperature(24);
-	paintChamber->setminimumTemperature(19);
-	paintChamber->setmaximumHumidity(50);
-	paintChamber->setminimumHumidity(40);
-	dipTank->setmaximumTemperature(24);
-	dipTank->setminimumTemperature(19);
+void PaintMachine::setmaxpaintVolume(int max)
+{
+	this->maxpaintVolume = max;
+}
+
+int PaintMachine::getpaintVolumeBLUE()
+{
+	return this->paintVolumeBLUE;
+}
+
+void PaintMachine::setpaintVolumeBLUE(int paintVolume)
+{
+	this->paintVolumeBLUE = paintVolume;
+}
+
+int PaintMachine::getpaintVolumeGREEN()
+{
+	return this->paintVolumeGREEN;
+}
+
+void PaintMachine::setpaintVolumeGREEN(int paintVolume)
+{
+	this->paintVolumeGREEN = paintVolume;
+}
+
+int PaintMachine::getpaintVolumeRED()
+{
+	return this->paintVolumeRED;
+}
+
+void PaintMachine::setpaintVolumeRED(int paintVolume)
+{
+	this->paintVolumeRED = paintVolume;
+}
+
+void PaintMachine::validatepaintVolume(string RGBcolour)
+{
+	int paintVolume;
+	int requestVolume;
+	int volume;
+
+	if (RGBcolour == "RED")
+	{
+		paintVolume = getpaintVolumeRED();
+		requestVolume = getRED();
+	}
+	else if (RGBcolour == "BLUE")
+	{
+		paintVolume = getpaintVolumeBLUE();
+		requestVolume = getBLUE();
+	}
+	else
+	{
+		paintVolume = getpaintVolumeGREEN();
+		requestVolume = getGREEN();
+	}
+
+	//calculating 20% of maximum capacity to warn user
+	int lowVolume = (getmaxpaintVolume() * 20) / 100;
+	int remainingVolume = (getmaxpaintVolume() / paintVolume) * 100;
+
+	if (paintVolume== 0)
+	{
+		cout << RGBcolour << " Paint Vat is empty" << endl;
+		
+		cout << "Enter Paint Volume" << endl;
+		cin >> volume;
+
+		volume = checkValidresupply(volume,RGBcolour);
+		resupplyRGBpaintVat(RGBcolour, volume);
+		
+	}
+	else if (paintVolume == lowVolume)
+	{
+		cout << RGBcolour << " Paint Vat Is At 20% Capacity" << endl;
+
+		cout << "Do you want to resupply the " << RGBcolour << "[Y/N]" << endl;
+		string choice;
+		cout << "Enter Paint Volume" << endl;
+		cin >> volume;
+
+		if (choice == "Y" || choice == "y")
+		{
+			volume = checkValidresupply(volume,RGBcolour);
+			resupplyRGBpaintVat(RGBcolour, volume);
+
+		}	
+	}
+	else if (requestVolume > paintVolume)
+	{
+		cout << RGBcolour << " Paint Vat's volume is too low to complete request" << endl;
+		cout << "Enter Paint Volume" << endl;
+		cin >> volume;
+
+		volume = checkValidresupply(volume,RGBcolour);
+		resupplyRGBpaintVat(RGBcolour, volume);
+	}
+	else
+	{
+		cout << RGBcolour << " Paint Vat is at " << remainingVolume << "% Capacity" << endl;
+	}
+}
+void PaintMachine::readRGBpaintVat(void)
+{
+	string RED;
+	string BLUE;
+	string GREEN;
+	string fileName = "RGBPaintVats.txt";
+	string temp;
+	
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		
+		getline(fin, RED);
+		int REDLength = RED.length() - 3;
+		string REDResult = RED.substr(3, REDLength);
+		int REDConversion = stoi(REDResult);
+		setpaintVolumeRED(REDConversion);
+
+		getline(fin, GREEN);
+		int GREENLength = GREEN.length() - 3;
+		string GREENResult = GREEN.substr(3, GREENLength);
+		int GREENConversion = stoi(GREENResult);
+		setpaintVolumeGREEN(GREENConversion);
+
+		getline(fin, BLUE);
+		int BLUELength = BLUE.length() - 3;
+		string BLUEResult = BLUE.substr(3, BLUELength);
+		int BLUEConversion = stoi(BLUEResult);
+		setpaintVolumeBLUE(BLUEConversion);
+
+		fin.close();
+	}
+	else
+	{
+		cout << "Error reading RGB Paint Vats" << endl;
+	}
+
+}
+void PaintMachine::updateRGBpaintVat(void)
+{
+	ofstream fout;
+	string fileName = "RGBPaintVats.txt";
+
+	fout.open(fileName);
+
+	if (fout.is_open())
+	{
+		int newREDvolume = getpaintVolumeRED() - getRED();
+		fout << "R: " << newREDvolume << endl;
+		
+		int newGREENvolume = getpaintVolumeGREEN() - getGREEN();
+		fout << "G: " << newGREENvolume << endl;
+
+		int newBLUEvolume = getpaintVolumeBLUE() - getBLUE();
+		fout << "B: " << newBLUEvolume << endl;
+		
+		fout.close();
+	}
+	else
+	{
+		cout << "Error updating RGB Paint Vats" << endl;
+	}
+}
+
+void PaintMachine::resupplyRGBpaintVat(string vat, int amount)
+{
+	ofstream fout;
+	string fileName = "RGBPaintVats.txt";
+
+	fout.open(fileName);
+
+	if (fout.is_open())
+	{
+		if (vat == "RED")
+		{
+			int newREDvolume = getpaintVolumeRED() + amount;
+			fout << "R: " << newREDvolume << endl;
+
+			int newGREENvolume = getpaintVolumeGREEN();
+			fout << "G: " << newGREENvolume << endl;
+
+			int newBLUEvolume = getpaintVolumeBLUE();
+			fout << "B: " << newBLUEvolume << endl;
+		}
+		else if (vat == "GREEN")
+		{
+			int newREDvolume = getpaintVolumeRED();
+			fout << "R: " << newREDvolume << endl;
+
+			int newGREENvolume = getpaintVolumeGREEN() + amount;
+			fout << "G: " << newGREENvolume << endl;
+
+			int newBLUEvolume = getpaintVolumeBLUE();
+			fout << "B: " << newBLUEvolume << endl;
+		}
+		else
+		{
+			int newREDvolume = getpaintVolumeRED();
+			fout << "R: " << newREDvolume << endl;
+
+			int newGREENvolume = getpaintVolumeGREEN();
+			fout << "G: " << newGREENvolume << endl;
+
+			int newBLUEvolume = getpaintVolumeBLUE() + amount;
+			fout << "B: " << newBLUEvolume << endl;
+		}
+
+		fout.close();
+	}
+	else
+	{
+		cout << "Error updating RGB Paint Vats" << endl;
+	}
+}
+
+int PaintMachine::checkValidresupply(int volume, string RGBcolour)
+{
+	bool running = true;
+	int paintVolume;
+	if (RGBcolour == "RED")
+	{
+		paintVolume = getpaintVolumeRED();
+	}
+	else if (RGBcolour == "BLUE")
+	{
+		paintVolume = getpaintVolumeBLUE();
+	}
+	else
+	{
+		paintVolume = getpaintVolumeGREEN();
+	}
+
+	while (running)
+	{
+		if (isdigit(volume))
+		{
+			if (volume > 0 && volume <= getmaxpaintVolume() && volume + paintVolume < getmaxpaintVolume())
+			{
+				running = false;
+			}
+			else
+			{
+				cout << "Paint Volume is not between range of " << 0 << "-" << getmaxpaintVolume() << endl;
+				cout << "Enter Paint Volume" << endl;
+				cin >> volume;
+			}
+		}
+		else
+		{
+			cout << "Invalid Paint Volume entered" << endl;
+			cout << "Enter Paint Volume:" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cin >> volume;
+		}
+	}
+	return volume;
+}
+
+void PaintMachine::identifyRGBvalues(void)
+{
+	int position;
+	int RGBvalue;
+	string fileName = "PlantColours.txt";
+	string input;
+	
+	ifstream fin;
+	fin.open(fileName);
+
+	if (fin.is_open())
+	{
+		while (!fin.eof())
+		{
+			getline(fin, input);
+			position = input.find(":");
+			string result = input.substr(0, position);
+			
+			if (result == getcolour())
+			{
+				result = input.substr(position + 3, 1);
+				RGBvalue = stoi(result);
+				setRED(RGBvalue);
+
+				result = input.substr(position + 6, 1);
+				RGBvalue = stoi(result);
+				setGREEN(RGBvalue);
+
+				result = input.substr(position + 9, 1);
+				RGBvalue = stoi(result);
+				setBLUE(RGBvalue);
+
+				break;
+			}
+		}
+		fin.close();
+	}
+	else
+	{
+		cout << "Error Identifying Plant Colours" << endl;
+	}
+}
+
+int PaintMachine::getRED()
+{
+	return RED;
+}
+
+void PaintMachine::setRED(int amount)
+{
+	this->RED = amount;
+}
+
+int PaintMachine::getBLUE()
+{
+	return BLUE;
+}
+
+void PaintMachine::setBLUE(int amount)
+{
+	this->BLUE = amount;
+}
+
+int PaintMachine::getGREEN()
+{
+	return GREEN;
+}
+
+void PaintMachine::setGREEN(int amount)
+{
+	this->GREEN = amount;
 }
 
 void PaintMachine::startMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank)
 {
+	//dryingChamber->s;
+	setmaxpaintVolume(500);
 
-	dipTank->startDipTank("DipTankTemperature.txt", "PlantColours.txt", "RGBPaintVats.txt", getcolour());
+	identifyRGBvalues();
+	readRGBpaintVat();
+	validatepaintVolume("RED");
+	validatepaintVolume("GREEN");
+	validatepaintVolume("BLUE");
+	updateRGBpaintVat();
+
+	dipTank->startDipTank("DipTankTemperature.txt","DipTankFluidLevel.txt");
 	paintChamber->startPaintChamber("PaintChamberTemperature.txt", "PaintChamberHumidity.txt");
 	dryingChamber->startDryingChamber("DryingChamberTemperature.txt", "DryingChamberHumidity.txt");
 
@@ -565,86 +923,31 @@ void DryingChamber::startDryingChamber(string temperatureFile, string humidityFi
 
 DipTank::DipTank()
 {
-	this->maxpaintVolume = 0;
-	this->paintVolumeRED = 0;
-	this->paintVolumeBLUE = 0;
-	this->paintVolumeGREEN = 0;
-	this->RED = 0;
-	this->BLUE = 0;
-	this->GREEN = 0;
+	this->fluidLevel = 0;
+	this->maximumfluidLevel = 0;
 	this->minimumTemperature = 0;
 	this->maximumTemperature = 0;
 	this->temperature = 0;
 }
 
-int DipTank::getmaxpaintVolume()
+int DipTank::getfluidLevel()
 {
-	return this->maxpaintVolume;
+	return this->fluidLevel;
 }
 
-void DipTank::setmaxpaintVolume(int max)
+void DipTank::setfluidLevel(int level)
 {
-	this->maxpaintVolume = max;
+	this->fluidLevel = level;
 }
 
-int DipTank::getpaintVolumeBLUE()
+int DipTank::getmaximumfluidLevel()
 {
-	return this->paintVolumeBLUE;
+	return this->maximumfluidLevel;
 }
 
-void DipTank::setpaintVolumeBLUE(int paintVolume)
+void DipTank::setmaximumfluidLevel(int level)
 {
-	this->paintVolumeBLUE = paintVolume;
-}
-
-int DipTank::getpaintVolumeGREEN()
-{
-	return this->paintVolumeGREEN;
-}
-
-void DipTank::setpaintVolumeGREEN(int paintVolume)
-{
-	this->paintVolumeGREEN = paintVolume;
-}
-
-int DipTank::getpaintVolumeRED()
-{
-	return this->paintVolumeRED;
-}
-
-void DipTank::setpaintVolumeRED(int paintVolume)
-{
-	this->paintVolumeRED = paintVolume;
-}
-
-int DipTank::getRED()
-{
-	return RED;
-}
-
-void DipTank::setRED(int amount)
-{
-	this->RED = amount;
-}
-
-int DipTank::getBLUE()
-{
-	return BLUE;
-}
-
-void DipTank::setBLUE(int amount)
-{
-	this->BLUE = amount;
-}
-
-int DipTank::getGREEN()
-{
-	return GREEN;
-}
-
-void DipTank::setGREEN(int amount)
-{
-	this->GREEN = amount;
+	this->maximumfluidLevel = level;
 }
 
 double DipTank::getmaximumTemperature()
@@ -763,279 +1066,93 @@ void DipTank::updateTemperature(double temp)
 	}
 }
 
-void DipTank::validatepaintVolume(string RGBcolour)
+int DipTank::readfluidLevel(string fileName)
 {
-	int paintVolume;
-	int requestVolume;
-	int volume;
+	int result = 0;
+	string fluidLevel;
+	srand((unsigned)time(NULL));
+	int random = 1 + (rand() % 100);
 
-	if (RGBcolour == "RED")
-	{
-		paintVolume = getpaintVolumeRED();
-		requestVolume = getRED();
-	}
-	else if (RGBcolour == "BLUE")
-	{
-		paintVolume = getpaintVolumeBLUE();
-		requestVolume = getBLUE();
-	}
-	else
-	{
-		paintVolume = getpaintVolumeGREEN();
-		requestVolume = getGREEN();
-	}
-
-	//calculating 20% of maximum capacity to warn user
-	int lowVolume = (getmaxpaintVolume() * 20) / 100;
-	int remainingVolume = (getmaxpaintVolume() / paintVolume) * 100;
-
-	if (paintVolume == 0)
-	{
-		cout << RGBcolour << " Paint Vat is empty" << endl;
-
-		cout << "Enter Paint Volume" << endl;
-		cin >> volume;
-
-		volume = checkValidresupply(volume, RGBcolour);
-		resupplyRGBpaintVat(RGBcolour, volume);
-
-	}
-	else if (paintVolume == lowVolume)
-	{
-		cout << RGBcolour << " Paint Vat Is At 20% Capacity" << endl;
-
-		cout << "Do you want to resupply the " << RGBcolour << "[Y/N]" << endl;
-		string choice;
-		cout << "Enter Paint Volume" << endl;
-		cin >> volume;
-
-		if (choice == "Y" || choice == "y")
-		{
-			volume = checkValidresupply(volume, RGBcolour);
-			resupplyRGBpaintVat(RGBcolour, volume);
-
-		}
-	}
-	else if (requestVolume > paintVolume)
-	{
-		cout << RGBcolour << " Paint Vat's volume is too low to complete request" << endl;
-		cout << "Enter Paint Volume" << endl;
-		cin >> volume;
-
-		volume = checkValidresupply(volume, RGBcolour);
-		resupplyRGBpaintVat(RGBcolour, volume);
-	}
-	else
-	{
-		cout << RGBcolour << " Paint Vat is at " << remainingVolume << "% Capacity" << endl;
-	}
-}
-void DipTank::readRGBpaintVat(string fileName)
-{
-	string RED;
-	string BLUE;
-	string GREEN;
-	//string fileName = "RGBPaintVats.txt";
-	string temp;
 
 	ifstream fin;
 	fin.open(fileName);
 
 	if (fin.is_open())
 	{
+		for (int index = 0; index < random; index++)
+		{
+			getline(fin, fluidLevel);
+		}
 
-		getline(fin, RED);
-		int REDLength = RED.length() - 3;
-		string REDResult = RED.substr(3, REDLength);
-		int REDConversion = stoi(REDResult);
-		setpaintVolumeRED(REDConversion);
-
-		getline(fin, GREEN);
-		int GREENLength = GREEN.length() - 3;
-		string GREENResult = GREEN.substr(3, GREENLength);
-		int GREENConversion = stoi(GREENResult);
-		setpaintVolumeGREEN(GREENConversion);
-
-		getline(fin, BLUE);
-		int BLUELength = BLUE.length() - 3;
-		string BLUEResult = BLUE.substr(3, BLUELength);
-		int BLUEConversion = stoi(BLUEResult);
-		setpaintVolumeBLUE(BLUEConversion);
-
+		result = stoi(fluidLevel);
 		fin.close();
 	}
 	else
 	{
-		cout << "Error reading RGB Paint Vats" << endl;
+		cout << "Error reading fluid level of Dip Tank" << endl;
 	}
 
-}
-void DipTank::updateRGBpaintVat(string fileName)
-{
-	ofstream fout;
-	//string fileName = "RGBPaintVats.txt";
-
-	fout.open(fileName);
-
-	if (fout.is_open())
-	{
-		int newREDvolume = getpaintVolumeRED() - getRED();
-		fout << "R: " << newREDvolume << endl;
-
-		int newGREENvolume = getpaintVolumeGREEN() - getGREEN();
-		fout << "G: " << newGREENvolume << endl;
-
-		int newBLUEvolume = getpaintVolumeBLUE() - getBLUE();
-		fout << "B: " << newBLUEvolume << endl;
-
-		fout.close();
-	}
-	else
-	{
-		cout << "Error updating RGB Paint Vats" << endl;
-	}
+	return result;
 }
 
-void DipTank::resupplyRGBpaintVat(string vat, int amount)
-{
-	ofstream fout;
-	string fileName = "RGBPaintVats.txt";
-
-	fout.open(fileName);
-
-	if (fout.is_open())
-	{
-		if (vat == "RED")
-		{
-			int newREDvolume = getpaintVolumeRED() + amount;
-			fout << "R: " << newREDvolume << endl;
-
-			int newGREENvolume = getpaintVolumeGREEN();
-			fout << "G: " << newGREENvolume << endl;
-
-			int newBLUEvolume = getpaintVolumeBLUE();
-			fout << "B: " << newBLUEvolume << endl;
-		}
-		else if (vat == "GREEN")
-		{
-			int newREDvolume = getpaintVolumeRED();
-			fout << "R: " << newREDvolume << endl;
-
-			int newGREENvolume = getpaintVolumeGREEN() + amount;
-			fout << "G: " << newGREENvolume << endl;
-
-			int newBLUEvolume = getpaintVolumeBLUE();
-			fout << "B: " << newBLUEvolume << endl;
-		}
-		else
-		{
-			int newREDvolume = getpaintVolumeRED();
-			fout << "R: " << newREDvolume << endl;
-
-			int newGREENvolume = getpaintVolumeGREEN();
-			fout << "G: " << newGREENvolume << endl;
-
-			int newBLUEvolume = getpaintVolumeBLUE() + amount;
-			fout << "B: " << newBLUEvolume << endl;
-		}
-
-		fout.close();
-	}
-	else
-	{
-		cout << "Error updating RGB Paint Vats" << endl;
-	}
-}
-
-int DipTank::checkValidresupply(int volume, string RGBcolour)
+void DipTank::updatefluidLevel(int fluidLevel)
 {
 	bool running = true;
-	int paintVolume;
-	if (RGBcolour == "RED")
-	{
-		paintVolume = getpaintVolumeRED();
-	}
-	else if (RGBcolour == "BLUE")
-	{
-		paintVolume = getpaintVolumeBLUE();
-	}
-	else
-	{
-		paintVolume = getpaintVolumeGREEN();
-	}
 
 	while (running)
 	{
-		if (isdigit(volume))
+		if (isdigit(fluidLevel))
 		{
-			if (volume > 0 && volume <= getmaxpaintVolume() && volume + paintVolume < getmaxpaintVolume())
+			if (fluidLevel > 0 && fluidLevel < getmaximumfluidLevel())
 			{
+				setTemperature(fluidLevel);
 				running = false;
 			}
 			else
 			{
-				cout << "Paint Volume is not between range of " << 0 << "-" << getmaxpaintVolume() << endl;
-				cout << "Enter Paint Volume" << endl;
-				cin >> volume;
+				cout << "Fluid Level not between permitted range"<< endl;
+				cout << "Enter Fluid Level:" << endl;
+				cin >> fluidLevel;
 			}
 		}
 		else
 		{
-			cout << "Invalid Paint Volume entered" << endl;
-			cout << "Enter Paint Volume:" << endl;
+			cout << "Invalid Fluid level entered" << endl;
+			cout << "Enter Fluid level:" << endl;
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cin >> volume;
+			cin >> fluidLevel;
 		}
 	}
-	return volume;
 }
 
-void DipTank::identifyRGBvalues(string fileName, string colour)
+void DipTank::validatefluidLevel(void)
 {
-	int position;
-	int RGBvalue;
-	//string fileName = "PlantColours.txt";
-	string input;
+	int fluidLevel = getfluidLevel();
+	int input;
+	int lowVolume = (getmaximumfluidLevel() * 20) / 100;
 
-	ifstream fin;
-	fin.open(fileName);
-
-	if (fin.is_open())
+	if (fluidLevel<= lowVolume)
 	{
-		while (!fin.eof())
-		{
-			getline(fin, input);
-			position = input.find(":");
-			string result = input.substr(0, position);
-
-			if (result == colour)
-			{
-				result = input.substr(position + 3, 1);
-				RGBvalue = stoi(result);
-				setRED(RGBvalue);
-
-				result = input.substr(position + 6, 1);
-				RGBvalue = stoi(result);
-				setGREEN(RGBvalue);
-
-				result = input.substr(position + 9, 1);
-				RGBvalue = stoi(result);
-				setBLUE(RGBvalue);
-
-				break;
-			}
-		}
-		fin.close();
+		cout << "[WARNING] Current Fluid level of: " << fluidLevel << "is below minimum permitted level of " << getmaximumfluidLevel() << endl;
+		cout << "Enter Fluid level:" << endl;
+		cin >> input;
+		updatefluidLevel(input);
+	}
+	else if (fluidLevel > getmaximumfluidLevel())
+	{
+		cout << "[WARNING] Current Fluid level of: " << fluidLevel << "is above maximum permitted level of " << getmaximumfluidLevel() << endl;
+		cout << "Enter Fluid level:" << endl;
+		cin >> input;
+		updatefluidLevel(input);
 	}
 	else
 	{
-		cout << "Error Identifying Plant Colours" << endl;
+		cout << "Current Fluid level of Dip Tank: " << fluidLevel << endl;
 	}
 }
 
-
-void DipTank::startDipTank(string temperatureFile, string plantcoloursFile, string paintvatFile, string colour)
+void DipTank::startDipTank(string temperatureFile, string fluidFile)
 {
 	//setmaximumfluidLevel(50);
 	//setmaximumTemperature(24);
@@ -1045,14 +1162,7 @@ void DipTank::startDipTank(string temperatureFile, string plantcoloursFile, stri
 	setTemperature(temp);
 	validateTemperature();
 
-	setmaxpaintVolume(500);
-
-	identifyRGBvalues(plantcoloursFile, colour);
-	readRGBpaintVat(paintvatFile);
-	validatepaintVolume("RED");
-	validatepaintVolume("GREEN");
-	validatepaintVolume("BLUE");
-	updateRGBpaintVat(paintvatFile);
-
-
+	int level = readfluidLevel(fluidFile);
+	setfluidLevel(level);
+	validatefluidLevel();
 }

@@ -12,56 +12,34 @@
 using namespace std;
 
 
-
 class DipTank
 {
-private:
-
-	int paintVolumeRED;
-	int paintVolumeBLUE;
-	int paintVolumeGREEN;
-	int maxpaintVolume;
-	int RED;
-	int GREEN;
-	int BLUE;
+public:
+	int fluidLevel;
 	double temperature;
 	double minimumTemperature;
 	double maximumTemperature;
-
-public:
-
-	DipTank();//
-	void startDipTank(string temperatureFile, string plantcoloursFile, string paintvatFile, string colour);
+	int maximumfluidLevel;
+	DipTank();
+	void startDipTank(string temperatureFile, string fluidFile);
+	void setfluidLevel(int fluidLevel);
+	int getfluidLevel();
 	void setTemperature(double temperature);
 	double getTemperature();
 	void setmaximumTemperature(double maxTemp);
 	double getmaximumTemperature();
 	void setminimumTemperature(double minTemp);
 	double getminimumTemperature();
+	void setmaximumfluidLevel(int maxfluid);
+	int getmaximumfluidLevel();
 	void updateTemperature(double temp);
-	double readTemperature(string fileName);
 	void validateTemperature(void);
-	void setpaintVolumeBLUE(int paintVolume);
-	int getpaintVolumeBLUE();
-	void setpaintVolumeRED(int paintVolume);
-	int getpaintVolumeRED();
-	void setpaintVolumeGREEN(int paintVolume);
-	int getpaintVolumeGREEN();
-	void setmaxpaintVolume(int max);
-	int getmaxpaintVolume();
-	void validatepaintVolume(string RGBcolor);
-	int checkValidresupply(int volume, string RGBcolor);
-	void identifyRGBvalues(string fileName, string colour);
-	void readRGBpaintVat(string fileName);
-	void updateRGBpaintVat(string fileName);
-	void resupplyRGBpaintVat(string vat, int volume);
-	void setRED(int amount);//
-	void setGREEN(int amount);//
-	void setBLUE(int amount);//
-	int getRED(void);//
-	int getGREEN(void);//
-	int getBLUE(void);//
+	double readTemperature(string filename);
+	int readfluidLevel(string fileName);
+	void updatefluidLevel(int fluidLevel);
+	void validatefluidLevel(void);
 
+	
 };
 
 class PaintChamber
@@ -133,6 +111,13 @@ class PaintMachine
 private:
 
 	string colour;
+	int paintVolumeRED;
+	int paintVolumeBLUE;
+	int paintVolumeGREEN;
+	int maxpaintVolume;
+	int RED;
+	int GREEN;
+	int BLUE;
 	DryingChamber* dryingChamber;
 	PaintChamber* paintChamber;
 	DipTank* dipTank;
@@ -143,6 +128,26 @@ public:
 	void startMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank);
 	void setcolour(string colour);
 	string getcolour();
-
+	void setpaintVolumeBLUE(int paintVolume);
+	int getpaintVolumeBLUE();
+	void setpaintVolumeRED(int paintVolume);
+	int getpaintVolumeRED();
+	void setpaintVolumeGREEN(int paintVolume);
+	int getpaintVolumeGREEN();
+	void setmaxpaintVolume(int max);
+	int getmaxpaintVolume();
+	void validatepaintVolume(string RGBcolor);
+	int checkValidresupply(int volume, string RGBcolor);
+	void identifyRGBvalues(void);
+	void readRGBpaintVat(void);
+	void updateRGBpaintVat(void);
+	void resupplyRGBpaintVat(string vat, int volume);
+	void setRED(int amount);
+	void setGREEN(int amount);
+	void setBLUE(int amount);
+	int getRED(void);
+	int getGREEN(void);
+	int getBLUE(void);
 };
+
 
