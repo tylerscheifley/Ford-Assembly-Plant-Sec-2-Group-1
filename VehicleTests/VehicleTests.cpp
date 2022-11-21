@@ -18,7 +18,7 @@ namespace VehicleTests
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Vehicle car1;
+			//Vehicle car1;
 		}
 	};
 }
