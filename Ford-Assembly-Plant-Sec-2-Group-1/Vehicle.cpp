@@ -91,6 +91,26 @@ string Vehicle::GenerateVIN(void) {
 	
 }
 
+
+bool Vehicle ::LogCompletedVehicle(string fileName) {
+	ofstream fout;
+
+	fout.open(fileName, ios::out | ios::app);
+
+	if (fout.is_open()) {
+
+		fout << getMake() << "|" << getYear() << "|" << getModel() << "|" << getTrim() << "|" << getBody() << "|" << getColour() << "|" << getChassis() << "|" << getInterior() << "|" << getVIN() << "|" << getDate()  << endl;
+
+
+		fout.close();
+		return true;
+	}
+	else {
+		cout << "ERROR" << endl;
+		return false;
+	}
+}
+
 bool Vehicle::checkQAQC() {
 
 	bool qaqc = false;
@@ -119,4 +139,44 @@ bool Vehicle::checkQAQC() {
 
 
 
+bool Vehicle::generateCount(string fileName) {
+	ifstream fin;
+	string line = " ";
+	int F150count = 0;
+	int Expcount = 0;
+	fin.open(fileName, ios::in);
+
+	if (fin.is_open()) {
+
+
+
+		while (fin.peek() != EOF) {
+			getline(fin, line);
+			vector<string> v;
+			
+			stringstream ss(line);
+
+			
+			while (ss.good()) {
+				string substr;
+				getline(ss, substr, '|');
+				v.push_back(substr);
+			}
+
+			if (v[2] == "Expedition") {
+				Expcount++;
+			}
+			else {
+				F150count++;
+			}
+		}
+		if (getModel() == "Expedition") {
+			setCount(Expcount);
+		}
+		else {
+			setCount(F150count);
+		}
+
+	}
+}
 

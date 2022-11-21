@@ -48,7 +48,9 @@ public:
 	string getDate();
 	void setDate(string);
 	string GenerateVIN(void);
+	bool generateCount(string);
 	bool checkQAQC();
+	bool LogCompletedVehicle(string);
 	
 	
 };
