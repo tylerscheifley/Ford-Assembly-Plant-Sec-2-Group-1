@@ -99,6 +99,7 @@ bool Vehicle ::LogCompletedVehicle(string fileName) {
 
 	if (fout.is_open()) {
 
+		
 		fout << getMake() << "|" << getYear() << "|" << getModel() << "|" << getTrim() << "|" << getBody() << "|" << getColour() << "|" << getChassis() << "|" << getInterior() << "|" << getVIN() << "|" << getDate()  << endl;
 
 
@@ -176,7 +177,10 @@ bool Vehicle::generateCount(string fileName) {
 		else {
 			setCount(F150count);
 		}
-
+		return true;
+	}
+	else {
+		return false;
 	}
 }
 
