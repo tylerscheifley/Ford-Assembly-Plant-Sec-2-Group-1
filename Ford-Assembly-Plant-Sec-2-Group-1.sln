@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PaintMachine Tests", "Paint
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChassisMachineTests", "ChassisMachineTests\ChassisMachineTests.vcxproj", "{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InteriorMachineTests", "InteriorMachineTests\InteriorMachineTests.vcxproj", "{1595E81D-F0D0-4301-AFF2-D56009C2536F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,14 @@ Global
 		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Release|x64.Build.0 = Release|x64
 		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Release|x86.ActiveCfg = Release|Win32
 		{2E8E00D0-C671-4811-A04F-0A31B8FCB2FB}.Release|x86.Build.0 = Release|Win32
+		{1595E81D-F0D0-4301-AFF2-D56009C2536F}.Debug|x64.ActiveCfg = Debug|x64
+		{1595E81D-F0D0-4301-AFF2-D56009C2536F}.Debug|x64.Build.0 = Debug|x64
+		{1595E81D-F0D0-4301-AFF2-D56009C2536F}.Debug|x86.ActiveCfg = Debug|Win32
+		{1595E81D-F0D0-4301-AFF2-D56009C2536F}.Debug|x86.Build.0 = Debug|Win32
+		{1595E81D-F0D0-4301-AFF2-D56009C2536F}.Release|x64.ActiveCfg = Release|x64
+		{1595E81D-F0D0-4301-AFF2-D56009C2536F}.Release|x64.Build.0 = Release|x64
+		{1595E81D-F0D0-4301-AFF2-D56009C2536F}.Release|x86.ActiveCfg = Release|Win32
+		{1595E81D-F0D0-4301-AFF2-D56009C2536F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

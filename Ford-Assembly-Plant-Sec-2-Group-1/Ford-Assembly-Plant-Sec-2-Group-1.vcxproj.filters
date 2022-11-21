@@ -15,6 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="InteriorMachine.cpp">
     <ClCompile Include="PaintMachine.cpp">
     <ClCompile Include="BodyMachine.cpp">
     <ClCompile Include="plant.cpp">
@@ -38,6 +39,17 @@
     <ClCompile Include="ChassisLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VehicleInteriorsBay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InteriorMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VehicleInteriorsBay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChassisMachine.h">
