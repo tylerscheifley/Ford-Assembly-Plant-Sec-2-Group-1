@@ -388,6 +388,8 @@ void PaintMachine::setGREEN(int amount)
 void PaintMachine::startMachine(DryingChamber* dryingChamber, PaintChamber* paintChamber, DipTank* dipTank)
 {
 	//dryingChamber->s;
+	dipTank->startDipTank("DipTankTemperature.txt","DipTankFluidLevel.txt");
+	paintChamber->startPaintChamber("PaintChamberTemperature.txt", "PaintChamberHumidity.txt");
 	setmaxpaintVolume(500);
 
 	identifyRGBvalues();
@@ -396,9 +398,6 @@ void PaintMachine::startMachine(DryingChamber* dryingChamber, PaintChamber* pain
 	validatepaintVolume("GREEN");
 	validatepaintVolume("BLUE");
 	updateRGBpaintVat();
-
-	dipTank->startDipTank("DipTankTemperature.txt","DipTankFluidLevel.txt");
-	paintChamber->startPaintChamber("PaintChamberTemperature.txt", "PaintChamberHumidity.txt");
 	dryingChamber->startDryingChamber("DryingChamberTemperature.txt", "DryingChamberHumidity.txt");
 
 }
