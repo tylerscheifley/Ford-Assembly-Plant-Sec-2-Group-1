@@ -32,9 +32,9 @@ namespace ChassisMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.engineType = "50LV8C";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.chassis = "N/A";
+			placedOrder.setEngineType("50LV8C");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setChassis("N/A");
 
 			//Switch off current bay to update bay and then switch back
 
@@ -51,7 +51,7 @@ namespace ChassisMachineTests
 
 			string expectedChassis = "F15050LV8C";
 
-			Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
+			Assert::AreEqual(expectedChassis, vehiclePlaceholder.getChassis());
 			Assert::AreEqual(99, newChassisMachine.lineOne.GetF15050LV8CInventoryAmount());
 
 		}
@@ -65,9 +65,9 @@ namespace ChassisMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.engineType = "35LV6PwrBstC";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.chassis = "N/A";
+			placedOrder.setEngineType("35LV6PwrBstC");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setChassis("N/A");
 
 			//Switch off current bay to update bay and then switch back
 
@@ -84,7 +84,7 @@ namespace ChassisMachineTests
 
 			string expectedChassis = "F15035LV6PwrBstC";
 
-			Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
+			Assert::AreEqual(expectedChassis, vehiclePlaceholder.getChassis());
 			Assert::AreEqual(99, newChassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount());
 
 		}
@@ -98,9 +98,9 @@ namespace ChassisMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.engineType = "35LV6EcoC";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.chassis = "N/A";
+			placedOrder.setEngineType("35LV6EcoC");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setChassis("N/A");
 
 			//Switch off current bay to update bay and then switch back
 
@@ -117,7 +117,7 @@ namespace ChassisMachineTests
 
 			string expectedChassis = "F15035LV6EcoC";
 
-			Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
+			Assert::AreEqual(expectedChassis, vehiclePlaceholder.getChassis());
 			Assert::AreEqual(99, newChassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount());
 
 		}
@@ -131,9 +131,9 @@ namespace ChassisMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.engineType = "33LV6C";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.chassis = "N/A";
+			placedOrder.setEngineType("33LV6C");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setChassis("N/A");
 
 			//Switch off current bay to update bay and then switch back
 
@@ -150,7 +150,7 @@ namespace ChassisMachineTests
 
 			string expectedChassis = "F15033LV6C";
 
-			Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
+			Assert::AreEqual(expectedChassis, vehiclePlaceholder.getChassis());
 			Assert::AreEqual(99, newChassisMachine.lineOne.GetF15033LV6CInventoryAmount());
 		}
 		TEST_METHOD(F15027LV6CInventory_Build27LV6CF150_27LV6CAddedAndInventoryCountDown1)
@@ -163,9 +163,9 @@ namespace ChassisMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.engineType = "27LV6C";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.chassis = "N/A";
+			placedOrder.setEngineType("27LV6C");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setChassis("N/A");
 
 			//Switch off current bay to update bay and then switch back
 
@@ -182,7 +182,7 @@ namespace ChassisMachineTests
 
 			string expectedChassis = "F15027LV6C";
 
-			Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
+			Assert::AreEqual(expectedChassis, vehiclePlaceholder.getChassis());
 			Assert::AreEqual(99, newChassisMachine.lineOne.GetF15027LV6CInventoryAmount());
 		}
 		TEST_METHOD(Expedition35LV6HOCInventory_Build35LV6HOCExpedition_35LV6HOCAddedAndInventoryCountDown1)
@@ -195,9 +195,9 @@ namespace ChassisMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.engineType = "35LV6HOC";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.chassis = "N/A";
+			placedOrder.setEngineType("35LV6HOC");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setChassis("N/A");
 
 			//Switch off current bay to update bay and then switch back
 
@@ -214,7 +214,7 @@ namespace ChassisMachineTests
 
 			string expectedChassis = "Expedition35LV6HOC";
 
-			Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
+			Assert::AreEqual(expectedChassis, vehiclePlaceholder.getChassis());
 			Assert::AreEqual(99, newChassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount());
 		}
 		TEST_METHOD(Expedition35LV6CInventory_BuildExpedition35LV6C_35LV6CAddedAndInventoryCountDown1)
@@ -227,9 +227,9 @@ namespace ChassisMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.engineType = "35LV6C";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.chassis = "N/A";
+			placedOrder.setEngineType("35LV6C");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setChassis("N/A");
 
 			//Switch off current bay to update bay and then switch back
 
@@ -246,7 +246,7 @@ namespace ChassisMachineTests
 
 			string expectedChassis = "Expedition35LV6C";
 
-			Assert::AreEqual(expectedChassis, vehiclePlaceholder.chassis);
+			Assert::AreEqual(expectedChassis, vehiclePlaceholder.getChassis());
 			Assert::AreEqual(99, newChassisMachine.lineOne.GetExpedition35LV6CInventoryAmount());
 		}
 		TEST_METHOD(InventoryThreshold_BuildExpeditionMax_InventoryLevelBelowThreshold)
@@ -259,9 +259,9 @@ namespace ChassisMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.engineType = "35LV6HOC ";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.chassis = "N/A";
+			placedOrder.setEngineType("35LV6HOC");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setChassis("N/A");
 
 			newChassisMachine.SwitchVehicleChassisLines("LineTwo");
 

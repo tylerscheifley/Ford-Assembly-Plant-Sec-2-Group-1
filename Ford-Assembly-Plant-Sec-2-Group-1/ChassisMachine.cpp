@@ -116,7 +116,7 @@ ChassisMachine::ChassisMachine()
 //this method will run the bodymachine where an order and a vehicle outline will be provided
 bool ChassisMachine::RunChassisMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 {
-	chassisType = givenOrder.model + givenOrder.engineType;
+	chassisType = givenOrder.getModel() + givenOrder.getEngineType();
 
 	if (chassisType == "Expedition35LV6C")
 	{
@@ -259,43 +259,43 @@ bool ChassisMachine::RunChassisMachine(Order givenOrder, Vehicle* vehiclePlaceHo
 	bool didAdd = false;;
 
 	//update inventory levels
-	if (vehiclePlaceHolder->chassis == "Expedition35LV6C")
+	if (vehiclePlaceHolder->getChassis() == "Expedition35LV6C")
 	{
 		currentLine->SetExpedition35LV6CInventoryAmount((currentLine->GetExpedition35LV6CInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->chassis == "Expedition35LV6HOC")
+	else if (vehiclePlaceHolder->getChassis() == "Expedition35LV6HOC")
 	{
 		currentLine->SetExpedition35LV6HOCInventoryAmount((currentLine->GetExpedition35LV6HOCInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->chassis == "F15027LV6C")
+	else if (vehiclePlaceHolder->getChassis() == "F15027LV6C")
 	{
 		currentLine->SetF15027LV6CInventoryAmount((currentLine->GetF15027LV6CInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->chassis == "F15033LV6C")
+	else if (vehiclePlaceHolder->getChassis() == "F15033LV6C")
 	{
 		currentLine->SetF15033LV6CInventoryAmount((currentLine->GetF15033LV6CInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->chassis == "F15035LV6EcoC")
+	else if (vehiclePlaceHolder->getChassis() == "F15035LV6EcoC")
 	{
 		currentLine->SetF15035LV6EcoCInventoryAmount((currentLine->GetF15035LV6EcoCInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->chassis == "F15035LV6PwrBstC")
+	else if (vehiclePlaceHolder->getChassis() == "F15035LV6PwrBstC")
 	{
 		currentLine->SetF15035LV6PwrBstCInventoryAmount((currentLine->GetF15035LV6PwrBstCInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->chassis == "F15050LV8C")
+	else if (vehiclePlaceHolder->getChassis() == "F15050LV8C")
 	{
 		currentLine->SetF15050LV8CInventoryAmount((currentLine->GetF15050LV8CInventoryAmount() - 1));
 		WriteTakenInventoryToLog();

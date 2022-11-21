@@ -32,9 +32,9 @@ namespace BodyMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.bodyPanelSet = "Regular";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.body = "N/A";
+			placedOrder.setBodyPanelSet("Regular");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setBody("N/A");
 
 			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -49,7 +49,7 @@ namespace BodyMachineTests
 			
 			string expectedBody = "RegularF150";
 
-			Assert::AreEqual(expectedBody,vehiclePlaceholder.body);
+			Assert::AreEqual(expectedBody,vehiclePlaceholder.getBody());
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetRegularF150InventoryAmount());
 
 		}
@@ -63,9 +63,9 @@ namespace BodyMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.bodyPanelSet = "SuperCab";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.body = "N/A";
+			placedOrder.setBodyPanelSet("SuperCab");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setBody("N/A");
 
 			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -80,7 +80,7 @@ namespace BodyMachineTests
 
 			string expectedBody = "SuperCabF150";
 
-			Assert::AreEqual(expectedBody, vehiclePlaceholder.body);
+			Assert::AreEqual(expectedBody, vehiclePlaceholder.getBody());
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetSuperCabF150InventoryAmount());
 		}
 		TEST_METHOD(F150SuperCrewBodyInventory_BuildSuperCrewF150_BodyAddedAndInventoryCountDown1)
@@ -93,9 +93,9 @@ namespace BodyMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.bodyPanelSet = "SuperCrew";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.body = "N/A";
+			placedOrder.setBodyPanelSet("SuperCrew");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setBody("N/A");
 
 			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -110,7 +110,7 @@ namespace BodyMachineTests
 
 			string expectedBody = "SuperCrewF150";
 
-			Assert::AreEqual(expectedBody, vehiclePlaceholder.body);
+			Assert::AreEqual(expectedBody, vehiclePlaceholder.getBody());
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
 		}
 		TEST_METHOD(ExpeditionRegularBodyInventory_BuildRegularExpedition_BodyAddedAndInventoryCountDown1)
@@ -123,9 +123,9 @@ namespace BodyMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.bodyPanelSet = "Regular";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.body = "N/A";
+			placedOrder.setBodyPanelSet("Regular");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setBody("N/A");
 
 			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -140,7 +140,7 @@ namespace BodyMachineTests
 
 			string expectedBody = "RegularExpedition";
 
-			Assert::AreEqual(expectedBody, vehiclePlaceholder.body);
+			Assert::AreEqual(expectedBody, vehiclePlaceholder.getBody());
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
 		}
 		TEST_METHOD(ExpeditionMaxBodyInventory_BuildExpeditionMax_BodyAddedAndInventoryCountDown1)
@@ -153,9 +153,9 @@ namespace BodyMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.bodyPanelSet = "Max";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.body = "N/A";
+			placedOrder.setBodyPanelSet("Max");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setBody("N/A");
 
 			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -170,7 +170,7 @@ namespace BodyMachineTests
 
 			string expectedBody = "MaxExpedition";
 
-			Assert::AreEqual(expectedBody, vehiclePlaceholder.body);
+			Assert::AreEqual(expectedBody, vehiclePlaceholder.getBody());
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
 		}
 		TEST_METHOD(InventoryThreshold_BuildExpeditionMax_InventoryLevelBelowThreshold)
@@ -183,9 +183,9 @@ namespace BodyMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.bodyPanelSet = "Max";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.body = "N/A";
+			placedOrder.setBodyPanelSet("Max");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setBody("N/A");
 
 			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
 

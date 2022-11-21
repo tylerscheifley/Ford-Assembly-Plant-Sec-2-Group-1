@@ -109,7 +109,7 @@ InteriorMachine::InteriorMachine()
 //this method will run the InteriorMachine where an order and a vehicle outline will be provided
 bool InteriorMachine::RunInteriorMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 {
-	interiorType = givenOrder.interiorLevel + givenOrder.model;
+	interiorType = givenOrder.getInteriorLevel() + givenOrder.getModel();
 
 	if (interiorType == "baseF150")
 	{
@@ -241,37 +241,37 @@ bool InteriorMachine::RunInteriorMachine(Order givenOrder, Vehicle* vehiclePlace
 	bool didAdd = false;
 
 	//update inventory levels
-	if (vehiclePlaceHolder->interior == "baseF150")
+	if (vehiclePlaceHolder->getInterior() == "baseF150")
 	{
 		currentBay->SetBaseF150InteriorInventoryAmount((currentBay->GetBaseF150InteriorInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->interior == "midF150")
+	else if (vehiclePlaceHolder->getInterior() == "midF150")
 	{
 		currentBay->SetMidF150InteriorInventoryAmount((currentBay->GetMidF150InteriorInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->interior == "highF150")
+	else if (vehiclePlaceHolder->getInterior() == "highF150")
 	{
 		currentBay->SetHighF150InteriorInventoryAmount((currentBay->GetHighF150InteriorInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->interior == "baseExpedition")
+	else if (vehiclePlaceHolder->getInterior() == "baseExpedition")
 	{
 		currentBay->SetBaseExpeditionInteriorInventoryAmount((currentBay->GetBaseExpeditionInteriorInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->interior == "midExpedition")
+	else if (vehiclePlaceHolder->getInterior() == "midExpedition")
 	{
 		currentBay->SetMidExpeditionInteriorInventoryAmount((currentBay->GetMidExpeditionInteriorInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->interior == "highExpedition")
+	else if (vehiclePlaceHolder->getInterior() == "highExpedition")
 	{
 		currentBay->SetHighExpeditionInteriorInventoryAmount((currentBay->GetHighExpeditionInteriorInventoryAmount() - 1));
 		WriteTakenInventoryToLog();

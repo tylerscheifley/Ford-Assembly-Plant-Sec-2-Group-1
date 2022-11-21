@@ -103,7 +103,7 @@ BodyMachine::BodyMachine()
 //this method will run the bodymachine where an order and a vehicle outline will be provided
 bool BodyMachine::RunBodyMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 {
-	bodyType = givenOrder.bodyPanelSet + givenOrder.model;
+	bodyType = givenOrder.getBodyPanelSet() + givenOrder.getModel();
 
 	if (bodyType == "RegularF150")
 	{
@@ -217,31 +217,31 @@ bool BodyMachine::RunBodyMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 	bool didAdd = false;
 
 	//update inventory levels
-	if (vehiclePlaceHolder->body == "RegularF150")
+	if (vehiclePlaceHolder->getBody() == "RegularF150")
 	{
 		currentBay->SetRegularF150InventoryAmount((currentBay->GetRegularF150InventoryAmount() - 1 ));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->body == "SuperCabF150")
+	else if (vehiclePlaceHolder->getBody() == "SuperCabF150")
 	{
 		currentBay->SetSuperCabF150InventoryAmount((currentBay->GetSuperCabF150InventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->body == "SuperCrewF150")
+	else if (vehiclePlaceHolder->getBody() == "SuperCrewF150")
 	{
 		currentBay->SetSuperCrewF150InventoryAmount((currentBay->GetSuperCrewF150InventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->body == "RegularExpedition")
+	else if (vehiclePlaceHolder->getBody() == "RegularExpedition")
 	{
 		currentBay->SetRegularExpeditionInventoryAmount((currentBay->GetRegularExpeditionInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->body == "MaxExpedition")
+	else if (vehiclePlaceHolder->getBody() == "MaxExpedition")
 	{
 		currentBay->SetMaxExpeditionInventoryAmount((currentBay->GetMaxExpeditionInventoryAmount() - 1));
 		WriteTakenInventoryToLog();

@@ -20,9 +20,9 @@ namespace InteriorMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.interiorLevel = "base";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.interior = "N/A";
+			placedOrder.setInteriorLevel("base");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setInterior("N/A");
 
 			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -37,7 +37,7 @@ namespace InteriorMachineTests
 
 			string expectedInterior = "baseF150";
 
-			Assert::AreEqual(expectedInterior, vehiclePlaceholder.interior);
+			Assert::AreEqual(expectedInterior, vehiclePlaceholder.getInterior());
 			Assert::AreEqual(99, newInteriorMachine.bayOne.GetBaseF150InteriorInventoryAmount());
 
 		}
@@ -51,9 +51,9 @@ namespace InteriorMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.interiorLevel = "mid";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.interior = "N/A";
+			placedOrder.setInteriorLevel("mid");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setInterior("N/A");
 
 			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -68,7 +68,7 @@ namespace InteriorMachineTests
 
 			string expectedInterior = "midF150";
 
-			Assert::AreEqual(expectedInterior, vehiclePlaceholder.interior);
+			Assert::AreEqual(expectedInterior, vehiclePlaceholder.getInterior());
 			Assert::AreEqual(99, newInteriorMachine.bayOne.GetMidF150InteriorInventoryAmount());
 		}
 		TEST_METHOD(F150HighInteriorInventory_BuildHighInteriorF150_InventoryLevelAddedAndInventoryCountDown1)
@@ -81,9 +81,9 @@ namespace InteriorMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.interiorLevel = "high";
-			placedOrder.model = "F150";
-			vehiclePlaceholder.interior = "N/A";
+			placedOrder.setInteriorLevel("high");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setInterior("N/A");
 
 			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -98,7 +98,7 @@ namespace InteriorMachineTests
 
 			string expectedInterior = "highF150";
 
-			Assert::AreEqual(expectedInterior, vehiclePlaceholder.interior);
+			Assert::AreEqual(expectedInterior, vehiclePlaceholder.getInterior());
 			Assert::AreEqual(99, newInteriorMachine.bayOne.GetHighF150InteriorInventoryAmount());
 		}
 		TEST_METHOD(ExpeditionBaseInteriorInventory_BuildBaseInteriorExpedition_InventoryLevelAddedAndInventoryCountDown1)
@@ -111,9 +111,9 @@ namespace InteriorMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.interiorLevel = "base";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.interior = "N/A";
+			placedOrder.setInteriorLevel("base");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setInterior("N/A");
 
 			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -128,7 +128,7 @@ namespace InteriorMachineTests
 
 			string expectedInterior = "baseExpedition";
 
-			Assert::AreEqual(expectedInterior, vehiclePlaceholder.interior);
+			Assert::AreEqual(expectedInterior, vehiclePlaceholder.getInterior());
 			Assert::AreEqual(99, newInteriorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount());
 		}
 		TEST_METHOD(ExpeditionMidInteriorInventory_BuildBaseInteriorExpedition_InventoryLevelAddedAndInventoryCountDown1)
@@ -141,9 +141,9 @@ namespace InteriorMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.interiorLevel = "mid";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.interior = "N/A";
+			placedOrder.setInteriorLevel("mid");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setInterior("N/A");
 
 			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -158,7 +158,7 @@ namespace InteriorMachineTests
 
 			string expectedInterior = "midExpedition";
 
-			Assert::AreEqual(expectedInterior, vehiclePlaceholder.interior);
+			Assert::AreEqual(expectedInterior, vehiclePlaceholder.getInterior());
 			Assert::AreEqual(99, newInteriorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount());
 		}
 		TEST_METHOD(ExpeditionHighInteriorInventory_BuildHighInteriorExpedition_InventoryLevelAddedAndInventoryCountDown1)
@@ -171,9 +171,9 @@ namespace InteriorMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.interiorLevel = "high";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.interior = "N/A";
+			placedOrder.setInteriorLevel("high");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setInterior("N/A");
 
 			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
 
@@ -188,7 +188,7 @@ namespace InteriorMachineTests
 
 			string expectedInterior = "highExpedition";
 
-			Assert::AreEqual(expectedInterior, vehiclePlaceholder.interior);
+			Assert::AreEqual(expectedInterior, vehiclePlaceholder.getInterior());
 			Assert::AreEqual(99, newInteriorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount());
 		}
 		TEST_METHOD(InventoryThreshold_BuildExpeditionHighInterior_InventoryLevelBelowThreshold)
@@ -201,9 +201,9 @@ namespace InteriorMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.interiorLevel = "high";
-			placedOrder.model = "Expedition";
-			vehiclePlaceholder.interior = "N/A";
+			placedOrder.setInteriorLevel("high");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setInterior("N/A");
 
 			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
 

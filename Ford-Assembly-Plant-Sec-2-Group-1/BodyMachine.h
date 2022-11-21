@@ -18,32 +18,9 @@
 #include <ctime>
 #include <string.h>
 #include "VehiclePanelsBay.h"
+#include "Vehicle.h"
 
 using namespace std;
-
-//----------------------------------------------THESE ARE STUBS AND WILL BE REMOVED AFTER INTEGRATION-------------------------------------------------------\\
-
-class Vehicle
-{
-public:
-
-	string body;
-
-	void setBody(string bodyType)
-	{
-		body = bodyType;
-	}
-
-};
-
-class Order
-{
-public:
-
-	string bodyPanelSet;
-	string model;
-
-};
 
 
 class BodyMachine

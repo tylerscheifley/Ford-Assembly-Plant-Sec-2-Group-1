@@ -18,32 +18,9 @@
 #include <ctime>
 #include <string.h>
 #include "ChassisLine.h"
+#include "Vehicle.h"
 
 using namespace std;
-
-//----------------------------------------------THESE ARE STUBS AND WILL BE REMOVED AFTER INTEGRATION-------------------------------------------------------\\
-
-class Vehicle
-{
-public:
-
-	string chassis;
-
-	void setChassis(string chassisType)
-	{
-		chassis = chassisType;
-	}
-
-};
-
-class Order
-{
-public:
-
-	string engineType;
-	string model;
-
-};
 
 
 class ChassisMachine

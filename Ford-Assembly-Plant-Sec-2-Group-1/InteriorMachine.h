@@ -18,32 +18,9 @@
 #include <ctime>
 #include <string.h>
 #include "VehicleInteriorsBay.h"
+#include "Vehicle.h"
 
 using namespace std;
-
-//----------------------------------------------THESE ARE STUBS AND WILL BE REMOVED AFTER INTEGRATION-------------------------------------------------------\\
-
-class Vehicle
-{
-public:
-
-	string interior;
-
-	void setInterior(string interiorType)
-	{
-		interior = interiorType;
-	}
-
-};
-
-class Order
-{
-public:
-
-	string interiorLevel;
-	string model;
-
-};
 
 
 class InteriorMachine
