@@ -127,6 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Order.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Order.h" />
+    <ClInclude Include="Vehicle.h" />
     <ClCompile Include="BodyMachine.cpp" />
     <ClCompile Include="VehiclePanelsBay.cpp" />
   </ItemGroup>
