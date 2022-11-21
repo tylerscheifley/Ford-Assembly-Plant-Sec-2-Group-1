@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="plant.cpp" />
     <ClCompile Include="plantFiles.cpp" />
   </ItemGroup>
