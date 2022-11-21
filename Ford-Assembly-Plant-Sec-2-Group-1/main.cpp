@@ -1,6 +1,7 @@
 #include <iostream>
 #include "plant.h"
 #include "plantFiles.h"
+#include <windows.h>
 #define MAXPLANTS 4
 
 using namespace std;
