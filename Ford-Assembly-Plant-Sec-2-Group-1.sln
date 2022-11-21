@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ford-Assembly-Plant-Sec-2-Group-1", "Ford-Assembly-Plant-Sec-2-Group-1\Ford-Assembly-Plant-Sec-2-Group-1.vcxproj", "{6B7AF844-F844-45B6-B53E-25538E0C9BAF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BodyMachineTests", "BodyMachineTests\BodyMachineTests.vcxproj", "{3C438A16-93F3-45E2-9CB5-036B143E667B}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plantFiles.Tests", "plantFilesTests.Tests\plantFiles.Tests.csproj", "{30AADBB5-7EE4-44DF-8F56-6E50C87B156B}"
 EndProject
 Global
@@ -29,6 +31,14 @@ Global
 		{6B7AF844-F844-45B6-B53E-25538E0C9BAF}.Release|x64.Build.0 = Release|x64
 		{6B7AF844-F844-45B6-B53E-25538E0C9BAF}.Release|x86.ActiveCfg = Release|Win32
 		{6B7AF844-F844-45B6-B53E-25538E0C9BAF}.Release|x86.Build.0 = Release|Win32
+		{3C438A16-93F3-45E2-9CB5-036B143E667B}.Debug|x64.ActiveCfg = Debug|x64
+		{3C438A16-93F3-45E2-9CB5-036B143E667B}.Debug|x64.Build.0 = Debug|x64
+		{3C438A16-93F3-45E2-9CB5-036B143E667B}.Debug|x86.ActiveCfg = Debug|Win32
+		{3C438A16-93F3-45E2-9CB5-036B143E667B}.Debug|x86.Build.0 = Debug|Win32
+		{3C438A16-93F3-45E2-9CB5-036B143E667B}.Release|x64.ActiveCfg = Release|x64
+		{3C438A16-93F3-45E2-9CB5-036B143E667B}.Release|x64.Build.0 = Release|x64
+		{3C438A16-93F3-45E2-9CB5-036B143E667B}.Release|x86.ActiveCfg = Release|Win32
+		{3C438A16-93F3-45E2-9CB5-036B143E667B}.Release|x86.Build.0 = Release|Win32
 		{30AADBB5-7EE4-44DF-8F56-6E50C87B156B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{30AADBB5-7EE4-44DF-8F56-6E50C87B156B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30AADBB5-7EE4-44DF-8F56-6E50C87B156B}.Debug|x64.ActiveCfg = Debug|Any CPU
