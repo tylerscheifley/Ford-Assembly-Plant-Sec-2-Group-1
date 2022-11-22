@@ -84,7 +84,7 @@ void PaintMachine::setpaintVolumeRED(int paintVolume)
 	this->paintVolumeRED = paintVolume;
 }
 
-void PaintMachine::validatepaintVolume(string RGBcolour)
+void PaintMachine::validatepaintVolume(string RGBcolour, string fileName)
 {
 	int paintVolume;
 	int requestVolume;
@@ -118,7 +118,7 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 		cin >> volume;
 
 		volume = checkValidresupply(volume,RGBcolour);
-		resupplyRGBpaintVat(RGBcolour, volume);
+		resupplyRGBpaintVat(RGBcolour, volume, fileName);
 		
 	}
 	else if (paintVolume == lowVolume)
@@ -133,7 +133,7 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 		if (choice == "Y" || choice == "y")
 		{
 			volume = checkValidresupply(volume,RGBcolour);
-			resupplyRGBpaintVat(RGBcolour, volume);
+			resupplyRGBpaintVat(RGBcolour, volume, fileName);
 
 		}	
 	}
@@ -144,19 +144,19 @@ void PaintMachine::validatepaintVolume(string RGBcolour)
 		cin >> volume;
 
 		volume = checkValidresupply(volume,RGBcolour);
-		resupplyRGBpaintVat(RGBcolour, volume);
+		resupplyRGBpaintVat(RGBcolour, volume, fileName);
 	}
 	else
 	{
 		cout << RGBcolour << " Paint Vat is at " << remainingVolume << "% Capacity" << endl;
 	}
 }
-void PaintMachine::readRGBpaintVat(void)
+void PaintMachine::readRGBpaintVat(string fileName)
 {
 	string RED;
 	string BLUE;
 	string GREEN;
-	string fileName = "RGBPaintVats.txt";
+	//string fileName = "RGBPaintVats.txt";
 	string temp;
 	
 	ifstream fin;
@@ -191,10 +191,10 @@ void PaintMachine::readRGBpaintVat(void)
 	}
 
 }
-void PaintMachine::updateRGBpaintVat(void)
+void PaintMachine::updateRGBpaintVat(string fileName)
 {
 	ofstream fout;
-	string fileName = "RGBPaintVats.txt";
+	//string fileName = "RGBPaintVats.txt";
 
 	fout.open(fileName);
 
@@ -217,10 +217,10 @@ void PaintMachine::updateRGBpaintVat(void)
 	}
 }
 
-void PaintMachine::resupplyRGBpaintVat(string vat, int amount)
+void PaintMachine::resupplyRGBpaintVat(string vat, int amount, string fileName)
 {
 	ofstream fout;
-	string fileName = "RGBPaintVats.txt";
+	//string fileName = "RGBPaintVats.txt";
 
 	fout.open(fileName);
 
@@ -312,11 +312,11 @@ int PaintMachine::checkValidresupply(int volume, string RGBcolour)
 	return volume;
 }
 
-void PaintMachine::identifyRGBvalues(void)
+void PaintMachine::identifyRGBvalues(string fileName)
 {
 	int position;
 	int RGBvalue;
-	string fileName = "PlantColours.txt";
+	//string fileName = "PlantColours.txt";
 	string input;
 	
 	ifstream fin;
@@ -392,12 +392,12 @@ void PaintMachine::startMachine(DryingChamber* dryingChamber, PaintChamber* pain
 	paintChamber->startPaintChamber("PaintChamberTemperature.txt", "PaintChamberHumidity.txt");
 	setmaxpaintVolume(500);
 
-	identifyRGBvalues();
-	readRGBpaintVat();
-	validatepaintVolume("RED");
-	validatepaintVolume("GREEN");
-	validatepaintVolume("BLUE");
-	updateRGBpaintVat();
+	identifyRGBvalues("PlantColours.txt");
+	readRGBpaintVat("RGBPaintVats.txt");
+	validatepaintVolume("RED","RGBPaintVats.txt");
+	validatepaintVolume("GREEN","RGBPaintVats.txt");
+	validatepaintVolume("BLUE","RGBPaintVats.txt");
+	updateRGBpaintVat("RGBPaintVats.txt");
 	dryingChamber->startDryingChamber("DryingChamberTemperature.txt", "DryingChamberHumidity.txt");
 
 }
