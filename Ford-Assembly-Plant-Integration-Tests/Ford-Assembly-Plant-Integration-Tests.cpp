@@ -6,6 +6,8 @@
 #include "Vehicle.h"
 #include "Order.h"
 #include "Plant.h"
+#include "PaintMachine.h"
+#include "Vehicle.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -264,6 +266,69 @@ namespace FordAssemblyPlantIntegrationTests
 		}
 
 		TEST_METHOD(InteriorMachineAndBay_IntializeBayWithConstructor_BayIsCreated)
+		{
+
+		}
+
+
+		TEST_METHOD(PaintMachine_Read_RGB_Values_INT_TEST)
+		{
+			int expectedRvalue = 6;
+			int expectedGvalue = 0;
+			int expectedBvalue = 0;
+			DipTank dipTank;
+			DryingChamber dryingChamber;
+			PaintChamber paintChamber;
+			PaintMachine paintMachine(&dryingChamber,&paintChamber,&dipTank);
+
+		}
+
+		TEST_METHOD(PaintMachine_Read_RGB_Paint_Volume_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_Update_RGB_Paint_Volume_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_DipTank_Read_Temperature_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_DipTank_Read_FluidLevel_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_PaintChamber_Read_Temperature_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_PaintChamber_Read_Humidity_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_Order_Pass_Colour_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_Initialize_DipTank_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_Initialize_DryingChamber_INT_TEST)
+		{
+
+		}
+
+		TEST_METHOD(PaintMachine_Initialize_PaintChamber_INT_TEST)
 		{
 
 		}
