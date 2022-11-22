@@ -71,6 +71,10 @@ public:
 
 	int GetLowLevelLimit();
 
+	//read the current body type that is working in this machine
+
+	string GetBodyType();
+
 };
 
 
