@@ -164,6 +164,7 @@ namespace FordAssemblyPlantIntegrationTests
 
 		TEST_METHOD(PaintMachine_Read_RGB_Values_INT_TEST)
 		{
+			// Testing race red from testing file 
 			int expectedRvalue = 6;
 			int expectedGvalue = 0;
 			int expectedBvalue = 0;
@@ -171,7 +172,10 @@ namespace FordAssemblyPlantIntegrationTests
 			DryingChamber dryingChamber;
 			PaintChamber paintChamber;
 			PaintMachine paintMachine(&dryingChamber,&paintChamber,&dipTank);
+			
+			paintMachine.identifyRGBvalues("PlantColours.txt");
 
+			Assert::IsTrue(expectedRvalue == paintMachine.getRED() && expectedGvalue == paintMachine.getGREEN() && expectedBvalue == paintMachine.getBLUE());
 		}
 
 		TEST_METHOD(PaintMachine_Read_RGB_Paint_Volume_INT_TEST)
