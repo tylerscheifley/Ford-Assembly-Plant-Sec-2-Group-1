@@ -1,7 +1,5 @@
 Agate Black Metallic: R2 G2 B2 
 
-Antimatter Blue: R0 G0 B6 
-
 Carbonized Grey Metallic: R2 G2 B2 
 
 Iconic Silver Metallic: R2 G3 B1 
@@ -10,7 +8,7 @@ Oxford White: R2 G2 B2
 
 Race Red: R6 G0 B0 
 
-Stone Grey Metallic: R3 G2 B1 
+Stone Grey Metallic: R3 G3 B1 
 
 Space White Metallic: R1 G3 B2 
 
@@ -20,4 +18,14 @@ Atlas Blue Metallic: R0 G1 B5
 
 Antimatter Blue Metallic: R1 G2 B3 
 
+Dark Matter Metallic: R2 G6 B4 
 
+Infinite Blue Metallic Tinted Clearcoat: R2 G6 B1 
+
+Jewel Red Metallic Tinted Clearcoat: R9 G6 B1 
+
+Star White Platinum Metallic Tri-Coat: R8 G6 B1 
+
+Stone Blue Metallic: R7 G6 B1 
+
+Forged Green Metallic: R4 G6 B1 
