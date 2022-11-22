@@ -1,7 +1,12 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "PaintMachine.h"
+#include "InteriorMachine.h"
+#include "ChassisMachine.h"
+#include "BodyMachine.h"
 #include "Vehicle.h"
+#include "Order.h"
+#include "Plant.h"
+#include "PaintMachine.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -13,32 +18,135 @@ namespace FordAssemblyPlantIntegrationTests
 
 		TEST_METHOD(BodyMachineAndVehicle_UpdateBodyPanelSet_VehicleReceivesBodyPanelSet)
 		{
+			BodyMachine newBodyMachine;//notably a new body machine WILL NOT be created for every vehicle just for use in this test
 
+			//This information will normally be handeled in the plant object
+			Order placedOrder;
+			Vehicle vehiclePlaceholder;
+
+			//This information will normally be handeled in the order object however we will set this test
+			//up to simulate how this connection would begin
+			placedOrder.setBodyPanelSet("SuperCrew");
+			placedOrder.setModel("F150");
+			vehiclePlaceholder.setBody("N/A");
+
+			//This information will normally be handeled in the bodyMachine and this information
+			//is not relevant to this test it will just ensure the environment is setup correctly
+
+			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+
+			newBodyMachine.UpdateSuperCrewF150InventoryAmount(100, "BayOne");
+
+			newBodyMachine.SwitchVehiclePanelsBays("BayOne");
+
+
+
+			//This call will then connect the bodyMachine with the vehicle object and if this connetion
+			//is successfull then the vehicles body varaible will be updated
+
+			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
+
+
+
+			//Now we confirm that the vehicle received the body from the bodyMachine
+
+			string expectedBody = "SuperCrewF150";
+
+			Assert::AreEqual(expectedBody, vehiclePlaceholder.getBody());
 		}
 
 		TEST_METHOD(BodyMachineAndOrder_ReadOrder_OrderInfoReceived)
 		{
+			BodyMachine newBodyMachine;//notably a new body machine WILL NOT be created for every vehicle just for use in this test
 
+			//This information will normally be handeled in the plant object
+			Order placedOrder;
+			Vehicle vehiclePlaceholder;
+
+			//This information will normally be handeled in the order object however we will set this test
+			//up to simulate how this connection would begin
+			placedOrder.setBodyPanelSet("Max");
+			placedOrder.setModel("Expedition");
+			vehiclePlaceholder.setBody("N/A"); //this call is irrelevant to this test case it will just allow the method to be called
+
+
+
+			//This call will then connect the bodyMachine with the order object and if this connection
+			//is successfull then the body machine should receive info on what body to add to the vehicle
+
+			newBodyMachine.RunBodyMachine(placedOrder, &vehiclePlaceholder);
+
+
+
+			//Now we confirm that the bodyMachine received the body type info from the order
+
+			string expectedBody = "MaxExpedition";
+
+			Assert::AreEqual(expectedBody, newBodyMachine.GetBodyType());
 		}
 
 		TEST_METHOD(BodyMachineAndCurrentBay_InventoryLevel_BayReceivesUpdateInvAmount)
 		{
+//!!!!!!FAILED AT FIRST BECAUSE THE "BayTwo" was entered as "bayTwo"
+			BodyMachine newBodyMachine;//notably a new body machine WILL NOT be created for every vehicle just for use in this test
 
+			
+
+			//This call will then connect the bodyMachine with the bay object and if this connection
+			//is successfull than the bay will receive the inventory level 100
+			newBodyMachine.UpdateMaxExpeditionInventoryAmount(100, "BayTwo");
+
+
+
+			//Now we confirm that the bodyMachine sent the inventory level to the bay object
+			Assert::AreEqual(100, newBodyMachine.bayTwo.GetMaxExpeditionInventoryAmount());
 		}
 
 		TEST_METHOD(BodyMachineAndCurrentBay_InventoryLevel_BodyMachineRecievesInvLevel)
 		{
+//!!!!!!FAILED AT FIRST BECAUSE THE "BayOne" was entered as "bayOne"
+			BodyMachine newBodyMachine;//notably a new body machine WILL NOT be created for every vehicle just for use in this test
+			// this call is irrelevant to the test but needs
+			//to be in place so that an inventory level can be read
+			newBodyMachine.SwitchVehiclePanelsBays("BayTwo");
+			newBodyMachine.UpdateRegularExpeditionInventoryAmount(100, "BayOne");
+			newBodyMachine.SwitchVehiclePanelsBays("BayOne");
 
+
+
+			//Now we confirm that the bodyMachine sent the inventory level to the bay object
+			Assert::AreEqual(100, newBodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
 		}
 
 		TEST_METHOD(BodyMachineAndCurrentBay_BayInUse_BodyMachineReceivesTrueFlag)
 		{
+			//This is not needed for updating a bay it is just for use in this test this will normally be handeled in the plant object
+			BodyMachine newBodyMachine;
 
+		
+
+			//Set this bay to in use
+			newBodyMachine.bayOne.bayInUse();
+
+
+
+			//Check to see if the bodyMachine can receive a true flag from bay one
+			Assert::IsTrue(newBodyMachine.bayOne.bayThisLineInUse());
 		}
 
 		TEST_METHOD(BodyMachineAndCurrentBay_BayNotInUse_BayReceivesFalseFlag)
 		{
+			//This is not needed for updating a bay it is just for use in this test this will normally be handeled in the plant object
+			BodyMachine newBodyMachine;
+			//Set this bay to in use
+			newBodyMachine.bayOne.bayInUse(); //This means that the opposite bay should have recieved 
 
+
+
+			//Check to see if the bodyMachine can receive a false flag from bay two
+			//even though it was not directly modified. This means that the body machine connected
+			//to bayOne and then bayOne connected to bayTwo
+			Assert::IsFalse(newBodyMachine.bayTwo.bayThisLineInUse());
 		}
 
 		TEST_METHOD(BodyMachineAndCurrentBay_SwitchBays_BaysSwitch)

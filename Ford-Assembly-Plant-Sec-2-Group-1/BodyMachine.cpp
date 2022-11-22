@@ -683,3 +683,10 @@ int BodyMachine::GetLowLevelLimit()
 {
 	return lowLevelLimit;
 }
+
+//read the current body type that is working in this machine
+
+string BodyMachine::GetBodyType()
+{
+	return bodyType;
+}
