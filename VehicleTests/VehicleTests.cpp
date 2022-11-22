@@ -1,12 +1,10 @@
 /*
 CSCN7230-22F: Project III: Software Development Life Cycle
 Ford-Assembly-Plant HMI
-
-
 */
+
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "Vehicle.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
