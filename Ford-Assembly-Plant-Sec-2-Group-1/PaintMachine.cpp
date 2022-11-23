@@ -316,7 +316,7 @@ void PaintMachine::identifyRGBvalues(string fileName)
 {
 	int position;
 	int RGBvalue;
-	//string fileName = "PlantColours.txt";
+	///string filename = "PlantColours.txt";
 	string input;
 	
 	ifstream fin;
@@ -492,6 +492,7 @@ double PaintChamber::readTemperature(string fileName)
 		}
 
 		result = stod(temp);
+		setTemperature(result);
 		fin.close();
 	}
 	else
@@ -521,6 +522,7 @@ int PaintChamber::readHumidity(string fileName)
 		}
 
 		result = stoi(humidity);
+		setHumidity(result);
 		fin.close();
 	}
 	else
@@ -751,6 +753,7 @@ double DryingChamber::readTemperature(string fileName)
 		}
 
 		result = stod(temp);
+		setTemperature(result);
 		fin.close();
 	}
 	else
@@ -780,6 +783,7 @@ int DryingChamber::readHumidity(string fileName)
 		}
 
 		result = stoi(humidity);
+		setHumidity(result);
 		fin.close();
 	}
 	else
@@ -998,6 +1002,7 @@ double DipTank::readTemperature(string fileName)
 		}
 
 		result = stod(temp);
+		setTemperature(result);
 		fin.close();
 	}
 	else
@@ -1084,6 +1089,7 @@ int DipTank::readfluidLevel(string fileName)
 		}
 
 		result = stoi(fluidLevel);
+		setfluidLevel(result);
 		fin.close();
 	}
 	else
