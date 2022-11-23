@@ -751,10 +751,10 @@ namespace FordAssemblyPlantIntegrationTests
 
 
 
-			//If the lines and chassisMachine are integrated correctly we just should
-			//be able to access the variables in the lines and they should be both false
-			//as this is defualt that the line constructor sets (this will indicate if 
-			//the constructor was called
+			// If the lines and chassisMachine are integrated correctly we just should
+			// be able to access the variables in the lines and they should be both false
+			// as this is defualt that the line constructor sets (this will indicate if 
+			// the constructor was called
 			Assert::IsFalse(newInteriorMachine.bayOne.bayThisLineInUse());
 			Assert::IsFalse(newInteriorMachine.bayTwo.bayThisLineInUse());
 		}
@@ -774,12 +774,12 @@ namespace FordAssemblyPlantIntegrationTests
 			PaintChamber paintChamber;
 			PaintMachine paintMachine(&dryingChamber,&paintChamber,&dipTank);
 			
-			//calls the identifyRGBvalues to search for Race Red and set RGB values
+			// calls the identifyRGBvalues to search for Race Red and set RGB values
 
 			paintMachine.setcolour("Race Red");
 			paintMachine.identifyRGBvalues("PlantColours.txt");
 
-			//Asserting that the paint machine RGB attributes are equal to the expected  
+			// Asserting that the paint machine RGB attributes are equal to the expected  
 
 			Assert::AreEqual(expectedRvalue,paintMachine.getRED());
 			Assert::AreEqual(expectedGvalue,paintMachine.getGREEN());
@@ -800,7 +800,7 @@ namespace FordAssemblyPlantIntegrationTests
 			PaintChamber paintChamber;
 			PaintMachine paintMachine(&dryingChamber, &paintChamber, &dipTank);
 
-			//Set painting volume is used to reset file to default 500  
+			// Set painting volume is used to reset file to default 500  
 			paintMachine.setpaintVolumeRED(500);
 			paintMachine.setpaintVolumeGREEN(500);
 			paintMachine.setpaintVolumeBLUE(500);
@@ -810,7 +810,7 @@ namespace FordAssemblyPlantIntegrationTests
 
 			paintMachine.readRGBpaintVat("TestingVats.txt");
 
-			//Checking the paint volumes read from the testingVats.txt file returns 500 for RGB paint volumes
+			// Checking the paint volumes read from the testingVats.txt file returns 500 for RGB paint volumes
 			Assert::AreEqual(expectedRpaintVolume, paintMachine.getpaintVolumeRED());
 			Assert::AreEqual(expectedGpaintVolume, paintMachine.getpaintVolumeGREEN());
 			Assert::AreEqual(expectedBpaintVolume, paintMachine.getpaintVolumeBLUE());
@@ -831,26 +831,27 @@ namespace FordAssemblyPlantIntegrationTests
 			PaintChamber paintChamber;
 			PaintMachine paintMachine(&dryingChamber, &paintChamber, &dipTank);
 			
-			//Resetting file to default RGB paint volumes of 500L each
+			// Resetting file to default RGB paint volumes of 500L each
 			paintMachine.resupplyRGBpaintVat("RED", 500, "TestingVats.txt");
 			paintMachine.resupplyRGBpaintVat("GREEN", 500, "TestingVats.txt");
 			paintMachine.resupplyRGBpaintVat("BLUE", 500, "TestingVats.txt");
 			
-			//setting the amount of liters to be subtracted
+			// setting the amount of liters to be subtracted
 			paintMachine.setpaintVolumeRED(500);
 			paintMachine.setpaintVolumeGREEN(500);
 			paintMachine.setpaintVolumeBLUE(500);
 
-			//amount to be subtracted from paint volume in the file
+			// amount to be subtracted from paint volume in the file
 			paintMachine.setRED(400);
 			paintMachine.setGREEN(400);
 			paintMachine.setBLUE(400);
 
 
 			paintMachine.updateRGBpaintVat("TestingVats.txt");
-			//
+			// Reading the RGB paint vat file to read the now updated values
 			paintMachine.readRGBpaintVat("TestingVats.txt");
 
+			// checking that the integer values in the text RGB paint vat file were updated
 			Assert::AreEqual(expectedRpaintVolume, paintMachine.getpaintVolumeRED());
 			Assert::AreEqual(expectedGpaintVolume, paintMachine.getpaintVolumeGREEN());
 			Assert::AreEqual(expectedBpaintVolume, paintMachine.getpaintVolumeBLUE());
@@ -858,28 +859,36 @@ namespace FordAssemblyPlantIntegrationTests
 
 		TEST_METHOD(PaintMachine_DipTank_Read_Temperature_INT_TEST)
 		{
+			// Testing the dip tank class, reading accurate temperature from a file
+			// Expected value is 19 degrees
+
 			DipTank dipTank;
 			double expectedTemp = 19;
 
+			// Uses the testingTemperatureDiptank.txt to search for the value 19
 			dipTank.readTemperature("testingTemperatureDiptank.txt");
 
 			Assert::AreEqual(expectedTemp, dipTank.getTemperature());
-			//dip tank had no setter
+			// Error discoveded: dip tank had no setter
 		}
 
 		TEST_METHOD(PaintMachine_DipTank_Read_FluidLevel_INT_TEST)
 		{
+			// Testing the dip tank reading from the fluid level file
+			// Expected value is 50L
 			DipTank dipTank;
 			int expectedfluidLevel = 50;
 
 			dipTank.readfluidLevel("testingfluidLevelDiptank.txt");
 
 			Assert::AreEqual(expectedfluidLevel, dipTank.getfluidLevel());
-			// Dip tank had no setter
+			// ERROR detected: Dip tank had no setter for fluid level
 		}
 
 		TEST_METHOD(PaintMachine_PaintChamber_Read_Temperature_INT_TEST)
 		{
+			// Testing the PaintChamber reading from the temperature file
+			// Expected value is 20 degrees
 			PaintChamber paintChamber;
 			double expectedTemperature =20;
 
@@ -890,6 +899,8 @@ namespace FordAssemblyPlantIntegrationTests
 
 		TEST_METHOD(PaintMachine_PaintChamber_Read_Humidity_INT_TEST)
 		{
+			// Testing the PaintChamber method of reading from the humidity file
+			// Expected value is 45%
 			PaintChamber paintChamber;
 			int expectedhumidity = 45;
 
@@ -900,13 +911,16 @@ namespace FordAssemblyPlantIntegrationTests
 
 		TEST_METHOD(PaintMachine_Order_Pass_Colour_INT_TEST)
 		{
+			// Testing that a colour can be passed from order to paintMachine colour attribute
+			// Expected colour is Infinite Blue Metallic Tinted Clearcoat
 			string expectedColour = "Infinite Blue Metallic Tinted Clearcoat";
-			DipTank dipTank;
+			DipTank dipTank; // These objects are needed to initialize the paint machine
 			DryingChamber dryingChamber;
 			PaintChamber paintChamber;
 			PaintMachine paintMachine(&dryingChamber, &paintChamber, &dipTank);
 			Order order;
 
+			// Setting the paintMachine's colour by getting the order's colour
 			order.setColour("Infinite Blue Metallic Tinted Clearcoat");
 			paintMachine.setcolour(order.getColour());
 
@@ -916,6 +930,9 @@ namespace FordAssemblyPlantIntegrationTests
 
 		TEST_METHOD(PaintMachine_Initialize_DipTank_INT_TEST)
 		{
+			// Testing that the paint machine can initialize the max and min value of dip tank
+			// Expected maximum temperature: 24 degrees, minimum: 19 degrees
+			// Expected maximum fluid level: 50L
 			DipTank dipTank;
 			DryingChamber dryingChamber;
 			PaintChamber paintChamber;
@@ -924,6 +941,7 @@ namespace FordAssemblyPlantIntegrationTests
 			double expectedMINtemp = 19;
 			int expectedMAXfluidLevel = 50;
 
+			// Ensuirng the diptanks values are updated from the paint machine constructor
 			Assert::AreEqual(expectedMAXfluidLevel, dipTank.getmaximumfluidLevel());
 			Assert::AreEqual(expectedMINtemp, dipTank.getminimumTemperature());
 			Assert::AreEqual(expectedMAXtemp, dipTank.getmaximumTemperature());
@@ -932,6 +950,9 @@ namespace FordAssemblyPlantIntegrationTests
 
 		TEST_METHOD(PaintMachine_Initialize_DryingChamber_INT_TEST)
 		{
+			// Testing the DryingChamber's min and max values are initialized by the PaintMachine
+			// Expected maximum temperature: 24 degrees, minimum: 19 degrees
+			// Expected maximum humidity: 50%, minimum: 40%
 			DipTank dipTank;
 			DryingChamber dryingChamber;
 			PaintChamber paintChamber;
@@ -941,6 +962,7 @@ namespace FordAssemblyPlantIntegrationTests
 			int expectedMAXhumidity = 50;
 			int expectedMINhumidity = 40;
 
+			// Asserting than the dryingChamber is updated by the paintMachine constructor
 			Assert::AreEqual(expectedMAXhumidity, dryingChamber.getmaximumHumidity());
 			Assert::AreEqual(expectedMINhumidity, dryingChamber.getminimumHumidity());
 			Assert::AreEqual(expectedMAXtemp, dryingChamber.getmaximumTemperature());
@@ -949,6 +971,9 @@ namespace FordAssemblyPlantIntegrationTests
 
 		TEST_METHOD(PaintMachine_Initialize_PaintChamber_INT_TEST)
 		{
+			// Testing the PaintChamber's minimum and maximum values are initialized by the PaintMachine
+			// Expected maximum temperature: 24 degrees, minimum: 19 degrees
+			// Expected maximum humidity: 50%, minimum: 40%
 			DipTank dipTank;
 			DryingChamber dryingChamber;
 			PaintChamber paintChamber;
@@ -958,6 +983,7 @@ namespace FordAssemblyPlantIntegrationTests
 			int expectedMAXhumidity = 50;
 			int expectedMINhumidity = 40;
 
+			// Checking that the paint machine constructor functions as intended
 			Assert::AreEqual(expectedMAXhumidity, paintChamber.getmaximumHumidity());
 			Assert::AreEqual(expectedMINhumidity, paintChamber.getminimumHumidity());
 			Assert::AreEqual(expectedMAXtemp, paintChamber.getmaximumTemperature());
