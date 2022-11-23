@@ -7,8 +7,7 @@
 #include "Order.h"
 #include "Plant.h"
 #include "PaintMachine.h"
-//#include "PlantColours.txt"
-
+#include "VehiclePanelsBay.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

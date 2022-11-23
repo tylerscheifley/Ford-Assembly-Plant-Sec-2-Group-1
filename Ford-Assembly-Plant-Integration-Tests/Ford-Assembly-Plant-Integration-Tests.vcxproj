@@ -101,7 +101,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>..\Ford-Assembly-Plant-Sec-2-Group-1\x64\Debug;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>VehiclePanelsBay.obj;VehicleInteriorsBay.obj;Vehicle.obj;plantFiles.obj;plant.obj;PaintMachine.obj;Order.obj;main.obj;InteriorMachine.obj;ChassisMachine.obj;ChassisLine.obj;BodyMachine.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Vehicle.obj;plantFiles.obj;plant.obj;PaintMachine.obj;Order.obj;main.obj;InteriorMachine.obj;VehicleInteriorsBay.obj;ChassisMachine.obj;ChassisLine.obj;BodyMachine.obj;VehiclePanelsBay.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
