@@ -73,4 +73,7 @@ public:
 
 	int GetLowLevelLimit();
 
+	//read the current interior type that is working in this machine
+
+	string GetInteriorType();
 };

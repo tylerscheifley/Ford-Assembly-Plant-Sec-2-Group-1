@@ -26,7 +26,6 @@ ChassisMachine::ChassisMachine()
 	lineOne = newLineOne;
 	ChassisLine newLineTwo;
 	lineTwo = newLineTwo;
-	lineOne.lineInUse();
 	//read inventory levels in from the bay (the text file)
 
 	//Bay 1-----------------------
@@ -869,4 +868,11 @@ bool ChassisMachine::SetLowLevelLimit(int givenThreshold)
 int ChassisMachine::GetLowLevelLimit()
 {
 	return lowLevelLimit;
+}
+
+//read the current chassis type that is working in this machine
+
+string ChassisMachine::GetChassisType()
+{
+	return chassisType;
 }

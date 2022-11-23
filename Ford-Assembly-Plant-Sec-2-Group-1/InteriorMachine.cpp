@@ -779,3 +779,10 @@ int InteriorMachine::GetLowLevelLimit()
 {
 	return lowLevelLimit;
 }
+
+//read the current interior type that is working in this machine
+
+string InteriorMachine::GetInteriorType()
+{
+	return interiorType;
+}

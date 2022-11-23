@@ -75,4 +75,8 @@ public:
 
 	int GetLowLevelLimit();
 
+	//read the current chassis type that is working in this machine
+
+	string GetChassisType();
+
 };
