@@ -331,7 +331,7 @@ int main()
 	gladLoadGL();
 	// Specify the viewport of OpenGL in the Window
 	// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
-	glViewport(0, 0, 1920, 1080);
+	glViewport(0, 0, 1280, 1024);
 
 
 
@@ -363,13 +363,6 @@ int main()
 
 
 
-	// Vertices coordinates
-	GLfloat vertices[] =
-	{
-		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower left corner
-		0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower right corner
-		0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f // Upper corner
-	};
 
 	// Create reference containers for the Vartex Array Object and the Vertex Buffer Object
 	GLuint VAO, VBO;
@@ -384,7 +377,7 @@ int main()
 	// Bind the VBO specifying it's a GL_ARRAY_BUFFER
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	// Introduce the vertices into the VBO
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
 
 	// Configure the Vertex Attribute so that OpenGL knows how to read the VBO
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
@@ -486,8 +479,8 @@ int main()
 	glUniform4f(glGetUniformLocation(shaderProgram, "color"), color[0], color[1], color[2], color[3]);
 
 
-	int my_image_width = 1820;
-	int my_image_height = 1980;
+	int my_image_width = 1280;
+	int my_image_height = 1024;
 	GLuint my_image_texture = 0;
 	bool ret = LoadTextureFromFile("Images/Ford_Assembly_Line_GUI_Background.png", &my_image_texture, &my_image_width, &my_image_height);
 	IM_ASSERT(ret);
@@ -637,10 +630,7 @@ int main()
 		glUseProgram(shaderProgram);
 		// Bind the VAO so OpenGL knows to use it
 		glBindVertexArray(VAO);
-		// Only draw the triangle if the ImGUI checkbox is ticked
-		if (drawTriangle)
-			// Draw the triangle using the GL_TRIANGLES primitive
-			glDrawArrays(GL_TRIANGLES, 0, 3);
+	
 
 		//BODY MACHINE================================================================================================================================================
 			/*
@@ -1996,7 +1986,7 @@ printf("Today's temperature was 23%cC",ch);
 		// We specify a default position/size in case there's no data in the .ini file.
 		// We only do it to make the demo applications a little more welcoming, but typically this isn't required.
 		const ImGuiViewport* main_viewport = ImGui::GetMainViewport();
-		ImGui::SetNextWindowSize(ImVec2(1920, 1080), ImGuiCond_FirstUseEver);
+		ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 		// Main body of the Demo window starts here.
 		if (!ImGui::Begin("Ford Assembly Plant", open, window_flags))
