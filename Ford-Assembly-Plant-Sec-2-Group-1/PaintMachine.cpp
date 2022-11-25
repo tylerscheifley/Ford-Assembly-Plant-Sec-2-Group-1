@@ -29,7 +29,7 @@ PaintMachine::PaintMachine(DryingChamber* dryingChamber, PaintChamber* paintCham
 	paintChamber->setminimumTemperature(19);
 	paintChamber->setmaximumHumidity(50);
 	paintChamber->setminimumHumidity(40);
-	dipTank->setmaximumfluidLevel(50);
+	dipTank->setmaximumfluidLevel(1000);
 	dipTank->setmaximumTemperature(24);
 	dipTank->setminimumTemperature(19);
 }

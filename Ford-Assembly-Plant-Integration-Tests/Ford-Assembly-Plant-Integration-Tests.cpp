@@ -938,7 +938,7 @@ namespace FordAssemblyPlantIntegrationTests
 			PaintMachine paintMachine(&dryingChamber, &paintChamber, &dipTank);
 			double expectedMAXtemp = 24;
 			double expectedMINtemp = 19;
-			int expectedMAXfluidLevel = 50;
+			int expectedMAXfluidLevel = 1000;
 
 			// Ensuirng the diptanks values are updated from the paint machine constructor
 			Assert::AreEqual(expectedMAXfluidLevel, dipTank.getmaximumfluidLevel());
