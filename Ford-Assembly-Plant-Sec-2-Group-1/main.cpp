@@ -317,6 +317,9 @@ string* pathFinder(Order order, string* container[])
 
 int main()
 {
+	
+
+
 	static int e = 0;
 	static bool check = true;
 
@@ -381,7 +384,7 @@ int main()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	// Create a GLFWwindow object of 800 by 800 pixels, naming it "YoutubeOpenGL"
-	GLFWwindow* window = glfwCreateWindow(1920, 1080, "ImGui + GLFW", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(1920, 1080, "ImGui + GLFW", glfwGetPrimaryMonitor(), NULL);
 	// Error check if the window fails to create
 	if (window == NULL)
 	{
@@ -646,25 +649,23 @@ int main()
 	bool PaintChamber = LoadTextureFromFile("Images/DryingchamberIcon.png", &PaintChamber_image_texture, &PaintChamber_image_width, &PaintChamber_image_height);
 	IM_ASSERT(PaintChamber);
 
+
 	bool bodyMachine = true;
 	bool paintMachine = true;
 	bool chassisMachine = true;
 	bool interiorMachine = true;
+	bool ClosedHMI = false;
 	
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{
-
 		
 			
 			while (bodyMachine) {
 
-				if (glfwWindowShouldClose(window)) {
-					bodyMachine = false;
-					paintMachine = false;
-					chassisMachine = false;
-					interiorMachine = false;
-				}
+				glfwPollEvents();
+
+			
 				
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
@@ -894,6 +895,23 @@ int main()
 					
 					bodyMachine = false;
 					paintMachine = true;
+				}
+				if (ImGui::Button("Close HMI")) {
+					bodyMachine = false;
+					paintMachine = false;
+					chassisMachine = false;
+					interiorMachine = false;
+
+					// Deletes all ImGUI instances
+					ImGui_ImplOpenGL3_Shutdown();
+					ImGui_ImplGlfw_Shutdown();
+					ImGui::DestroyContext();
+
+					glfwDestroyWindow(window);
+
+					glfwTerminate();
+					ClosedHMI = true;
+					return 0;
 				}
 				ImGui::Separator();
 
@@ -2186,7 +2204,7 @@ int main()
 				// Swap the back buffer with the front buffer
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
-				glfwPollEvents();
+				
 			
 
 				i++;
@@ -2200,7 +2218,12 @@ int main()
 				
 			}
 
+			if (!bodyMachine) {
+
+			}
+
 			while (paintMachine) {
+				glfwPollEvents();
 
 				if (glfwWindowShouldClose(window)) {
 					bodyMachine = false;
@@ -2438,6 +2461,24 @@ int main()
 					paintMachine = false;
 					chassisMachine = true;
 				}
+				if (ImGui::Button("Close HMI")) {
+
+					bodyMachine = false;
+					paintMachine = false;
+					chassisMachine = false;
+					interiorMachine = false;
+
+					// Deletes all ImGUI instances
+					ImGui_ImplOpenGL3_Shutdown();
+					ImGui_ImplGlfw_Shutdown();
+					ImGui::DestroyContext();
+
+					glfwDestroyWindow(window);
+
+					glfwTerminate();
+					ClosedHMI = true;
+					return 0;
+				}
 				ImGui::Separator();
 
 				if (ImGui::Checkbox("Start Line", &check)) {};
@@ -3729,7 +3770,7 @@ int main()
 				// Swap the back buffer with the front buffer
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
-				glfwPollEvents();
+				
 			
 				i++;
 				if (check == true) {
@@ -3740,9 +3781,13 @@ int main()
 					}
 				}
 			}
+			if (!paintMachine) {
+
+		
+			}
 
 			while (chassisMachine) {
-
+				glfwPollEvents();
 				if (glfwWindowShouldClose(window)) {
 					bodyMachine = false;
 					paintMachine = false;
@@ -3979,6 +4024,24 @@ int main()
 					chassisMachine = false;
 					interiorMachine = true;
 				}
+				if (ImGui::Button("Close HMI")) {
+
+					bodyMachine = false;
+					paintMachine = false;
+					chassisMachine = false;
+					interiorMachine = false;
+
+					// Deletes all ImGUI instances
+					ImGui_ImplOpenGL3_Shutdown();
+					ImGui_ImplGlfw_Shutdown();
+					ImGui::DestroyContext();
+
+					glfwDestroyWindow(window);
+
+					glfwTerminate();
+					ClosedHMI = true;
+					return 0;
+				}
 				ImGui::Separator();
 
 				if (ImGui::Checkbox("Start Line", &check)) {};
@@ -5270,7 +5333,7 @@ int main()
 				// Swap the back buffer with the front buffer
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
-				glfwPollEvents();
+
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -5282,10 +5345,14 @@ int main()
 				}
 
 			}
+			if (!chassisMachine) {
 
+
+			}
 
 			while (interiorMachine) {
 
+				glfwPollEvents();
 				if (glfwWindowShouldClose(window)) {
 					bodyMachine = false;
 					paintMachine = false;
@@ -5522,6 +5589,25 @@ int main()
 					interiorMachine = false;
 					bodyMachine = true;
 				}
+				if (ImGui::Button("Close HMI")) {
+
+					bodyMachine = false;
+					paintMachine = false;
+					chassisMachine = false;
+					interiorMachine = false;
+
+					// Deletes all ImGUI instances
+					ImGui_ImplOpenGL3_Shutdown();
+					ImGui_ImplGlfw_Shutdown();
+					ImGui::DestroyContext();
+
+					glfwDestroyWindow(window);
+
+					glfwTerminate();
+					ClosedHMI = true;
+					return 0;
+
+				}
 				ImGui::Separator();
 
 				if (ImGui::Checkbox("Start Line", &check)) {};
@@ -6813,7 +6899,7 @@ int main()
 				// Swap the back buffer with the front buffer
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
-				glfwPollEvents();
+			
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -6824,6 +6910,66 @@ int main()
 				}
 			}
 
+			if (!interiorMachine) {
+				if (!ClosedHMI) {
+					// Deletes all ImGUI instances
+					ImGui_ImplOpenGL3_Shutdown();
+					ImGui_ImplGlfw_Shutdown();
+					ImGui::DestroyContext();
+
+					glfwDestroyWindow(window);
+
+					glfwTerminate();
+
+					// Initialize GLFW
+					glfwInit();
+
+					// Tell GLFW what version of OpenGL we are using 
+					// In this case we are using OpenGL 3.3
+					glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+					glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+					// Tell GLFW we are using the CORE profile
+					// So that means we only have the modern functions
+					glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+					// Create a GLFWwindow object of 800 by 800 pixels, naming it "YoutubeOpenGL"
+					window = glfwCreateWindow(1920, 1080, "ImGui + GLFW", glfwGetPrimaryMonitor(), NULL);
+					// Error check if the window fails to create
+					if (window == NULL)
+					{
+						std::cout << "Failed to create GLFW window" << std::endl;
+						glfwTerminate();
+						return -1;
+					}
+					// Introduce the window into the current context
+					glfwMakeContextCurrent(window);
+
+					//Load GLAD so it configures OpenGL
+					gladLoadGL();
+					// Specify the viewport of OpenGL in the Window
+					// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
+					glViewport(0, 0, 1280, 1024);
+
+					IMGUI_CHECKVERSION();
+					ImGui::CreateContext();
+					ImGuiIO& io = ImGui::GetIO(); (void)io;
+					ImGui::StyleColorsDark();
+					ImGui_ImplGlfw_InitForOpenGL(window, true);
+					ImGui_ImplOpenGL3_Init("#version 330");
+
+
+					bool ret = LoadTextureFromFile("Images/Ford_Assembly_Line_GUI_Background.png", &my_image_texture, &my_image_width, &my_image_height);
+					IM_ASSERT(ret);
+
+					bool DipTank = LoadTextureFromFile("Images/Diptank.png", &DipTank_image_texture, &DipTank_image_width, &DipTank_image_height);
+					IM_ASSERT(DipTank);
+
+					bool PaintChamber = LoadTextureFromFile("Images/DryingchamberIcon.png", &PaintChamber_image_texture, &PaintChamber_image_width, &PaintChamber_image_height);
+					IM_ASSERT(PaintChamber);
+				}
+
+			}
+
 
 
 
@@ -6831,20 +6977,19 @@ int main()
 		
 	
 	
+	if (!ClosedHMI) {
+		// Deletes all ImGUI instances
+		ImGui_ImplOpenGL3_Shutdown();
+		ImGui_ImplGlfw_Shutdown();
+		ImGui::DestroyContext();
 
-	// Deletes all ImGUI instances
-	ImGui_ImplOpenGL3_Shutdown();
-	ImGui_ImplGlfw_Shutdown();
-	ImGui::DestroyContext();
 
-	// Delete all the objects we've created
-	glDeleteVertexArrays(1, &VAO);
-	glDeleteBuffers(1, &VBO);
-	glDeleteProgram(shaderProgram);
-	// Delete window before ending the program
-	glfwDestroyWindow(window);
-	// Terminate GLFW before ending the program
-	glfwTerminate();
+		// Delete window before ending the program
+		glfwDestroyWindow(window);
+	}
+		// Terminate GLFW before ending the program
+		glfwTerminate();
+	
 	return 0;
 }
 
