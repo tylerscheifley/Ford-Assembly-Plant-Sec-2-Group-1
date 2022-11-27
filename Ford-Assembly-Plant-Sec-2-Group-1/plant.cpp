@@ -14,22 +14,8 @@ Plant::Plant(string date, int globalAirQuality, int numVehicleToday, double glob
 	this->assemblyLineStatus = assemblyLineStatus;
 
 	// init for order;
-	order = new Order();
+	order.GenerateOrder();
 
-	// init for body
-	bodyMachine_obj = new BodyMachine();
-
-	// init for paint
-	dipTank = new DipTank();
-	dryingChamber = new DryingChamber();
-	paintChamber = new PaintChamber();
-	paintMachine = new PaintMachine(&dryingChamber_obj, &paintChamber_obj, &dipTank_obj);
-
-	// init for chassis
-	chassisMachine = new ChassisMachine();
-
-	// init for interior Machine
-	interiorMachine = new InteriorMachine();
 }
 
 Plant::Plant()
@@ -42,24 +28,7 @@ Plant::Plant()
 	vehicleQuota = 0;
 	assemblyLineStatus = false;
 
-	// init for order;
-	order = new Order();
-	vehicle = new Vehicle();
 
-	// init for body
-	bodyMachine = new BodyMachine();
-	
-	// init for paint
-	dipTank = new DipTank();
-	dryingChamber = new DryingChamber();
-	paintChamber = new PaintChamber();
-	paintMachine = new PaintMachine(&dryingChamber_obj, &paintChamber_obj, &dipTank_obj);
-	
-	// init for chassis
-	chassisMachine = new ChassisMachine();
-	
-	// init for interior Machine
-	interiorMachine = new InteriorMachine();
 }
 
 string Plant::getDate()

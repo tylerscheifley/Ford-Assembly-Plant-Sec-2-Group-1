@@ -24,13 +24,14 @@ public:
 
 	Vehicle vehicle;
 	Order order;
-	PaintMachine paintingMachine;
-	BodyMachine bodyMachine;
-	ChassisMachine chassisMachine;
-	InteriorMachine interiorMachine;
-	DipTank dipTank;
-	DryingChamber dryingChamber;
-	PaintChamber paintChamber;
+	
+	BodyMachine bodyMachine = BodyMachine();
+	ChassisMachine chassisMachine = ChassisMachine();
+	InteriorMachine interiorMachine = InteriorMachine();
+	DipTank dipTank = DipTank();
+	DryingChamber dryingChamber = DryingChamber();
+	PaintChamber paintChamber = PaintChamber();
+	PaintMachine paintingMachine = PaintMachine(&dryingChamber, &paintChamber, &dipTank);
 
 	Plant(string date, int globalAirQuality, int numVehicleToday, double globalTemp, double globalHumidity, int vehicleQuota, bool assemblyLineStatus);
 

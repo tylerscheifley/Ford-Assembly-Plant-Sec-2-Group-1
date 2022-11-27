@@ -1,8 +1,5 @@
 
-#include "BodyMachine.h"
-#include "ChassisMachine.h"
-#include "InteriorMachine.h"
-#include "PaintMachine.h"
+
 #include "plant.h"
 
 using namespace std;
@@ -317,8 +314,8 @@ string* pathFinder(Order order, string* container[])
 
 int main()
 {
+	Plant plant;
 	
-
 
 	static int e = 0;
 	static bool check = true;
