@@ -1,6 +1,7 @@
 
 
 #include "plant.h"
+#include "plantFiles.h"
 
 using namespace std;
 
@@ -315,7 +316,17 @@ string* pathFinder(Order order, string* container[])
 int main()
 {
 	Plant plant;
+	sampleDataCreator();
 	
+	//
+	
+
+	//PAINT MACHINE DATA FLOW
+	/*plant.paintingMachine.identifyRGBvalues("PlantColours.txt");*/ // each machine loop
+
+
+
+
 
 	static int e = 0;
 	static bool check = true;
@@ -427,65 +438,8 @@ int main()
 	glDeleteShader(fragmentShader);
 
 
-
-
-	// Create reference containers for the Vartex Array Object and the Vertex Buffer Object
-	GLuint VAO, VBO;
-
-	// Generate the VAO and VBO with only 1 object each
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-
-	// Make the VAO the current Vertex Array Object by binding it
-	glBindVertexArray(VAO);
-
-	// Bind the VBO specifying it's a GL_ARRAY_BUFFER
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	// Introduce the vertices into the VBO
-
-
-	// Configure the Vertex Attribute so that OpenGL knows how to read the VBO
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-	// Enable the Vertex Attribute so that OpenGL knows to use it
-	glEnableVertexAttribArray(0);
-
-	// Bind both the VBO and VAO to 0 so that we don't accidentally modify the VAO and VBO we created
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindVertexArray(0);
-
-	// Initialize ImGUI
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
-	ImGuiIO& io = ImGui::GetIO(); (void)io;
-	ImGui::StyleColorsDark();
-	ImGui_ImplGlfw_InitForOpenGL(window, true);
-	ImGui_ImplOpenGL3_Init("#version 330");
-
-	// Variables to be changed in the ImGUI window
-	bool drawTriangle = true;
-	float size = 1.0f;
-	float color[4] = { 0.8f, 0.3f, 0.02f, 1.0f };
-	static int bodyitem_current = 0;
-	static int chassisitem_current = 0;
-	static int Interioritem_current = 0;
-	static int PaintVatitem_current = 0;
-	static int PaintMachineitem_current = 0;
-	int paintRedVatVol = 4;
-	int paintGreenVatVol = 450;
-	int paintBlueVatVol = 135;
-	double DipTankTemp = 22.2;
-	int DipTankFluidLevel = 335;
-	double PaintChamberTemp = 22.2;
-	int PaintChamberHMD = 45;
-	double DryChamberTemp = 22.2;
-	int DryChamberHMD = 45;
-	int globalTemp = 20;
-	int GlobalAir = 45;
-	int VeQuota = 69;
-	int VeComp = 69;
-	int i = 0;
 	//Value boxes for each inventory
-	//BAY 1
+//BAY 1
 	int bay1MaxExp = 1; // INVENTORY LEVELS FOR Bay 1 Max Expedition
 	int bay1RegExp = 2; // INVENTORY LEVELS FOR bay 1 Reg Expedition
 	int bay1RegCab = 3; // INVENTORY LEVELS FOR bay 1 Reg Cab f150
@@ -539,6 +493,63 @@ int main()
 	int bay2HighF150 = 6; // INVENTORY LEVELS FOR Bay 1 Max Expedition
 
 
+	// Create reference containers for the Vartex Array Object and the Vertex Buffer Object
+	GLuint VAO, VBO;
+
+	// Generate the VAO and VBO with only 1 object each
+	glGenVertexArrays(1, &VAO);
+	glGenBuffers(1, &VBO);
+
+	// Make the VAO the current Vertex Array Object by binding it
+	glBindVertexArray(VAO);
+
+	// Bind the VBO specifying it's a GL_ARRAY_BUFFER
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	// Introduce the vertices into the VBO
+
+
+	// Configure the Vertex Attribute so that OpenGL knows how to read the VBO
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	// Enable the Vertex Attribute so that OpenGL knows to use it
+	glEnableVertexAttribArray(0);
+
+	// Bind both the VBO and VAO to 0 so that we don't accidentally modify the VAO and VBO we created
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindVertexArray(0);
+
+	// Initialize ImGUI
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	ImGui::StyleColorsDark();
+	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplOpenGL3_Init("#version 330");
+
+	 //Variables to be changed in the ImGUI window
+	bool drawTriangle = true;
+	float size = 1.0f;
+	float color[4] = { 0.8f, 0.3f, 0.02f, 1.0f };
+	static int bodyitem_current = 0;
+	static int chassisitem_current = 0;
+	static int Interioritem_current = 0;
+	static int PaintVatitem_current = 0;
+	static int PaintMachineitem_current = 0;
+	int paintRedVatVol = 0;
+	int paintGreenVatVol = 0;
+	int paintBlueVatVol = 0;
+	double DipTankTemp = 0.0;
+	int DipTankFluidLevel = 0;
+	double PaintChamberTemp = 0.0;
+	int PaintChamberHMD = 0;
+	double DryChamberTemp = 0.0;
+	int DryChamberHMD =0;
+	int globalTemp =0;
+	int GlobalAir = 0;
+	int VeQuota = 0;
+	int VeComp = 0;
+	int i = 0;
+
+
 	// Exporting variables to shaders
 	glUseProgram(shaderProgram);
 	glUniform1f(glGetUniformLocation(shaderProgram, "size"), size);
@@ -585,7 +596,7 @@ int main()
 	//IM_ASSERT(Paint);
 
 
-	bool RedPaintVat;
+	bool RedPaintVat = false;
 	int RedPaintVat_image_width = 90;
 	int RedPaintVat_image_height = 113;
 	GLuint RedPaintVat_image_texture = 0;
@@ -617,7 +628,7 @@ int main()
 
 	IM_ASSERT(GreenPaintVat);
 
-	bool BluePaintVat;
+	bool BluePaintVat = false;
 	int BluePaintVat_image_width = 90;
 	int BluePaintVat_image_height = 113;
 	GLuint BluePaintVat_image_texture = 0;
@@ -653,15 +664,102 @@ int main()
 	bool interiorMachine = true;
 	bool ClosedHMI = false;
 	
+	
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{
+		bool changePaintValues = true;
+
+		plant.order.loadOrder("Order.txt");
 		
-			
+		readLog(&plant);
+
+		plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+		plant.dipTank.readTemperature("DipTankTemperature.txt");
+		plant.dipTank.readfluidLevel("DipTankFluidLevel.txt");
+		plant.paintChamber.readTemperature("PaintChamberTemperature.txt");
+		plant.paintChamber.readHumidity("PaintChamberHumidity.txt");
+		plant.dryingChamber.readTemperature("DryingChamberTemperature.txt");
+		plant.dryingChamber.readHumidity("DryingChamberHumidity.txt");
+
+		paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+		paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+		paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+		DipTankTemp = plant.dipTank.getTemperature();
+		DipTankFluidLevel = plant.dipTank.getfluidLevel();
+		PaintChamberTemp = plant.paintChamber.getTemperature();
+		PaintChamberHMD = plant.paintChamber.getHumidity();
+		DryChamberTemp = plant.dryingChamber.getTemperature();
+		DryChamberHMD = plant.dryingChamber.getHumidity();
+		globalTemp = plant.getGlobalTemp();
+		GlobalAir = plant.getGlobalAirQuality();
+		VeQuota = plant.getVehicleQuota();
+		VeComp = plant.getNumVehicleToday();
+		
+		//Value boxes for each inventory
+//BAY 1
+		int bay1MaxExp = plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+		int bay1RegExp = plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+		int bay1RegCab = plant.bodyMachine.bayOne.GetRegularF150InventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+		int bay1SupCab = plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+		int bay1SupCrew = plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+		//Value boxes for each inventory
+				//BAY 2
+		int bay2MaxExp = plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+		int bay2RegExp = plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+		int bay2RegCab = plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+		int bay2SupCab = plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+		int bay2SupCrew = plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+
+
+		//Value boxes for each inventory
+	//BAY 1
+		int bay135LV6C = plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+		int bay135LV6HOC = plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+		int bay127LV6C = plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+		int bay133LV6C = plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+		int bay135LV6EcoC = plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+		int bay135LV6PwrBstC = plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+		int bay150LV8C = plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+		//Value boxes for each inventory
+				//BAY 2
+		int bay235LV6C = plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+		int bay235LV6HOC = plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+		int bay227LV6C = plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+		int bay233LV6C = plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+		int bay235LV6EcoC = plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+		int bay235LV6PwrBstC = plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+		int bay250LV8C = plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+
+
+		//Value boxes for each inventory
+	//BAY 1
+		int bay1BaseExp = plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+		int bay1MidExp = plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+		int bay1HighExp = plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+		int bay1BaseF150 = plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+		int bay1MidF150 = plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+		int bay1HighF150 = plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+
+		//Value boxes for each inventory
+				//BAY 2
+		int bay2BaseExp = plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+		int bay2MidExp = plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+		int bay2HighExp = plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+		int bay2BaseF150 = plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+		int bay2MidF150 = plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+		int bay2HighF150 = plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+
+
 			while (bodyMachine) {
 
 				glfwPollEvents();
 
+				//changing values from order to body machine.
+
+
+
+				//end of changing values.
 			
 				
 				if (paintRedVatVol >= 250) {
@@ -2222,11 +2320,30 @@ int main()
 			while (paintMachine) {
 				glfwPollEvents();
 
+
 				if (glfwWindowShouldClose(window)) {
 					bodyMachine = false;
 					paintMachine = false;
 					chassisMachine = false;
 					interiorMachine = false;
+				}
+
+				//PAINT CHANGING STUFF.
+
+				if (changePaintValues) {
+
+					plant.paintingMachine.setcolour(plant.order.getColour());
+					plant.paintingMachine.identifyRGBvalues("PlantColours.txt");
+					plant.paintingMachine.updateRGBpaintVat("RGBPaintVats.txt");
+
+					plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+					paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+					paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+					paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
+					
+
+					changePaintValues = false;
 				}
 
 				if (paintRedVatVol >= 250) {
