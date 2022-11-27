@@ -1,7 +1,5 @@
-
-
 #include "plant.h"
-
+#include "plantFiles.h"
 using namespace std;
 
 
@@ -315,7 +313,11 @@ string* pathFinder(Order order, string* container[])
 int main()
 {
 	Plant plant;
-	
+	sampleDataCreator();
+	for (int i = 0; i < 100; i++)
+	{
+		readLog(&plant);
+	}
 
 	static int e = 0;
 	static bool check = true;

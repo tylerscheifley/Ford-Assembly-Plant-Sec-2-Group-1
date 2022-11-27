@@ -35,28 +35,63 @@ void updateLog(Plant *plant)
 	plantSave.close();
 }
 
+
 void readLog(Plant *plant)
 {
-
 	ifstream plantLoad;
+	ofstream temp;
+
 	plantLoad.open("sampleLog.txt");
+	temp.open("temp.txt");
 
 	string date;
-	int globalAirQuality = 0, numVehicleToday = 0, vehicleQuota = 0;
+	int globalAirQuality = 0, numVehicleToday = 0, vehicleQuota = 0, count = 0;
 	double globalTemp = 0, globalHumidity = 0;
 
-	if (plantLoad.is_open())
+
+	while (plantLoad.is_open() && (plantLoad.eof() != true))
 	{
 		plantLoad >> date >> globalAirQuality >> vehicleQuota >> globalTemp >> globalHumidity;
 
-		plant->setDate(date);
-		plant->setGlobalAirQuality(globalAirQuality);
-		plant->setNumVehicleToday(numVehicleToday);
-		plant->setVehicleQuota(vehicleQuota);
-		plant->setGlobalTemp(globalTemp);
-		plant->setGlobalHumidity(globalHumidity);
+		if (date == "")
+			break;
+
+		count++;
+
+		if (count == 1)
+		{
+			plant->setDate(date);
+			plant->setGlobalAirQuality(globalAirQuality);
+			plant->setNumVehicleToday(numVehicleToday);
+			plant->setVehicleQuota(vehicleQuota);
+			plant->setGlobalTemp(globalTemp);
+			plant->setGlobalHumidity(globalHumidity);
+		}
+
+		if (count > 1)
+		{
+			temp << date << " " << globalAirQuality << " " << vehicleQuota << " " << globalTemp << " " << globalHumidity << "\n";
+		}
 	}
-	plantLoad.close();
+
+	if (count == 0)
+	{
+		sampleDataCreator();
+
+		plantLoad.close();
+		temp.close();
+
+		readLog(plant);
+	}
+	else
+	{
+
+		plantLoad.close();
+		temp.close();
+
+		remove("sampleLog.txt");
+		rename("temp.txt", "sampleLog.txt");
+	}
 }
 
 void stopPlant(Plant* plant)
@@ -77,7 +112,7 @@ void sampleDataCreator()
 	int globalAirQuality,vehicleQuota;
 	double globalTemp, globalHumidity;
 
-	for (int i = 0; i < 31; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		string date;
 
