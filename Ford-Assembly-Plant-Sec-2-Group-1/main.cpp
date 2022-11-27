@@ -64,5 +64,10 @@ string bodyMachineFinder(string year, string body, string model)
 
 int main(void)
 {
+	Plant plant = new Plant();
+
+	plant.chassisMachine.GetLowLevelLimit();
+
+
 	return 0;
 }

@@ -1,8 +1,8 @@
 #pragma once
-//#include "BodyMachine.h"
-//#include "ChassisMachine.h"
-//#include "InteriorMachine.h"
-//#include "PaintingMachine.h"
+#include "BodyMachine.h"
+#include "ChassisMachine.h"
+#include "InteriorMachine.h"
+#include "PaintMachine.h"
 
 
 using namespace std;
@@ -22,11 +22,15 @@ class Plant
 
 public:
 
-	//Vehicle vehicle;
-	//PaintingMachine paintingMachine;
-	//BodyMachine bodyMachine;
-	//ChassisMachine chassisMachine;
-	//InteriorMachine interiorMachine;
+	Vehicle vehicle;
+	Order order;
+	PaintMachine paintingMachine;
+	BodyMachine bodyMachine;
+	ChassisMachine chassisMachine;
+	InteriorMachine interiorMachine;
+	DipTank dipTank;
+	DryingChamber dryingChamber;
+	PaintChamber paintChamber;
 
 	Plant(string date, int globalAirQuality, int numVehicleToday, double globalTemp, double globalHumidity, int vehicleQuota, bool assemblyLineStatus);
 
