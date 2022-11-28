@@ -24,11 +24,11 @@ namespace InteriorMachineTests
 			placedOrder.setModel("F150");
 			vehiclePlaceholder.setInterior("N/A");
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 			newInteriorMachine.UpdateBaseInteriorF150InventoryAmount(100, "BayOne"); 
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 			newInteriorMachine.RunInteriorMachine(placedOrder, &vehiclePlaceholder);
 
@@ -55,11 +55,11 @@ namespace InteriorMachineTests
 			placedOrder.setModel("F150");
 			vehiclePlaceholder.setInterior("N/A");
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 			newInteriorMachine.UpdateMidInteriorF150InventoryAmount(100, "BayOne"); 
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 			newInteriorMachine.RunInteriorMachine(placedOrder, &vehiclePlaceholder);
 
@@ -85,11 +85,11 @@ namespace InteriorMachineTests
 			placedOrder.setModel("F150");
 			vehiclePlaceholder.setInterior("N/A");
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 			newInteriorMachine.UpdateHighInteriorF150InventoryAmount(100, "BayOne"); 
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 			newInteriorMachine.RunInteriorMachine(placedOrder, &vehiclePlaceholder);
 
@@ -115,11 +115,11 @@ namespace InteriorMachineTests
 			placedOrder.setModel("Expedition");
 			vehiclePlaceholder.setInterior("N/A");
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 			newInteriorMachine.UpdateBaseInteriorExpeditionInventoryAmount(100, "BayOne"); 
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 			newInteriorMachine.RunInteriorMachine(placedOrder, &vehiclePlaceholder);
 
@@ -145,11 +145,11 @@ namespace InteriorMachineTests
 			placedOrder.setModel("Expedition");
 			vehiclePlaceholder.setInterior("N/A");
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 			newInteriorMachine.UpdateMidInteriorExpeditionInventoryAmount(100, "BayOne"); 
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 			newInteriorMachine.RunInteriorMachine(placedOrder, &vehiclePlaceholder);
 
@@ -175,11 +175,11 @@ namespace InteriorMachineTests
 			placedOrder.setModel("Expedition");
 			vehiclePlaceholder.setInterior("N/A");
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 			newInteriorMachine.UpdateHighInteriorExpeditionInventoryAmount(100, "BayOne"); 
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 			newInteriorMachine.RunInteriorMachine(placedOrder, &vehiclePlaceholder);
 
@@ -205,11 +205,11 @@ namespace InteriorMachineTests
 			placedOrder.setModel("Expedition");
 			vehiclePlaceholder.setInterior("N/A");
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 			newInteriorMachine.UpdateHighInteriorExpeditionInventoryAmount(9, "BayOne"); //default low level limit is 10
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 			newInteriorMachine.RunInteriorMachine(placedOrder, &vehiclePlaceholder);
 
@@ -222,7 +222,7 @@ namespace InteriorMachineTests
 
 			InteriorMachine newInteriorMachine;//notably a new interior machine WILL NOT be created for every vehicle just for use in this test
 
-			bool didSwitch = newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			bool didSwitch = newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 			Assert::AreEqual(true, didSwitch);
 		}

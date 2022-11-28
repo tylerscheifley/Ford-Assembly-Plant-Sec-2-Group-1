@@ -7,7 +7,6 @@
 #include "Order.h"
 #include "Plant.h"
 #include "PaintMachine.h"
-#include "VehiclePanelsBay.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -591,9 +590,9 @@ namespace FordAssemblyPlantIntegrationTests
 			InteriorMachine newInteriorMachine;//notably a new interior machine WILL NOT be created for every vehicle just for use in this test
 			// this call is irrelevant to the test but needs
 			//to be in place so that an inventory level can be read
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 			newInteriorMachine.UpdateBaseInteriorExpeditionInventoryAmount(100, "BayOne");
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 
 
@@ -641,7 +640,7 @@ namespace FordAssemblyPlantIntegrationTests
 
 
 			//This will make bayOne set to true and bayTwo set to false
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 
 
 
@@ -657,9 +656,9 @@ namespace FordAssemblyPlantIntegrationTests
 
 
 
-			newInteriorMachine.SwitchVehiclePanelsBays("BayTwo");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayTwo");
 			newInteriorMachine.UpdateBaseInteriorExpeditionInventoryAmount(100, "BayOne");
-			newInteriorMachine.SwitchVehiclePanelsBays("BayOne");
+			newInteriorMachine.SwitchVehicleInteriorsBays("BayOne");
 
 
 
@@ -803,9 +802,9 @@ namespace FordAssemblyPlantIntegrationTests
 			paintMachine.setpaintVolumeRED(500);
 			paintMachine.setpaintVolumeGREEN(500);
 			paintMachine.setpaintVolumeBLUE(500);
-			paintMachine.resupplyRGBpaintVat("RED", 0, "TestingVats.txt"); //0 since not adding 500 uses paint volume instead
-			paintMachine.resupplyRGBpaintVat("GREEN", 0, "TestingVats.txt");
-			paintMachine.resupplyRGBpaintVat("BLUE", 0, "TestingVats.txt");
+			paintMachine.resupplyRGBpaintVat("RED", 500, "TestingVats.txt"); //0 since not adding 500 uses paint volume instead
+			paintMachine.resupplyRGBpaintVat("GREEN", 500, "TestingVats.txt");
+			paintMachine.resupplyRGBpaintVat("BLUE", 500, "TestingVats.txt");
 
 			paintMachine.readRGBpaintVat("TestingVats.txt");
 
