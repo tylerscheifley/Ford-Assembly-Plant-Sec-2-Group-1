@@ -229,7 +229,7 @@ void PaintMachine::resupplyRGBpaintVat(string vat, int amount, string fileName)
 	{
 		if (vat == "RED")
 		{
-			int newREDvolume = getpaintVolumeRED() + amount;
+			int newREDvolume = amount;
 			fout << "R: " << newREDvolume << endl;
 
 			int newGREENvolume = getpaintVolumeGREEN();
@@ -243,7 +243,7 @@ void PaintMachine::resupplyRGBpaintVat(string vat, int amount, string fileName)
 			int newREDvolume = getpaintVolumeRED();
 			fout << "R: " << newREDvolume << endl;
 
-			int newGREENvolume = getpaintVolumeGREEN() + amount;
+			int newGREENvolume = amount;
 			fout << "G: " << newGREENvolume << endl;
 
 			int newBLUEvolume = getpaintVolumeBLUE();
@@ -257,7 +257,7 @@ void PaintMachine::resupplyRGBpaintVat(string vat, int amount, string fileName)
 			int newGREENvolume = getpaintVolumeGREEN();
 			fout << "G: " << newGREENvolume << endl;
 
-			int newBLUEvolume = getpaintVolumeBLUE() + amount;
+			int newBLUEvolume = amount;
 			fout << "B: " << newBLUEvolume << endl;
 		}
 
