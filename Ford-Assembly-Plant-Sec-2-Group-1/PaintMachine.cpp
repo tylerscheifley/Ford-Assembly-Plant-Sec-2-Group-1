@@ -32,6 +32,7 @@ PaintMachine::PaintMachine(DryingChamber* dryingChamber, PaintChamber* paintCham
 	dipTank->setmaximumfluidLevel(1000);
 	dipTank->setmaximumTemperature(24);
 	dipTank->setminimumTemperature(19);
+	setmaxpaintVolume(500);
 }
 
 string PaintMachine::getcolour()
