@@ -252,7 +252,7 @@ bool LoadTextureFromFile(const char* filename, GLuint* out_texture, int* out_wid
 
 	return true;
 }
-
+//This loads the correct image for the body machine using the order
 string loadBodyMachineImage(Order order)
 {
 	string startOfPath = "Images/GUI/Body Machine/";
@@ -293,6 +293,7 @@ string loadBodyMachineImage(Order order)
 	return startOfPath + fileName;
 }
 
+//This loads the correct image for the chassis machine using the order
 string loadChassisMachineImage(Order order)
 {
 	string startOfPath = "Images/GUI/Chassis Machine/";
@@ -300,6 +301,7 @@ string loadChassisMachineImage(Order order)
 	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + " " + order.getColour() + ".jpg";
 }
 
+//This loads the correct image for the interior machine using the order
 string loadInteriorMachineImage(Order order)
 {
 	string startOfPath = "Images/GUI/Interior Machine/";
@@ -344,6 +346,7 @@ string loadInteriorMachineImage(Order order)
 	return startOfPath + fileName;
 }
 
+//This loads the correct image for the paint machine using the order
 string loadPaintMachineImage(Order order)
 {
 	string startOfPath = "Images/GUI/Paint Machine/";
@@ -351,6 +354,7 @@ string loadPaintMachineImage(Order order)
 	return startOfPath + order.getYear() + " " + order.getBodyPanelSet() + " " + order.getModel() + " " + order.getColour() + ".jpg";
 }
 
+//This loads the correct image for displaying the order using the order
 string loadOrderImage(Order order)
 {
 	string startOfPath = "Images/GUI/Orders/";
