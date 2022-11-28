@@ -451,7 +451,7 @@ int main()
 	const bool controlMenu_no_titlebar = false;
 	const bool controlMenu_no_scrollbar = true;
 	const bool controlMenu_no_menu = false;
-	const bool controlMenu_no_move = false;
+	const bool controlMenu_no_move = true;
 	const bool controlMenu_no_resize = false;
 	const bool controlMenu_no_collapse = false;
 	const bool controlMenu_no_close = false;
@@ -472,6 +472,79 @@ int main()
 	const bool InvBody1_no_background = false;
 	const bool InvBody1_unsaved_document = false;
 
+	const bool InvBodyButtons_no_titlebar = true;
+	const bool InvBodyButtons_no_scrollbar = true;
+	const bool InvBodyButtons_no_menu = true;
+	const bool InvBodyButtons_no_move = true;
+	const bool InvBodyButtons_no_resize = true;
+	const bool InvBodyButtons_no_collapse = false;
+	const bool InvBodyButtons_no_close = false;
+	const bool InvBodyButtons_no_nav = true;
+	static bool InvBodyButtons_no_bring_to_front = false;
+	const bool InvBodyButtons_no_background = false;
+	const bool InvBodyButtons_unsaved_document = false;
+
+	static bool BodyImage_no_titlebar = true;
+	static bool BodyImage_no_scrollbar = true;
+	static bool BodyImage_no_menu = true;
+	static bool BodyImage_no_move = true;
+	static bool BodyImage_no_resize = true;
+	static bool BodyImage_no_collapse = false;
+	static bool BodyImage_no_close = false;
+	static bool BodyImage_no_nav = true;
+	static bool BodyImage_no_background = false;
+	static bool BodyImage_no_bring_to_front = false;
+	static bool BodyImage_unsaved_document = false;
+
+	static bool ChassisImage_no_titlebar = true;
+	static bool ChassisImage_no_scrollbar = true;
+	static bool ChassisImage_no_menu = true;
+	static bool ChassisImage_no_move = true;
+	static bool ChassisImage_no_resize = true;
+	static bool ChassisImage_no_collapse = false;
+	static bool ChassisImage_no_close = false;
+	static bool ChassisImage_no_nav = true;
+	static bool ChassisImage_no_background = false;
+	static bool ChassisImage_no_bring_to_front = false;
+	static bool ChassisImage_unsaved_document = false;
+
+
+	//BAY SELECTION TOGGLE and restock button
+	const bool InvChassisButtons_no_titlebar = true;
+	const bool InvChassisButtons_no_scrollbar = true;
+	const bool InvChassisButtons_no_menu = true;
+	const bool InvChassisButtons_no_move = true;
+	const bool InvChassisButtons_no_resize = true;
+	const bool InvChassisButtons_no_collapse = false;
+	const bool InvChassisButtons_no_close = false;
+	const bool InvChassisButtons_no_nav = false;
+	static bool InvChassisButtons_no_bring_to_front = false;
+	const bool InvChassisButtons_no_background = false;
+	const bool InvChassisButtons_unsaved_document = false;
+
+	const bool InvInteriorButtons_no_titlebar = true;
+	const bool InvInteriorButtons_no_scrollbar = true;
+	const bool InvInteriorButtons_no_menu = true;
+	const bool InvInteriorButtons_no_move = true;
+	const bool InvInteriorButtons_no_resize = true;
+	const bool InvInteriorButtons_no_collapse = false;
+	const bool InvInteriorButtons_no_close = false;
+	const bool InvInteriorButtons_no_nav = false;
+	static bool InvInteriorButtons_no_bring_to_front = false;
+	const bool InvInteriorButtons_no_background = false;
+	const bool InvInteriorButtons_unsaved_document = false;
+
+	static bool InteriorImage_no_titlebar = true;
+	static bool InteriorImage_no_scrollbar = true;
+	static bool InteriorImage_no_menu = true;
+	static bool InteriorImage_no_move = true;
+	static bool InteriorImage_no_resize = false;
+	static bool InteriorImage_no_collapse = false;
+	static bool InteriorImage_no_close = false;
+	static bool InteriorImage_no_nav = true;
+	static bool InteriorImage_no_background = false;
+	static bool InteriorImage_no_bring_to_front = false;
+	static bool InteriorImage_unsaved_document = false;
 
 	const bool InvChassis_no_titlebar = true;
 	const bool InvChassis_no_scrollbar = true;
@@ -496,6 +569,31 @@ int main()
 	static bool InvInterior_no_bring_to_front = false;
 	const bool InvInterior_no_background = false;
 	const bool InvInterior_unsaved_document = false;
+
+	static bool BluePaintVat_no_titlebar = true;
+	static bool BluePaintVat_no_scrollbar = true;
+	static bool BluePaintVat_no_menu = true;
+	static bool BluePaintVat_no_move = true;
+	static bool BluePaintVat_no_resize = true;
+	static bool BluePaintVat_no_collapse = false;
+	static bool BluePaintVat_no_close = false;
+	static bool BluePaintVat_no_nav = true;
+	static bool BluePaintVat_no_background = false;
+	static bool BluePaintVat_no_bring_to_front = false;
+	static bool BluePaintVat_unsaved_document = false;
+
+	static bool RedPaintVat_no_titlebar = true;
+	static bool RedPaintVat_no_scrollbar = true;
+	static bool RedPaintVat_no_menu = true;
+	static bool RedPaintVat_no_move = true;
+	static bool RedPaintVat_no_resize = true;
+	static bool RedPaintVat_no_collapse = false;
+	static bool RedPaintVat_no_close = false;
+	static bool RedPaintVat_no_nav = true;
+	static bool RedPaintVat_no_background = false;
+	static bool RedPaintVat_no_bring_to_front = false;
+	static bool RedPaintVat_unsaved_document = false;
+
 
 	// Initialize GLFW
 	glfwInit();
@@ -771,7 +869,7 @@ int main()
 		globalTemp = plant.getGlobalTemp();
 		GlobalAir = plant.getGlobalAirQuality();
 		
-		VeComp = plant.getNumVehicleToday();
+		VeComp = VeComp++;
 		
 		//Value boxes for each inventory
 //BAY 1
@@ -843,6 +941,7 @@ int main()
 				if (changeBodyValues) {
 
 					plant.bodyMachine.RunBodyMachine(plant.order, &plant.vehicle);
+					plant.bodyMachine.bayOne.bayInUse();
 					changeBodyValues = false;
 				}
 				//Value boxes for each inventory
@@ -943,17 +1042,7 @@ int main()
 
 
 					//BAY SELECTION TOGGLE and restock button
-				const bool InvBodyButtons_no_titlebar = true;
-				const bool InvBodyButtons_no_scrollbar = true;
-				const bool InvBodyButtons_no_menu = true;
-				const bool InvBodyButtons_no_move = true;
-				const bool InvBodyButtons_no_resize = true;
-				const bool InvBodyButtons_no_collapse = false;
-				const bool InvBodyButtons_no_close = false;
-				const bool InvBodyButtons_no_nav = true;
-				static bool InvBodyButtons_no_bring_to_front = false;
-				const bool InvBodyButtons_no_background = false;
-				const bool InvBodyButtons_unsaved_document = false;
+				
 
 				ImGuiWindowFlags bodyButtonflags = 1;
 				if (InvBodyButtons_no_titlebar)        bodyButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -996,7 +1085,7 @@ int main()
 
 
 				// Always center this window when appearing
-				
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -1058,7 +1147,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -1211,17 +1300,8 @@ int main()
 				/// BODY IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool BodyImage_no_titlebar = true;
-				static bool BodyImage_no_scrollbar = true;
-				static bool BodyImage_no_menu = true;
-				static bool BodyImage_no_move = true;
-				static bool BodyImage_no_resize = true;
-				static bool BodyImage_no_collapse = false;
-				static bool BodyImage_no_close = false;
-				static bool BodyImage_no_nav = true;
-				static bool BodyImage_no_background = false;
-				static bool BodyImage_no_bring_to_front = false;
-				static bool BodyImage_unsaved_document = false;
+			
+				
 
 				ImGuiWindowFlags bodyImage_flags = 1;
 				if (BodyImage_no_titlebar)        bodyImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -1249,11 +1329,12 @@ int main()
 					return 0;
 				}
 
+				////ImVec2 center = ImGui::GetMainViewport()->GetCenter();
 				// Most "big" widgets share a common width settings by default. See 'Demo->Layout->Widgets Width' for details.
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -1269,18 +1350,7 @@ int main()
 
 
 
-				//BAY SELECTION TOGGLE and restock button
-				const bool InvChassisButtons_no_titlebar = true;
-				const bool InvChassisButtons_no_scrollbar = true;
-				const bool InvChassisButtons_no_menu = true;
-				const bool InvChassisButtons_no_move = true;
-				const bool InvChassisButtons_no_resize = true;
-				const bool InvChassisButtons_no_collapse = false;
-				const bool InvChassisButtons_no_close = false;
-				const bool InvChassisButtons_no_nav = false;
-				static bool InvChassisButtons_no_bring_to_front = false;
-				const bool InvChassisButtons_no_background = false;
-				const bool InvChassisButtons_unsaved_document = false;
+			
 
 				ImGuiWindowFlags ChassisButtonflags = 1;
 				if (InvChassisButtons_no_titlebar)        ChassisButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -1322,7 +1392,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -1387,7 +1457,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -1504,17 +1574,7 @@ int main()
 				/// Chassis IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool ChassisImage_no_titlebar = true;
-				static bool ChassisImage_no_scrollbar = true;
-				static bool ChassisImage_no_menu = true;
-				static bool ChassisImage_no_move = true;
-				static bool ChassisImage_no_resize = true;
-				static bool ChassisImage_no_collapse = false;
-				static bool ChassisImage_no_close = false;
-				static bool ChassisImage_no_nav = true;
-				static bool ChassisImage_no_background = false;
-				static bool ChassisImage_no_bring_to_front = false;
-				static bool ChassisImage_unsaved_document = false;
+		
 
 				ImGuiWindowFlags ChassisImage_flags = 1;
 				if (ChassisImage_no_titlebar)        ChassisImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -1542,11 +1602,6 @@ int main()
 					return 0;
 				}
 
-				// Most "big" widgets share a common width settings by default. See 'Demo->Layout->Widgets Width' for details.
-				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
-				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
-				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
 
 
 
@@ -1562,17 +1617,7 @@ int main()
 
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvInteriorButtons_no_titlebar = true;
-				const bool InvInteriorButtons_no_scrollbar = true;
-				const bool InvInteriorButtons_no_menu = true;
-				const bool InvInteriorButtons_no_move = true;
-				const bool InvInteriorButtons_no_resize = true;
-				const bool InvInteriorButtons_no_collapse = false;
-				const bool InvInteriorButtons_no_close = false;
-				const bool InvInteriorButtons_no_nav = false;
-				static bool InvInteriorButtons_no_bring_to_front = false;
-				const bool InvInteriorButtons_no_background = false;
-				const bool InvInteriorButtons_unsaved_document = false;
+				
 
 				ImGuiWindowFlags InteriorButtonflags = 1;
 				if (InvInteriorButtons_no_titlebar)        InteriorButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -1607,7 +1652,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -1663,7 +1708,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -1674,7 +1719,7 @@ int main()
 
 					ImGui::Combo("Interior Type", &Interioritem_current, items, IM_ARRAYSIZE(items));
 
-					static int i0 = 123;
+					int i0 = 123;
 					ImGui::InputInt("input int", &i0);
 
 					ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
@@ -1768,17 +1813,7 @@ int main()
 				/// Interior IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool InteriorImage_no_titlebar = true;
-				static bool InteriorImage_no_scrollbar = true;
-				static bool InteriorImage_no_menu = true;
-				static bool InteriorImage_no_move = true;
-				static bool InteriorImage_no_resize = false;
-				static bool InteriorImage_no_collapse = false;
-				static bool InteriorImage_no_close = false;
-				static bool InteriorImage_no_nav = true;
-				static bool InteriorImage_no_background = false;
-				static bool InteriorImage_no_bring_to_front = false;
-				static bool InteriorImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags InteriorImage_flags = 1;
 				if (InteriorImage_no_titlebar)        InteriorImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -1806,11 +1841,6 @@ int main()
 					return 0;
 				}
 
-				// Most "big" widgets share a common width settings by default. See 'Demo->Layout->Widgets Width' for details.
-				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
-				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
-				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
 
 
 
@@ -1825,18 +1855,7 @@ int main()
 				//START OF PAINT MACHINE
 
 
-				static bool RedPaintVat_no_titlebar = true;
-				static bool RedPaintVat_no_scrollbar = true;
-				static bool RedPaintVat_no_menu = true;
-				static bool RedPaintVat_no_move = true;
-				static bool RedPaintVat_no_resize = true;
-				static bool RedPaintVat_no_collapse = false;
-				static bool RedPaintVat_no_close = false;
-				static bool RedPaintVat_no_nav = true;
-				static bool RedPaintVat_no_background = false;
-				static bool RedPaintVat_no_bring_to_front = false;
-				static bool RedPaintVat_unsaved_document = false;
-
+			
 				ImGuiWindowFlags RedPaintVat_flags = 1;
 				if (RedPaintVat_no_titlebar)        RedPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
 				if (RedPaintVat_no_scrollbar)       RedPaintVat_flags |= ImGuiWindowFlags_NoScrollbar;
@@ -1864,24 +1883,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintRedVatVol);
 				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
 
-				static bool BluePaintVat_no_titlebar = true;
-				static bool BluePaintVat_no_scrollbar = true;
-				static bool BluePaintVat_no_menu = true;
-				static bool BluePaintVat_no_move = true;
-				static bool BluePaintVat_no_resize = true;
-				static bool BluePaintVat_no_collapse = false;
-				static bool BluePaintVat_no_close = false;
-				static bool BluePaintVat_no_nav = true;
-				static bool BluePaintVat_no_background = false;
-				static bool BluePaintVat_no_bring_to_front = false;
-				static bool BluePaintVat_unsaved_document = false;
+			
 
 				ImGuiWindowFlags BluePaintVat_flags = 1;
 				if (BluePaintVat_no_titlebar)        BluePaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -1910,7 +1919,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
 				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
 				ImGui::End();
@@ -1956,7 +1965,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
 				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
 				ImGui::End();
@@ -2007,7 +2016,7 @@ int main()
 				char ch=248;
 			printf("Today's temperature was 23%cC",ch);
 						*/
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
 				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
@@ -2055,7 +2064,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Paint Humidity: %d", PaintChamberHMD);
 				ImGui::Text("Paint Temperature: %.2f`C", PaintChamberTemp);
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
@@ -2110,7 +2119,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -2155,7 +2164,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Paint Machine Values Adjuster", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -2482,7 +2491,7 @@ int main()
 				//// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				////ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				//// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				//ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				//
 
 
 
@@ -2538,7 +2547,7 @@ int main()
 				//// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				////ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				//// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				//ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				//
 
 
 
@@ -2805,7 +2814,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -3000,7 +3009,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -3069,7 +3078,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -3134,7 +3143,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -3293,7 +3302,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -3354,7 +3363,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -3410,7 +3419,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -3557,7 +3566,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -3611,7 +3620,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintRedVatVol);
 				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
 				ImGui::End();
@@ -3657,7 +3666,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
 				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
 				ImGui::End();
@@ -3703,7 +3712,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
 				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
 				ImGui::End();
@@ -3754,7 +3763,7 @@ int main()
 				char ch=248;
 			printf("Today's temperature was 23%cC",ch);
 						*/
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
 				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
@@ -3802,7 +3811,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Paint Humidity: %d", PaintChamberHMD);
 				ImGui::Text("Paint Temperature: %.2f`C", PaintChamberTemp);
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
@@ -3857,7 +3866,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -3903,7 +3912,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Paint Machine Values Adjuster", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -4229,7 +4238,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -4285,7 +4294,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -4327,8 +4336,9 @@ int main()
 				}
 
 				if (changeChassisValues) {
-
+				
 					plant.chassisMachine.RunChassisMachine(plant.order, &plant.vehicle);
+					plant.chassisMachine.lineOne.lineInUse();
 					changeChassisValues = false;
 				}
 
@@ -4481,7 +4491,7 @@ int main()
 
 
 				// Always center this window when appearing
-				
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -4543,7 +4553,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-				
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -4739,7 +4749,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -4808,7 +4818,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -4873,7 +4883,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -5032,7 +5042,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -5093,7 +5103,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -5149,7 +5159,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -5296,7 +5306,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -5350,7 +5360,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintRedVatVol);
 				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
 				ImGui::End();
@@ -5396,7 +5406,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
 				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
 				ImGui::End();
@@ -5442,7 +5452,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
 				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
 				ImGui::End();
@@ -5493,7 +5503,7 @@ int main()
 				char ch=248;
 			printf("Today's temperature was 23%cC",ch);
 						*/
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
 				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
@@ -5541,7 +5551,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Paint Humidity: %d", PaintChamberHMD);
 				ImGui::Text("Paint Temperature: %.2f`C", PaintChamberTemp);
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
@@ -5596,7 +5606,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -5641,7 +5651,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Paint Machine Values Adjuster", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -5968,7 +5978,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -6024,7 +6034,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -6069,7 +6079,8 @@ int main()
 				}
 
 				if (changeInteriorValues) {
-					plant.chassisMachine.RunChassisMachine(plant.order, &plant.vehicle);
+					plant.interiorMachine.RunInteriorMachine(plant.order, &plant.vehicle);
+					plant.interiorMachine.bayOne.bayInUse();
 					changeInteriorValues = false;
 				}
 
@@ -6221,7 +6232,7 @@ int main()
 
 
 				// Always center this window when appearing
-		
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -6283,7 +6294,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -6480,7 +6491,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -6549,7 +6560,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -6614,7 +6625,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -6773,7 +6784,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -6840,7 +6851,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -6896,7 +6907,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -7043,7 +7054,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -7097,7 +7108,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintRedVatVol);
 				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
 				ImGui::End();
@@ -7143,7 +7154,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
 				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
 				ImGui::End();
@@ -7189,7 +7200,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
 				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
 				ImGui::End();
@@ -7240,7 +7251,7 @@ int main()
 				char ch=248;
 			printf("Today's temperature was 23%cC",ch);
 						*/
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
 				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
@@ -7288,7 +7299,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 				ImGui::Text("Paint Humidity: %d", PaintChamberHMD);
 				ImGui::Text("Paint Temperature: %.2f`C", PaintChamberTemp);
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
@@ -7343,7 +7354,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -7388,7 +7399,7 @@ int main()
 
 
 				// Always center this window when appearing
-
+				center = ImGui::GetMainViewport()->GetCenter();
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Paint Machine Values Adjuster", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -7714,7 +7725,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -7770,7 +7781,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				
 
 
 
@@ -7803,24 +7814,24 @@ int main()
 
 
 			if (plant.vehicle.checkQAQC()) {
+				
 				plant.vehicle.generateCount("completedVehicles.txt");
 
-				plant.vehicle.GenerateVIN();
-				plant.vehicle.setDate(plant.getDate());
-
+				time_t now = time(0);
+				string dateAndTime = ctime(&now);
+				dateAndTime.erase(std::remove(dateAndTime.begin(), dateAndTime.end(), '\n'), dateAndTime.cend());
+				plant.vehicle.setVIN(plant.vehicle.GenerateVIN());
+				plant.vehicle.setDate(dateAndTime);
+				
 				plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
+
+				/*plant.setNumVehicleToday(VeComp++);*/
 			}
 			
-			plant.vehicle.setModel("F150");
-			plant.vehicle.generateCount("completedVehicles.txt");
-			int F150 = plant.vehicle.getCount();
-			plant.vehicle.setModel("Expedition");
-			plant.vehicle.generateCount("completedVehicles.txt");
-			int Exp = plant.vehicle.getCount();
+			
 
-			VeComp = F150 + Exp;
-
-
+			updateLog(&plant);
+			cout << "plant log  and of loop" << endl;
 	}
 	
 		// Deletes all ImGUI instances

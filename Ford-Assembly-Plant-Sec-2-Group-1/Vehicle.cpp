@@ -76,8 +76,13 @@ void Vehicle::setDate(string date) {
 
 string Vehicle::GenerateVIN(void) {
 	string vin;
-
-	vin += getModel();
+	if (getModel() == "Expedition") {
+		vin += "EXP";
+	}
+	else {
+		vin += "F150";
+	}
+	
 	vin += getYear();
 	int count = getCount();
 	string sCount = to_string(count);
