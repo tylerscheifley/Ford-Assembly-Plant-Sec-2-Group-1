@@ -676,6 +676,11 @@ int main()
 		
 		readLog(&plant);
 
+		plant.vehicle.setMake(plant.order.getMake());
+		plant.vehicle.setModel(plant.order.getModel());
+		plant.vehicle.setYear(plant.order.getYear());
+		plant.vehicle.setTrim(plant.order.getTrim());
+		plant.vehicle.setOrder(plant.order);
 		plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
 		plant.dipTank.readTemperature("DipTankTemperature.txt");
 		plant.dipTank.readfluidLevel("DipTankFluidLevel.txt");
@@ -819,10 +824,10 @@ int main()
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
 				if (isRendered) {
-					bool body = LoadTextureFromFile("Images/GUI/Body Machine/MaxExp.jpg", &body_image_texture, &body_image_width, &body_image_height);
+					bool body = LoadTextureFromFile(loadBodyMachineImage(plant.order).c_str(), &body_image_texture, &body_image_width, &body_image_height);
 					IM_ASSERT(body);
 
-					bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
 					IM_ASSERT(toBeMade);
 
 					//Set to blank
@@ -2572,7 +2577,7 @@ int main()
 					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
 					IM_ASSERT(body);
 
-					bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
 					IM_ASSERT(toBeMade);
 
 
@@ -2581,7 +2586,7 @@ int main()
 
 
 					//set to blank
-					bool Paint = LoadTextureFromFile("Images/GUI/Paint Machine/2022 Regular F150 Antimatter Blue Metallic.jpg", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+					bool Paint = LoadTextureFromFile(loadPaintMachineImage(plant.order).c_str(), &Paint_image_texture, &Paint_image_width, &Paint_image_height);
 					IM_ASSERT(Paint);
 
 					//set to blank
@@ -4307,11 +4312,11 @@ int main()
 					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
 					IM_ASSERT(body);
 
-					bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
 					IM_ASSERT(toBeMade);
 
 
-					bool chassis = LoadTextureFromFile("Images/GUI/Chassis Machine/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+					bool chassis = LoadTextureFromFile(loadChassisMachineImage(plant.order).c_str(), &chassis_image_texture, &chassis_image_width, &chassis_image_height);
 					IM_ASSERT(chassis);
 
 
@@ -6046,7 +6051,7 @@ int main()
 					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
 					IM_ASSERT(body);
 
-					bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
 					IM_ASSERT(toBeMade);
 
 
@@ -6059,7 +6064,7 @@ int main()
 					IM_ASSERT(Paint);
 
 					//set to blank
-					bool Interior = LoadTextureFromFile("Images/GUI/Interior Machine/2022 Base F150.jpg", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+					bool Interior = LoadTextureFromFile(loadInteriorMachineImage(plant.order).c_str(), &Interior_image_texture, &Interior_image_width, &Interior_image_height);
 					IM_ASSERT(Interior);
 
 				}
@@ -6743,10 +6748,10 @@ int main()
 				ImGui::RadioButton("Bay 1", &c, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &c, 1);
 				if (c == 0) {
-					plant.interiorMachine.SwitchVehiclePanelsBays("BayOne");
+					plant.interiorMachine.SwitchVehicleInteriorsBays("BayOne");
 				}
 				else {
-					plant.interiorMachine.SwitchVehiclePanelsBays("BayTwo");
+					plant.interiorMachine.SwitchVehicleInteriorsBays("BayTwo");
 				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
@@ -7720,9 +7725,25 @@ int main()
 						
 			}
 			isRendered = true;
-		
-			plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
 
+
+			if (plant.vehicle.checkQAQC()) {
+				//plant.vehicle.generateCount("completedVehicles.txt");
+
+				plant.vehicle.GenerateVIN();
+				plant.vehicle.setDate("2022-11-28");
+
+				plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
+			}
+			
+			plant.vehicle.setModel("F150");
+			plant.vehicle.generateCount("completedVehicles.txt");
+			int F150 = plant.vehicle.getCount();
+			plant.vehicle.setModel("Expedition");
+			plant.vehicle.generateCount("completedVehicles.txt");
+			int Exp = plant.vehicle.getCount();
+
+			VeComp = F150 + Exp;
 
 
 	}
