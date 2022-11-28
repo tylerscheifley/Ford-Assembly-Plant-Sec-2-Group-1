@@ -251,6 +251,40 @@ bool LoadTextureFromFile(const char* filename, GLuint* out_texture, int* out_wid
 
 	return true;
 }
+
+//This converts the name of the body panel in the object to the correct format for the file name
+string convertBodyPanelSetToFileName(string bodyPanelSet, Order order)
+{
+	string convertedBodyPanelSetName;
+	if (order.getYear() == "2022")
+	{
+		if (bodyPanelSet == "Regular")
+		{
+			convertedBodyPanelSetName = " Regular Cab ";
+		}
+		else if (bodyPanelSet == "SuperCrew")
+		{
+			convertedBodyPanelSetName = " Super Crew ";
+		}
+		else if (bodyPanelSet == "SuperCab")
+		{
+			convertedBodyPanelSetName = " Super Cab ";
+		}
+	}
+	else if (order.getYear() == "2023")
+	{
+		if (bodyPanelSet == "REG")
+		{
+			convertedBodyPanelSetName = " ";
+		}
+		else if (bodyPanelSet == "MAX")
+		{
+			convertedBodyPanelSetName = " MAX ";
+		}
+	}
+	return convertedBodyPanelSetName;
+}
+
 //This loads the correct image for the body machine using the order
 string loadBodyMachineImage(Order order)
 {
@@ -330,15 +364,15 @@ string loadInteriorMachineImage(Order order)
 		{
 			if (order.getInteriorLevel() == "high")
 			{
-				fileName = "2022 High Expedition.jpg";
+				fileName = "2023 High Expedition.jpg";
 			}
 			else if (order.getInteriorLevel() == "base")
 			{
-				fileName = "2022 Base Expedition.jpg";
+				fileName = "2023 Base Expedition.jpg";
 			}
 			else if (order.getInteriorLevel() == "mid")
 			{
-				fileName = "2022 Mid Expedition.jpg";
+				fileName = "2023 Mid Expedition.jpg";
 			}
 		}
 	}
@@ -361,38 +395,6 @@ string loadOrderImage(Order order)
 	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + convertBodyPanelSetToFileName(order.getBodyPanelSet(), order) + order.getColour() + ".jpg";
 }
 
-//This converts the name of the body panel in the object to the correct format for the file name
-string convertBodyPanelSetToFileName(string bodyPanelSet, Order order)
-{
-	string convertedBodyPanelSetName;
-	if (order.getYear() == "2022")
-	{
-		if (bodyPanelSet == "Regular")
-		{
-			convertedBodyPanelSetName = " Regular Cab ";
-		}
-		else if (bodyPanelSet == "SuperCrew")
-		{
-			convertedBodyPanelSetName = " Super Crew ";
-		}
-		else if (bodyPanelSet == "Super Cab")
-		{
-			convertedBodyPanelSetName = " Super Cab ";
-		}
-	}
-	else if (order.getYear() == "2023")
-	{
-		if (bodyPanelSet == "REG")
-		{
-			convertedBodyPanelSetName = " ";
-		}
-		else if (bodyPanelSet == "MAX")
-		{
-			convertedBodyPanelSetName = " MAX ";
-		}
-	}
-	return convertedBodyPanelSetName;
-}
 
 
 int main()
@@ -861,6 +863,7 @@ int main()
 					IM_ASSERT(body);
 
 					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					cout << loadOrderImage(plant.order) << endl;
 					IM_ASSERT(toBeMade);
 
 					//Set to blank
@@ -1260,24 +1263,25 @@ int main()
 				// ImGUI window creation
 				ImGui::Begin("Chassis Machine Manager", open, ChassisButtonflags);
 				// Text that appears in the window
-				ImGui::Text("Bay Selection:");
+				ImGui::Text("Line Selection:");
 				//radio buttons
 				static int b;
-				ImGui::RadioButton("Bay 1", &b, 0); ImGui::SameLine();
-				ImGui::RadioButton("Bay 2", &b, 1);
+				ImGui::RadioButton("Line 1", &b, 0); ImGui::SameLine();
+				ImGui::RadioButton("Line 2", &b, 1);
 				if (b == 0) {
-					plant.chassisMachine.SwitchVehicleChassisLines("BayOne");
+					plant.chassisMachine.SwitchVehicleChassisLines("LineOne");
 				}
 				else {
-					plant.chassisMachine.SwitchVehicleChassisLines("BayTwo");
+					plant.chassisMachine.SwitchVehicleChassisLines("LineTwo");
 				}
+
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (b == 0) {
-						ImGui::OpenPopup("Restock Bay 2");
+						ImGui::OpenPopup("Restock Line 2");
 					}
 					else {
-						ImGui::OpenPopup("Restock Bay 1");
+						ImGui::OpenPopup("Restock Line 1");
 					}
 				}
 
@@ -1286,7 +1290,7 @@ int main()
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
-				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+				if (ImGui::BeginPopupModal("Restock Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 				{
 					ImGui::Text("Please Select Which Inventory You Would like to Restock\n\n");
 					ImGui::Separator();
@@ -1310,25 +1314,25 @@ int main()
 							i0 = 0;
 						}
 						if (chassisitem_current == 0) {
-							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 1) {
-							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 2) {
-							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 3) {
-							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 4) {
-							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 5) {
-							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 6) {
-							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "LineOne");
 						}
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
@@ -1351,7 +1355,7 @@ int main()
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
-				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+				if (ImGui::BeginPopupModal("Restock Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 				{
 					ImGui::Text("Please Select Which Inventory You Would like to Restock\n\n");
 					ImGui::Separator();
@@ -1376,25 +1380,25 @@ int main()
 							i0 = 0;
 						}
 						if (chassisitem_current == 0) {
-							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 1) {
-							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 2) {
-							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 3) {
-							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 4) {
-							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 5) {
-							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 6) {
-							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "LineTwo");
 						}
 						/*
 						* Bay 2 if bay 1 is selected you can only restock bay 2
@@ -3005,24 +3009,25 @@ int main()
 				// ImGUI window creation
 				ImGui::Begin("Chassis Machine Manager", open, ChassisButtonflags);
 				// Text that appears in the window
-				ImGui::Text("Bay Selection:");
+				ImGui::Text("Line Selection:");
 				//radio buttons
 				static int b;
-				ImGui::RadioButton("Bay 1", &b, 0); ImGui::SameLine();
-				ImGui::RadioButton("Bay 2", &b, 1);
+				ImGui::RadioButton("Line 1", &b, 0); ImGui::SameLine();
+				ImGui::RadioButton("Line 2", &b, 1);
 				if (b == 0) {
-					plant.chassisMachine.SwitchVehicleChassisLines("BayOne");
+					plant.chassisMachine.SwitchVehicleChassisLines("LineOne");
 				}
 				else {
-					plant.chassisMachine.SwitchVehicleChassisLines("BayTwo");
+					plant.chassisMachine.SwitchVehicleChassisLines("LineTwo");
 				}
+
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (b == 0) {
-						ImGui::OpenPopup("Restock Bay 2");
+						ImGui::OpenPopup("Restock Line 2");
 					}
 					else {
-						ImGui::OpenPopup("Restock Bay 1");
+						ImGui::OpenPopup("Restock Line 1");
 					}
 				}
 
@@ -3031,7 +3036,7 @@ int main()
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
-				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+				if (ImGui::BeginPopupModal("Restock Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 				{
 					ImGui::Text("Please Select Which Inventory You Would like to Restock\n\n");
 					ImGui::Separator();
@@ -3055,25 +3060,25 @@ int main()
 							i0 = 0;
 						}
 						if (chassisitem_current == 0) {
-							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 1) {
-							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 2) {
-							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 3) {
-							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 4) {
-							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 5) {
-							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 6) {
-							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "LineOne");
 						}
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
@@ -3096,7 +3101,7 @@ int main()
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
-				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+				if (ImGui::BeginPopupModal("Restock Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 				{
 					ImGui::Text("Please Select Which Inventory You Would like to Restock\n\n");
 					ImGui::Separator();
@@ -3121,25 +3126,25 @@ int main()
 							i0 = 0;
 						}
 						if (chassisitem_current == 0) {
-							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 1) {
-							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 2) {
-							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 3) {
-							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 4) {
-							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 5) {
-							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 6) {
-							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "LineTwo");
 						}
 						/*
 						* Bay 2 if bay 1 is selected you can only restock bay 2
@@ -4743,25 +4748,25 @@ int main()
 				// ImGUI window creation
 				ImGui::Begin("Chassis Machine Manager", open, ChassisButtonflags);
 				// Text that appears in the window
-				ImGui::Text("Bay Selection:");
+				ImGui::Text("Line Selection:");
 				//radio buttons
 				static int b;
-				ImGui::RadioButton("Bay 1", &b, 0); ImGui::SameLine();
-				ImGui::RadioButton("Bay 2", &b, 1);
+				ImGui::RadioButton("Line 1", &b, 0); ImGui::SameLine();
+				ImGui::RadioButton("Line 2", &b, 1);
 				if (b == 0) {
-					plant.chassisMachine.SwitchVehicleChassisLines("BayOne");
+					plant.chassisMachine.SwitchVehicleChassisLines("LineOne");
 				}
 				else {
-					plant.chassisMachine.SwitchVehicleChassisLines("BayTwo");
+					plant.chassisMachine.SwitchVehicleChassisLines("LineTwo");
 				}
 				
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (b == 0) {
-						ImGui::OpenPopup("Restock Bay 2");
+						ImGui::OpenPopup("Restock Line 2");
 					}
 					else {
-						ImGui::OpenPopup("Restock Bay 1");
+						ImGui::OpenPopup("Restock Line 1");
 					}
 				}
 
@@ -4770,7 +4775,7 @@ int main()
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
-				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+				if (ImGui::BeginPopupModal("Restock Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 				{
 					ImGui::Text("Please Select Which Inventory You Would like to Restock\n\n");
 					ImGui::Separator();
@@ -4794,25 +4799,25 @@ int main()
 							i0 = 0;
 						}
 						if (chassisitem_current == 0) {
-							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 1) {
-							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 2) {
-							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 3) {
-							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 4) {
-							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 5) {
-							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 6) {
-							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "LineOne");
 						}
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
@@ -4835,7 +4840,7 @@ int main()
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
-				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+				if (ImGui::BeginPopupModal("Restock Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 				{
 					ImGui::Text("Please Select Which Inventory You Would like to Restock\n\n");
 					ImGui::Separator();
@@ -4860,25 +4865,25 @@ int main()
 							i0 = 0;
 						}
 						if (chassisitem_current == 0) {
-							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 1) {
-							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 2) {
-							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 3) {
-							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 4) {
-							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 5) {
-							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 6) {
-							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "LineTwo");
 						}
 						/*
 						* Bay 2 if bay 1 is selected you can only restock bay 2
@@ -6484,24 +6489,25 @@ int main()
 				// ImGUI window creation
 				ImGui::Begin("Chassis Machine Manager", open, ChassisButtonflags);
 				// Text that appears in the window
-				ImGui::Text("Bay Selection:");
+				ImGui::Text("Line Selection:");
 				//radio buttons
 				static int b;
-				ImGui::RadioButton("Bay 1", &b, 0); ImGui::SameLine();
-				ImGui::RadioButton("Bay 2", &b, 1);
+				ImGui::RadioButton("Line 1", &b, 0); ImGui::SameLine();
+				ImGui::RadioButton("Line 2", &b, 1);
 				if (b == 0) {
-					plant.chassisMachine.SwitchVehicleChassisLines("BayOne");
+					plant.chassisMachine.SwitchVehicleChassisLines("LineOne");
 				}
 				else {
-					plant.chassisMachine.SwitchVehicleChassisLines("BayTwo");
+					plant.chassisMachine.SwitchVehicleChassisLines("LineTwo");
 				}
+
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (b == 0) {
-						ImGui::OpenPopup("Restock Bay 2");
+						ImGui::OpenPopup("Restock Line 2");
 					}
 					else {
-						ImGui::OpenPopup("Restock Bay 1");
+						ImGui::OpenPopup("Restock Line 1");
 					}
 				}
 
@@ -6510,7 +6516,7 @@ int main()
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
-				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+				if (ImGui::BeginPopupModal("Restock Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 				{
 					ImGui::Text("Please Select Which Inventory You Would like to Restock\n\n");
 					ImGui::Separator();
@@ -6534,25 +6540,25 @@ int main()
 							i0 = 0;
 						}
 						if (chassisitem_current == 0) {
-							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 1) {
-							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 2) {
-							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 3) {
-							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 4) {
-							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 5) {
-							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "LineOne");
 						}
 						else if (chassisitem_current == 6) {
-							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayOne");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "LineOne");
 						}
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
@@ -6575,7 +6581,7 @@ int main()
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
-				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+				if (ImGui::BeginPopupModal("Restock Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 				{
 					ImGui::Text("Please Select Which Inventory You Would like to Restock\n\n");
 					ImGui::Separator();
@@ -6600,25 +6606,25 @@ int main()
 							i0 = 0;
 						}
 						if (chassisitem_current == 0) {
-							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 1) {
-							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 2) {
-							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 3) {
-							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 4) {
-							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 5) {
-							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "LineTwo");
 						}
 						else if (chassisitem_current == 6) {
-							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayTwo");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "LineTwo");
 						}
 						/*
 						* Bay 2 if bay 1 is selected you can only restock bay 2
@@ -7761,7 +7767,7 @@ int main()
 
 
 			if (plant.vehicle.checkQAQC()) {
-				//plant.vehicle.generateCount("completedVehicles.txt");
+				plant.vehicle.generateCount("completedVehicles.txt");
 
 				plant.vehicle.GenerateVIN();
 				plant.vehicle.setDate("2022-11-28");
