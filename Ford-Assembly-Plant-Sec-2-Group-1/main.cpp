@@ -1,5 +1,4 @@
 
-
 #include "plant.h"
 #include "plantFiles.h"
 
@@ -312,7 +311,6 @@ string* pathFinder(Order order, string* container[])
 }
 
 
-
 int main()
 {
 	Plant plant;
@@ -392,7 +390,7 @@ int main()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	// Create a GLFWwindow object of 800 by 800 pixels, naming it "YoutubeOpenGL"
-	GLFWwindow* window = glfwCreateWindow(1920, 1080, "ImGui + GLFW", glfwGetPrimaryMonitor(), NULL);
+	GLFWwindow* window = glfwCreateWindow(1920, 1080, "ImGui + GLFW", NULL, NULL);
 	// Error check if the window fails to create
 	if (window == NULL)
 	{
@@ -407,35 +405,12 @@ int main()
 	gladLoadGL();
 	// Specify the viewport of OpenGL in the Window
 	// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
-	glViewport(0, 0, 1280, 1024);
+	glViewport(0, 0, 1920, 1080);
 
 
 
-	// Create Vertex Shader Object and get its reference
-	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	// Attach Vertex Shader source to the Vertex Shader Object
-	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-	// Compile the Vertex Shader into machine code
-	glCompileShader(vertexShader);
 
-	// Create Fragment Shader Object and get its reference
-	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-	// Attach Fragment Shader source to the Fragment Shader Object
-	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-	// Compile the Vertex Shader into machine code
-	glCompileShader(fragmentShader);
 
-	// Create Shader Program Object and get its reference
-	GLuint shaderProgram = glCreateProgram();
-	// Attach the Vertex and Fragment Shaders to the Shader Program
-	glAttachShader(shaderProgram, vertexShader);
-	glAttachShader(shaderProgram, fragmentShader);
-	// Wrap-up/Link all the shaders together into the Shader Program
-	glLinkProgram(shaderProgram);
-
-	// Delete the now useless Vertex and Fragment Shader objects
-	glDeleteShader(vertexShader);
-	glDeleteShader(fragmentShader);
 
 
 	//Value boxes for each inventory
@@ -493,29 +468,7 @@ int main()
 	int bay2HighF150 = 6; // INVENTORY LEVELS FOR Bay 1 Max Expedition
 
 
-	// Create reference containers for the Vartex Array Object and the Vertex Buffer Object
-	GLuint VAO, VBO;
 
-	// Generate the VAO and VBO with only 1 object each
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-
-	// Make the VAO the current Vertex Array Object by binding it
-	glBindVertexArray(VAO);
-
-	// Bind the VBO specifying it's a GL_ARRAY_BUFFER
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	// Introduce the vertices into the VBO
-
-
-	// Configure the Vertex Attribute so that OpenGL knows how to read the VBO
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-	// Enable the Vertex Attribute so that OpenGL knows to use it
-	glEnableVertexAttribArray(0);
-
-	// Bind both the VBO and VAO to 0 so that we don't accidentally modify the VAO and VBO we created
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindVertexArray(0);
 
 	// Initialize ImGUI
 	IMGUI_CHECKVERSION();
@@ -526,7 +479,7 @@ int main()
 	ImGui_ImplOpenGL3_Init("#version 330");
 
 	 //Variables to be changed in the ImGUI window
-	bool drawTriangle = true;
+
 	float size = 1.0f;
 	float color[4] = { 0.8f, 0.3f, 0.02f, 1.0f };
 	static int bodyitem_current = 0;
@@ -548,12 +501,7 @@ int main()
 	int VeQuota = 0;
 	int VeComp = 0;
 	int i = 0;
-
-
-	// Exporting variables to shaders
-	glUseProgram(shaderProgram);
-	glUniform1f(glGetUniformLocation(shaderProgram, "size"), size);
-	glUniform4f(glGetUniformLocation(shaderProgram, "color"), color[0], color[1], color[2], color[3]);
+	ImVec2 center = ImGui::GetMainViewport()->GetCenter();
 
 
 	int my_image_width = 1280;
@@ -663,12 +611,15 @@ int main()
 	bool chassisMachine = true;
 	bool interiorMachine = true;
 	bool ClosedHMI = false;
-	
+	bool isRendered = true;
 	
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{
 		bool changePaintValues = true;
+		bool changeBodyValues = true;
+		bool changeChassisValues = true;
+		bool changeInteriorValues = true;
 
 		plant.order.loadOrder("Order.txt");
 		
@@ -756,6 +707,32 @@ int main()
 				glfwPollEvents();
 
 				//changing values from order to body machine.
+				if (glfwWindowShouldClose(window)) {
+					bodyMachine = false;
+					paintMachine = false;
+					chassisMachine = false;
+					interiorMachine = false;
+				}
+
+				if (changeBodyValues) {
+
+					plant.bodyMachine.RunBodyMachine(plant.order, &plant.vehicle);
+					changeBodyValues = false;
+				}
+				//Value boxes for each inventory
+//BAY 1
+				bay1MaxExp = plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+				bay1RegExp = plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+				bay1RegCab = plant.bodyMachine.bayOne.GetRegularF150InventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+				bay1SupCab = plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+				bay1SupCrew = plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+				//Value boxes for each inventory
+						//BAY 2
+				bay2MaxExp = plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+				bay2RegExp = plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+				bay2RegCab = plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+				bay2SupCab = plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+				bay2SupCrew = plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
 
 
 
@@ -790,27 +767,27 @@ int main()
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
+				if (isRendered) {
+					bool body = LoadTextureFromFile("Images/GUI/Body Machine/MaxExp.jpg", &body_image_texture, &body_image_width, &body_image_height);
+					IM_ASSERT(body);
 
-				bool body = LoadTextureFromFile("Images/GUI/Body Machine/MaxExp.jpg", &body_image_texture, &body_image_width, &body_image_height);
-				IM_ASSERT(body);
+					bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					IM_ASSERT(toBeMade);
 
-				bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
-				IM_ASSERT(toBeMade);
-
-				//Set to blank
-				bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
-				IM_ASSERT(chassis);
-
-
-				//set to blank
-				bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
-				IM_ASSERT(Paint);
-
-				//set to blank
-				bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
-				IM_ASSERT(Interior);
+					//Set to blank
+					bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+					IM_ASSERT(chassis);
 
 
+					//set to blank
+					bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+					IM_ASSERT(Paint);
+
+					//set to blank
+					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+					IM_ASSERT(Interior);
+				}
+				
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 				// Clean the back buffer and assign the new color to it
@@ -823,10 +800,8 @@ int main()
 
 
 
-				// Tell OpenGL which Shader Program we want to use
-				glUseProgram(shaderProgram);
-				// Bind the VAO so OpenGL knows to use it
-				glBindVertexArray(VAO);
+
+			
 
 
 				//BODY MACHINE================================================================================================================================================
@@ -873,10 +848,19 @@ int main()
 				//radio buttons
 				ImGui::RadioButton("Bay 1", &e, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &e, 1);
+
+				if (e == 0) {
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayOne");
+				}
+				else {
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayTwo");
+				}
+
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (e == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
+						
 					}
 					else {
 						ImGui::OpenPopup("Restock Bay 1");
@@ -885,7 +869,7 @@ int main()
 
 
 				// Always center this window when appearing
-				ImVec2 center = ImGui::GetMainViewport()->GetCenter();
+				
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -905,17 +889,39 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						
-							/*
-							* Bay 1 if bay 2 is selected you can only restock bay 1
-							Set inventory levels for that body type
-							using the methods from body inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
 
-							use : bodyitem_current to get the body type selected
-							i0 to get the value for body type if greater than 500 set = 500
-							if < 0 = 0
-							*/
-						
+						if (bodyitem_current == 0) {
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 1) {
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 2) {
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 3) {
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 4) {
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayOne");
+						}
+
+						/*
+						* Bay 1 if bay 2 is selected you can only restock bay 1
+						Set inventory levels for that body type
+						using the methods from body inventory bay
+
+						use : bodyitem_current to get the body type selected
+						i0 to get the value for body type if greater than 500 set = 500
+						if < 0 = 0
+						*/
+
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -925,7 +931,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-				center = ImGui::GetMainViewport()->GetCenter();
+
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -939,23 +945,37 @@ int main()
 					static int i0 = 123;
 					ImGui::InputInt("input int", &i0);
 
+
 					ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
 
 					ImGui::PopStyleVar();
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						
-							/*
-							* BAY 2 selected
-							Set inventory levels for that body type
-							using the methods from body inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (bodyitem_current == 0) {
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 1) {
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 2) {
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 3) {
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 4) {
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayTwo");
+						}
 
-							use : bodyitem_current to get the body type selected
-							i0 to get the value for body type if greater than 500 set = 500
-							if < 0 = 0
-							*/
-					
+
+
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -1156,6 +1176,12 @@ int main()
 				static int b;
 				ImGui::RadioButton("Bay 1", &b, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &b, 1);
+				if (b == 0) {
+					plant.chassisMachine.SwitchVehicleChassisLines("BayOne");
+				}
+				else {
+					plant.chassisMachine.SwitchVehicleChassisLines("BayTwo");
+				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (b == 0) {
@@ -1188,6 +1214,33 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (chassisitem_current == 0) {
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 1) {
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 2) {
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 3) {
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 4) {
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 5) {
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 6) {
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayOne");
+						}
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
 						Set inventory levels for that engine type
@@ -1226,6 +1279,34 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (chassisitem_current == 0) {
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 1) {
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 2) {
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 3) {
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 4) {
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 5) {
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 6) {
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayTwo");
+						}
 						/*
 						* Bay 2 if bay 1 is selected you can only restock bay 2
 						Set inventory levels for that engine type
@@ -1418,15 +1499,33 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						/*
-						* Bay 1 if bay 2 is selected you can only restock bay 1
-						Set inventory levels for that Interior type
-						using the methods from engine inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
 
-						use : engineitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (Interioritem_current == 0) {
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 1) {
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 2) {
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 3) {
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 4) {
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 5) {
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(i0, "BayOne");
+						}
+
+
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -1456,15 +1555,31 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						/*
-						* Bay 1 if bay 2 is selected you can only restock bay 1
-						Set inventory levels for that Interior type
-						using the methods from Interior inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
 
-						use : engineitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (Interioritem_current == 0) {
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 1) {
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 2) {
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 3) {
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 4) {
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 5) {
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(i0, "BayTwo");
+						}
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -1925,15 +2040,32 @@ int main()
 						//RESTOCKING PAINT VALUE
 
 						if (PaintVatitem_current == 0) {
-							paintRedVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("RED", 500, "RGBPaintVats.txt");
 
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
 
 						}
 						else if (PaintVatitem_current == 1) {
-							paintGreenVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("GREEN", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
 						}
 						else if (PaintVatitem_current == 2) {
-							paintBlueVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("BLUE", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
 
 						}
 					}
@@ -2207,7 +2339,7 @@ int main()
 
 				// We specify a default position/size in case there's no data in the .ini file.
 				// We only do it to make the demo applications a little more welcoming, but typically this isn't required.
-				const ImGuiViewport* main_viewport = ImGui::GetMainViewport();
+				
 				ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 				// Main body of the Demo window starts here.
@@ -2218,11 +2350,11 @@ int main()
 					return 0;
 				}
 
-				// Most "big" widgets share a common width settings by default. See 'Demo->Layout->Widgets Width' for details.
-				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
-				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
-				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				//// Most "big" widgets share a common width settings by default. See 'Demo->Layout->Widgets Width' for details.
+				//// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
+				////ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
+				//// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
+				//ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
 
 
 
@@ -2274,11 +2406,11 @@ int main()
 					return 0;
 				}
 
-				// Most "big" widgets share a common width settings by default. See 'Demo->Layout->Widgets Width' for details.
-				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
-				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
-				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+				//// Most "big" widgets share a common width settings by default. See 'Demo->Layout->Widgets Width' for details.
+				//// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
+				////ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
+				//// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
+				//ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
 
 
 
@@ -2287,21 +2419,25 @@ int main()
 
 				ImGui::End();
 
-				// Export variables to shader
-				glUseProgram(shaderProgram);
-				glUniform1f(glGetUniformLocation(shaderProgram, "size"), size);
-				glUniform4f(glGetUniformLocation(shaderProgram, "color"), color[0], color[1], color[2], color[3]);
-
-				// Renders the ImGUI elements
-				ImGui::Render();
-				ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-				// Swap the back buffer with the front buffer
-				glfwSwapBuffers(window);
-				// Take care of all GLFW events
 				
-			
 
+				
+				ImGui::EndFrame();
+
+
+
+
+					// Renders the ImGUI elements
+					ImGui::Render();
+					ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+					// Swap the back buffer with the front buffer
+					glfwSwapBuffers(window);
+					// Take care of all GLFW events
+
+
+				
+				isRendered = false;
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -2312,21 +2448,24 @@ int main()
 				}
 				
 			}
-
+			
 			if (!bodyMachine) {
-
+				isRendered = true;
 			}
 
 			while (paintMachine) {
 				glfwPollEvents();
 
 
+
+				//changing values from order to body machine.
 				if (glfwWindowShouldClose(window)) {
 					bodyMachine = false;
 					paintMachine = false;
 					chassisMachine = false;
 					interiorMachine = false;
 				}
+
 
 				//PAINT CHANGING STUFF.
 
@@ -2335,16 +2474,19 @@ int main()
 					plant.paintingMachine.setcolour(plant.order.getColour());
 					plant.paintingMachine.identifyRGBvalues("PlantColours.txt");
 					plant.paintingMachine.updateRGBpaintVat("RGBPaintVats.txt");
-
 					plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
 					paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
 					paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
 					paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+					plant.vehicle.setColour(plant.paintingMachine.getcolour());
+					changePaintValues = false;
+				}
+					
 
 					
 
-					changePaintValues = false;
-				}
+				
 
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
@@ -2374,27 +2516,27 @@ int main()
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
+				if (isRendered) {
+					//Set to blank
+					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
+					IM_ASSERT(body);
 
-				//Set to blank
-				bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
-				IM_ASSERT(body);
-
-				bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
-				IM_ASSERT(toBeMade);
-
-				
-				bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
-				IM_ASSERT(chassis);
+					bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					IM_ASSERT(toBeMade);
 
 
-				//set to blank
-				bool Paint = LoadTextureFromFile("Images/GUI/Paint Machine/2022 Regular F150 Antimatter Blue Metallic.jpg", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
-				IM_ASSERT(Paint);
+					bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+					IM_ASSERT(chassis);
 
-				//set to blank
-				bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
-				IM_ASSERT(Interior);
 
+					//set to blank
+					bool Paint = LoadTextureFromFile("Images/GUI/Paint Machine/2022 Regular F150 Antimatter Blue Metallic.jpg", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+					IM_ASSERT(Paint);
+
+					//set to blank
+					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+					IM_ASSERT(Interior);
+				}
 
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -2408,10 +2550,6 @@ int main()
 
 
 
-				// Tell OpenGL which Shader Program we want to use
-				glUseProgram(shaderProgram);
-				// Bind the VAO so OpenGL knows to use it
-				glBindVertexArray(VAO);
 
 
 				//BODY MACHINE================================================================================================================================================
@@ -2458,6 +2596,13 @@ int main()
 				//radio buttons
 				ImGui::RadioButton("Bay 1", &e, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &e, 1);
+
+				if (e == 0) {
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayOne");
+				}
+				else {
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayTwo");
+				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (e == 0) {
@@ -2469,8 +2614,7 @@ int main()
 				}
 
 
-				// Always center this window when appearing
-				ImVec2 center = ImGui::GetMainViewport()->GetCenter();
+				
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -2490,6 +2634,28 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+
+						if (bodyitem_current == 0) {
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 1) {
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 2) {
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 3) {
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 4) {
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayOne");
+						}
 
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
@@ -2510,7 +2676,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-				center = ImGui::GetMainViewport()->GetCenter();
+
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -2524,22 +2690,36 @@ int main()
 					static int i0 = 123;
 					ImGui::InputInt("input int", &i0);
 
+
 					ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
 
 					ImGui::PopStyleVar();
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (bodyitem_current == 0) {
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 1) {
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 2) {
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 3) {
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 4) {
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayTwo");
+						}
 
-						/*
-						* BAY 2 selected
-						Set inventory levels for that body type
-						using the methods from body inventory bay
 
-						use : bodyitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
 
 
 					}
@@ -2741,6 +2921,12 @@ int main()
 				static int b;
 				ImGui::RadioButton("Bay 1", &b, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &b, 1);
+				if (b == 0) {
+					plant.chassisMachine.SwitchVehicleChassisLines("BayOne");
+				}
+				else {
+					plant.chassisMachine.SwitchVehicleChassisLines("BayTwo");
+				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (b == 0) {
@@ -2773,6 +2959,33 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (chassisitem_current == 0) {
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 1) {
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 2) {
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 3) {
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 4) {
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 5) {
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 6) {
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayOne");
+						}
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
 						Set inventory levels for that engine type
@@ -2811,6 +3024,34 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (chassisitem_current == 0) {
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 1) {
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 2) {
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 3) {
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 4) {
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 5) {
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 6) {
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayTwo");
+						}
 						/*
 						* Bay 2 if bay 1 is selected you can only restock bay 2
 						Set inventory levels for that engine type
@@ -3003,15 +3244,33 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						/*
-						* Bay 1 if bay 2 is selected you can only restock bay 1
-						Set inventory levels for that Interior type
-						using the methods from engine inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
 
-						use : engineitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (Interioritem_current == 0) {
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 1) {
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 2) {
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 3) {
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 4) {
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 5) {
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(i0, "BayOne");
+						}
+
+
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -3041,15 +3300,31 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						/*
-						* Bay 1 if bay 2 is selected you can only restock bay 1
-						Set inventory levels for that Interior type
-						using the methods from Interior inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
 
-						use : engineitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (Interioritem_current == 0) {
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 1) {
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 2) {
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 3) {
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 4) {
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 5) {
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(i0, "BayTwo");
+						}
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -3496,6 +3771,7 @@ int main()
 				}
 
 
+
 				// Always center this window when appearing
 
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
@@ -3510,15 +3786,32 @@ int main()
 						//RESTOCKING PAINT VALUE
 
 						if (PaintVatitem_current == 0) {
-							paintRedVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("RED", 500, "RGBPaintVats.txt");
 
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
 
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+							
 						}
 						else if (PaintVatitem_current == 1) {
-							paintGreenVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("GREEN", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+							
 						}
 						else if (PaintVatitem_current == 2) {
-							paintBlueVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("BLUE", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+							
 
 						}
 					}
@@ -3792,7 +4085,6 @@ int main()
 
 				// We specify a default position/size in case there's no data in the .ini file.
 				// We only do it to make the demo applications a little more welcoming, but typically this isn't required.
-				const ImGuiViewport* main_viewport = ImGui::GetMainViewport();
 				ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 				// Main body of the Demo window starts here.
@@ -3872,11 +4164,7 @@ int main()
 
 				ImGui::End();
 
-				// Export variables to shader
-				glUseProgram(shaderProgram);
-				glUniform1f(glGetUniformLocation(shaderProgram, "size"), size);
-				glUniform4f(glGetUniformLocation(shaderProgram, "color"), color[0], color[1], color[2], color[3]);
-
+		
 				// Renders the ImGUI elements
 				ImGui::Render();
 				ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -3885,7 +4173,7 @@ int main()
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
 				
-			
+				isRendered = false;
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -3896,8 +4184,7 @@ int main()
 				}
 			}
 			if (!paintMachine) {
-
-		
+				isRendered = true;
 			}
 
 			while (chassisMachine) {
@@ -3908,6 +4195,33 @@ int main()
 					chassisMachine = false;
 					interiorMachine = false;
 				}
+
+				if (changeChassisValues) {
+
+					plant.chassisMachine.RunChassisMachine(plant.order, &plant.vehicle);
+					changeChassisValues = false;
+				}
+
+				//Value boxes for each inventory
+//BAY 1
+				bay135LV6C = plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+				bay135LV6HOC = plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+				bay127LV6C = plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+				bay133LV6C = plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+				bay135LV6EcoC = plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+				bay135LV6PwrBstC = plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+				bay150LV8C = plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+				//Value boxes for each inventory
+						//BAY 2
+				bay235LV6C = plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+				bay235LV6HOC = plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+				bay227LV6C = plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+				bay233LV6C = plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+				bay235LV6EcoC = plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+				bay235LV6PwrBstC = plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+				bay250LV8C = plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+
+
 
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
@@ -3938,25 +4252,26 @@ int main()
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
 				//Set to blank
-				bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
-				IM_ASSERT(body);
+				if (isRendered) {
+					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
+					IM_ASSERT(body);
 
-				bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
-				IM_ASSERT(toBeMade);
-
-				
-				bool chassis = LoadTextureFromFile("Images/GUI/Chassis Machine/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
-				IM_ASSERT(chassis);
+					bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					IM_ASSERT(toBeMade);
 
 
-				//set to blank
-				bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
-				IM_ASSERT(Paint);
+					bool chassis = LoadTextureFromFile("Images/GUI/Chassis Machine/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+					IM_ASSERT(chassis);
 
-				//set to blank
-				bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
-				IM_ASSERT(Interior);
 
+					//set to blank
+					bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+					IM_ASSERT(Paint);
+
+					//set to blank
+					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+					IM_ASSERT(Interior);
+				}
 
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -3970,10 +4285,7 @@ int main()
 
 
 
-				// Tell OpenGL which Shader Program we want to use
-				glUseProgram(shaderProgram);
-				// Bind the VAO so OpenGL knows to use it
-				glBindVertexArray(VAO);
+			
 
 
 				//BODY MACHINE================================================================================================================================================
@@ -4020,6 +4332,13 @@ int main()
 				//radio buttons
 				ImGui::RadioButton("Bay 1", &e, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &e, 1);
+
+				if (e == 0) {
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayOne");
+				}
+				else {
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayTwo");
+				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (e == 0) {
@@ -4032,7 +4351,7 @@ int main()
 
 
 				// Always center this window when appearing
-				ImVec2 center = ImGui::GetMainViewport()->GetCenter();
+				
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -4045,13 +4364,35 @@ int main()
 
 					static int i0 = 123;
 					ImGui::InputInt("input int", &i0);
-
+				
 					ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
 
 					ImGui::PopStyleVar();
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+
+						if (bodyitem_current == 0) {
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 1) {
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 2) {
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 3) {
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 4) {
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayOne");
+						}
 
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
@@ -4072,7 +4413,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-				center = ImGui::GetMainViewport()->GetCenter();
+				
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -4085,6 +4426,7 @@ int main()
 
 					static int i0 = 123;
 					ImGui::InputInt("input int", &i0);
+					
 
 					ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
 
@@ -4092,16 +4434,29 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-
-						/*
-						* BAY 2 selected
-						Set inventory levels for that body type
-						using the methods from body inventory bay
-
-						use : bodyitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (bodyitem_current == 0) {
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 1) {
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 2) {
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 3) {
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 4) {
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayTwo");
+						}
+							
+				
 
 
 					}
@@ -4304,6 +4659,13 @@ int main()
 				static int b;
 				ImGui::RadioButton("Bay 1", &b, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &b, 1);
+				if (b == 0) {
+					plant.chassisMachine.SwitchVehicleChassisLines("BayOne");
+				}
+				else {
+					plant.chassisMachine.SwitchVehicleChassisLines("BayTwo");
+				}
+				
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (b == 0) {
@@ -4336,6 +4698,33 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (chassisitem_current == 0) {
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 1) {
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 2) {
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 3) {
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 4) {
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 5) {
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 6) {
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayOne");
+						}
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
 						Set inventory levels for that engine type
@@ -4374,6 +4763,34 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (chassisitem_current == 0) {
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 1) {
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 2) {
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 3) {
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 4) {
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 5) {
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 6) {
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayTwo");
+						}
 						/*
 						* Bay 2 if bay 1 is selected you can only restock bay 2
 						Set inventory levels for that engine type
@@ -4566,15 +4983,33 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						/*
-						* Bay 1 if bay 2 is selected you can only restock bay 1
-						Set inventory levels for that Interior type
-						using the methods from engine inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
 
-						use : engineitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (Interioritem_current == 0) {
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 1) {
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 2) {
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 3) {
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 4) {
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 5) {
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(i0, "BayOne");
+						}
+
+
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -4604,15 +5039,31 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						/*
-						* Bay 1 if bay 2 is selected you can only restock bay 1
-						Set inventory levels for that Interior type
-						using the methods from Interior inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
 
-						use : engineitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (Interioritem_current == 0) {
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 1) {
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 2) {
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 3) {
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 4) {
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 5) {
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(i0, "BayTwo");
+						}
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -5073,15 +5524,32 @@ int main()
 						//RESTOCKING PAINT VALUE
 
 						if (PaintVatitem_current == 0) {
-							paintRedVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("RED", 500, "RGBPaintVats.txt");
 
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
 
 						}
 						else if (PaintVatitem_current == 1) {
-							paintGreenVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("GREEN", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
 						}
 						else if (PaintVatitem_current == 2) {
-							paintBlueVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("BLUE", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
 
 						}
 					}
@@ -5355,7 +5823,7 @@ int main()
 
 				// We specify a default position/size in case there's no data in the .ini file.
 				// We only do it to make the demo applications a little more welcoming, but typically this isn't required.
-				const ImGuiViewport* main_viewport = ImGui::GetMainViewport();
+	
 				ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 				// Main body of the Demo window starts here.
@@ -5435,11 +5903,6 @@ int main()
 
 				ImGui::End();
 
-				// Export variables to shader
-				glUseProgram(shaderProgram);
-				glUniform1f(glGetUniformLocation(shaderProgram, "size"), size);
-				glUniform4f(glGetUniformLocation(shaderProgram, "color"), color[0], color[1], color[2], color[3]);
-
 				// Renders the ImGUI elements
 				ImGui::Render();
 				ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -5448,6 +5911,7 @@ int main()
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
 
+				isRendered = false;
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -5460,7 +5924,7 @@ int main()
 
 			}
 			if (!chassisMachine) {
-
+				isRendered = true;
 
 			}
 
@@ -5473,6 +5937,30 @@ int main()
 					chassisMachine = false;
 					interiorMachine = false;
 				}
+
+				if (changeInteriorValues) {
+					plant.chassisMachine.RunChassisMachine(plant.order, &plant.vehicle);
+					changeInteriorValues = false;
+				}
+
+				//Value boxes for each inventory
+//BAY 1
+				bay1BaseExp = plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+				bay1MidExp = plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+				bay1HighExp = plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+				bay1BaseF150 = plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+				bay1MidF150 = plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+				bay1HighF150 = plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+
+				//Value boxes for each inventory
+						//BAY 2
+				bay2BaseExp = plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+				bay2MidExp = plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
+				bay2HighExp = plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
+				bay2BaseF150 = plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
+				bay2MidF150 = plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
+				bay2HighF150 = plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
+
 
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
@@ -5502,27 +5990,28 @@ int main()
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
-				//Set to blank
-				bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
-				IM_ASSERT(body);
+				if (isRendered) {
+					//Set to blank
+					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
+					IM_ASSERT(body);
 
-				bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
-				IM_ASSERT(toBeMade);
-
-
-				bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
-				IM_ASSERT(chassis);
+					bool toBeMade = LoadTextureFromFile("Images/GUI/Orders/2022 F150 KING RANCH Super Crew Agate Black Metallic.jpg", &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+					IM_ASSERT(toBeMade);
 
 
-				//set to blank
-				bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
-				IM_ASSERT(Paint);
-
-				//set to blank
-				bool Interior = LoadTextureFromFile("Images/GUI/Interior Machine/2022 Base F150.jpg", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
-				IM_ASSERT(Interior);
+					bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+					IM_ASSERT(chassis);
 
 
+					//set to blank
+					bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+					IM_ASSERT(Paint);
+
+					//set to blank
+					bool Interior = LoadTextureFromFile("Images/GUI/Interior Machine/2022 Base F150.jpg", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+					IM_ASSERT(Interior);
+
+				}
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 				// Clean the back buffer and assign the new color to it
@@ -5535,10 +6024,8 @@ int main()
 
 
 
-				// Tell OpenGL which Shader Program we want to use
-				glUseProgram(shaderProgram);
-				// Bind the VAO so OpenGL knows to use it
-				glBindVertexArray(VAO);
+
+			
 
 
 				//BODY MACHINE================================================================================================================================================
@@ -5585,6 +6072,13 @@ int main()
 				//radio buttons
 				ImGui::RadioButton("Bay 1", &e, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &e, 1);
+
+				if (e == 0) {
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayOne");
+				}
+				else {
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayTwo");
+				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (e == 0) {
@@ -5597,7 +6091,7 @@ int main()
 
 
 				// Always center this window when appearing
-				ImVec2 center = ImGui::GetMainViewport()->GetCenter();
+		
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -5617,6 +6111,28 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+
+						if (bodyitem_current == 0) {
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 1) {
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 2) {
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 3) {
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(i0, "BayOne");
+						}
+						else if (bodyitem_current == 4) {
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayOne");
+						}
 
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
@@ -5637,7 +6153,7 @@ int main()
 				}
 
 				// Always center this window when appearing
-				center = ImGui::GetMainViewport()->GetCenter();
+
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -5651,22 +6167,36 @@ int main()
 					static int i0 = 123;
 					ImGui::InputInt("input int", &i0);
 
+
 					ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
 
 					ImGui::PopStyleVar();
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (bodyitem_current == 0) {
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 1) {
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 2) {
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 3) {
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (bodyitem_current == 4) {
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayTwo");
+						}
 
-						/*
-						* BAY 2 selected
-						Set inventory levels for that body type
-						using the methods from body inventory bay
 
-						use : bodyitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
 
 
 					}
@@ -5870,6 +6400,12 @@ int main()
 				static int b;
 				ImGui::RadioButton("Bay 1", &b, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &b, 1);
+				if (b == 0) {
+					plant.chassisMachine.SwitchVehicleChassisLines("BayOne");
+				}
+				else {
+					plant.chassisMachine.SwitchVehicleChassisLines("BayTwo");
+				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (b == 0) {
@@ -5902,6 +6438,33 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (chassisitem_current == 0) {
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 1) {
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 2) {
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 3) {
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 4) {
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 5) {
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayOne");
+						}
+						else if (chassisitem_current == 6) {
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayOne");
+						}
 						/*
 						* Bay 1 if bay 2 is selected you can only restock bay 1
 						Set inventory levels for that engine type
@@ -5940,6 +6503,34 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
+						if (chassisitem_current == 0) {
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 1) {
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 2) {
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 3) {
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 4) {
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 5) {
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(i0, "BayTwo");
+						}
+						else if (chassisitem_current == 6) {
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(i0, "BayTwo");
+						}
 						/*
 						* Bay 2 if bay 1 is selected you can only restock bay 2
 						Set inventory levels for that engine type
@@ -6100,6 +6691,12 @@ int main()
 				static int c;
 				ImGui::RadioButton("Bay 1", &c, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &c, 1);
+				if (c == 0) {
+					plant.interiorMachine.SwitchVehiclePanelsBays("BayOne");
+				}
+				else {
+					plant.interiorMachine.SwitchVehiclePanelsBays("BayTwo");
+				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
 					if (c == 0) {
@@ -6132,15 +6729,33 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						/*
-						* Bay 1 if bay 2 is selected you can only restock bay 1
-						Set inventory levels for that Interior type
-						using the methods from engine inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if(i0 < 0) {
+							i0 = 0;
+						}
 
-						use : engineitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (Interioritem_current == 0) {
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 1) {
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 2) {
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 3) {
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 4) {
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(i0, "BayOne");
+						}
+						else if (Interioritem_current == 5) {
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(i0, "BayOne");
+						}
+
+
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -6170,15 +6785,31 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
-						/*
-						* Bay 1 if bay 2 is selected you can only restock bay 1
-						Set inventory levels for that Interior type
-						using the methods from Interior inventory bay
+						if (i0 > 500) {
+							i0 = 500;
+						}
+						else if (i0 < 0) {
+							i0 = 0;
+						}
 
-						use : engineitem_current to get the body type selected
-						i0 to get the value for body type if greater than 500 set = 500
-						if < 0 = 0
-						*/
+						if (Interioritem_current == 0) {
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 1) {
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 2) {
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 3) {
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 4) {
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(i0, "BayTwo");
+						}
+						else if (Interioritem_current == 5) {
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(i0, "BayTwo");
+						}
 
 					}
 					ImGui::SetItemDefaultFocus();
@@ -6637,17 +7268,33 @@ int main()
 					ImGui::Combo("Paint Vats", &PaintVatitem_current, items, IM_ARRAYSIZE(items));
 					if (ImGui::Button("Restock Button", ImVec2(120, 0))) {
 						//RESTOCKING PAINT VALUE
-
 						if (PaintVatitem_current == 0) {
-							paintRedVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("RED", 500, "RGBPaintVats.txt");
 
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
 
 						}
 						else if (PaintVatitem_current == 1) {
-							paintGreenVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("GREEN", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
 						}
 						else if (PaintVatitem_current == 2) {
-							paintBlueVatVol = 500;
+							plant.paintingMachine.resupplyRGBpaintVat("BLUE", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
 
 						}
 					}
@@ -6921,7 +7568,7 @@ int main()
 
 				// We specify a default position/size in case there's no data in the .ini file.
 				// We only do it to make the demo applications a little more welcoming, but typically this isn't required.
-				const ImGuiViewport* main_viewport = ImGui::GetMainViewport();
+
 				ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 				// Main body of the Demo window starts here.
@@ -7001,11 +7648,7 @@ int main()
 
 				ImGui::End();
 
-				// Export variables to shader
-				glUseProgram(shaderProgram);
-				glUniform1f(glGetUniformLocation(shaderProgram, "size"), size);
-				glUniform4f(glGetUniformLocation(shaderProgram, "color"), color[0], color[1], color[2], color[3]);
-
+				
 				// Renders the ImGUI elements
 				ImGui::Render();
 				ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -7022,76 +7665,17 @@ int main()
 						i = 0;
 					}
 				}
+				isRendered = false;
+						
 			}
-
-			if (!interiorMachine) {
-				if (!ClosedHMI) {
-					// Deletes all ImGUI instances
-					ImGui_ImplOpenGL3_Shutdown();
-					ImGui_ImplGlfw_Shutdown();
-					ImGui::DestroyContext();
-
-					glfwDestroyWindow(window);
-
-					glfwTerminate();
-
-					// Initialize GLFW
-					glfwInit();
-
-					// Tell GLFW what version of OpenGL we are using 
-					// In this case we are using OpenGL 3.3
-					glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-					glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-					// Tell GLFW we are using the CORE profile
-					// So that means we only have the modern functions
-					glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-					// Create a GLFWwindow object of 800 by 800 pixels, naming it "YoutubeOpenGL"
-					window = glfwCreateWindow(1920, 1080, "ImGui + GLFW", glfwGetPrimaryMonitor(), NULL);
-					// Error check if the window fails to create
-					if (window == NULL)
-					{
-						std::cout << "Failed to create GLFW window" << std::endl;
-						glfwTerminate();
-						return -1;
-					}
-					// Introduce the window into the current context
-					glfwMakeContextCurrent(window);
-
-					//Load GLAD so it configures OpenGL
-					gladLoadGL();
-					// Specify the viewport of OpenGL in the Window
-					// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
-					glViewport(0, 0, 1280, 1024);
-
-					IMGUI_CHECKVERSION();
-					ImGui::CreateContext();
-					ImGuiIO& io = ImGui::GetIO(); (void)io;
-					ImGui::StyleColorsDark();
-					ImGui_ImplGlfw_InitForOpenGL(window, true);
-					ImGui_ImplOpenGL3_Init("#version 330");
-
-
-					bool ret = LoadTextureFromFile("Images/Ford_Assembly_Line_GUI_Background.png", &my_image_texture, &my_image_width, &my_image_height);
-					IM_ASSERT(ret);
-
-					bool DipTank = LoadTextureFromFile("Images/Diptank.png", &DipTank_image_texture, &DipTank_image_width, &DipTank_image_height);
-					IM_ASSERT(DipTank);
-
-					bool PaintChamber = LoadTextureFromFile("Images/DryingchamberIcon.png", &PaintChamber_image_texture, &PaintChamber_image_width, &PaintChamber_image_height);
-					IM_ASSERT(PaintChamber);
-				}
-
-			}
-
+			isRendered = true;
+		
+			plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
 
 
 
 	}
-		
 	
-	
-	if (!ClosedHMI) {
 		// Deletes all ImGUI instances
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
@@ -7100,7 +7684,7 @@ int main()
 
 		// Delete window before ending the program
 		glfwDestroyWindow(window);
-	}
+
 		// Terminate GLFW before ending the program
 		glfwTerminate();
 	

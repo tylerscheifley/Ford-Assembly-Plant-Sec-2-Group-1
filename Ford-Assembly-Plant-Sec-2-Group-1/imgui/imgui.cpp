@@ -1195,7 +1195,7 @@ ImGuiIO::ImGuiIO()
     ConfigDragClickToInputText = false;
     ConfigWindowsResizeFromEdges = true;
     ConfigWindowsMoveFromTitleBarOnly = false;
-    ConfigMemoryCompactTimer = 60.0f;
+    ConfigMemoryCompactTimer = 2.0f;
 
     // Platform Functions
     BackendPlatformName = BackendRendererName = NULL;
