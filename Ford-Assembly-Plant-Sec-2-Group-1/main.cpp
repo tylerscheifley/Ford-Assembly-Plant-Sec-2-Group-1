@@ -298,7 +298,7 @@ string loadChassisMachineImage(Order order)
 {
 	string startOfPath = "Images/GUI/Chassis Machine/";
 
-	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + " " + order.getColour() + ".jpg";
+	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + convertBodyPanelSetToFileName(order.getBodyPanelSet(), order) + order.getColour() + ".jpg";
 }
 
 //This loads the correct image for the interior machine using the order
@@ -359,7 +359,40 @@ string loadOrderImage(Order order)
 {
 	string startOfPath = "Images/GUI/Orders/";
 
-	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + " " + order.getColour() + ".jpg";
+	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + convertBodyPanelSetToFileName(order.getBodyPanelSet(), order) + order.getColour() + ".jpg";
+}
+
+//This converts the name of the body panel in the object to the correct format for the file name
+string convertBodyPanelSetToFileName(string bodyPanelSet, Order order)
+{
+	string convertedBodyPanelSetName;
+	if (order.getYear() == "2022")
+	{
+		if (bodyPanelSet == "Regular")
+		{
+			convertedBodyPanelSetName = " Regular Cab ";
+		}
+		else if (bodyPanelSet == "SuperCrew")
+		{
+			convertedBodyPanelSetName = " Super Crew ";
+		}
+		else if (bodyPanelSet == "Super Cab")
+		{
+			convertedBodyPanelSetName = " Super Cab ";
+		}
+	}
+	else if (order.getYear() == "2023")
+	{
+		if (bodyPanelSet == "REG")
+		{
+			convertedBodyPanelSetName = " ";
+		}
+		else if (bodyPanelSet == "MAX")
+		{
+			convertedBodyPanelSetName = " MAX ";
+		}
+	}
+	return convertedBodyPanelSetName;
 }
 
 
