@@ -379,12 +379,45 @@ string loadInteriorMachineImage(Order order)
 	return startOfPath + fileName;
 }
 
+//This converts the name of the body panel in the object to the correct format for the file name
+string convertBodyPanelSetToPaintFileName(string bodyPanelSet, Order order)
+{
+	string convertedBodyPanelSetName;
+	if (order.getYear() == "2022")
+	{
+		if (bodyPanelSet == "Regular")
+		{
+			convertedBodyPanelSetName = "Regular";
+		}
+		else if (bodyPanelSet == "SuperCrew")
+		{
+			convertedBodyPanelSetName = "SuperCrew";
+		}
+		else if (bodyPanelSet == "SuperCab")
+		{
+			convertedBodyPanelSetName = "SuperCab";
+		}
+	}
+	else if (order.getYear() == "2023")
+	{
+		if (bodyPanelSet == "REG")
+		{
+			convertedBodyPanelSetName = "Regular";
+		}
+		else if (bodyPanelSet == "MAX")
+		{
+			convertedBodyPanelSetName = "Max";
+		}
+	}
+	return convertedBodyPanelSetName;
+}
+
 //This loads the correct image for the paint machine using the order
 string loadPaintMachineImage(Order order)
 {
 	string startOfPath = "Images/GUI/Paint Machine/";
 
-	return startOfPath + order.getYear() + " " + order.getBodyPanelSet() + " " + order.getModel() + " " + order.getColour() + ".jpg";
+	return startOfPath + order.getYear() + " " + convertBodyPanelSetToPaintFileName(order.getBodyPanelSet(), order) + " " + order.getModel() + " " + order.getColour() + ".jpg";
 }
 
 //This loads the correct image for displaying the order using the order
