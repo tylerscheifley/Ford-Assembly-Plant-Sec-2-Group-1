@@ -2,11 +2,11 @@ FORD|2023|Expedition|PLATINUM|MAX|Iconic Silver|35LV6HOC|high|Harriston
 FORD|2023|Expedition|KING RANCH|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Walkerton
 FORD|2022|F150|PLATINUM|SuperCrew|Smoked Quartz Tinted Clearcoat Metallic|27LV6C|high|Kitchener
 FORD|2023|Expedition|KING RANCH|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Toronto
+Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Toronto
 FORD|2022|F150|XLT|SuperCab|Atlas Blue Metallic|27LV6C|high|Harriston
 FORD|2022|F150|LIMITED|SuperCrew|Agate Black Metallic|50LV8C|base|London
 FORD|2023|Expedition|LIMITED|REG|Dark Matter Metallic|35LV6HOC|high|Owen Sound
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6C|base|Toronto
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6C|base|Toronto
 FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6HOC|base|Owen Sound
 FORD|2022|F150|LIMITED|SuperCrew|Iconic Silver Metallic|50LV8C|high|Owen Sound
 FORD|2022|F150|XLT|Regular|Atlas Blue Metallic|50LV8C|high|Toronto
@@ -26,15 +26,15 @@ FORD|2022|F150|LARIAT|SuperCab|Stone Grey Metallic|50LV8C|base|Harriston
 FORD|2023|Expedition|TIMBERLINE|REG|Stone Blue Metallic|35LV6HOC|mid|Waterloo
 FORD|2022|F150|PLATINUM|SuperCrew|Smoked Quartz Tinted Clearcoat Metallic|35LV6PwrBstC|mid|Toronto
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Toronto
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|base|Walkerton
+Iconic Silver|35LV6C|base|Walkerton
 FORD|2022|F150|XLT|Regular|Atlas Blue Metallic|35LV6EcoC|base|Toronto
 FORD|2022|F150|XLT|Regular|Rapid Red Metallic Tinted Clearcoat|50LV8C|mid|Walkerton
 FORD|2022|F150|LARIAT|SuperCab|Rapid Red Metallic Tinted Clearcoat Metallic|50LV8C|base|Toronto
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6HOC|high|Walkerton
+Dark Matter Metallic|35LV6HOC|high|Walkerton
 FORD|2022|F150|XLT|Regular|Race Red|35LV6PwrBstC|mid|Harriston
 FORD|2022|F150|XLT|Regular|Space White Metallic|35LV6EcoC|high|Kitchener
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6C|high|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6C|high|Walkerton
+Oxford White|35LV6C|high|Walkerton
 FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|35LV6EcoC|high|Walkerton
 FORD|2022|F150|TREMOR|SuperCrew|Atlas Blue Metallic|35LV6PwrBstC|mid|Toronto
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|35LV6PwrBstC|base|Kitchener
@@ -42,8 +42,8 @@ FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV
 FORD|2023|Expedition|XLT|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Owen Sound
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Walkerton
 FORD|2022|F150|XLT|Regular|Stone Grey Metallic|27LV6C|high|Toronto
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6C|mid|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6HOC|mid|Kitchener
+Stone Blue Metallic|35LV6C|mid|Toronto
+Agate Black|35LV6HOC|mid|Kitchener
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|50LV8C|high|Owen Sound
 FORD|2022|F150|XLT|Regular|Rapid Red Metallic Tinted Clearcoat|35LV6PwrBstC|base|Kitchener
 FORD|2022|F150|LIMITED|SuperCrew|Iconic Silver Metallic|33LV6C|high|Toronto
@@ -56,7 +56,7 @@ FORD|2022|F150|PLATINUM|SuperCrew|Smoked Quartz Tinted Clearcoat Metallic|27LV6C
 FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Owen Sound
 FORD|2023|Expedition|KING RANCH|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Toronto
 FORD|2022|F150|XL|SuperCab|Space White Metallic|27LV6C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6C|base|Owen Sound
+Forged Green Metallic|35LV6C|base|Owen Sound
 FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|33LV6C|mid|Kitchener
 FORD|2022|F150|XL|Regular|Atlas Blue Metallic|33LV6C|mid|Owen Sound
 FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|35LV6EcoC|high|Kitchener
@@ -64,20 +64,20 @@ FORD|2023|Expedition|PLATINUM|MAX|Agate Black|35LV6C|high|Toronto
 FORD|2022|F150|XLT|Regular|Atlas Blue Metallic|33LV6C|mid|Walkerton
 FORD|2023|Expedition|PLATINUM|REG|Stone Blue Metallic|35LV6C|high|Walkerton
 FORD|2022|F150|XLT|Regular|Iconic Silver Metallic|35LV6EcoC|base|Harriston
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6HOC|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|high|Owen Sound
+Stone Blue Metallic|35LV6HOC|high|London
+Dark Matter Metallic|35LV6HOC|high|Owen Sound
 FORD|2023|Expedition|PLATINUM|MAX|Iconic Silver|35LV6HOC|high|Waterloo
 FORD|2023|Expedition|LIMITED|MAX|Oxford White|35LV6C|high|Toronto
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|50LV8C|high|London
 FORD|2022|F150|XL|SuperCrew|Atlas Blue Metallic|27LV6C|mid|Toronto
 FORD|2023|Expedition|LIMITED|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6C|base|London
+Stone Blue Metallic|35LV6C|base|London
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Waterloo
 FORD|2022|F150|XL|Regular|Race Red|27LV6C|high|Kitchener
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6C|base|Toronto
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6HOC|base|Owen Sound
 FORD|2023|Expedition|TIMBERLINE|REG|Oxford White|35LV6C|high|London
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Waterloo
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Waterloo
 FORD|2022|F150|XL|SuperCrew|Space White Metallic|33LV6C|base|Toronto
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|27LV6C|base|Kitchener
 FORD|2022|F150|PLATINUM|SuperCrew|Antimatter Blue Metallic|35LV6PwrBstC|base|Owen Sound
@@ -85,24 +85,24 @@ FORD|2023|Expedition|LIMITED|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mi
 FORD|2023|Expedition|XLT|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Owen Sound
 FORD|2022|F150|RAPTOR|SuperCrew|Iconic Silver Metallic|27LV6C|base|London
 FORD|2022|F150|XL|Regular|Race Red|33LV6C|high|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6C|mid|Toronto
+Iconic Silver|35LV6C|mid|Toronto
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Waterloo
 FORD|2022|F150|XL|Regular|Atlas Blue Metallic|33LV6C|base|Toronto
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6HOC|high|Walkerton
+Dark Matter Metallic|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Toronto
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6C|base|Harriston
 FORD|2022|F150|XLT|Regular|Space White Metallic|35LV6EcoC|mid|Harriston
 FORD|2022|F150|LARIAT|SuperCab|Star White Metallic Tri-Coat|50LV8C|mid|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Waterloo
+Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Waterloo
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6HOC|mid|Walkerton
 FORD|2022|F150|XLT|Regular|Oxford White|27LV6C|base|Toronto
 FORD|2023|Expedition|XLT|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Owen Sound
 FORD|2022|F150|XLT|SuperCab|Rapid Red Metallic Tinted Clearcoat|33LV6C|mid|Kitchener
 FORD|2022|F150|LARIAT|SuperCab|Iconic Silver Metallic|33LV6C|mid|Harriston
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|high|Toronto
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|high|Toronto
 FORD|2022|F150|RAPTOR|SuperCrew|Rapid Red Metallic Tinted Clearcoat|27LV6C|high|London
 FORD|2022|F150|XLT|SuperCab|Carbonized Grey Metallic|27LV6C|mid|London
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6HOC|high|Waterloo
+Agate Black|35LV6HOC|high|Waterloo
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Harriston
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6C|high|Harriston
 FORD|2023|Expedition|XLT|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|Harriston
@@ -110,13 +110,13 @@ FORD|2022|F150|XLT|Regular|Race Red|27LV6C|base|Walkerton
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|35LV6EcoC|high|London
 FORD|2023|Expedition|TIMBERLINE|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Waterloo
 FORD|2023|Expedition|TIMBERLINE|REG|Dark Matter Metallic|35LV6C|high|Harriston
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|high|Kitchener
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|London
 FORD|2022|F150|XL|Regular|Race Red|50LV8C|base|Toronto
 FORD|2022|F150|XL|SuperCab|Atlas Blue Metallic|35LV6PwrBstC|mid|Toronto
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|mid|London
 FORD|2022|F150|TREMOR|SuperCrew|Stone Grey Metallic|50LV8C|high|Harriston
-FORD|2023|Expedition|XLT|MAX|Forged Green Metallic|35LV6C|mid|Harriston
+Forged Green Metallic|35LV6C|mid|Harriston
 FORD|2023|Expedition|XLT|REG|Agate Black|35LV6C|mid|Harriston
 FORD|2023|Expedition|KING RANCH|MAX|Forged Green Metallic|35LV6HOC|mid|London
 FORD|2023|Expedition|LIMITED|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Toronto
@@ -125,12 +125,12 @@ FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|50LV8C|base|London
 FORD|2022|F150|LARIAT|SuperCab|Race Red|35LV6PwrBstC|high|Kitchener
 FORD|2022|F150|XLT|Regular|Oxford White|50LV8C|high|Toronto
 FORD|2023|Expedition|KING RANCH|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Waterloo
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Harriston
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6HOC|base|Waterloo
 FORD|2023|Expedition|PLATINUM|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|base|Waterloo
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6C|high|Toronto
 FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Toronto
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6C|mid|Owen Sound
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6C|mid|Owen Sound
 FORD|2023|Expedition|PLATINUM|MAX|Dark Matter Metallic|35LV6HOC|high|London
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Walkerton
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6C|mid|Owen Sound
@@ -138,7 +138,7 @@ FORD|2023|Expedition|LIMITED|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|
 FORD|2023|Expedition|LIMITED|MAX|Oxford White|35LV6C|base|Toronto
 FORD|2022|F150|XLT|SuperCrew|Atlas Blue Metallic|33LV6C|mid|Owen Sound
 FORD|2022|F150|XLT|SuperCab|Race Red|50LV8C|high|Kitchener
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6C|high|London
+Stone Blue Metallic|35LV6C|high|London
 FORD|2022|F150|XL|SuperCab|Space White Metallic|50LV8C|high|Kitchener
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Harriston
 FORD|2022|F150|LIMITED|SuperCrew|Smoked Quartz Tinted Clearcoat Metallic|27LV6C|high|Toronto
@@ -150,26 +150,26 @@ FORD|2023|Expedition|LIMITED|MAX|Dark Matter Metallic|35LV6C|base|London
 FORD|2022|F150|XL|SuperCab|Agate Black MetallicAntimatter Blue Metallic|27LV6C|high|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6C|high|Walkerton
 FORD|2022|F150|XL|SuperCab|Race Red|50LV8C|high|Kitchener
-FORD|2022|F150|XL|SuperCrew|Iconic Sliver Metallic|33LV6C|mid|Kitchener
+FORD|2022|F150|XL|SuperCrew|Iconic Silver Metallic|33LV6C|mid|Kitchener
 FORD|2022|F150|XLT|SuperCab|Carbonized Grey Metallic|33LV6C|base|Kitchener
 FORD|2023|Expedition|XLT|REG|Dark Matter Metallic|35LV6C|high|Toronto
 FORD|2023|Expedition|LIMITED|REG|Stone Blue Metallic|35LV6C|mid|Harriston
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|35LV6PwrBstC|high|Toronto
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|mid|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|high|Kitchener
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|mid|London
+Star White Platinum Metallic Tri-Coat|35LV6C|high|Kitchener
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6C|high|Owen Sound
 FORD|2023|Expedition|LIMITED|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Toronto
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|high|Walkerton
+Iconic Silver|35LV6C|high|Walkerton
 FORD|2022|F150|RAPTOR|SuperCrew|Iconic Silver Metallic|35LV6EcoC|base|London
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Harriston
 FORD|2022|F150|XL|Regular|Atlas Blue Metallic|50LV8C|base|Owen Sound
 FORD|2023|Expedition|PLATINUM|REG|Iconic Silver|35LV6HOC|mid|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6HOC|high|London
+Forged Green Metallic|35LV6HOC|high|London
 FORD|2022|F150|XL|Regular|Agate Black Metallic|35LV6EcoC|base|London
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6HOC|mid|Walkerton
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6HOC|mid|Walkerton
 FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|high|Kitchener
+Dark Matter Metallic|35LV6HOC|high|Kitchener
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|33LV6C|high|London
 FORD|2022|F150|XL|Regular|Oxford White|50LV8C|base|Walkerton
 FORD|2022|F150|LARIAT|SuperCrew|Stone Grey Metallic|27LV6C|mid|Owen Sound
@@ -183,12 +183,12 @@ FORD|2022|F150|KING RANCH|SuperCrew|Rapid Red Metallic Tinted Clearcoat|33LV6C|h
 FORD|2022|F150|XL|SuperCab|Oxford White|33LV6C|mid|Harriston
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|35LV6PwrBstC|mid|Kitchener
 FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6HOC|mid|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6C|high|London
+Stone Blue Metallic|35LV6HOC|mid|Kitchener
+Dark Matter Metallic|35LV6C|high|London
 FORD|2023|Expedition|KING RANCH|MAX|Oxford White|35LV6C|mid|Owen Sound
 FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|50LV8C|base|London
 FORD|2022|F150|XLT|SuperCab|Atlas Blue Metallic|35LV6PwrBstC|high|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Toronto
+Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Toronto
 FORD|2022|F150|LIMITED|SuperCrew|Carbonized Grey Metallic|35LV6EcoC|high|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Dark Matter Metallic|35LV6HOC|high|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Iconic Silver|35LV6HOC|high|Waterloo
@@ -198,14 +198,14 @@ FORD|2022|F150|XL|Regular|Stone Grey Metallic|35LV6EcoC|high|Walkerton
 FORD|2023|Expedition|XLT|REG|Oxford White|35LV6C|high|Waterloo
 FORD|2022|F150|XL|SuperCab|Oxford White|27LV6C|mid|Harriston
 FORD|2023|Expedition|LIMITED|REG|Dark Matter Metallic|35LV6C|mid|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Forged Green Metallic|35LV6C|base|Harriston
+Forged Green Metallic|35LV6C|base|Harriston
 FORD|2023|Expedition|TIMBERLINE|REG|Dark Matter Metallic|35LV6HOC|base|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6HOC|base|Harriston
+Stone Blue Metallic|35LV6HOC|base|Harriston
 FORD|2022|F150|RAPTOR|SuperCrew|Rapid Red Metallic Tinted Clearcoat|35LV6PwrBstC|high|Walkerton
 FORD|2022|F150|XL|Regular|Race Red|33LV6C|high|Harriston
 FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|50LV8C|high|Toronto
 FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Toronto
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|mid|Harriston
+Iconic Silver|35LV6C|mid|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Iconic Silver|35LV6HOC|base|Toronto
 FORD|2023|Expedition|KING RANCH|REG|Oxford White|35LV6C|mid|Harriston
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Walkerton
@@ -220,7 +220,7 @@ FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6C|mid|Walkerton
 FORD|2022|F150|TREMOR|SuperCrew|Antimattter Blue Metallic|27LV6C|base|Toronto
 FORD|2022|F150|PLATINUM|SuperCrew|Smoked Quartz Tinted Clearcoat Metallic|35LV6PwrBstC|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Toronto
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Toronto
 FORD|2022|F150|LARIAT|SuperCrew|Space White Metallic|50LV8C|high|Kitchener
 FORD|2022|F150|XL|Regular|Oxford White|35LV6PwrBstC|high|Toronto
 FORD|2022|F150|XL|Regular|Agate Black Metallic|50LV8C|base|Kitchener
@@ -228,7 +228,7 @@ FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6H
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|35LV6PwrBstC|mid|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6HOC|mid|Kitchener
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|base|Waterloo
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|base|Waterloo
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6C|high|Owen Sound
 FORD|2022|F150|LARIAT|SuperCrew|Carbonized Grey Metallic|35LV6EcoC|mid|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Stone Blue Metallic|35LV6HOC|base|Walkerton
@@ -237,25 +237,25 @@ FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6HOC|base|London
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|35LV6EcoC|mid|Toronto
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6C|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6C|mid|Owen Sound
+Stone Blue Metallic|35LV6C|base|Walkerton
+Oxford White|35LV6C|mid|Owen Sound
 FORD|2022|F150|XLT|SuperCab|Stone Grey Metallic|35LV6EcoC|base|Walkerton
 FORD|2022|F150|RAPTOR|SuperCrew|Antimatter Blue Metallic|33LV6C|base|Walkerton
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Toronto
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Walkerton
 FORD|2022|F150|XLT|SuperCrew|Race Red|35LV6PwrBstC|high|Toronto
 FORD|2022|F150|LARIAT|SuperCab|Star White Metallic Tri-Coat|50LV8C|mid|Harriston
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6HOC|high|Owen Sound
+Stone Blue Metallic|35LV6HOC|high|Owen Sound
 FORD|2023|Expedition|KING RANCH|MAX|Forged Green Metallic|35LV6HOC|high|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Oxford White|35LV6C|mid|Walkerton
-FORD|2023|Expedition|XLT|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Toronto
+Star White Platinum Metallic Tri-Coat|35LV6C|mid|Toronto
 FORD|2022|F150|TREMOR|SuperCrew|Agate Black Metallic|35LV6PwrBstC|high|Harriston
 FORD|2022|F150|XLT|SuperCab|Carbonized Grey Metallic|27LV6C|mid|London
 FORD|2023|Expedition|LIMITED|REG|Agate Black|35LV6C|base|Toronto
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6C|base|Kitchener
+Agate Black|35LV6C|base|Kitchener
 FORD|2022|F150|KING RANCH|SuperCrew|Antimatter Blue|33LV6C|base|Harriston
 FORD|2022|F150|XL|Regular|Agate Black Metallic|50LV8C|high|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6C|high|Kitchener
+Iconic Silver|35LV6C|high|Kitchener
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6C|mid|Kitchener
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|35LV6PwrBstC|mid|Harriston
 FORD|2022|F150|LIMITED|SuperCrew|Carbonized Grey Metallic|35LV6PwrBstC|base|London
@@ -266,7 +266,7 @@ FORD|2022|F150|XL|SuperCrew|Space White Metallic|50LV8C|base|Harriston
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Walkerton
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6C|mid|Toronto
 FORD|2022|F150|PLATINUM|SuperCrew|Agate Black Metallic|33LV6C|base|London
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6HOC|mid|Owen Sound
+Agate Black|35LV6HOC|mid|Owen Sound
 FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|33LV6C|mid|Harriston
 FORD|2022|F150|LARIAT|SuperCrew|Carbonized Grey Metallic|27LV6C|high|Harriston
 FORD|2022|F150|LARIAT|SuperCrew|Iconic Silver Metallic|27LV6C|base|Owen Sound
@@ -290,8 +290,8 @@ FORD|2022|F150|PLATINUM|SuperCrew|Carbonized Grey Metallic|33LV6C|mid|London
 FORD|2023|Expedition|LIMITED|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Waterloo
 FORD|2022|F150|LARIAT|SuperCab|Antimatter Blue|33LV6C|high|Harriston
 FORD|2022|F150|LARIAT|SuperCab|Race Red|35LV6PwrBstC|high|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6C|mid|Walkerton
+Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Kitchener
+Iconic Silver|35LV6C|mid|Walkerton
 FORD|2023|Expedition|PLATINUM|MAX|Stone Blue Metallic|35LV6C|base|Harriston
 FORD|2023|Expedition|PLATINUM|REG|Iconic Silver|35LV6HOC|base|London
 FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6HOC|high|Toronto
@@ -306,7 +306,7 @@ FORD|2023|Expedition|LIMITED|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|ba
 FORD|2022|F150|LIMITED|SuperCrew|Star White Metallic Tri-Coat|35LV6PwrBstC|high|Harriston
 FORD|2023|Expedition|XLT|REG|Forged Green Metallic|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|TIMBERLINE|REG|Stone Blue Metallic|35LV6HOC|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6HOC|mid|London
+Agate Black|35LV6HOC|mid|London
 FORD|2022|F150|XLT|Regular|Atlas Blue Metallic|35LV6PwrBstC|mid|London
 FORD|2022|F150|LARIAT|SuperCab|Oxford White|33LV6C|high|London
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|35LV6PwrBstC|base|Toronto
@@ -317,10 +317,10 @@ FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6H
 FORD|2022|F150|LARIAT|SuperCab|Star White Metallic Tri-Coat|50LV8C|base|Kitchener
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6HOC|base|Kitchener
 FORD|2022|F150|XLT|Regular|Agate Black Metallic|33LV6C|base|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6HOC|mid|Harriston
+Stone Blue Metallic|35LV6HOC|mid|Harriston
 FORD|2022|F150|XLT|SuperCab|Atlas Blue Metallic|27LV6C|base|Walkerton
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Harriston
+Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Walkerton
+Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Harriston
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|35LV6EcoC|mid|London
 FORD|2022|F150|PLATINUM|SuperCrew|Carbonized Grey Metallic|33LV6C|high|Kitchener
 FORD|2022|F150|XLT|Regular|Iconic Silver Metallic|33LV6C|base|Harriston
@@ -336,20 +336,20 @@ FORD|2023|Expedition|KING RANCH|REG|Oxford White|35LV6C|mid|London
 FORD|2022|F150|LIMITED|SuperCrew|Carbonized Grey Metallic|35LV6EcoC|base|Walkerton
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6C|high|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6C|mid|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6C|base|Walkerton
+Forged Green Metallic|35LV6C|base|Walkerton
 FORD|2022|F150|XL|SuperCab|Race Red|35LV6EcoC|mid|Walkerton
 FORD|2023|Expedition|LIMITED|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Walkerton
 FORD|2022|F150|XLT|Regular|Iconic Silver Metallic|35LV6EcoC|mid|Kitchener
 FORD|2022|F150|LARIAT|SuperCrew|Carbonized Grey Metallic|35LV6EcoC|base|Kitchener
 FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6HOC|base|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6HOC|high|Owen Sound
+Iconic Silver|35LV6HOC|high|Owen Sound
 FORD|2022|F150|XL|Regular|Oxford White|27LV6C|base|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Harriston
 FORD|2022|F150|RAPTOR|SuperCrew|Rapid Red Metallic Tinted Clearcoat|27LV6C|base|Kitchener
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6C|base|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Walkerton
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6C|base|Kitchener
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6C|base|Harriston
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6C|base|Owen Sound
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Walkerton
+Oxford White|35LV6C|base|Kitchener
+Agate Black|35LV6C|base|Harriston
 FORD|2022|F150|XLT|Regular|Space White Metallic|50LV8C|high|London
 FORD|2023|Expedition|LIMITED|REG|Oxford White|35LV6C|mid|Kitchener
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6C|base|London
@@ -369,18 +369,18 @@ FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Dark Matter Metallic|35LV6C|mid|Walkerton
 FORD|2023|Expedition|PLATINUM|REG|Iconic Silver|35LV6HOC|base|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|high|Toronto
+Dark Matter Metallic|35LV6HOC|high|Toronto
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|35LV6EcoC|high|Owen Sound
 FORD|2023|Expedition|LIMITED|MAX|Forged Green Metallic|35LV6HOC|base|London
 FORD|2022|F150|TREMOR|SuperCrew|Atlas Blue Metallic|33LV6C|mid|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6C|base|Owen Sound
 FORD|2023|Expedition|TIMBERLINE|REG|Dark Matter Metallic|35LV6C|high|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Walkerton
+Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6HOC|base|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Kitchener
 FORD|2022|F150|XLT|SuperCab|Rapid Red Metallic Tinted Clearcoat|33LV6C|high|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Oxford White|35LV6HOC|high|Walkerton
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Toronto
+Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Toronto
 FORD|2022|F150|XLT|SuperCrew|Iconic Silver Metallic|33LV6C|high|Owen Sound
 FORD|2022|F150|PLATINUM|SuperCrew|Antimatter Blue Metallic|27LV6C|base|Walkerton
 FORD|2023|Expedition|XLT|REG|Dark Matter Metallic|35LV6HOC|high|Waterloo
@@ -390,9 +390,9 @@ FORD|2023|Expedition|LIMITED|MAX|Forged Green Metallic|35LV6HOC|high|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Waterloo
 FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6C|mid|Walkerton
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6HOC|mid|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|base|Toronto
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Kitchener
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6HOC|base|Owen Sound
+Star White Platinum Metallic Tri-Coat|35LV6C|base|Toronto
+Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Kitchener
+Dark Matter Metallic|35LV6HOC|base|Owen Sound
 FORD|2022|F150|XL|SuperCab|Race Red|33LV6C|high|Harriston
 FORD|2022|F150|KING RANCH|SuperCrew|Antimatter Blue|35LV6PwrBstC|high|Harriston
 FORD|2022|F150|TREMOR|SuperCrew|Stone Grey Metallic|33LV6C|mid|Owen Sound
@@ -405,13 +405,13 @@ FORD|2022|F150|XLT|Regular|Stone Grey Metallic|33LV6C|mid|Owen Sound
 FORD|2023|Expedition|TIMBERLINE|REG|Oxford White|35LV6C|mid|Owen Sound
 FORD|2022|F150|LARIAT|SuperCab|Oxford White|50LV8C|mid|Walkerton
 FORD|2022|F150|KING RANCH|SuperCrew|Rapid Red Metallic Tinted Clearcoat|50LV8C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|base|Harriston
+Star White Platinum Metallic Tri-Coat|35LV6C|base|Harriston
 FORD|2023|Expedition|LIMITED|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Kitchener
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|27LV6C|high|Harriston
 FORD|2022|F150|XL|SuperCrew|Agate Black Metallic|27LV6C|base|Harriston
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Waterloo
 FORD|2022|F150|TREMOR|SuperCrew|Atlas Blue Metallic|35LV6PwrBstC|high|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6C|high|Toronto
+Dark Matter Metallic|35LV6C|high|Toronto
 FORD|2022|F150|XLT|Regular|Space White Metallic|50LV8C|mid|London
 FORD|2022|F150|XLT|Regular|Oxford White|35LV6EcoC|mid|Owen Sound
 FORD|2022|F150|XLT|SuperCab|Space White Metallic|35LV6PwrBstC|mid|Kitchener
@@ -419,21 +419,21 @@ FORD|2022|F150|XL|SuperCrew|Oxford White|50LV8C|base|Kitchener
 FORD|2023|Expedition|KING RANCH|REG|Forged Green Metallic|35LV6HOC|base|Walkerton
 FORD|2023|Expedition|XLT|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Walkerton
 FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|50LV8C|mid|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|base|Harriston
+Iconic Silver|35LV6C|base|Harriston
 FORD|2023|Expedition|KING RANCH|REG|Forged Green Metallic|35LV6C|mid|Kitchener
 FORD|2022|F150|LARIAT|SuperCrew|Oxford White|35LV6EcoC|mid|Harriston
 FORD|2022|F150|KING RANCH|SuperCrew|Oxford White|33LV6C|base|Toronto
 FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Owen Sound
 FORD|2022|F150|LIMITED|SuperCrew|Carbonized Grey Metallic|35LV6PwrBstC|base|London
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Kitchener
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6C|base|London
+Oxford White|35LV6C|base|London
 FORD|2023|Expedition|KING RANCH|REG|Forged Green Metallic|35LV6C|base|Harriston
 FORD|2022|F150|LARIAT|SuperCab|Rapid Red Metallic Tinted Clearcoat Metallic|33LV6C|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6HOC|base|Toronto
+Stone Blue Metallic|35LV6HOC|base|Toronto
 FORD|2022|F150|XLT|Regular|Space White Metallic|27LV6C|base|Harriston
 FORD|2023|Expedition|PLATINUM|REG|Dark Matter Metallic|35LV6C|high|Harriston
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|33LV6C|base|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6HOC|mid|Walkerton
+Oxford White|35LV6HOC|mid|Walkerton
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6C|mid|Waterloo
 FORD|2022|F150|LARIAT|SuperCab|Agate Black Metallic|27LV6C|base|Harriston
 FORD|2022|F150|XLT|SuperCrew|Carbonized Grey Metallic|35LV6PwrBstC|high|Toronto
@@ -448,14 +448,14 @@ FORD|2022|F150|XLT|SuperCab|Atlas Blue Metallic|35LV6PwrBstC|high|Harriston
 FORD|2023|Expedition|TIMBERLINE|REG|Stone Blue Metallic|35LV6C|mid|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Forged Green Metallic|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|XLT|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Waterloo
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Kitchener
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Waterloo
 FORD|2022|F150|XLT|Regular|Oxford White|33LV6C|base|Walkerton
 FORD|2022|F150|XLT|SuperCrew|Oxford White|50LV8C|high|Owen Sound
 FORD|2022|F150|RAPTOR|SuperCrew|Code Orange Metallic|35LV6EcoC|mid|Harriston
 FORD|2023|Expedition|TIMBERLINE|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Walkerton
 FORD|2022|F150|XLT|Regular|Oxford White|50LV8C|mid|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Harriston
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Harriston
 FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|mid|Waterloo
 FORD|2023|Expedition|PLATINUM|MAX|Agate Black|35LV6HOC|high|Walkerton
 FORD|2022|F150|XL|Regular|Agate Black Metallic|33LV6C|high|Toronto
@@ -467,7 +467,7 @@ FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|
 FORD|2022|F150|XL|SuperCrew|Atlas Blue Metallic|35LV6EcoC|base|Harriston
 FORD|2022|F150|RAPTOR|SuperCrew|Antimatter Blue Metallic|50LV8C|high|Owen Sound
 FORD|2022|F150|LARIAT|SuperCrew|Star White Metallic Tri-Coat|27LV6C|mid|Harriston
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6HOC|base|Toronto
+Agate Black|35LV6HOC|base|Toronto
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6C|mid|Kitchener
 FORD|2023|Expedition|LIMITED|REG|Agate Black|35LV6C|base|Harriston
 FORD|2022|F150|LARIAT|SuperCab|Star White Metallic Tri-Coat|27LV6C|mid|Kitchener
@@ -481,21 +481,21 @@ FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6C|m
 FORD|2022|F150|XL|SuperCrew|Space White Metallic|50LV8C|mid|Kitchener
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|27LV6C|high|London
 FORD|2022|F150|LARIAT|SuperCab|Stone Grey Metallic|35LV6EcoC|high|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6HOC|mid|Waterloo
+Stone Blue Metallic|35LV6HOC|mid|Waterloo
 FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|mid|Owen Sound
 FORD|2022|F150|LARIAT|SuperCab|Stone Grey Metallic|35LV6EcoC|base|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Dark Matter Metallic|35LV6HOC|mid|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6HOC|mid|Walkerton
 FORD|2023|Expedition|PLATINUM|REG|Stone Blue Metallic|35LV6C|mid|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6C|high|London
+Oxford White|35LV6C|high|London
 FORD|2022|F150|XLT|SuperCrew|Carbonized Grey Metallic|35LV6EcoC|base|London
 FORD|2022|F150|RAPTOR|SuperCrew|Iconic Silver Metallic|35LV6PwrBstC|high|Walkerton
 FORD|2022|F150|LARIAT|SuperCab|Antimatter Blue|35LV6PwrBstC|base|London
 FORD|2022|F150|LIMITED|SuperCrew|Smoked Quartz Tinted Clearcoat Metallic|33LV6C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|high|Waterloo
+Dark Matter Metallic|35LV6HOC|high|Waterloo
 FORD|2023|Expedition|LIMITED|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|high|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6C|base|Owen Sound
+Forged Green Metallic|35LV6C|base|Owen Sound
 FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|27LV6C|base|London
 FORD|2022|F150|XL|SuperCrew|Agate Black Metallic|27LV6C|base|Walkerton
 FORD|2022|F150|XL|SuperCrew|Space White Metallic|33LV6C|high|Kitchener
@@ -503,13 +503,13 @@ FORD|2022|F150|XLT|SuperCrew|Oxford White|27LV6C|high|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Stone Blue Metallic|35LV6HOC|mid|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Waterloo
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|35LV6EcoC|base|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6C|mid|Waterloo
+Agate Black|35LV6C|mid|Waterloo
 FORD|2022|F150|XLT|SuperCab|Stone Grey Metallic|35LV6PwrBstC|mid|Harriston
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Harriston
 FORD|2022|F150|KING RANCH|SuperCrew|Oxford White|35LV6EcoC|mid|Toronto
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|35LV6EcoC|base|Walkerton
 FORD|2022|F150|XLT|Regular|Space White Metallic|50LV8C|high|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6C|mid|Waterloo
+Oxford White|35LV6C|mid|Waterloo
 FORD|2022|F150|PLATINUM|SuperCrew|Carbonized Grey Metallic|35LV6PwrBstC|base|Owen Sound
 FORD|2022|F150|XLT|SuperCrew|Stone Grey Metallic|35LV6EcoC|base|Harriston
 FORD|2022|F150|LIMITED|SuperCrew|Carbonized Grey Metallic|35LV6PwrBstC|base|Harriston
@@ -519,22 +519,22 @@ FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6HOC|mid|London
 FORD|2022|F150|XL|Regular|Race Red|50LV8C|base|Kitchener
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|33LV6C|high|Harriston
 FORD|2022|F150|XLT|Regular|Race Red|33LV6C|high|Harriston
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6C|mid|Toronto
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6C|mid|Toronto
 FORD|2022|F150|XLT|SuperCrew|Race Red|27LV6C|high|Kitchener
 FORD|2022|F150|XLT|SuperCrew|Atlas Blue Metallic|50LV8C|mid|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6HOC|base|Owen Sound
+Agate Black|35LV6HOC|base|Owen Sound
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6HOC|base|Waterloo
 FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|33LV6C|base|London
 FORD|2022|F150|XLT|Regular|Atlas Blue Metallic|35LV6EcoC|mid|Walkerton
 FORD|2022|F150|LIMITED|SuperCrew|Star White Metallic Tri-Coat|27LV6C|high|Walkerton
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6C|high|Kitchener
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6C|high|Kitchener
 FORD|2022|F150|XLT|Regular|Race Red|33LV6C|base|London
 FORD|2023|Expedition|LIMITED|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|high|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|base|Waterloo
+Dark Matter Metallic|35LV6HOC|base|Waterloo
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Waterloo
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Waterloo
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|33LV6C|high|Toronto
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6HOC|base|Waterloo
+Oxford White|35LV6HOC|base|Waterloo
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|50LV8C|high|Walkerton
 FORD|2022|F150|PLATINUM|SuperCrew|Iconic Silver Metallic|50LV8C|mid|Toronto
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6C|base|Walkerton
@@ -542,7 +542,7 @@ FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6H
 FORD|2022|F150|XL|SuperCab|Space White Metallic|35LV6EcoC|mid|Walkerton
 FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|35LV6EcoC|high|Owen Sound
 FORD|2023|Expedition|TIMBERLINE|REG|Dark Matter Metallic|35LV6C|base|Walkerton
-FORD|2022|F150|XL|SuperCrew|Iconic Sliver Metallic|33LV6C|high|Owen Sound
+FORD|2022|F150|XL|SuperCrew|Iconic Silver Metallic|33LV6C|high|Owen Sound
 FORD|2023|Expedition|XLT|REG|Dark Matter Metallic|35LV6HOC|base|Kitchener
 FORD|2022|F150|KING RANCH|SuperCrew|Iconic Silver Metallic|33LV6C|mid|Toronto
 FORD|2023|Expedition|LIMITED|REG|Oxford White|35LV6HOC|mid|Toronto
@@ -556,29 +556,29 @@ FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV
 FORD|2023|Expedition|LIMITED|REG|Oxford White|35LV6HOC|base|London
 FORD|2022|F150|XLT|SuperCab|Carbonized Grey Metallic|33LV6C|high|Owen Sound
 FORD|2023|Expedition|LIMITED|MAX|Stone Blue Metallic|35LV6HOC|high|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6C|base|London
+Forged Green Metallic|35LV6C|base|London
 FORD|2022|F150|XLT|Regular|Oxford White|27LV6C|base|Walkerton
 FORD|2022|F150|TREMOR|SuperCrew|Iconic Silver Metallic|35LV6EcoC|base|Toronto
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6C|mid|Waterloo
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|33LV6C|base|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6HOC|base|Walkerton
+Stone Blue Metallic|35LV6HOC|base|Walkerton
 FORD|2023|Expedition|PLATINUM|MAX|Stone Blue Metallic|35LV6C|high|Kitchener
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|35LV6EcoC|high|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6HOC|mid|Kitchener
+Forged Green Metallic|35LV6HOC|mid|Kitchener
 FORD|2022|F150|PLATINUM|SuperCrew|Iconic Silver Metallic|33LV6C|base|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6HOC|mid|Kitchener
 FORD|2022|F150|RAPTOR|SuperCrew|Antimatter Blue Metallic|33LV6C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Harriston
-FORD|2022|F150|XL|SuperCrew|Iconic Sliver Metallic|33LV6C|base|Harriston
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Harriston
+FORD|2022|F150|XL|SuperCrew|Iconic Silver Metallic|33LV6C|base|Harriston
 FORD|2023|Expedition|KING RANCH|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Kitchener
 FORD|2022|F150|XLT|SuperCab|Race Red|35LV6EcoC|high|Walkerton
 FORD|2023|Expedition|XLT|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|London
 FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|London
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Owen Sound
+Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Forged Green Metallic|35LV6C|mid|Toronto
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6C|base|Harriston
+Oxford White|35LV6C|base|Harriston
 FORD|2022|F150|KING RANCH|SuperCrew|Star White Metallic Tri-Coat|33LV6C|high|Owen Sound
 FORD|2022|F150|XL|SuperCab|Oxford White|35LV6PwrBstC|high|Walkerton
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|27LV6C|mid|Owen Sound
@@ -586,17 +586,17 @@ FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|m
 FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6C|mid|Toronto
 FORD|2022|F150|RAPTOR|SuperCrew|Code Orange Metallic|27LV6C|high|Walkerton
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Toronto
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Toronto
 FORD|2022|F150|XL|SuperCrew|Antimatter Blue Metallic|27LV6C|base|Owen Sound
 FORD|2022|F150|LIMITED|SuperCrew|Agate Black Metallic|35LV6EcoC|mid|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6C|high|Walkerton
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6HOC|high|Waterloo
+Forged Green Metallic|35LV6C|high|Walkerton
+Stone Blue Metallic|35LV6HOC|high|Waterloo
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|33LV6C|mid|Toronto
 FORD|2023|Expedition|LIMITED|REG|Stone Blue Metallic|35LV6C|mid|Harriston
 FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6C|high|Waterloo
 FORD|2022|F150|RAPTOR|SuperCrew|Code Orange Metallic|27LV6C|high|Owen Sound
 FORD|2022|F150|XLT|Regular|Space White Metallic|27LV6C|mid|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6C|base|Kitchener
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6C|base|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Forged Green Metallic|35LV6C|base|Owen Sound
 FORD|2022|F150|LARIAT|SuperCab|Oxford White|27LV6C|mid|Walkerton
 FORD|2022|F150|XLT|SuperCab|Space White Metallic|50LV8C|high|Kitchener
@@ -610,18 +610,18 @@ FORD|2022|F150|XL|SuperCrew|Carbonized Grey Metallic|50LV8C|high|London
 FORD|2023|Expedition|PLATINUM|MAX|Stone Blue Metallic|35LV6HOC|base|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Dark Matter Metallic|35LV6C|mid|Owen Sound
 FORD|2022|F150|LARIAT|SuperCab|Antimatter Blue|35LV6EcoC|high|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Waterloo
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Waterloo
 FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6C|base|Kitchener
+Dark Matter Metallic|35LV6C|base|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|London
 FORD|2023|Expedition|KING RANCH|REG|Oxford White|35LV6HOC|mid|London
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6C|base|Harriston
 FORD|2022|F150|XLT|SuperCab|Stone Grey Metallic|35LV6PwrBstC|base|Kitchener
 FORD|2023|Expedition|XLT|REG|Agate Black|35LV6HOC|base|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6C|high|Kitchener
+Dark Matter Metallic|35LV6C|high|Kitchener
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Owen Sound
 FORD|2022|F150|PLATINUM|SuperCrew|Iconic Silver Metallic|27LV6C|mid|Kitchener
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|high|Toronto
+Iconic Silver|35LV6C|high|Toronto
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6C|mid|Kitchener
 FORD|2023|Expedition|PLATINUM|MAX|Stone Blue Metallic|35LV6C|high|London
@@ -631,7 +631,7 @@ FORD|2023|Expedition|KING RANCH|REG|Forged Green Metallic|35LV6C|mid|Waterloo
 FORD|2022|F150|XLT|Regular|Iconic Silver Metallic|33LV6C|high|Kitchener
 FORD|2023|Expedition|LIMITED|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Walkerton
 FORD|2023|Expedition|XLT|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6C|mid|Walkerton
+Agate Black|35LV6C|mid|Walkerton
 FORD|2022|F150|XL|SuperCrew|Stone Grey Metallic|35LV6EcoC|high|London
 FORD|2022|F150|XL|SuperCrew|Carbonized Grey Metallic|35LV6EcoC|base|Kitchener
 FORD|2023|Expedition|XLT|REG|Forged Green Metallic|35LV6HOC|base|Kitchener
@@ -643,9 +643,9 @@ FORD|2022|F150|LIMITED|SuperCrew|Carbonized Grey Metallic|27LV6C|high|Owen Sound
 FORD|2022|F150|XL|SuperCrew|Agate Black Metallic|35LV6EcoC|base|Toronto
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Waterloo
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|London
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6C|mid|London
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6C|mid|London
 FORD|2023|Expedition|XLT|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6HOC|high|Kitchener
+Stone Blue Metallic|35LV6HOC|high|Kitchener
 FORD|2022|F150|XLT|SuperCab|Rapid Red Metallic Tinted Clearcoat|35LV6EcoC|mid|London
 FORD|2022|F150|TREMOR|SuperCrew|Stone Grey Metallic|35LV6EcoC|high|Walkerton
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|35LV6PwrBstC|high|Harriston
@@ -661,17 +661,17 @@ FORD|2022|F150|XL|SuperCab|Space White Metallic|33LV6C|base|Walkerton
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|50LV8C|mid|Owen Sound
 FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Harriston
 FORD|2023|Expedition|XLT|REG|Oxford White|35LV6C|base|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6HOC|base|Kitchener
+Agate Black|35LV6HOC|base|Kitchener
 FORD|2022|F150|LARIAT|SuperCab|Agate Black Metallic|35LV6EcoC|mid|Toronto
 FORD|2023|Expedition|XLT|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Kitchener
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6C|high|Kitchener
+Stone Blue Metallic|35LV6C|high|Kitchener
 FORD|2023|Expedition|TIMBERLINE|REG|Dark Matter Metallic|35LV6C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6HOC|high|Toronto
+Forged Green Metallic|35LV6HOC|high|Toronto
 FORD|2022|F150|XLT|SuperCab|Rapid Red Metallic Tinted Clearcoat|27LV6C|base|Toronto
 FORD|2022|F150|LARIAT|SuperCrew|Agate Black Metallic|33LV6C|high|London
 FORD|2023|Expedition|LIMITED|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Harriston
 FORD|2023|Expedition|KING RANCH|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6C|high|Owen Sound
+Agate Black|35LV6C|high|Owen Sound
 FORD|2022|F150|XLT|SuperCrew|Carbonized Grey Metallic|33LV6C|base|Owen Sound
 FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6HOC|mid|Kitchener
 FORD|2022|F150|XL|SuperCab|Space White Metallic|35LV6PwrBstC|mid|Owen Sound
@@ -686,15 +686,15 @@ FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|27LV6C|
 FORD|2022|F150|XLT|Regular|Race Red|35LV6EcoC|mid|Kitchener
 FORD|2023|Expedition|LIMITED|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Harriston
 FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|mid|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6HOC|high|Walkerton
+Forged Green Metallic|35LV6HOC|high|Walkerton
 FORD|2022|F150|LARIAT|SuperCab|Iconic Silver Metallic|35LV6EcoC|base|Toronto
 FORD|2022|F150|XLT|Regular|Oxford White|27LV6C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6HOC|mid|Waterloo
+Oxford White|35LV6HOC|mid|Waterloo
 FORD|2022|F150|XLT|Regular|Space White Metallic|27LV6C|high|Toronto
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6C|high|Walkerton
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6C|high|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Forged Green Metallic|35LV6HOC|base|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6HOC|high|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Toronto
+Oxford White|35LV6HOC|high|Harriston
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Toronto
 FORD|2022|F150|RAPTOR|SuperCrew|Rapid Red Metallic Tinted Clearcoat|35LV6EcoC|high|London
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Toronto
 FORD|2023|Expedition|LIMITED|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Walkerton
@@ -716,7 +716,7 @@ FORD|2022|F150|RAPTOR|SuperCrew|Code Orange Metallic|33LV6C|base|Owen Sound
 FORD|2023|Expedition|PLATINUM|REG|Iconic Silver|35LV6C|mid|Waterloo
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6HOC|base|Kitchener
 FORD|2023|Expedition|LIMITED|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6HOC|base|Toronto
+Agate Black|35LV6HOC|base|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6HOC|high|Waterloo
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|London
 FORD|2022|F150|XL|Regular|Race Red|27LV6C|mid|Kitchener
@@ -732,11 +732,11 @@ FORD|2023|Expedition|TIMBERLINE|REG|Stone Blue Metallic|35LV6HOC|base|London
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|33LV6C|base|Toronto
 FORD|2022|F150|XLT|Regular|Atlas Blue Metallic|33LV6C|high|Kitchener
 FORD|2023|Expedition|XLT|REG|Agate Black|35LV6C|base|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Forged Green Metallic|35LV6HOC|base|Harriston
+Forged Green Metallic|35LV6HOC|base|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Waterloo
 FORD|2023|Expedition|LIMITED|MAX|Oxford White|35LV6HOC|base|Walkerton
 FORD|2022|F150|XLT|Regular|Agate Black Metallic|35LV6EcoC|mid|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Toronto
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Toronto
 FORD|2023|Expedition|LIMITED|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Kitchener
 FORD|2022|F150|TREMOR|SuperCrew|Stone Grey Metallic|35LV6PwrBstC|high|Owen Sound
 FORD|2022|F150|XLT|Regular|Oxford White|35LV6EcoC|mid|London
@@ -749,11 +749,11 @@ FORD|2022|F150|XL|Regular|Stone Grey Metallic|50LV8C|high|Harriston
 FORD|2022|F150|LIMITED|SuperCrew|Iconic Silver Metallic|35LV6EcoC|base|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|mid|Kitchener
 FORD|2023|Expedition|KING RANCH|REG|Oxford White|35LV6C|high|Harriston
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Walkerton
+Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Walkerton
 FORD|2022|F150|RAPTOR|SuperCrew|Code Orange Metallic|27LV6C|mid|Toronto
 FORD|2023|Expedition|PLATINUM|MAX|Dark Matter Metallic|35LV6C|base|Waterloo
 FORD|2023|Expedition|LIMITED|MAX|Forged Green Metallic|35LV6C|high|Kitchener
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6C|base|London
+Dark Matter Metallic|35LV6C|base|London
 FORD|2022|F150|XL|SuperCab|Oxford White|50LV8C|high|Owen Sound
 FORD|2022|F150|XLT|SuperCrew|Antimatter Blue Metallic|33LV6C|base|Walkerton
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|27LV6C|mid|Toronto
@@ -777,13 +777,13 @@ FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6HOC|base|Toronto
 FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|London
 FORD|2022|F150|LARIAT|SuperCrew|Iconic Silver Metallic|27LV6C|high|Owen Sound
 FORD|2022|F150|PLATINUM|SuperCrew|Iconic Silver Metallic|33LV6C|base|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Waterloo
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|base|Toronto
+Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Waterloo
+Iconic Silver|35LV6C|base|Toronto
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|high|Walkerton
+Dark Matter Metallic|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|LIMITED|REG|Agate Black|35LV6C|high|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|base|Kitchener
+Dark Matter Metallic|35LV6HOC|base|Kitchener
 FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|33LV6C|mid|Kitchener
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6C|high|London
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Harriston
@@ -796,17 +796,17 @@ FORD|2022|F150|KING RANCH|SuperCrew|Star White Metallic Tri-Coat|35LV6PwrBstC|ba
 FORD|2022|F150|KING RANCH|SuperCrew|Rapid Red Metallic Tinted Clearcoat|35LV6PwrBstC|high|London
 FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6C|high|Harriston
 FORD|2023|Expedition|XLT|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6HOC|high|Kitchener
+Iconic Silver|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6HOC|mid|Waterloo
 FORD|2023|Expedition|TIMBERLINE|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|base|Walkerton
 FORD|2022|F150|XLT|Regular|Atlas Blue Metallic|35LV6PwrBstC|mid|Harriston
 FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Owen Sound
 FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6HOC|mid|Toronto
 FORD|2023|Expedition|KING RANCH|MAX|Oxford White|35LV6C|high|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|London
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|London
 FORD|2022|F150|XL|SuperCrew|Stone Grey Metallic|50LV8C|high|Harriston
 FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|mid|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6C|high|Owen Sound
+Agate Black|35LV6C|high|Owen Sound
 FORD|2022|F150|XL|SuperCrew|Race Red|27LV6C|base|London
 FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6C|high|Harriston
 FORD|2023|Expedition|KING RANCH|MAX|Oxford White|35LV6HOC|mid|Harriston
@@ -826,23 +826,23 @@ FORD|2023|Expedition|KING RANCH|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|base|Kitchener
 FORD|2022|F150|XL|SuperCab|Space White Metallic|35LV6EcoC|mid|Kitchener
 FORD|2022|F150|TREMOR|SuperCrew|Antimattter Blue Metallic|35LV6EcoC|mid|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6C|high|Waterloo
+Oxford White|35LV6C|high|Waterloo
 FORD|2022|F150|XL|SuperCrew|Agate Black Metallic|50LV8C|base|Toronto
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|33LV6C|high|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6HOC|high|Owen Sound
+Oxford White|35LV6HOC|high|Owen Sound
 FORD|2022|F150|KING RANCH|SuperCrew|Iconic Silver Metallic|33LV6C|mid|Kitchener
 FORD|2022|F150|RAPTOR|SuperCrew|Oxford White|50LV8C|high|Harriston
 FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Harriston
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Harriston
+Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Harriston
 FORD|2022|F150|KING RANCH|SuperCrew|Stone Grey Metallic|33LV6C|base|Kitchener
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6C|base|Walkerton
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6C|base|Walkerton
 FORD|2022|F150|XLT|Regular|Atlas Blue Metallic|35LV6PwrBstC|mid|London
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|33LV6C|high|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6HOC|base|London
+Oxford White|35LV6HOC|base|London
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Walkerton
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6C|base|London
-FORD|2022|F150|XL|SuperCrew|Iconic Sliver Metallic|35LV6EcoC|high|Harriston
+Agate Black|35LV6C|base|London
+FORD|2022|F150|XL|SuperCrew|Iconic Silver Metallic|35LV6EcoC|high|Harriston
 FORD|2022|F150|XLT|SuperCab|Rapid Red Metallic Tinted Clearcoat|27LV6C|high|Kitchener
 FORD|2022|F150|XLT|SuperCab|Race Red|33LV6C|base|Kitchener
 FORD|2022|F150|RAPTOR|SuperCrew|Oxford White|27LV6C|mid|Owen Sound
@@ -858,7 +858,7 @@ FORD|2022|F150|LARIAT|SuperCab|Star White Metallic Tri-Coat|27LV6C|high|Owen Sou
 FORD|2022|F150|RAPTOR|SuperCrew|Atlas Blue Metallic|27LV6C|base|Walkerton
 FORD|2023|Expedition|PLATINUM|MAX|Dark Matter Metallic|35LV6HOC|base|Toronto
 FORD|2022|F150|XL|SuperCab|Atlas Blue Metallic|33LV6C|mid|London
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6C|base|Waterloo
+Stone Blue Metallic|35LV6C|base|Waterloo
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|PLATINUM|MAX|Stone Blue Metallic|35LV6HOC|mid|Harriston
@@ -867,8 +867,8 @@ FORD|2022|F150|XLT|Regular|Rapid Red Metallic Tinted Clearcoat|27LV6C|high|Toron
 FORD|2022|F150|XLT|Regular|Oxford White|50LV8C|mid|Walkerton
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|50LV8C|base|Toronto
 FORD|2023|Expedition|PLATINUM|MAX|Dark Matter Metallic|35LV6HOC|mid|Toronto
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6HOC|base|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6HOC|high|Kitchener
+Stone Blue Metallic|35LV6HOC|base|Owen Sound
+Iconic Silver|35LV6HOC|high|Kitchener
 FORD|2022|F150|XLT|SuperCab|Race Red|33LV6C|mid|Toronto
 FORD|2022|F150|XL|Regular|Oxford White|33LV6C|mid|Harriston
 FORD|2022|F150|XLT|SuperCab|Race Red|50LV8C|mid|Kitchener
@@ -887,11 +887,11 @@ FORD|2023|Expedition|PLATINUM|REG|Stone Blue Metallic|35LV6C|high|Kitchener
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|Walkerton
 FORD|2022|F150|LARIAT|SuperCab|Stone Grey Metallic|50LV8C|high|London
 FORD|2022|F150|XL|SuperCab|Oxford White|35LV6PwrBstC|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6HOC|base|Toronto
+Stone Blue Metallic|35LV6HOC|base|Toronto
 FORD|2023|Expedition|PLATINUM|REG|Dark Matter Metallic|35LV6HOC|base|Harriston
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|35LV6PwrBstC|mid|Harriston
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6C|base|Walkerton
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6HOC|base|Kitchener
+Stone Blue Metallic|35LV6C|base|Walkerton
+Agate Black|35LV6HOC|base|Kitchener
 FORD|2022|F150|XL|SuperCab|Agate Black MetallicAntimatter Blue Metallic|35LV6EcoC|mid|Walkerton
 FORD|2022|F150|LARIAT|SuperCab|Iconic Silver Metallic|35LV6EcoC|mid|Walkerton
 FORD|2022|F150|XL|SuperCab|Agate Black MetallicAntimatter Blue Metallic|35LV6EcoC|high|Owen Sound
@@ -906,17 +906,17 @@ FORD|2023|Expedition|XLT|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Wa
 FORD|2022|F150|XLT|Regular|Oxford White|50LV8C|high|Owen Sound
 FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|35LV6EcoC|base|London
 FORD|2023|Expedition|PLATINUM|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|base|Waterloo
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6C|mid|Owen Sound
+Dark Matter Metallic|35LV6C|mid|Owen Sound
 FORD|2022|F150|RAPTOR|SuperCrew|Iconic Silver Metallic|50LV8C|high|London
 FORD|2022|F150|XL|Regular|Race Red|27LV6C|mid|London
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Harriston
 FORD|2022|F150|LARIAT|SuperCrew|Rapid Red Metallic Tinted Clearcoat Metallic|35LV6EcoC|high|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|London
 FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Walkerton
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6HOC|high|London
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6HOC|high|London
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6HOC|high|Owen Sound
 FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6HOC|base|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6HOC|mid|Harriston
+Stone Blue Metallic|35LV6HOC|mid|Harriston
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|27LV6C|high|Toronto
 FORD|2023|Expedition|LIMITED|REG|Oxford White|35LV6C|mid|London
 FORD|2023|Expedition|PLATINUM|REG|Dark Matter Metallic|35LV6C|high|Kitchener
@@ -932,21 +932,21 @@ FORD|2022|F150|XLT|SuperCab|Rapid Red Metallic Tinted Clearcoat|35LV6PwrBstC|hig
 FORD|2022|F150|RAPTOR|SuperCrew|Code Orange Metallic|50LV8C|mid|Toronto
 FORD|2023|Expedition|LIMITED|REG|Agate Black|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6C|base|Toronto
+Oxford White|35LV6C|base|Toronto
 FORD|2023|Expedition|LIMITED|REG|Stone Blue Metallic|35LV6C|high|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6C|base|Harriston
+Iconic Silver|35LV6C|base|Harriston
 FORD|2022|F150|XL|SuperCrew|Carbonized Grey Metallic|50LV8C|high|London
 FORD|2023|Expedition|LIMITED|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6HOC|high|Owen Sound
+Iconic Silver|35LV6HOC|high|Owen Sound
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Kitchener
 FORD|2022|F150|KING RANCH|SuperCrew|Star White Metallic Tri-Coat|33LV6C|base|Walkerton
 FORD|2022|F150|XL|SuperCab|Race Red|27LV6C|base|Kitchener
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|Waterloo
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Owen Sound
+Oxford White|35LV6C|high|London
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Harriston
+Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Owen Sound
 FORD|2022|F150|KING RANCH|SuperCrew|Smoked Quartz Clearcoat Metallic|27LV6C|base|Owen Sound
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6C|base|Walkerton
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6C|base|Walkerton
 FORD|2023|Expedition|XLT|REG|Agate Black|35LV6C|mid|Waterloo
 FORD|2022|F150|KING RANCH|SuperCrew|Stone Grey Metallic|50LV8C|mid|Toronto
 FORD|2023|Expedition|LIMITED|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|base|Owen Sound
@@ -977,17 +977,17 @@ FORD|2022|F150|PLATINUM|SuperCrew|Antimatter Blue Metallic|27LV6C|mid|London
 FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Toronto
 FORD|2022|F150|XL|SuperCrew|Race Red|27LV6C|base|Owen Sound
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6C|mid|Walkerton
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6C|mid|Toronto
+Agate Black|35LV6C|mid|Toronto
 FORD|2022|F150|LARIAT|SuperCrew|Atlas Blue Metallic|50LV8C|base|Kitchener
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6HOC|base|Owen Sound
+Oxford White|35LV6HOC|base|Owen Sound
 FORD|2022|F150|LIMITED|SuperCrew|Iconic Silver Metallic|33LV6C|mid|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Walkerton
+Star White Platinum Metallic Tri-Coat|35LV6C|mid|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Harriston
 FORD|2022|F150|KING RANCH|SuperCrew|Smoked Quartz Clearcoat Metallic|50LV8C|high|Kitchener
 FORD|2022|F150|RAPTOR|SuperCrew|Antimatter Blue Metallic|35LV6PwrBstC|mid|Kitchener
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6HOC|mid|Owen Sound
+Oxford White|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|Kitchener
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|base|Kitchener
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|base|Kitchener
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|London
 FORD|2023|Expedition|TIMBERLINE|REG|Oxford White|35LV6HOC|high|Harriston
 FORD|2022|F150|PLATINUM|SuperCrew|Antimatter Blue Metallic|35LV6EcoC|mid|Owen Sound
@@ -1003,7 +1003,7 @@ FORD|2022|F150|XLT|SuperCab|Space White Metallic|33LV6C|high|Walkerton
 FORD|2022|F150|XL|SuperCab|Atlas Blue Metallic|35LV6EcoC|mid|Walkerton
 FORD|2023|Expedition|PLATINUM|REG|Iconic Silver|35LV6HOC|mid|Walkerton
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6C|high|Harriston
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6C|mid|London
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6C|mid|London
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Harriston
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6HOC|high|Kitchener
 FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|27LV6C|high|Owen Sound
@@ -1018,9 +1018,9 @@ FORD|2022|F150|LARIAT|SuperCab|Agate Black Metallic|35LV6PwrBstC|mid|Harriston
 FORD|2022|F150|LARIAT|SuperCab|Race Red|33LV6C|base|Walkerton
 FORD|2022|F150|LARIAT|SuperCab|Race Red|35LV6EcoC|high|London
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6HOC|base|Walkerton
+Agate Black|35LV6HOC|base|Walkerton
 FORD|2023|Expedition|LIMITED|MAX|Oxford White|35LV6HOC|base|Walkerton
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6HOC|base|London
+Dark Matter Metallic|35LV6HOC|base|London
 FORD|2022|F150|XLT|Regular|Agate Black Metallic|35LV6PwrBstC|base|Walkerton
 FORD|2022|F150|XLT|Regular|Oxford White|33LV6C|base|Toronto
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Harriston
@@ -1030,30 +1030,30 @@ FORD|2022|F150|XLT|Regular|Oxford White|35LV6PwrBstC|mid|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Owen Sound
 FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|35LV6PwrBstC|base|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6C|mid|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6C|high|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Kitchener
+Forged Green Metallic|35LV6C|high|London
+Star White Platinum Metallic Tri-Coat|35LV6C|mid|Kitchener
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|35LV6EcoC|mid|Owen Sound
 FORD|2023|Expedition|XLT|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Waterloo
 FORD|2023|Expedition|KING RANCH|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Waterloo
 FORD|2022|F150|PLATINUM|SuperCrew|Carbonized Grey Metallic|33LV6C|high|London
 FORD|2022|F150|XL|SuperCrew|Oxford White|35LV6PwrBstC|high|London
-FORD|2023|Expedition|XLT|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|base|London
+Star White Platinum Metallic Tri-Coat|35LV6C|base|London
 FORD|2023|Expedition|XLT|REG|Iconic Silver|35LV6C|base|Owen Sound
 FORD|2023|Expedition|XLT|REG|Agate Black|35LV6C|mid|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6C|high|Harriston
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|27LV6C|base|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|mid|Toronto
+Dark Matter Metallic|35LV6HOC|mid|Toronto
 FORD|2022|F150|XLT|SuperCrew|Atlas Blue Metallic|50LV8C|mid|Toronto
 FORD|2022|F150|XLT|SuperCab|Atlas Blue Metallic|35LV6EcoC|base|London
 FORD|2022|F150|LIMITED|SuperCrew|Iconic Silver Metallic|35LV6PwrBstC|high|Kitchener
 FORD|2022|F150|LARIAT|SuperCab|Star White Metallic Tri-Coat|50LV8C|high|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6HOC|base|Toronto
+Iconic Silver|35LV6HOC|base|Toronto
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Harriston
 FORD|2022|F150|XL|Regular|Agate Black Metallic|27LV6C|high|Walkerton
 FORD|2022|F150|RAPTOR|SuperCrew|Rapid Red Metallic Tinted Clearcoat|33LV6C|base|Walkerton
 FORD|2022|F150|PLATINUM|SuperCrew|Agate Black Metallic|35LV6EcoC|base|Walkerton
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6HOC|mid|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6HOC|high|Owen Sound
+Agate Black|35LV6HOC|high|Owen Sound
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|50LV8C|high|Toronto
 FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|33LV6C|mid|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Toronto
@@ -1073,12 +1073,12 @@ FORD|2022|F150|XL|SuperCrew|Race Red|33LV6C|mid|Owen Sound
 FORD|2023|Expedition|KING RANCH|REG|Forged Green Metallic|35LV6HOC|high|Walkerton
 FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|50LV8C|base|Harriston
 FORD|2022|F150|TREMOR|SuperCrew|Antimattter Blue Metallic|35LV6PwrBstC|high|Harriston
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6C|base|Owen Sound
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6C|mid|Kitchener
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6C|base|Owen Sound
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6C|mid|Kitchener
 FORD|2022|F150|KING RANCH|SuperCrew|Iconic Silver Metallic|35LV6PwrBstC|base|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Dark Matter Metallic|35LV6HOC|high|Waterloo
 FORD|2023|Expedition|LIMITED|MAX|Stone Blue Metallic|35LV6HOC|high|Toronto
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6HOC|high|Toronto
+Iconic Silver|35LV6HOC|high|Toronto
 FORD|2023|Expedition|XLT|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|LIMITED|MAX|Stone Blue Metallic|35LV6HOC|high|Toronto
 FORD|2022|F150|LARIAT|SuperCab|Rapid Red Metallic Tinted Clearcoat Metallic|35LV6PwrBstC|mid|London
@@ -1090,7 +1090,7 @@ FORD|2023|Expedition|LIMITED|REG|Stone Blue Metallic|35LV6HOC|base|Harriston
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|27LV6C|high|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6HOC|base|London
 FORD|2022|F150|RAPTOR|SuperCrew|Atlas Blue Metallic|50LV8C|high|Walkerton
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6HOC|mid|London
+Dark Matter Metallic|35LV6HOC|mid|London
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|London
 FORD|2022|F150|XLT|Regular|Space White Metallic|35LV6PwrBstC|high|Walkerton
 FORD|2022|F150|XLT|SuperCab|Atlas Blue Metallic|33LV6C|base|London
@@ -1101,7 +1101,7 @@ FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|50LV8C|
 FORD|2022|F150|XL|SuperCrew|Agate Black Metallic|35LV6EcoC|high|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|London
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6C|high|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6HOC|base|Harriston
+Forged Green Metallic|35LV6HOC|base|Harriston
 FORD|2022|F150|XLT|Regular|Race Red|35LV6PwrBstC|high|Toronto
 FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|London
 FORD|2022|F150|LARIAT|SuperCab|Rapid Red Metallic Tinted Clearcoat Metallic|50LV8C|high|Toronto
@@ -1115,7 +1115,7 @@ FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6C|base|Toronto
 FORD|2023|Expedition|LIMITED|REG|Oxford White|35LV6C|mid|Toronto
 FORD|2023|Expedition|LIMITED|MAX|Dark Matter Metallic|35LV6HOC|high|Toronto
 FORD|2022|F150|XL|SuperCab|Stone Grey Metallic|50LV8C|base|Harriston
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6C|base|Owen Sound
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6C|base|Owen Sound
 FORD|2022|F150|LARIAT|SuperCrew|Iconic Silver Metallic|33LV6C|mid|Kitchener
 FORD|2022|F150|XLT|Regular|Race Red|50LV8C|mid|London
 FORD|2022|F150|XL|SuperCab|Agate Black MetallicAntimatter Blue Metallic|33LV6C|mid|Owen Sound
@@ -1126,17 +1126,17 @@ FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6C|hi
 FORD|2023|Expedition|PLATINUM|REG|Iconic Silver|35LV6HOC|mid|Waterloo
 FORD|2022|F150|XLT|SuperCab|Atlas Blue Metallic|33LV6C|mid|Kitchener
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Toronto
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6HOC|high|Waterloo
+Iconic Silver|35LV6HOC|high|Waterloo
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Owen Sound
 FORD|2022|F150|RAPTOR|SuperCrew|Atlas Blue Metallic|50LV8C|base|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6C|mid|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6HOC|high|Owen Sound
+Oxford White|35LV6HOC|high|Owen Sound
 FORD|2022|F150|XLT|Regular|Oxford White|35LV6PwrBstC|mid|Toronto
 FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Harriston
 FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|50LV8C|base|Toronto
 FORD|2022|F150|XLT|SuperCrew|Space White Metallic|27LV6C|mid|Owen Sound
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Walkerton
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6HOC|high|Kitchener
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6HOC|high|Waterloo
 FORD|2022|F150|LIMITED|SuperCrew|Agate Black Metallic|50LV8C|high|Kitchener
 FORD|2023|Expedition|XLT|REG|Forged Green Metallic|35LV6HOC|base|Owen Sound
@@ -1145,18 +1145,18 @@ FORD|2023|Expedition|KING RANCH|REG|Oxford White|35LV6HOC|base|London
 FORD|2022|F150|LARIAT|SuperCab|Race Red|27LV6C|mid|Toronto
 FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|35LV6PwrBstC|high|London
 FORD|2022|F150|XL|SuperCab|Race Red|50LV8C|mid|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6HOC|base|Waterloo
+Oxford White|35LV6HOC|base|Waterloo
 FORD|2022|F150|KING RANCH|SuperCrew|Stone Grey Metallic|35LV6EcoC|mid|Kitchener
 FORD|2023|Expedition|XLT|REG|Agate Black|35LV6HOC|high|Toronto
 FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|35LV6PwrBstC|mid|London
 FORD|2023|Expedition|KING RANCH|REG|Oxford White|35LV6C|high|Harriston
 FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|London
 FORD|2022|F150|PLATINUM|SuperCrew|Antimatter Blue Metallic|33LV6C|high|Owen Sound
-FORD|2023|Expedition|LIMITED|MAX|Iconic Sliver|35LV6HOC|mid|Owen Sound
+FORD|2023|Expedition|LIMITED|MAX|Iconic Silver|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6C|high|Kitchener
 FORD|2022|F150|XLT|Regular|Oxford White|50LV8C|base|Owen Sound
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6C|mid|Walkerton
+Agate Black|35LV6C|mid|Walkerton
 FORD|2022|F150|XLT|Regular|Iconic Silver Metallic|35LV6PwrBstC|mid|Walkerton
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|high|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Stone Blue Metallic|35LV6HOC|mid|Walkerton
@@ -1174,7 +1174,7 @@ FORD|2023|Expedition|PLATINUM|MAX|Agate Black|35LV6HOC|high|Owen Sound
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Waterloo
 FORD|2022|F150|LARIAT|SuperCab|Iconic Silver Metallic|33LV6C|mid|Harriston
 FORD|2022|F150|LARIAT|SuperCab|Stone Grey Metallic|27LV6C|high|Walkerton
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6C|high|Waterloo
+Stone Blue Metallic|35LV6C|high|Waterloo
 FORD|2023|Expedition|KING RANCH|MAX|Forged Green Metallic|35LV6HOC|mid|Owen Sound
 FORD|2022|F150|XLT|SuperCab|Oxford White|33LV6C|mid|Kitchener
 FORD|2022|F150|XL|SuperCab|Space White Metallic|35LV6EcoC|mid|Walkerton
@@ -1188,14 +1188,14 @@ FORD|2023|Expedition|PLATINUM|REG|Dark Matter Metallic|35LV6HOC|high|Waterloo
 FORD|2022|F150|LARIAT|SuperCab|Stone Grey Metallic|50LV8C|mid|Kitchener
 FORD|2022|F150|XLT|SuperCrew|Iconic Silver Metallic|35LV6EcoC|base|Owen Sound
 FORD|2023|Expedition|PLATINUM|MAX|Dark Matter Metallic|35LV6C|high|Walkerton
-FORD|2023|Expedition|XLT|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Walkerton
+Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Walkerton
 FORD|2022|F150|XL|Regular|Agate Black Metallic|35LV6EcoC|high|Toronto
 FORD|2022|F150|XL|SuperCab|Oxford White|35LV6PwrBstC|base|Kitchener
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6C|high|Harriston
+Oxford White|35LV6C|high|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Dark Matter Metallic|35LV6HOC|base|Toronto
 FORD|2022|F150|LARIAT|SuperCrew|Agate Black Metallic|35LV6PwrBstC|high|Owen Sound
 FORD|2022|F150|PLATINUM|SuperCrew|Agate Black Metallic|50LV8C|base|Harriston
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|high|Kitchener
+Iconic Silver|35LV6C|high|Kitchener
 FORD|2022|F150|XL|Regular|Race Red|27LV6C|mid|Kitchener
 FORD|2023|Expedition|KING RANCH|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Waterloo
 FORD|2022|F150|RAPTOR|SuperCrew|Code Orange Metallic|33LV6C|high|Kitchener
@@ -1210,9 +1210,9 @@ FORD|2022|F150|XLT|SuperCrew|Carbonized Grey Metallic|33LV6C|high|Kitchener
 FORD|2022|F150|LARIAT|SuperCrew|Iconic Silver Metallic|35LV6PwrBstC|base|London
 FORD|2022|F150|XL|SuperCab|Race Red|50LV8C|mid|Kitchener
 FORD|2023|Expedition|LIMITED|MAX|Stone Blue Metallic|35LV6HOC|mid|Waterloo
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|London
+Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|London
 FORD|2022|F150|XL|SuperCrew|Race Red|35LV6EcoC|base|London
-FORD|2023|Expedition|XLT|MAX|Forged Green Metallic|35LV6HOC|base|Harriston
+Forged Green Metallic|35LV6HOC|base|Harriston
 FORD|2023|Expedition|PLATINUM|REG|Dark Matter Metallic|35LV6C|base|Waterloo
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Harriston
 FORD|2023|Expedition|XLT|REG|Forged Green Metallic|35LV6HOC|high|Toronto
@@ -1230,7 +1230,7 @@ FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6C
 FORD|2022|F150|PLATINUM|SuperCrew|Agate Black Metallic|27LV6C|high|London
 FORD|2023|Expedition|LIMITED|MAX|Stone Blue Metallic|35LV6C|high|Walkerton
 FORD|2022|F150|KING RANCH|SuperCrew|Oxford White|50LV8C|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Walkerton
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Walkerton
 FORD|2022|F150|XL|SuperCrew|Antimatter Blue Metallic|35LV6PwrBstC|base|Walkerton
 FORD|2022|F150|RAPTOR|SuperCrew|Rapid Red Metallic Tinted Clearcoat|35LV6PwrBstC|high|Toronto
 FORD|2023|Expedition|LIMITED|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Walkerton
@@ -1238,7 +1238,7 @@ FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6HOC|high|Owen Sou
 FORD|2023|Expedition|LIMITED|MAX|Forged Green Metallic|35LV6C|mid|Kitchener
 FORD|2022|F150|RAPTOR|SuperCrew|Agate Black Metallic|35LV6PwrBstC|mid|Walkerton
 FORD|2022|F150|XLT|SuperCab|Space White Metallic|27LV6C|base|Harriston
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Waterloo
+Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Waterloo
 FORD|2023|Expedition|TIMBERLINE|REG|Stone Blue Metallic|35LV6HOC|mid|Kitchener
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Harriston
 FORD|2022|F150|LARIAT|SuperCab|Race Red|35LV6PwrBstC|mid|Kitchener
@@ -1252,7 +1252,7 @@ FORD|2022|F150|RAPTOR|SuperCrew|Iconic Silver Metallic|35LV6PwrBstC|high|Harrist
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6C|mid|Waterloo
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|27LV6C|base|Walkerton
 FORD|2023|Expedition|PLATINUM|MAX|Iconic Silver|35LV6C|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|high|Kitchener
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6C|base|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Kitchener
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Owen Sound
@@ -1261,20 +1261,20 @@ FORD|2023|Expedition|LIMITED|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base
 FORD|2023|Expedition|XLT|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6HOC|mid|London
 FORD|2023|Expedition|KING RANCH|MAX|Oxford White|35LV6HOC|mid|Harriston
-FORD|2022|F150|XL|SuperCrew|Iconic Sliver Metallic|33LV6C|mid|London
+FORD|2022|F150|XL|SuperCrew|Iconic Silver Metallic|33LV6C|mid|London
 FORD|2022|F150|KING RANCH|SuperCrew|Stone Grey Metallic|35LV6EcoC|mid|Owen Sound
 FORD|2022|F150|RAPTOR|SuperCrew|Code Orange Metallic|33LV6C|mid|Owen Sound
 FORD|2022|F150|PLATINUM|SuperCrew|Iconic Silver Metallic|27LV6C|mid|London
 FORD|2023|Expedition|LIMITED|REG|Stone Blue Metallic|35LV6HOC|high|Owen Sound
 FORD|2022|F150|XLT|SuperCrew|Carbonized Grey Metallic|27LV6C|base|Harriston
 FORD|2022|F150|XLT|Regular|Space White Metallic|33LV6C|high|Toronto
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6C|base|Toronto
+Oxford White|35LV6C|base|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6C|base|Owen Sound
 FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Waterloo
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6C|high|Harriston
 FORD|2022|F150|LIMITED|SuperCrew|Carbonized Grey Metallic|50LV8C|high|Kitchener
 FORD|2023|Expedition|TIMBERLINE|REG|Dark Matter Metallic|35LV6HOC|base|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|high|Walkerton
+Dark Matter Metallic|35LV6HOC|high|Walkerton
 FORD|2022|F150|RAPTOR|SuperCrew|Iconic Silver Metallic|50LV8C|base|Owen Sound
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6C|mid|Walkerton
 FORD|2022|F150|PLATINUM|SuperCrew|Iconic Silver Metallic|27LV6C|mid|London
@@ -1303,11 +1303,11 @@ FORD|2022|F150|PLATINUM|SuperCrew|Star White Metallic Tri-Coat|33LV6C|mid|Kitche
 FORD|2022|F150|XL|Regular|Atlas Blue Metallic|27LV6C|high|Walkerton
 FORD|2022|F150|XL|SuperCab|Race Red|50LV8C|mid|Toronto
 FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6C|base|London
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Harriston
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Harriston
 FORD|2022|F150|KING RANCH|SuperCrew|Oxford White|35LV6EcoC|base|Toronto
 FORD|2022|F150|XLT|SuperCrew|Iconic Silver Metallic|50LV8C|mid|Kitchener
 FORD|2022|F150|TREMOR|SuperCrew|Iconic Silver Metallic|35LV6PwrBstC|high|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6C|base|Kitchener
+Forged Green Metallic|35LV6C|base|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Owen Sound
 FORD|2023|Expedition|PLATINUM|REG|Stone Blue Metallic|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|LIMITED|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Toronto
@@ -1328,15 +1328,15 @@ FORD|2022|F150|PLATINUM|SuperCrew|Smoked Quartz Tinted Clearcoat Metallic|27LV6C
 FORD|2022|F150|XL|Regular|Agate Black Metallic|35LV6EcoC|mid|Toronto
 FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|35LV6PwrBstC|base|London
 FORD|2022|F150|KING RANCH|SuperCrew|Rapid Red Metallic Tinted Clearcoat|33LV6C|base|Harriston
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Owen Sound
+Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Waterloo
+Star White Platinum Metallic Tri-Coat|35LV6HOC|mid|Owen Sound
 FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|35LV6EcoC|high|Owen Sound
 FORD|2022|F150|TREMOR|SuperCrew|Atlas Blue Metallic|35LV6EcoC|mid|Kitchener
 FORD|2022|F150|RAPTOR|SuperCrew|Iconic Silver Metallic|50LV8C|mid|Toronto
 FORD|2023|Expedition|LIMITED|REG|Agate Black|35LV6C|mid|Harriston
 FORD|2023|Expedition|KING RANCH|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Walkerton
 FORD|2022|F150|XL|Regular|Atlas Blue Metallic|35LV6PwrBstC|mid|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6C|mid|Toronto
+Dark Matter Metallic|35LV6C|mid|Toronto
 FORD|2023|Expedition|XLT|REG|Dark Matter Metallic|35LV6C|base|Owen Sound
 FORD|2022|F150|XL|Regular|Oxford White|35LV6PwrBstC|mid|Toronto
 FORD|2022|F150|XL|SuperCab|Agate Black MetallicAntimatter Blue Metallic|35LV6PwrBstC|base|Harriston
@@ -1348,13 +1348,13 @@ FORD|2022|F150|XLT|SuperCrew|Oxford White|27LV6C|high|Kitchener
 FORD|2022|F150|TREMOR|SuperCrew|Atlas Blue Metallic|33LV6C|base|Owen Sound
 FORD|2022|F150|XL|Regular|Agate Black Metallic|27LV6C|high|London
 FORD|2022|F150|XL|SuperCab|Atlas Blue Metallic|27LV6C|base|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6HOC|high|Kitchener
+Forged Green Metallic|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|XLT|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Kitchener
 FORD|2022|F150|XL|Regular|Agate Black Metallic|35LV6PwrBstC|base|London
-FORD|2023|Expedition|XLT|MAX|Forged Green Metallic|35LV6HOC|mid|Walkerton
+Forged Green Metallic|35LV6HOC|mid|Walkerton
 FORD|2022|F150|XL|SuperCab|Atlas Blue Metallic|27LV6C|base|London
 FORD|2022|F150|XLT|Regular|Oxford White|35LV6PwrBstC|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6C|mid|Toronto
+Stone Blue Metallic|35LV6C|mid|Toronto
 FORD|2022|F150|XLT|SuperCab|Rapid Red Metallic Tinted Clearcoat|35LV6EcoC|mid|Walkerton
 FORD|2022|F150|XL|SuperCrew|Atlas Blue Metallic|50LV8C|mid|Owen Sound
 FORD|2022|F150|LARIAT|SuperCab|Antimatter Blue|50LV8C|high|Walkerton
@@ -1363,17 +1363,17 @@ FORD|2022|F150|XL|Regular|Iconic Silver Metallic|35LV6PwrBstC|base|Walkerton
 FORD|2022|F150|XL|SuperCrew|Race Red|33LV6C|base|London
 FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|50LV8C|base|London
 FORD|2022|F150|KING RANCH|SuperCrew|Iconic Silver Metallic|27LV6C|high|London
-FORD|2023|Expedition|XLT|MAX|Stone Blue Metallic|35LV6C|high|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6HOC|high|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6C|mid|Owen Sound
+Stone Blue Metallic|35LV6C|high|Waterloo
+Iconic Silver|35LV6HOC|high|Waterloo
+Oxford White|35LV6C|mid|Owen Sound
 FORD|2022|F150|XL|Regular|Agate Black Metallic|35LV6EcoC|high|Harriston
 FORD|2023|Expedition|KING RANCH|REG|Forged Green Metallic|35LV6HOC|high|Kitchener
 FORD|2023|Expedition|LIMITED|MAX|Oxford White|35LV6HOC|base|Owen Sound
 FORD|2022|F150|XL|SuperCab|Agate Black MetallicAntimatter Blue Metallic|35LV6EcoC|mid|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Harriston
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Waterloo
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Waterloo
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6HOC|mid|Owen Sound
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6C|base|Toronto
+Agate Black|35LV6C|base|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6C|base|Toronto
 FORD|2022|F150|LIMITED|SuperCrew|Antimatter Blue Metallic|33LV6C|mid|Walkerton
 FORD|2023|Expedition|LIMITED|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Walkerton
@@ -1381,7 +1381,7 @@ FORD|2023|Expedition|LIMITED|REG|Forged Green Metallic|35LV6HOC|high|Kitchener
 FORD|2022|F150|XLT|SuperCab|Oxford White|35LV6EcoC|base|Owen Sound
 FORD|2022|F150|LIMITED|SuperCrew|Star White Metallic Tri-Coat|35LV6PwrBstC|base|Harriston
 FORD|2022|F150|XL|Regular|Race Red|33LV6C|mid|Harriston
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6HOC|high|Kitchener
+Iconic Silver|35LV6HOC|high|Kitchener
 FORD|2022|F150|XLT|SuperCrew|Agate Black Metallic|35LV6PwrBstC|high|Walkerton
 FORD|2022|F150|TREMOR|SuperCrew|Stone Grey Metallic|27LV6C|base|London
 FORD|2022|F150|XLT|SuperCrew|Space White Metallic|50LV8C|mid|Harriston
@@ -1391,10 +1391,10 @@ FORD|2022|F150|LIMITED|SuperCrew|Agate Black Metallic|33LV6C|high|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|Harriston
 FORD|2022|F150|XL|Regular|Atlas Blue Metallic|35LV6PwrBstC|high|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Forged Green Metallic|35LV6HOC|mid|Harriston
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|high|Toronto
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6HOC|high|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Harriston
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|high|Toronto
+Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|London
+Forged Green Metallic|35LV6HOC|high|Walkerton
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Harriston
 FORD|2022|F150|LARIAT|SuperCrew|Space White Metallic|27LV6C|mid|Toronto
 FORD|2022|F150|LARIAT|SuperCab|Atlas Blue Metallic|33LV6C|base|Owen Sound
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6HOC|high|Kitchener
@@ -1403,12 +1403,12 @@ FORD|2023|Expedition|KING RANCH|REG|Oxford White|35LV6HOC|high|Toronto
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Walkerton
 FORD|2022|F150|XL|SuperCrew|Space White Metallic|27LV6C|high|Toronto
 FORD|2023|Expedition|PLATINUM|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Walkerton
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6C|high|Owen Sound
+Agate Black|35LV6C|high|Owen Sound
 FORD|2022|F150|XLT|SuperCab|Race Red|27LV6C|high|Kitchener
 FORD|2022|F150|LARIAT|SuperCab|Race Red|33LV6C|high|Harriston
 FORD|2023|Expedition|XLT|REG|Dark Matter Metallic|35LV6HOC|mid|Kitchener
 FORD|2022|F150|XLT|SuperCrew|Stone Grey Metallic|50LV8C|mid|London
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Toronto
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Oxford White|35LV6C|high|Waterloo
 FORD|2022|F150|XL|SuperCab|Atlas Blue Metallic|50LV8C|base|Kitchener
 FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Toronto
@@ -1416,19 +1416,19 @@ FORD|2023|Expedition|PLATINUM|REG|Iconic Silver|35LV6HOC|base|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|Toronto
 FORD|2022|F150|XL|SuperCrew|Race Red|27LV6C|high|Toronto
 FORD|2022|F150|LARIAT|SuperCrew|Agate Black Metallic|27LV6C|high|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Dark Matter Metallic|35LV6HOC|base|Walkerton
+Dark Matter Metallic|35LV6HOC|base|Walkerton
 FORD|2023|Expedition|LIMITED|MAX|Oxford White|35LV6HOC|base|Toronto
 FORD|2022|F150|XL|SuperCrew|Space White Metallic|35LV6EcoC|mid|London
 FORD|2023|Expedition|PLATINUM|REG|Iconic Silver|35LV6HOC|high|Walkerton
 FORD|2023|Expedition|XLT|REG|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Owen Sound
 FORD|2022|F150|XL|Regular|Oxford White|27LV6C|high|Owen Sound
 FORD|2022|F150|XLT|SuperCrew|Race Red|33LV6C|high|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6C|base|London
+Iconic Silver|35LV6C|base|London
 FORD|2022|F150|XL|SuperCab|Atlas Blue Metallic|27LV6C|mid|Harriston
 FORD|2022|F150|XL|SuperCab|Space White Metallic|50LV8C|mid|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6HOC|high|Walkerton
+Agate Black|35LV6HOC|high|Walkerton
 FORD|2022|F150|XLT|SuperCab|Agate Black MetallicAntimatter Blue Metallic|50LV8C|high|Toronto
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|mid|Waterloo
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|mid|Waterloo
 FORD|2022|F150|LARIAT|SuperCrew|Stone Grey Metallic|33LV6C|mid|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Forged Green Metallic|35LV6HOC|mid|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6C|base|London
@@ -1439,7 +1439,7 @@ FORD|2022|F150|XLT|Regular|Agate Black Metallic|35LV6EcoC|high|Walkerton
 FORD|2022|F150|KING RANCH|SuperCrew|Stone Grey Metallic|50LV8C|high|Harriston
 FORD|2023|Expedition|KING RANCH|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Agate Black|35LV6C|base|Kitchener
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|mid|Owen Sound
+Iconic Silver|35LV6C|mid|Owen Sound
 FORD|2022|F150|TREMOR|SuperCrew|Oxford White|27LV6C|base|Harriston
 FORD|2023|Expedition|LIMITED|REG|Dark Matter Metallic|35LV6HOC|base|Harriston
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Kitchener
@@ -1459,30 +1459,30 @@ FORD|2023|Expedition|PLATINUM|MAX|Dark Matter Metallic|35LV6HOC|mid|London
 FORD|2022|F150|LIMITED|SuperCrew|Antimatter Blue Metallic|35LV6EcoC|base|Owen Sound
 FORD|2022|F150|XLT|Regular|Rapid Red Metallic Tinted Clearcoat|35LV6EcoC|mid|Walkerton
 FORD|2022|F150|LIMITED|SuperCrew|Star White Metallic Tri-Coat|33LV6C|high|Walkerton
-FORD|2023|Expedition|XLT|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|high|Kitchener
+Star White Platinum Metallic Tri-Coat|35LV6C|high|Kitchener
 FORD|2023|Expedition|TIMBERLINE|REG|Agate Black|35LV6C|base|Kitchener
 FORD|2023|Expedition|PLATINUM|REG|Stone Blue Metallic|35LV6C|high|London
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Harriston
 FORD|2023|Expedition|TIMBERLINE|REG|Oxford White|35LV6HOC|base|Kitchener
 FORD|2022|F150|LIMITED|SuperCrew|Iconic Silver Metallic|35LV6EcoC|mid|Walkerton
 FORD|2022|F150|XL|Regular|Race Red|35LV6EcoC|base|Kitchener
-FORD|2023|Expedition|XLT|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|London
+Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|London
 FORD|2023|Expedition|TIMBERLINE|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|London
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6C|base|London
-FORD|2023|Expedition|XLT|MAX|Forged Green Metallic|35LV6HOC|mid|Kitchener
+Forged Green Metallic|35LV6HOC|mid|Kitchener
 FORD|2022|F150|XLT|SuperCab|Carbonized Grey Metallic|27LV6C|base|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Harriston
 FORD|2023|Expedition|XLT|REG|Forged Green Metallic|35LV6C|high|Owen Sound
 FORD|2023|Expedition|KING RANCH|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Oxford White|35LV6C|base|Toronto
+Oxford White|35LV6C|base|Toronto
 FORD|2023|Expedition|TIMBERLINE|REG|Dark Matter Metallic|35LV6C|high|Owen Sound
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6HOC|mid|Kitchener
 FORD|2022|F150|XLT|Regular|Agate Black Metallic|35LV6EcoC|mid|London
 FORD|2023|Expedition|KING RANCH|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|PLATINUM|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|high|Walkerton
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|Toronto
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6C|base|Harriston
+Iconic Silver|35LV6C|base|Harriston
 FORD|2022|F150|XL|Regular|Atlas Blue Metallic|50LV8C|base|Owen Sound
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|high|London
 FORD|2022|F150|LARIAT|SuperCab|Agate Black Metallic|27LV6C|base|London
@@ -1491,7 +1491,7 @@ FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|35LV6EcoC|high|Owen Sound
 FORD|2022|F150|KING RANCH|SuperCrew|Smoked Quartz Clearcoat Metallic|35LV6EcoC|base|London
 FORD|2022|F150|XLT|Regular|Race Red|50LV8C|mid|Harriston
 FORD|2022|F150|LARIAT|SuperCrew|Stone Grey Metallic|35LV6PwrBstC|mid|Kitchener
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6C|high|Kitchener
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6C|high|Kitchener
 FORD|2023|Expedition|TIMBERLINE|REG|Forged Green Metallic|35LV6HOC|high|London
 FORD|2023|Expedition|XLT|REG|Star White Platinum Metallic Tri-Coat|35LV6C|high|Toronto
 FORD|2022|F150|XLT|SuperCrew|Antimatter Blue Metallic|33LV6C|high|London
@@ -1505,7 +1505,7 @@ FORD|2023|Expedition|XLT|REG|Dark Matter Metallic|35LV6HOC|base|Harriston
 FORD|2023|Expedition|LIMITED|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|mid|London
 FORD|2022|F150|PLATINUM|SuperCrew|Antimatter Blue Metallic|27LV6C|mid|Toronto
 FORD|2022|F150|XLT|SuperCab|Atlas Blue Metallic|35LV6EcoC|base|London
-FORD|2023|Expedition|TIMBERLINE|MAX|Stone Blue Metallic|35LV6C|mid|Toronto
+Stone Blue Metallic|35LV6C|mid|Toronto
 FORD|2022|F150|LARIAT|SuperCrew|Carbonized Grey Metallic|27LV6C|base|London
 FORD|2023|Expedition|XLT|REG|Stone Blue Metallic|35LV6C|mid|London
 FORD|2022|F150|XLT|SuperCrew|Antimatter Blue Metallic|35LV6PwrBstC|base|London
@@ -1573,12 +1573,12 @@ FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|35LV6PwrBstC|mid|Owen Sound
 FORD|2022|F150|LARIAT|SuperCrew|Smoked Quartz Tinted ClearCoat Metallic|35LV6EcoC|mid|London
 FORD|2022|F150|XL|Regular|Iconic Silver Metallic|27LV6C|mid|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Walkerton
-FORD|2023|Expedition|TIMBERLINE|MAX|Forged Green Metallic|35LV6HOC|mid|Owen Sound
+Forged Green Metallic|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|LIMITED|MAX|Agate Black|35LV6HOC|mid|London
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|high|Owen Sound
 FORD|2022|F150|XL|SuperCab|Carbonized Grey Metallic|35LV6PwrBstC|mid|Kitchener
 FORD|2023|Expedition|PLATINUM|MAX|Stone Blue Metallic|35LV6HOC|mid|Kitchener
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|mid|Walkerton
+Jewel Red Metallic Tinted Clearcoat|35LV6C|mid|Walkerton
 FORD|2023|Expedition|LIMITED|REG|Jewel Red Metallic Tinted Clearcoat|35LV6C|mid|Kitchener
 FORD|2022|F150|XL|Regular|Race Red|33LV6C|base|Harriston
 FORD|2023|Expedition|PLATINUM|MAX|Stone Blue Metallic|35LV6HOC|high|Harriston
@@ -1589,23 +1589,23 @@ FORD|2023|Expedition|XLT|REG|Oxford White|35LV6C|mid|London
 FORD|2023|Expedition|PLATINUM|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|base|London
 FORD|2023|Expedition|XLT|REG|Jewel Red Metallic Tinted Clearcoat|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6C|base|Toronto
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6HOC|mid|Owen Sound
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6HOC|mid|Owen Sound
 FORD|2023|Expedition|KING RANCH|REG|Infinite Blue Metallic Tinted Clearcoat|35LV6C|mid|Walkerton
 FORD|2023|Expedition|TIMBERLINE|REG|Star White Platinum Metallic Tri-Coat|35LV6HOC|high|Toronto
 FORD|2022|F150|XL|SuperCrew|Oxford White|35LV6PwrBstC|mid|Harriston
 FORD|2022|F150|LIMITED|SuperCrew|Iconic Silver Metallic|35LV6PwrBstC|base|Harriston
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6HOC|mid|Owen Sound
-FORD|2023|Expedition|TIMBERLINE|REG|Iconic Sliver|35LV6HOC|base|Harriston
-FORD|2023|Expedition|XLT|MAX|Dark Matter Metallic|35LV6C|base|London
+Oxford White|35LV6HOC|mid|Owen Sound
+FORD|2023|Expedition|TIMBERLINE|REG|Iconic Silver|35LV6HOC|base|Harriston
+Dark Matter Metallic|35LV6C|base|London
 FORD|2023|Expedition|LIMITED|REG|Agate Black|35LV6HOC|high|London
 FORD|2022|F150|XLT|SuperCrew|Rapid Red Metallic Tinted Clearcoat|27LV6C|mid|Toronto
 FORD|2023|Expedition|LIMITED|REG|Dark Matter Metallic|35LV6C|mid|Toronto
 FORD|2023|Expedition|LIMITED|MAX|Infinite Blue Metallic Tinted Clearcoat|35LV6HOC|base|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6C|base|Kitchener
+Iconic Silver|35LV6C|base|Kitchener
 FORD|2023|Expedition|XLT|REG|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Harriston
-FORD|2023|Expedition|TIMBERLINE|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|high|Walkerton
+Star White Platinum Metallic Tri-Coat|35LV6C|high|Walkerton
 FORD|2023|Expedition|LIMITED|REG|Agate Black|35LV6HOC|high|London
-FORD|2023|Expedition|XLT|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|high|London
+Star White Platinum Metallic Tri-Coat|35LV6C|high|London
 FORD|2022|F150|XLT|Regular|Stone Grey Metallic|35LV6EcoC|mid|Harriston
 FORD|2023|Expedition|LIMITED|REG|Star White Platinum Metallic Tri-Coat|35LV6C|base|Harriston
 FORD|2022|F150|TREMOR|SuperCrew|Iconic Silver Metallic|33LV6C|base|Toronto
@@ -1619,21 +1619,21 @@ FORD|2022|F150|XL|SuperCab|Oxford White|35LV6EcoC|base|London
 FORD|2022|F150|LARIAT|SuperCrew|Race Red|35LV6PwrBstC|high|Harriston
 FORD|2022|F150|XL|Regular|Stone Grey Metallic|27LV6C|high|Toronto
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6HOC|base|London
-FORD|2023|Expedition|LIMITED|REG|Iconic Sliver|35LV6HOC|high|London
+FORD|2023|Expedition|LIMITED|REG|Iconic Silver|35LV6HOC|high|London
 FORD|2023|Expedition|KING RANCH|REG|Agate Black|35LV6C|mid|Toronto
-FORD|2023|Expedition|TIMBERLINE|MAX|Iconic Sliver|35LV6C|mid|Kitchener
-FORD|2023|Expedition|XLT|MAX|Iconic Silver|35LV6HOC|mid|Walkerton
-FORD|2023|Expedition|XLT|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Toronto
-FORD|2023|Expedition|XLT|MAX|Oxford White|35LV6HOC|mid|Walkerton
+Iconic Silver|35LV6C|mid|Kitchener
+Iconic Silver|35LV6HOC|mid|Walkerton
+Jewel Red Metallic Tinted Clearcoat|35LV6C|base|Toronto
+Oxford White|35LV6HOC|mid|Walkerton
 FORD|2022|F150|XL|SuperCrew|Race Red|50LV8C|base|Toronto
-FORD|2023|Expedition|XLT|MAX|Agate Black|35LV6C|mid|Kitchener
+Agate Black|35LV6C|mid|Kitchener
 FORD|2023|Expedition|KING RANCH|MAX|Jewel Red Metallic Tinted Clearcoat|35LV6C|high|Walkerton
 FORD|2023|Expedition|LIMITED|MAX|Forged Green Metallic|35LV6C|mid|Harriston
 FORD|2022|F150|XLT|Regular|Oxford White|50LV8C|high|Kitchener
 FORD|2022|F150|RAPTOR|SuperCrew|Atlas Blue Metallic|27LV6C|mid|Harriston
 FORD|2022|F150|XL|SuperCab|Race Red|27LV6C|base|Toronto
 FORD|2023|Expedition|PLATINUM|REG|Agate Black|35LV6HOC|base|Waterloo
-FORD|2023|Expedition|TIMBERLINE|MAX|Agate Black|35LV6C|base|Toronto
+Agate Black|35LV6C|base|Toronto
 FORD|2023|Expedition|LIMITED|MAX|Oxford White|35LV6HOC|mid|Walkerton
 FORD|2023|Expedition|KING RANCH|MAX|Star White Platinum Metallic Tri-Coat|35LV6C|mid|Kitchener
 FORD|2022|F150|XL|SuperCab|Oxford White|50LV8C|base|London

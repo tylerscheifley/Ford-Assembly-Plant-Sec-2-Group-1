@@ -1,0 +1,11 @@
+FORD|2022|F150|PLATINUM|SuperCrewF150|Antimatter Blue Metallic|F15050LV8C|||2022-11-28
+FORD|2022|F150|XLT|RegularF150|Oxford White|F15035LV6EcoC|||2022-11-28
+FORD|2022|F150|RAPTOR|SuperCrewF150|Antimatter Blue Metallic|F15050LV8C|||2022-11-28
+FORD|2022|F150|RAPTOR|SuperCrewF150|Antimatter Blue Metallic|F15033LV6C|||2022-11-28
+FORD|2022|F150|XL|SuperCrewF150|Race Red|F15050LV8C|||2022-11-28
+FORD|2023|Expedition|LIMITED|MAXExpedition|Stone Blue Metallic|Expedition35LV6HOC|||2022-11-28
+FORD|2023|Expedition|LIMITED|MAXExpedition|Infinite Blue Metallic Tinted Clearcoat|Expedition35LV6HOC|||2022-11-28
+FORD|2022|F150|XL|SuperCabF150|Carbonized Grey Metallic|F15035LV6EcoC|||2022-11-28
+FORD|2022|F150|TREMOR|SuperCrewF150|Iconic Silver Metallic|F15035LV6EcoC|||2022-11-28
+FORD|2022|F150|XLT|RegularF150|Iconic Silver Metallic|F15033LV6C|||2022-11-28
+FORD|2023|Expedition|LIMITED|MAXExpedition|Oxford White|Expedition35LV6HOC|||2022-11-28
