@@ -45,7 +45,7 @@ public:
 
 	//switch the inventory inlet into the InteriorMachine from the current bay to another valid bay to allow the original bay to be restocked 
 
-	bool SwitchVehiclePanelsBays(string);
+	bool SwitchVehicleInteriorsBays(string);
 
 	//adjust the inventory counts 
 
@@ -76,4 +76,7 @@ public:
 	//read the current interior type that is working in this machine
 
 	string GetInteriorType();
+
+	//update bay levels in text file
+	void UpdateBayLevelsInFile();
 };

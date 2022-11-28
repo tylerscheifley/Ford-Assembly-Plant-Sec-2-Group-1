@@ -75,6 +75,9 @@ public:
 
 	string GetBodyType();
 
+	//update bay levels in text file
+	void UpdateBayLevelsInFile();
+
 };
 
 

@@ -251,63 +251,114 @@ bool LoadTextureFromFile(const char* filename, GLuint* out_texture, int* out_wid
 
 	return true;
 }
-
-
-
-string bodyMachineFinder(string year, string body, string model)
+//This loads the correct image for the body machine using the order
+string loadBodyMachineImage(Order order)
 {
-	if (year == "2022")
+	string startOfPath = "Images/GUI/Body Machine/";
+	string fileName = "NoFileNameFound";
+
+	if (order.getYear() == "2022")
 	{
-		if (model == "F150")
+		if (order.getModel() == "F150")
 		{
-			if (body == "Regular")
+			if (order.getBodyPanelSet() == "Regular")
 			{
-				return "..\\GUI\\BodyMachine\\RegF150.png";
+				fileName = "RegF150.jpg";
 			}
-			else if (body == "SuperCab")
+			else if (order.getBodyPanelSet() == "SuperCab")
 			{
-				return "..\\GUI\\BodyMachine\\SprCabF150.png";
+				fileName = "SprCabF150.jpg";
 			}
-			else if (body == "SuperCrew")
+			else if (order.getBodyPanelSet() == "SuperCrew")
 			{
-				return "..\\GUI\\BodyMachine\\SprCrwF150.png";
+				fileName = "SprCrwF150.jpg";
 			}
 		}
-		return "DNE";
 	}
-	else if (year == "2023")
+	else if (order.getYear() == "2023")
 	{
-		if (model == "Expedition")
+		if (order.getModel() == "Expedition")
 		{
-			if (body == "Regular")
+			if (order.getBodyPanelSet() == "REG")
 			{
-				return "..\\GUI\\BodyMachine\\RegExp.png";
+				fileName = "RegExp.jpg";
 			}
-			else if (body == "Max")
+			else if (order.getBodyPanelSet() == "MAX")
 			{
-				return "..\\GUI\\BodyMachine\\MaxExp.png";
+				fileName = "MaxExp.jpg";
 			}
 		}
-		return "DNE";
 	}
-	else
-	{
-		return "DNE";
-	}
+	return startOfPath + fileName;
 }
 
-string* pathFinder(Order order, string* container[])
+//This loads the correct image for the chassis machine using the order
+string loadChassisMachineImage(Order order)
 {
-	if (bodyMachineFinder(order.getYear(), order.getBodyPanelSet(), order.getModel()) != "DNE")
+	string startOfPath = "Images/GUI/Chassis Machine/";
+
+	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + " " + order.getColour() + ".jpg";
+}
+
+//This loads the correct image for the interior machine using the order
+string loadInteriorMachineImage(Order order)
+{
+	string startOfPath = "Images/GUI/Interior Machine/";
+	string fileName = "NoFileNameFound";
+
+	if (order.getYear() == "2022")
 	{
-		*container[0] = bodyMachineFinder(order.getYear(), order.getBodyPanelSet(), order.getModel());
+		if (order.getModel() == "F150")
+		{
+			if (order.getInteriorLevel() == "high")
+			{
+				fileName = "2022 High F150.jpg";
+			}
+			else if (order.getInteriorLevel() == "base")
+			{
+				fileName = "2022 Base F150.jpg";
+			}
+			else if (order.getInteriorLevel() == "mid")
+			{
+				fileName = "2022 Mid F150.jpg";
+			}
+		}
 	}
+	else if (order.getYear() == "2023")
+	{
+		if (order.getModel() == "Expedition")
+		{
+			if (order.getInteriorLevel() == "high")
+			{
+				fileName = "2022 High Expedition.jpg";
+			}
+			else if (order.getInteriorLevel() == "base")
+			{
+				fileName = "2022 Base Expedition.jpg";
+			}
+			else if (order.getInteriorLevel() == "mid")
+			{
+				fileName = "2022 Mid Expedition.jpg";
+			}
+		}
+	}
+	return startOfPath + fileName;
+}
 
-	*container[1] = "..\\GUI\\ChassisMachine\\" + order.getYear() + " " + order.getInteriorLevel() + " " + order.getModel() + ".png";
-	*container[2] = "..\\GUI\\ChassisMachine\\" + order.getYear() + " " + order.getBodyPanelSet() + " " + order.getModel() + " " + order.getColour() + ".png";
-	*container[3] = "..\\GUI\\ChassisMachine\\" + order.getYear() + " " + order.getModel() + " " + order.getTrim() + " " + order.getColour() + ".jpg";
+//This loads the correct image for the paint machine using the order
+string loadPaintMachineImage(Order order)
+{
+	string startOfPath = "Images/GUI/Paint Machine/";
 
-	return *container;
+	return startOfPath + order.getYear() + " " + order.getBodyPanelSet() + " " + order.getModel() + " " + order.getColour() + ".jpg";
+}
+
+//This loads the correct image for displaying the order using the order
+string loadOrderImage(Order order)
+{
+	string startOfPath = "Images/GUI/Orders/";
+
+	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + " " + order.getColour() + ".jpg";
 }
 
 

@@ -79,4 +79,7 @@ public:
 
 	string GetChassisType();
 
+	//update line levels in text file
+	void UpdateLineLevelsInFile();
+
 };

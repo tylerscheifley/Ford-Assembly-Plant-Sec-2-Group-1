@@ -101,7 +101,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>..\Ford-Assembly-Plant-Sec-2-Group-1\x64\Debug;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Vehicle.obj;plantFiles.obj;plant.obj;PaintMachine.obj;Order.obj;main.obj;InteriorMachine.obj;VehicleInteriorsBay.obj;ChassisMachine.obj;ChassisLine.obj;BodyMachine.obj;VehiclePanelsBay.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Vehicle.obj;plantFiles.obj;plant.obj;PaintMachine.obj;Order.obj;InteriorMachine.obj;VehicleInteriorsBay.obj;ChassisMachine.obj;ChassisLine.obj;BodyMachine.obj;VehiclePanelsBay.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -168,6 +168,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ford-Assembly-Plant-Sec-2-Group-1\Ford-Assembly-Plant-Sec-2-Group-1.vcxproj">
+      <Project>{6b7af844-f844-45b6-b53e-25538e0c9baf}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

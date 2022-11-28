@@ -100,6 +100,42 @@ BodyMachine::BodyMachine()
 
 }
 
+//update bay levels in text file
+void BodyMachine::UpdateBayLevelsInFile()
+{
+	ofstream fout;
+	fout.open("BodyMachineBay1Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
+	if (fout.is_open())
+	{
+		fout << bayOne.GetRegularF150InventoryAmount()
+			<< "," << bayOne.GetSuperCabF150InventoryAmount()
+			<< "," << bayOne.GetSuperCrewF150InventoryAmount()
+			<< "," << bayOne.GetRegularExpeditionInventoryAmount()
+			<< "," << bayOne.GetMaxExpeditionInventoryAmount() << endl;
+		fout.close();
+	}
+	else
+	{
+		cout << "file cannot be opened!\n" << "Filename : BodyMachineBay1Inv.txt" << endl;
+	}
+	ofstream fout1;
+	fout1.open("BodyMachineBay2Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
+	if (fout1.is_open())
+	{
+		fout1 << bayTwo.GetRegularF150InventoryAmount()
+			<< "," << bayTwo.GetSuperCabF150InventoryAmount()
+			<< "," << bayTwo.GetSuperCrewF150InventoryAmount()
+			<< "," << bayTwo.GetRegularExpeditionInventoryAmount()
+			<< "," << bayTwo.GetMaxExpeditionInventoryAmount() << endl;
+		fout1.close();
+	}
+	else
+	{
+		cout << "file cannot be opened!\n" << "Filename : BodyMachineBay2Inv.txt" << endl;
+	}
+}
+
+
 //this method will run the bodymachine where an order and a vehicle outline will be provided
 bool BodyMachine::RunBodyMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 {
@@ -250,36 +286,7 @@ bool BodyMachine::RunBodyMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 	//Only save the inventory in each bay if the inventory was changed
 	if (didAdd == true)
 	{
-		ofstream fout;
-		fout.open("BodyMachineBay1Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
-		if (fout.is_open())
-		{
-			fout << bayOne.GetRegularF150InventoryAmount()
-				<< "," << bayOne.GetSuperCabF150InventoryAmount()
-				<< "," << bayOne.GetSuperCrewF150InventoryAmount()
-				<< "," << bayOne.GetRegularExpeditionInventoryAmount()
-				<< "," << bayOne.GetMaxExpeditionInventoryAmount() << endl;
-			fout.close();
-		}
-		else
-		{
-			cout << "file cannot be opened!\n" << "Filename : BodyMachineBay1Inv.txt" << endl;
-		}
-		ofstream fout1;
-		fout1.open("BodyMachineBay2Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
-		if (fout1.is_open())
-		{
-			fout1 << bayTwo.GetRegularF150InventoryAmount()
-				<< "," << bayTwo.GetSuperCabF150InventoryAmount()
-				<< "," << bayTwo.GetSuperCrewF150InventoryAmount()
-				<< "," << bayTwo.GetRegularExpeditionInventoryAmount()
-				<< "," << bayTwo.GetMaxExpeditionInventoryAmount() << endl;
-			fout1.close();
-		}
-		else
-		{
-			cout << "file cannot be opened!\n" << "Filename : BodyMachineBay2Inv.txt" << endl;
-		}
+		UpdateBayLevelsInFile();
 		return true;
 	}
 	else
@@ -355,6 +362,8 @@ bool BodyMachine::UpdateRegularF150InventoryAmount(int setInvLevelTo, string giv
 		{
 			bayTwo.SetRegularF150InventoryAmount(setInvLevelTo);
 		}
+
+		UpdateBayLevelsInFile();
 		
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -419,6 +428,8 @@ bool BodyMachine::UpdateSuperCabF150InventoryAmount(int setInvLevelTo, string gi
 			bayTwo.SetSuperCabF150InventoryAmount(setInvLevelTo);
 		}
 
+		UpdateBayLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -481,6 +492,8 @@ bool BodyMachine::UpdateSuperCrewF150InventoryAmount(int setInvLevelTo, string g
 		{
 			bayTwo.SetSuperCrewF150InventoryAmount(setInvLevelTo);
 		}
+
+		UpdateBayLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -545,6 +558,8 @@ bool BodyMachine::UpdateRegularExpeditionInventoryAmount(int setInvLevelTo, stri
 			bayTwo.SetRegularExpeditionInventoryAmount(setInvLevelTo);
 		}
 
+		UpdateBayLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -607,6 +622,8 @@ bool BodyMachine::UpdateMaxExpeditionInventoryAmount(int setInvLevelTo, string g
 		{
 			bayTwo.SetMaxExpeditionInventoryAmount(setInvLevelTo);
 		}
+
+		UpdateBayLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
