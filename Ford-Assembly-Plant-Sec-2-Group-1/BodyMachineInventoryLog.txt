@@ -1,1 +1,3 @@
-(M) Regular Expedition Inventory Level Amount Updated To: 100 In: BayOne @ TodaysDate TodaysTime TodaysYear
+(M) Regular Expedition Inventory Level Amount Updated To: 100 In: BayOne @ TodaysDate TodaysTime TodaysYear(A) Inventory Level Update @ Sun Nov 27 22:53:39 2022
+    Bay 1: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 499 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
