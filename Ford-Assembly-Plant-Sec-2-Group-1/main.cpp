@@ -2657,6 +2657,7 @@ int main()
 
 					//set to blank
 					bool Paint = LoadTextureFromFile(loadPaintMachineImage(plant.order).c_str(), &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+					cout << loadPaintMachineImage(plant.order).c_str() << endl;
 					IM_ASSERT(Paint);
 
 					//set to blank
