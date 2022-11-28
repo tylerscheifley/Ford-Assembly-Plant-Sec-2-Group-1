@@ -654,3 +654,54 @@
 (A) Inventory Level Update @ Mon Nov 28 16:35:11 2022
     Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 471 HighF150InteriorInvLvl: 469 BaseExpeditionInteriorInvLvl: 464 MidExpeditionInteriorInvLvl: 468 HighExpeditionInteriorInvLvl: 51
     Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 16:58:11 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 471 HighF150InteriorInvLvl: 469 BaseExpeditionInteriorInvLvl: 464 MidExpeditionInteriorInvLvl: 468 HighExpeditionInteriorInvLvl: 50
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 16:58:15 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 471 HighF150InteriorInvLvl: 469 BaseExpeditionInteriorInvLvl: 464 MidExpeditionInteriorInvLvl: 468 HighExpeditionInteriorInvLvl: 49
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 16:58:18 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 471 HighF150InteriorInvLvl: 468 BaseExpeditionInteriorInvLvl: 464 MidExpeditionInteriorInvLvl: 468 HighExpeditionInteriorInvLvl: 49
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 16:58:22 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 471 HighF150InteriorInvLvl: 468 BaseExpeditionInteriorInvLvl: 464 MidExpeditionInteriorInvLvl: 468 HighExpeditionInteriorInvLvl: 48
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 16:58:26 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 471 HighF150InteriorInvLvl: 468 BaseExpeditionInteriorInvLvl: 464 MidExpeditionInteriorInvLvl: 467 HighExpeditionInteriorInvLvl: 48
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 16:59:52 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 471 HighF150InteriorInvLvl: 468 BaseExpeditionInteriorInvLvl: 463 MidExpeditionInteriorInvLvl: 467 HighExpeditionInteriorInvLvl: 48
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 16:59:55 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 468 BaseExpeditionInteriorInvLvl: 463 MidExpeditionInteriorInvLvl: 467 HighExpeditionInteriorInvLvl: 48
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 16:59:59 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 468 BaseExpeditionInteriorInvLvl: 463 MidExpeditionInteriorInvLvl: 467 HighExpeditionInteriorInvLvl: 47
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:00:02 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 467 BaseExpeditionInteriorInvLvl: 463 MidExpeditionInteriorInvLvl: 467 HighExpeditionInteriorInvLvl: 47
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:00:06 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 467 BaseExpeditionInteriorInvLvl: 463 MidExpeditionInteriorInvLvl: 466 HighExpeditionInteriorInvLvl: 47
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:00:10 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 467 BaseExpeditionInteriorInvLvl: 462 MidExpeditionInteriorInvLvl: 466 HighExpeditionInteriorInvLvl: 47
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:01:53 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 466 BaseExpeditionInteriorInvLvl: 462 MidExpeditionInteriorInvLvl: 466 HighExpeditionInteriorInvLvl: 47
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:01:57 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 466 BaseExpeditionInteriorInvLvl: 461 MidExpeditionInteriorInvLvl: 466 HighExpeditionInteriorInvLvl: 47
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:02:01 2022
+    Bay 1: BaseF150InteriorInvLvl: 466 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 466 BaseExpeditionInteriorInvLvl: 461 MidExpeditionInteriorInvLvl: 466 HighExpeditionInteriorInvLvl: 46
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:02:04 2022
+    Bay 1: BaseF150InteriorInvLvl: 465 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 466 BaseExpeditionInteriorInvLvl: 461 MidExpeditionInteriorInvLvl: 466 HighExpeditionInteriorInvLvl: 46
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:02:08 2022
+    Bay 1: BaseF150InteriorInvLvl: 465 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 466 BaseExpeditionInteriorInvLvl: 460 MidExpeditionInteriorInvLvl: 466 HighExpeditionInteriorInvLvl: 46
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 17:02:12 2022
+    Bay 1: BaseF150InteriorInvLvl: 465 MidF150InteriorInvLvl: 470 HighF150InteriorInvLvl: 466 BaseExpeditionInteriorInvLvl: 459 MidExpeditionInteriorInvLvl: 466 HighExpeditionInteriorInvLvl: 46
+    Bay 2: BaseF150InteriorInvLvl: 499 MidF150InteriorInvLvl: 500 HighF150InteriorInvLvl: 499 BaseExpeditionInteriorInvLvl: 499 MidExpeditionInteriorInvLvl: 500 HighExpeditionInteriorInvLvl: 497

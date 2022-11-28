@@ -192,24 +192,73 @@ static void ShowExampleAppLog(bool* p_open)
 	if (Log_no_bring_to_front)  Log_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus;
 	if (Log_unsaved_document)   Log_flags |= ImGuiWindowFlags_UnsavedDocument;
 
-	// For the demo: add a debug button _BEFORE_ the normal log window contents
-	// We take advantage of a rarely used feature: multiple calls to Begin()/End() are appending to the _same_ window.
-	// Most of the contents of the window will be added by the log.Draw() call.
+	//Print all log files to the GUI log - with proper logs
 	ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
 	ImGui::Begin("Log", p_open, Log_flags);
-	if (ImGui::SmallButton("[Debug] Add 5 entries"))
+	if (ImGui::SmallButton("Refresh Log"))
 	{
-		static int counter = 0;
-		const char* categories[3] = { "info", "warn", "error" };
-		const char* words[] = { "Bumfuzzled", "Cattywampus", "Snickersnee", "Abibliophobia", "Absquatulate", "Nincompoop", "Pauciloquent" };
-		for (int n = 0; n < 5; n++)
-		{
-			const char* category = categories[counter % IM_ARRAYSIZE(categories)];
-			const char* word = words[counter % IM_ARRAYSIZE(words)];
-			assemblyLogs.AddLog("[%05d] [%s] Hello, current time is %.1f, here's a word: '%s'\n",
-				ImGui::GetFrameCount(), category, ImGui::GetTime(), word);
-			counter++;
+		//the categories that the user can filter by
+		const char* categories[4] = { "BodyMachineInvLog", "ChassisMachineInvLog", "InteriorMachineInvLog", "PlantLog" };
+		
+		//load the body machine logs from the body machine log file into the gui log
+		ifstream file("BodyMachineInventoryLog.txt");
+		string line;
+		if (file.is_open()) {
+			const char* category = categories[0];
+			while (!file.eof()) {
+				getline(file, line);
+				assemblyLogs.AddLog("[%s] %s\n",category, line.c_str());
+			}
 		}
+		else {
+			cout << "file cannot be opened!\n" << "Filename : BodyMachineInventoryLog.txt" << endl;
+		}
+		file.close();
+
+		//load the chassis machine logs from the chassis machine log file into the gui log
+		ifstream file1("ChassisMachineInventoryLog.txt");
+		string line1;
+		if (file1.is_open()) {
+			const char* category1 = categories[1];
+			while (!file1.eof()) {
+				getline(file1, line1);
+				assemblyLogs.AddLog("[%s] %s\n", category1, line1.c_str());
+			}
+		}
+		else {
+			cout << "file cannot be opened!\n" << "Filename : ChassisMachineInventoryLog.txt" << endl;
+		}
+		file1.close();
+
+		//load the interior machine logs from the interior machine log file into the gui log
+		ifstream file2("InteriorMachineInventoryLog.txt");
+		string line2;
+		if (file2.is_open()) {
+			const char* category2 = categories[2];
+			while (!file2.eof()) {
+				getline(file2, line2);
+				assemblyLogs.AddLog("[%s] %s\n", category2, line2.c_str());
+			}
+		}
+		else {
+			cout << "file cannot be opened!\n" << "Filename : ChassisMachineInventoryLog.txt" << endl;
+		}
+		file2.close();
+
+		//load the plant logs from the plant log file into the gui log
+		ifstream file3("plantLog.txt");
+		string line3;
+		if (file3.is_open()) {
+			const char* category3 = categories[3];
+			while (!file3.eof()) {
+				getline(file3, line3);
+				assemblyLogs.AddLog("[%s] %s\n", category3, line3.c_str());
+			}
+		}
+		else {
+			cout << "file cannot be opened!\n" << "Filename : plantLog.txt" << endl;
+		}
+		file3.close();
 	}
 	ImGui::End();
 
