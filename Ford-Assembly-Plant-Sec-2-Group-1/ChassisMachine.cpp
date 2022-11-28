@@ -112,6 +112,45 @@ ChassisMachine::ChassisMachine()
 
 }
 
+//update line levels in text file
+void ChassisMachine::UpdateLineLevelsInFile()
+{
+	ofstream fout;
+	fout.open("ChassisMachineLine1Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
+	if (fout.is_open())
+	{
+		fout << lineOne.GetF15033LV6CInventoryAmount()
+			<< "," << lineOne.GetF15027LV6CInventoryAmount()
+			<< "," << lineOne.GetF15050LV8CInventoryAmount()
+			<< "," << lineOne.GetF15035LV6EcoCInventoryAmount()
+			<< "," << lineOne.GetF15035LV6PwrBstCInventoryAmount()
+			<< "," << lineOne.GetExpedition35LV6CInventoryAmount()
+			<< "," << lineOne.GetExpedition35LV6HOCInventoryAmount() << endl;
+		fout.close();
+	}
+	else
+	{
+		cout << "file cannot be opened!\n" << "Filename : ChassisMachineLine1Inv.txt" << endl;
+	}
+	ofstream fout1;
+	fout1.open("ChassisMachineLine2Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
+	if (fout1.is_open())
+	{
+		fout1 << lineTwo.GetF15033LV6CInventoryAmount()
+			<< "," << lineTwo.GetF15027LV6CInventoryAmount()
+			<< "," << lineTwo.GetF15050LV8CInventoryAmount()
+			<< "," << lineTwo.GetF15035LV6EcoCInventoryAmount()
+			<< "," << lineTwo.GetF15035LV6PwrBstCInventoryAmount()
+			<< "," << lineTwo.GetExpedition35LV6CInventoryAmount()
+			<< "," << lineTwo.GetExpedition35LV6HOCInventoryAmount() << endl;
+		fout1.close();
+	}
+	else
+	{
+		cout << "file cannot be opened!\n" << "Filename : ChassisMachineLine2Inv.txt" << endl;
+	}
+}
+
 //this method will run the bodymachine where an order and a vehicle outline will be provided
 bool ChassisMachine::RunChassisMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 {
@@ -304,40 +343,8 @@ bool ChassisMachine::RunChassisMachine(Order givenOrder, Vehicle* vehiclePlaceHo
 	//Only save the inventory in each line if the inventory was changed
 	if (didAdd == true)
 	{
-		ofstream fout;
-		fout.open("ChassisMachineLine1Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
-		if (fout.is_open())
-		{
-			fout << lineOne.GetF15033LV6CInventoryAmount() 
-				<< "," << lineOne.GetF15027LV6CInventoryAmount()
-				<< "," << lineOne.GetF15050LV8CInventoryAmount()
-				<< "," << lineOne.GetF15035LV6EcoCInventoryAmount()
-				<< "," << lineOne.GetF15035LV6PwrBstCInventoryAmount()
-				<< "," << lineOne.GetExpedition35LV6CInventoryAmount()
-				<< "," << lineOne.GetExpedition35LV6HOCInventoryAmount() << endl;
-			fout.close();
-		}
-		else
-		{
-			cout << "file cannot be opened!\n" << "Filename : ChassisMachineLine1Inv.txt" << endl;
-		}
-		ofstream fout1;
-		fout1.open("ChassisMachineLine2Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
-		if (fout1.is_open())
-		{
-			fout1 << lineTwo.GetF15033LV6CInventoryAmount()
-				<< "," << lineTwo.GetF15027LV6CInventoryAmount()
-				<< "," << lineTwo.GetF15050LV8CInventoryAmount()
-				<< "," << lineTwo.GetF15035LV6EcoCInventoryAmount()
-				<< "," << lineTwo.GetF15035LV6PwrBstCInventoryAmount()
-				<< "," << lineTwo.GetExpedition35LV6CInventoryAmount()
-				<< "," << lineTwo.GetExpedition35LV6HOCInventoryAmount() << endl;
-			fout1.close();
-		}
-		else
-		{
-			cout << "file cannot be opened!\n" << "Filename : ChassisMachineLine2Inv.txt" << endl;
-		}
+		//update line levels in text file
+		void UpdateLineLevelsInFile();
 		return true;
 	}
 	else
@@ -414,6 +421,9 @@ bool ChassisMachine::UpdateF15033LV6CInventoryAmount(int setInvLevelTo, string g
 			lineTwo.SetF15033LV6CInventoryAmount(setInvLevelTo);
 		}
 
+		//update line levels in text file
+		void UpdateLineLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -476,6 +486,9 @@ bool ChassisMachine::UpdateF15027LV6CInventoryAmount(int setInvLevelTo, string g
 		{
 			lineTwo.SetF15027LV6CInventoryAmount(setInvLevelTo);
 		}
+
+		//update line levels in text file
+		void UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -540,6 +553,9 @@ bool ChassisMachine::UpdateF15050LV8CInventoryAmount(int setInvLevelTo, string g
 			lineTwo.SetF15050LV8CInventoryAmount(setInvLevelTo);
 		}
 
+		//update line levels in text file
+		void UpdateLineLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -602,6 +618,9 @@ bool ChassisMachine::UpdateF15035LV6EcoCInventoryAmount(int setInvLevelTo, strin
 		{
 			lineTwo.SetF15035LV6EcoCInventoryAmount(setInvLevelTo);
 		}
+
+		//update line levels in text file
+		void UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -666,6 +685,9 @@ bool ChassisMachine::UpdateF15035LV6PwrBstCInventoryAmount(int setInvLevelTo, st
 			lineTwo.SetF15035LV6PwrBstCInventoryAmount(setInvLevelTo);
 		}
 
+		//update line levels in text file
+		void UpdateLineLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -729,6 +751,9 @@ bool ChassisMachine::UpdateExpedition35LV6CInventoryAmount(int setInvLevelTo, st
 			lineTwo.SetExpedition35LV6CInventoryAmount(setInvLevelTo);
 		}
 
+		//update line levels in text file
+		void UpdateLineLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -791,6 +816,9 @@ bool ChassisMachine::UpdateExpedition35LV6HOCInventoryAmount(int setInvLevelTo, 
 		{
 			lineTwo.SetExpedition35LV6HOCInventoryAmount(setInvLevelTo);
 		}
+
+		//update line levels in text file
+		void UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);

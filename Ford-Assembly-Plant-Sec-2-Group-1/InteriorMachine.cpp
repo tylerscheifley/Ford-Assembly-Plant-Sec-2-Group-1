@@ -106,6 +106,43 @@ InteriorMachine::InteriorMachine()
 
 }
 
+//update bay levels in text file
+void InteriorMachine::UpdateBayLevelsInFile()
+{
+	ofstream fout;
+	fout.open("InteriorMachineBay1Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
+	if (fout.is_open())
+	{
+		fout << bayOne.GetBaseF150InteriorInventoryAmount()
+			<< "," << bayOne.GetMidF150InteriorInventoryAmount()
+			<< "," << bayOne.GetHighF150InteriorInventoryAmount()
+			<< "," << bayOne.GetBaseExpeditionInteriorInventoryAmount()
+			<< "," << bayOne.GetMidExpeditionInteriorInventoryAmount()
+			<< "," << bayOne.GetHighExpeditionInteriorInventoryAmount() << endl;
+		fout.close();
+	}
+	else
+	{
+		cout << "file cannot be opened!\n" << "Filename : InteriorMachineBay1Inv.txt" << endl;
+	}
+	ofstream fout1;
+	fout1.open("InteriorMachineBay2Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
+	if (fout1.is_open())
+	{
+		fout1 << bayTwo.GetBaseF150InteriorInventoryAmount()
+			<< "," << bayTwo.GetMidF150InteriorInventoryAmount()
+			<< "," << bayTwo.GetHighF150InteriorInventoryAmount()
+			<< "," << bayTwo.GetBaseExpeditionInteriorInventoryAmount()
+			<< "," << bayTwo.GetMidExpeditionInteriorInventoryAmount()
+			<< "," << bayTwo.GetHighExpeditionInteriorInventoryAmount() << endl;
+		fout1.close();
+	}
+	else
+	{
+		cout << "file cannot be opened!\n" << "Filename : InteriorMachineBay2Inv.txt" << endl;
+	}
+}
+
 //this method will run the InteriorMachine where an order and a vehicle outline will be provided
 bool InteriorMachine::RunInteriorMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 {
@@ -280,38 +317,8 @@ bool InteriorMachine::RunInteriorMachine(Order givenOrder, Vehicle* vehiclePlace
 	//Only save the inventory in each bay if the inventory was changed
 	if (didAdd == true)
 	{
-		ofstream fout;
-		fout.open("InteriorMachineBay1Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
-		if (fout.is_open())
-		{
-			fout << bayOne.GetBaseF150InteriorInventoryAmount()
-				<< "," << bayOne.GetMidF150InteriorInventoryAmount()
-				<< "," << bayOne.GetHighF150InteriorInventoryAmount()
-				<< "," << bayOne.GetBaseExpeditionInteriorInventoryAmount()
-				<< "," << bayOne.GetMidExpeditionInteriorInventoryAmount()
-				<< "," << bayOne.GetHighExpeditionInteriorInventoryAmount() << endl;
-			fout.close();
-		}
-		else
-		{
-			cout << "file cannot be opened!\n" << "Filename : InteriorMachineBay1Inv.txt" << endl;
-		}
-		ofstream fout1;
-		fout1.open("InteriorMachineBay2Inv.txt", ios::trunc); //we want to trunc to the file or essentially write over the existing data
-		if (fout1.is_open())
-		{
-			fout1 << bayTwo.GetBaseF150InteriorInventoryAmount()
-				<< "," << bayTwo.GetMidF150InteriorInventoryAmount()
-				<< "," << bayTwo.GetHighF150InteriorInventoryAmount()
-				<< "," << bayTwo.GetBaseExpeditionInteriorInventoryAmount()
-				<< "," << bayTwo.GetMidExpeditionInteriorInventoryAmount()
-				<< "," << bayTwo.GetHighExpeditionInteriorInventoryAmount() << endl;
-			fout1.close();
-		}
-		else
-		{
-			cout << "file cannot be opened!\n" << "Filename : InteriorMachineBay2Inv.txt" << endl;
-		}
+		//update bay levels in text file
+		UpdateBayLevelsInFile();
 		return true;
 	}
 	else
@@ -322,7 +329,7 @@ bool InteriorMachine::RunInteriorMachine(Order givenOrder, Vehicle* vehiclePlace
 
 //switch the inventory inlet into the bodyMachine from the current bay to another valid bay to allow the original bay to be restocked 
 
-bool InteriorMachine::SwitchVehiclePanelsBays(string switchToBay)
+bool InteriorMachine::SwitchVehicleInteriorsBays(string switchToBay)
 {
 	//Determine which bay to switch to
 	if (switchToBay == "BayOne")
@@ -388,6 +395,9 @@ bool InteriorMachine::UpdateBaseInteriorF150InventoryAmount(int setInvLevelTo, s
 			bayTwo.SetBaseF150InteriorInventoryAmount(setInvLevelTo);
 		}
 
+		//update bay levels in text file
+		UpdateBayLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -450,6 +460,9 @@ bool InteriorMachine::UpdateMidInteriorF150InventoryAmount(int setInvLevelTo, st
 		{
 			bayTwo.SetMidF150InteriorInventoryAmount(setInvLevelTo);
 		}
+
+		//update bay levels in text file
+		UpdateBayLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -514,6 +527,9 @@ bool InteriorMachine::UpdateHighInteriorF150InventoryAmount(int setInvLevelTo, s
 			bayTwo.SetHighF150InteriorInventoryAmount(setInvLevelTo);
 		}
 
+		//update bay levels in text file
+		UpdateBayLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -576,6 +592,9 @@ bool InteriorMachine::UpdateBaseInteriorExpeditionInventoryAmount(int setInvLeve
 		{
 			bayTwo.SetBaseExpeditionInteriorInventoryAmount(setInvLevelTo);
 		}
+
+		//update bay levels in text file
+		UpdateBayLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -640,6 +659,9 @@ bool InteriorMachine::UpdateMidInteriorExpeditionInventoryAmount(int setInvLevel
 			bayTwo.SetMidExpeditionInteriorInventoryAmount(setInvLevelTo);
 		}
 
+		//update bay levels in text file
+		UpdateBayLevelsInFile();
+
 		//get current data and time to use in our log
 		time_t now = time(0);
 		char* dateAndTime = ctime(&now);
@@ -702,6 +724,9 @@ bool InteriorMachine::UpdateHighInteriorExpeditionInventoryAmount(int setInvLeve
 		{
 			bayTwo.SetHighExpeditionInteriorInventoryAmount(setInvLevelTo);
 		}
+
+		//update bay levels in text file
+		UpdateBayLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
