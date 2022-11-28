@@ -617,7 +617,7 @@ int main()
 	int DryChamberHMD =0;
 	int globalTemp =0;
 	int GlobalAir = 0;
-	int VeQuota = 0;
+	
 	int VeComp = 0;
 	int i = 0;
 	ImVec2 center = ImGui::GetMainViewport()->GetCenter();
@@ -730,8 +730,10 @@ int main()
 	bool chassisMachine = true;
 	bool interiorMachine = true;
 	bool ClosedHMI = false;
+
 	bool isRendered = true;
-	
+	readLog(&plant);
+	int VeQuota = plant.getVehicleQuota();
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{
@@ -768,7 +770,7 @@ int main()
 		DryChamberHMD = plant.dryingChamber.getHumidity();
 		globalTemp = plant.getGlobalTemp();
 		GlobalAir = plant.getGlobalAirQuality();
-		VeQuota = plant.getVehicleQuota();
+		
 		VeComp = plant.getNumVehicleToday();
 		
 		//Value boxes for each inventory
@@ -7804,7 +7806,7 @@ int main()
 				plant.vehicle.generateCount("completedVehicles.txt");
 
 				plant.vehicle.GenerateVIN();
-				plant.vehicle.setDate("2022-11-28");
+				plant.vehicle.setDate(plant.getDate());
 
 				plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
 			}
