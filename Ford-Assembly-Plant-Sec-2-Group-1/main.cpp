@@ -1,173 +1,11 @@
-
 #include "plant.h"
 #include "plantFiles.h"
+#include "GUILog.h"
 
-using namespace std;
+Log readFileLogs;
 
-
-
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
-
-#include"imgui.h"
-#include"imgui_impl_glfw.h"
-#include"imgui_impl_opengl3.h"
-
-#include<iostream>
-#include<glad/glad.h>
-#include<GLFW/glfw3.h>
-
-// Vertex Shader source code
-const char* vertexShaderSource = "#version 330 core\n"
-"layout (location = 0) in vec3 aPos;\n"
-"uniform float size;\n"
-"void main()\n"
-"{\n"
-"   gl_Position = vec4(size * aPos.x, size * aPos.y, size * aPos.z, 1.0);\n"
-"}\0";
-//Fragment Shader source code
-const char* fragmentShaderSource = "#version 330 core\n"
-"out vec4 FragColor;\n"
-"uniform vec4 color;\n"
-"void main()\n"
-"{\n"
-"   FragColor = color;\n"
-"}\n\0";
-
-
-
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
-
-struct ExampleAppLog
+extern void ShowReadLogs(bool* p_open)
 {
-	ImGuiTextBuffer     Buf;
-	ImGuiTextFilter     Filter;
-	ImVector<int>       LineOffsets; // Index to lines offset. We maintain this with AddLog() calls.
-	bool                AutoScroll;  // Keep scrolling if already at the bottom.
-
-	ExampleAppLog()
-	{
-		AutoScroll = true;
-		Clear();
-	}
-
-	void    Clear()
-	{
-		Buf.clear();
-		LineOffsets.clear();
-		LineOffsets.push_back(0);
-	}
-
-	void    AddLog(const char* fmt, ...) IM_FMTARGS(2)
-	{
-		int old_size = Buf.size();
-		va_list args;
-		va_start(args, fmt);
-		Buf.appendfv(fmt, args);
-		va_end(args);
-		for (int new_size = Buf.size(); old_size < new_size; old_size++)
-			if (Buf[old_size] == '\n')
-				LineOffsets.push_back(old_size + 1);
-	}
-
-	void    Draw(const char* title, bool* p_open = NULL)
-	{
-		if (!ImGui::Begin(title, p_open))
-		{
-			ImGui::End();
-			return;
-		}
-
-		// Options menu
-		if (ImGui::BeginPopup("Options"))
-		{
-			ImGui::Checkbox("Auto-scroll", &AutoScroll);
-			ImGui::EndPopup();
-		}
-
-		// Main window
-		if (ImGui::Button("Options"))
-			ImGui::OpenPopup("Options");
-		ImGui::SameLine();
-		bool clear = ImGui::Button("Clear");
-		ImGui::SameLine();
-		bool copy = ImGui::Button("Copy");
-		ImGui::SameLine();
-		Filter.Draw("Filter", -100.0f);
-
-		ImGui::Separator();
-
-		if (ImGui::BeginChild("scrolling", ImVec2(0, 0), false, ImGuiWindowFlags_HorizontalScrollbar))
-		{
-			if (clear)
-				Clear();
-			if (copy)
-				ImGui::LogToClipboard();
-
-			ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0, 0));
-			const char* buf = Buf.begin();
-			const char* buf_end = Buf.end();
-			if (Filter.IsActive())
-			{
-				// In this example we don't use the clipper when Filter is enabled.
-				// This is because we don't have random access to the result of our filter.
-				// A real application processing logs with ten of thousands of entries may want to store the result of
-				// search/filter.. especially if the filtering function is not trivial (e.g. reg-exp).
-				for (int line_no = 0; line_no < LineOffsets.Size; line_no++)
-				{
-					const char* line_start = buf + LineOffsets[line_no];
-					const char* line_end = (line_no + 1 < LineOffsets.Size) ? (buf + LineOffsets[line_no + 1] - 1) : buf_end;
-					if (Filter.PassFilter(line_start, line_end))
-						ImGui::TextUnformatted(line_start, line_end);
-				}
-			}
-			else
-			{
-				// The simplest and easy way to display the entire buffer:
-				//   ImGui::TextUnformatted(buf_begin, buf_end);
-				// And it'll just work. TextUnformatted() has specialization for large blob of text and will fast-forward
-				// to skip non-visible lines. Here we instead demonstrate using the clipper to only process lines that are
-				// within the visible area.
-				// If you have tens of thousands of items and their processing cost is non-negligible, coarse clipping them
-				// on your side is recommended. Using ImGuiListClipper requires
-				// - A) random access into your data
-				// - B) items all being the  same height,
-				// both of which we can handle since we have an array pointing to the beginning of each line of text.
-				// When using the filter (in the block of code above) we don't have random access into the data to display
-				// anymore, which is why we don't use the clipper. Storing or skimming through the search result would make
-				// it possible (and would be recommended if you want to search through tens of thousands of entries).
-				ImGuiListClipper clipper;
-				clipper.Begin(LineOffsets.Size);
-				while (clipper.Step())
-				{
-					for (int line_no = clipper.DisplayStart; line_no < clipper.DisplayEnd; line_no++)
-					{
-						const char* line_start = buf + LineOffsets[line_no];
-						const char* line_end = (line_no + 1 < LineOffsets.Size) ? (buf + LineOffsets[line_no + 1] - 1) : buf_end;
-						ImGui::TextUnformatted(line_start, line_end);
-					}
-				}
-				clipper.End();
-			}
-			ImGui::PopStyleVar();
-
-			// Keep up at the bottom of the scroll region if we were already at the bottom at the beginning of the frame.
-			// Using a scrollbar or mouse-wheel will take away from the bottom edge.
-			if (AutoScroll && ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
-				ImGui::SetScrollHereY(1.0f);
-		}
-		ImGui::EndChild();
-		ImGui::End();
-	}
-};
-ExampleAppLog assemblyLogs;
-static void ShowExampleAppLog(bool* p_open)
-{
-
 	static bool Log_no_titlebar = true;
 	static bool Log_no_scrollbar = true;
 	static bool Log_no_menu = true;
@@ -199,7 +37,7 @@ static void ShowExampleAppLog(bool* p_open)
 	{
 		//the categories that the user can filter by
 		const char* categories[4] = { "BodyMachineInvLog", "ChassisMachineInvLog", "InteriorMachineInvLog", "PlantLog" };
-		
+
 		//load the body machine logs from the body machine log file into the gui log
 		ifstream file("BodyMachineInventoryLog.txt");
 		string line;
@@ -207,7 +45,7 @@ static void ShowExampleAppLog(bool* p_open)
 			const char* category = categories[0];
 			while (!file.eof()) {
 				getline(file, line);
-				assemblyLogs.AddLog("[%s] %s\n",category, line.c_str());
+				readFileLogs.AddLog("[%s] %s\n", category, line.c_str());
 			}
 		}
 		else {
@@ -222,7 +60,7 @@ static void ShowExampleAppLog(bool* p_open)
 			const char* category1 = categories[1];
 			while (!file1.eof()) {
 				getline(file1, line1);
-				assemblyLogs.AddLog("[%s] %s\n", category1, line1.c_str());
+				readFileLogs.AddLog("[%s] %s\n", category1, line1.c_str());
 			}
 		}
 		else {
@@ -237,7 +75,7 @@ static void ShowExampleAppLog(bool* p_open)
 			const char* category2 = categories[2];
 			while (!file2.eof()) {
 				getline(file2, line2);
-				assemblyLogs.AddLog("[%s] %s\n", category2, line2.c_str());
+				readFileLogs.AddLog("[%s] %s\n", category2, line2.c_str());
 			}
 		}
 		else {
@@ -252,7 +90,7 @@ static void ShowExampleAppLog(bool* p_open)
 			const char* category3 = categories[3];
 			while (!file3.eof()) {
 				getline(file3, line3);
-				assemblyLogs.AddLog("[%s] %s\n", category3, line3.c_str());
+				readFileLogs.AddLog("[%s] %s\n", category3, line3.c_str());
 			}
 		}
 		else {
@@ -263,7 +101,7 @@ static void ShowExampleAppLog(bool* p_open)
 	ImGui::End();
 
 	// Actually call in the regular Log helper (which will Begin() into the same window as we just did)
-	assemblyLogs.Draw("Log", p_open);
+	readFileLogs.Draw("Log", p_open);
 }
 
 // Simple helper function to load an image into a OpenGL texture with common settings
@@ -834,7 +672,7 @@ int main()
 	int PaintChamberHMD = 0;
 	double DryChamberTemp = 0.0;
 	int DryChamberHMD = 0;
-	int globalTemp = 0;
+	double globalTemp = 0;
 	int GlobalAir = 0;
 	static int b;
 	static int c;
@@ -1556,7 +1394,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2(body_image_width, body_image_height));
+				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2((float)body_image_width, (float)body_image_height));
 
 
 				ImGui::End();
@@ -1825,7 +1663,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2(chassis_image_width, chassis_image_height));
+				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2((float)chassis_image_width, (float)chassis_image_height));
 
 
 				ImGui::End();
@@ -2065,7 +1903,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)Interior_image_texture, ImVec2(Interior_image_width, Interior_image_height));
+				ImGui::Image((void*)(intptr_t)Interior_image_texture, ImVec2((float)Interior_image_width, (float)Interior_image_height));
 
 
 				ImGui::End();
@@ -2106,7 +1944,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintRedVatVol);
-				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2((float)RedPaintVat_image_width, (float)RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
@@ -2142,7 +1980,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
-				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2((float)BluePaintVat_image_width, (float)BluePaintVat_image_height));
 				ImGui::End();
 
 				//Green Vat
@@ -2177,7 +2015,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
-				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2((float)GreenPaintVat_image_width, (float)GreenPaintVat_image_height));
 				ImGui::End();
 
 				//DipTank
@@ -2220,7 +2058,7 @@ int main()
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
 
-				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
+				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2((float)DipTank_image_width, (float)DipTank_image_height));
 
 				ImGui::End();
 
@@ -2260,7 +2098,7 @@ int main()
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
 				ImGui::Text("Dry Temperature: %.2f`C", DryChamberTemp);
 
-				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2(PaintChamber_image_width, PaintChamber_image_height));
+				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2((float)PaintChamber_image_width, (float)PaintChamber_image_height));
 
 				ImGui::End();
 
@@ -2305,7 +2143,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)Paint_image_texture, ImVec2(Paint_image_width, Paint_image_height));
+				ImGui::Image((void*)(intptr_t)Paint_image_texture, ImVec2((float)Paint_image_width, (float)Paint_image_height));
 
 
 				ImGui::End();
@@ -2576,7 +2414,7 @@ int main()
 
 				//LOG STUFF
 				// 
-				ShowExampleAppLog(NULL);
+				ShowReadLogs(NULL);
 				//END OF LOG STUFF
 
 
@@ -2614,7 +2452,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2(my_image_width, my_image_height));
+				ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2((float)my_image_width, (float)my_image_height));
 
 
 				ImGui::End();
@@ -2660,7 +2498,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)toBeMade_image_texture, ImVec2(toBeMade_image_width, toBeMade_image_height));
+				ImGui::Image((void*)(intptr_t)toBeMade_image_texture, ImVec2((float)toBeMade_image_width, (float)toBeMade_image_height));
 
 
 				ImGui::End();
@@ -3192,7 +3030,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2(body_image_width, body_image_height));
+				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2((float)body_image_width, (float)body_image_height));
 
 
 				ImGui::End();
@@ -3461,7 +3299,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2(chassis_image_width, chassis_image_height));
+				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2((float)chassis_image_width, (float)chassis_image_height));
 
 
 				ImGui::End();
@@ -3706,7 +3544,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)Interior_image_texture, ImVec2(Interior_image_width, Interior_image_height));
+				ImGui::Image((void*)(intptr_t)Interior_image_texture, ImVec2((float)Interior_image_width, (float)Interior_image_height));
 
 
 				ImGui::End();
@@ -3747,7 +3585,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintRedVatVol);
-				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2((float)RedPaintVat_image_width, (float)RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
@@ -3781,7 +3619,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
-				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2((float)BluePaintVat_image_width, (float)BluePaintVat_image_height));
 				ImGui::End();
 
 				//Green Vat
@@ -3817,7 +3655,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
-				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2((float)GreenPaintVat_image_width, (float)GreenPaintVat_image_height));
 				ImGui::End();
 
 				//DipTank
@@ -3858,7 +3696,7 @@ int main()
 
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
-				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
+				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2((float)DipTank_image_width, (float)DipTank_image_height));
 				ImGui::End();
 
 
@@ -3899,7 +3737,7 @@ int main()
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
 				ImGui::Text("Dry Temperature: %.2f`C", DryChamberTemp);
 
-				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2(PaintChamber_image_width, PaintChamber_image_height));
+				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2((float)PaintChamber_image_width, (float)PaintChamber_image_height));
 
 				ImGui::End();
 
@@ -3944,7 +3782,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)Paint_image_texture, ImVec2(Paint_image_width, Paint_image_height));
+				ImGui::Image((void*)(intptr_t)Paint_image_texture, ImVec2((float)Paint_image_width, (float)Paint_image_height));
 
 
 				ImGui::End();
@@ -4215,7 +4053,7 @@ int main()
 
 				//LOG STUFF
 				// 
-				ShowExampleAppLog(NULL);
+				ShowReadLogs(NULL);
 				//END OF LOG STUFF
 				// Demonstrate the various window flags. Typically you would just use the default!
 
@@ -4253,7 +4091,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2(my_image_width, my_image_height));
+				ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2((float)my_image_width, (float)my_image_height));
 
 
 				ImGui::End();
@@ -4299,7 +4137,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)toBeMade_image_texture, ImVec2(toBeMade_image_width, toBeMade_image_height));
+				ImGui::Image((void*)(intptr_t)toBeMade_image_texture, ImVec2((float)toBeMade_image_width, (float)toBeMade_image_height));
 
 
 				ImGui::End();
@@ -4883,7 +4721,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2(body_image_width, body_image_height));
+				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2((float)body_image_width, (float)body_image_height));
 
 
 				ImGui::End();
@@ -5156,7 +4994,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2(chassis_image_width, chassis_image_height));
+				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2((float)chassis_image_width, (float)chassis_image_height));
 
 
 				ImGui::End();
@@ -5400,7 +5238,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)Interior_image_texture, ImVec2(Interior_image_width, Interior_image_height));
+				ImGui::Image((void*)(intptr_t)Interior_image_texture, ImVec2((float)Interior_image_width, (float)Interior_image_height));
 
 
 				ImGui::End();
@@ -5442,7 +5280,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintRedVatVol);
-				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2((float)RedPaintVat_image_width, (float)RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
@@ -5477,7 +5315,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
-				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2((float)BluePaintVat_image_width, (float)BluePaintVat_image_height));
 				ImGui::End();
 
 				//Green Vat
@@ -5512,7 +5350,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
-				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2((float)GreenPaintVat_image_width, (float)GreenPaintVat_image_height));
 				ImGui::End();
 
 				//DipTank
@@ -5554,7 +5392,7 @@ int main()
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
 
-				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
+				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2((float)DipTank_image_width, (float)DipTank_image_height));
 
 				ImGui::End();
 
@@ -5596,7 +5434,7 @@ int main()
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
 				ImGui::Text("Dry Temperature: %.2f`C", DryChamberTemp);
 
-				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2(PaintChamber_image_width, PaintChamber_image_height));
+				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2((float)PaintChamber_image_width, (float)PaintChamber_image_height));
 
 				ImGui::End();
 
@@ -5641,7 +5479,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)Paint_image_texture, ImVec2(Paint_image_width, Paint_image_height));
+				ImGui::Image((void*)(intptr_t)Paint_image_texture, ImVec2((float)Paint_image_width, (float)Paint_image_height));
 
 
 				ImGui::End();
@@ -5914,7 +5752,7 @@ int main()
 
 				//LOG STUFF
 				// 
-				ShowExampleAppLog(NULL);
+				ShowReadLogs(NULL);
 				//END OF LOG STUFF
 				// Demonstrate the various window flags. Typically you would just use the default!
 
@@ -5953,7 +5791,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2(my_image_width, my_image_height));
+				ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2((float)my_image_width, (float)my_image_height));
 
 
 				ImGui::End();
@@ -5999,7 +5837,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)toBeMade_image_texture, ImVec2(toBeMade_image_width, toBeMade_image_height));
+				ImGui::Image((void*)(intptr_t)toBeMade_image_texture, ImVec2((float)toBeMade_image_width, (float)toBeMade_image_height));
 
 
 				ImGui::End();
@@ -6574,7 +6412,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2(body_image_width, body_image_height));
+				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2((float)body_image_width, (float)body_image_height));
 
 
 				ImGui::End();
@@ -6848,7 +6686,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2(chassis_image_width, chassis_image_height));
+				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2((float)chassis_image_width, (float)chassis_image_height));
 
 
 				ImGui::End();
@@ -7097,7 +6935,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)Interior_image_texture, ImVec2(Interior_image_width, Interior_image_height));
+				ImGui::Image((void*)(intptr_t)Interior_image_texture, ImVec2((float)Interior_image_width, (float)Interior_image_height));
 
 
 				ImGui::End();
@@ -7138,7 +6976,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintRedVatVol);
-				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2((float)RedPaintVat_image_width, (float)RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
@@ -7174,7 +7012,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
-				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2((float)BluePaintVat_image_width, (float)BluePaintVat_image_height));
 				ImGui::End();
 
 				//Green Vat
@@ -7209,7 +7047,7 @@ int main()
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
-				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
+				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2((float)GreenPaintVat_image_width, (float)GreenPaintVat_image_height));
 				ImGui::End();
 
 				//DipTank
@@ -7252,7 +7090,7 @@ int main()
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
 
-				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
+				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2((float)DipTank_image_width, (float)DipTank_image_height));
 
 				ImGui::End();
 
@@ -7293,7 +7131,7 @@ int main()
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
 				ImGui::Text("Dry Temperature: %.2f`C", DryChamberTemp);
 
-				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2(PaintChamber_image_width, PaintChamber_image_height));
+				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2((float)PaintChamber_image_width, (float)PaintChamber_image_height));
 
 				ImGui::End();
 
@@ -7338,7 +7176,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)Paint_image_texture, ImVec2(Paint_image_width, Paint_image_height));
+				ImGui::Image((void*)(intptr_t)Paint_image_texture, ImVec2((float)Paint_image_width, (float)Paint_image_height));
 
 
 				ImGui::End();
@@ -7611,7 +7449,7 @@ int main()
 
 				//LOG STUFF
 				// 
-				ShowExampleAppLog(NULL);
+				ShowReadLogs(NULL);
 				//END OF LOG STUFF
 				// Demonstrate the various window flags. Typically you would just use the default!
 
@@ -7649,7 +7487,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2(my_image_width, my_image_height));
+				ImGui::Image((void*)(intptr_t)my_image_texture, ImVec2((float)my_image_width, (float)my_image_height));
 
 
 				ImGui::End();
@@ -7695,7 +7533,7 @@ int main()
 
 
 
-				ImGui::Image((void*)(intptr_t)toBeMade_image_texture, ImVec2(toBeMade_image_width, toBeMade_image_height));
+				ImGui::Image((void*)(intptr_t)toBeMade_image_texture, ImVec2((float)toBeMade_image_width, (float)toBeMade_image_height));
 
 
 				ImGui::End();
@@ -7771,9 +7609,3 @@ int main()
 
 		return 0;
 }
-
-
-
-
-
-
