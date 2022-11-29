@@ -434,9 +434,9 @@ int main()
 {
 	Plant plant;
 	sampleDataCreator();
-	
+
 	//
-	
+
 
 	//PAINT MACHINE DATA FLOW
 	/*plant.paintingMachine.identifyRGBvalues("PlantColours.txt");*/ // each machine loop
@@ -451,7 +451,7 @@ int main()
 	const bool controlMenu_no_titlebar = false;
 	const bool controlMenu_no_scrollbar = true;
 	const bool controlMenu_no_menu = false;
-	const bool controlMenu_no_move = true;
+	const bool controlMenu_no_move = false;
 	const bool controlMenu_no_resize = false;
 	const bool controlMenu_no_collapse = false;
 	const bool controlMenu_no_close = false;
@@ -595,6 +595,141 @@ int main()
 	static bool RedPaintVat_unsaved_document = false;
 
 
+	static bool GreenPaintVat_no_titlebar = true;
+	static bool GreenPaintVat_no_scrollbar = true;
+	static bool GreenPaintVat_no_menu = true;
+	static bool GreenPaintVat_no_move = true;
+	static bool GreenPaintVat_no_resize = true;
+	static bool GreenPaintVat_no_collapse = false;
+	static bool GreenPaintVat_no_close = false;
+	static bool GreenPaintVat_no_nav = true;
+	static bool GreenPaintVat_no_background = false;
+	static bool GreenPaintVat_no_bring_to_front = false;
+	static bool GreenPaintVat_unsaved_document = false;
+
+	static bool DipTank_no_titlebar = true;
+	static bool DipTank_no_scrollbar = true;
+	static bool DipTank_no_menu = true;
+	static bool DipTank_no_move = true;
+	static bool DipTank_no_resize = true;
+	static bool DipTank_no_collapse = false;
+	static bool DipTank_no_close = false;
+	static bool DipTank_no_nav = true;
+	static bool DipTank_no_background = false;
+	static bool DipTank_no_bring_to_front = false;
+	static bool DipTank_unsaved_document = false;
+	//PaintChamber
+
+	static bool PaintChamber_no_titlebar = true;
+	static bool PaintChamber_no_scrollbar = true;
+	static bool PaintChamber_no_menu = true;
+	static bool PaintChamber_no_move = true;
+	static bool PaintChamber_no_resize = true;
+	static bool PaintChamber_no_collapse = false;
+	static bool PaintChamber_no_close = false;
+	static bool PaintChamber_no_nav = true;
+	static bool PaintChamber_no_background = false;
+	static bool PaintChamber_no_bring_to_front = false;
+	static bool PaintChamber_unsaved_document = false;
+
+	static bool PaintImage_no_titlebar = true;
+	static bool PaintImage_no_scrollbar = true;
+	static bool PaintImage_no_menu = true;
+	static bool PaintImage_no_move = true;
+	static bool PaintImage_no_resize = true;
+	static bool PaintImage_no_collapse = false;
+	static bool PaintImage_no_close = false;
+	static bool PaintImage_no_nav = true;
+	static bool PaintImage_no_background = false;
+	static bool PaintImage_no_bring_to_front = false;
+	static bool PaintImage_unsaved_document = false;
+
+	//BAY SELECTION TOGGLE and restock button
+	const bool InvPaintButtons_no_titlebar = true;
+	const bool InvPaintButtons_no_scrollbar = true;
+	const bool InvPaintButtons_no_menu = true;
+	const bool InvPaintButtons_no_move = true;
+	const bool InvPaintButtons_no_resize = true;
+	const bool InvPaintButtons_no_collapse = false;
+	const bool InvPaintButtons_no_close = false;
+	const bool InvPaintButtons_no_nav = false;
+	static bool InvPaintButtons_no_bring_to_front = false;
+	const bool InvPaintButtons_no_background = false;
+	const bool InvPaintButtons_unsaved_document = false;
+
+	static bool GlobalTemp_no_titlebar = true;
+	static bool GlobalTemp_no_scrollbar = true;
+	static bool GlobalTemp_no_menu = true;
+	static bool GlobalTemp_no_move = true;
+	static bool GlobalTemp_no_resize = true;
+	static bool GlobalTemp_no_collapse = false;
+	static bool GlobalTemp_no_close = false;
+	static bool GlobalTemp_no_nav = true;
+	static bool GlobalTemp_no_background = false;
+	static bool GlobalTemp_no_bring_to_front = false;
+	static bool GlobalTemp_unsaved_document = false;
+
+	static bool GlobalAir_no_titlebar = true;
+	static bool GlobalAir_no_scrollbar = true;
+	static bool GlobalAir_no_menu = true;
+	static bool GlobalAir_no_move = true;
+	static bool GlobalAir_no_resize = true;
+	static bool GlobalAir_no_collapse = false;
+	static bool GlobalAir_no_close = false;
+	static bool GlobalAir_no_nav = true;
+	static bool GlobalAir_no_background = false;
+	static bool GlobalAir_no_bring_to_front = false;
+	static bool GlobalAir_unsaved_document = false;
+
+	static bool VeQuota_no_titlebar = true;
+	static bool VeQuota_no_scrollbar = true;
+	static bool VeQuota_no_menu = true;
+	static bool VeQuota_no_move = true;
+	static bool VeQuota_no_resize = true;
+	static bool VeQuota_no_collapse = false;
+	static bool VeQuota_no_close = false;
+	static bool VeQuota_no_nav = true;
+	static bool VeQuota_no_background = false;
+	static bool VeQuota_no_bring_to_front = false;
+	static bool VeQuota_unsaved_document = false;
+
+
+	static bool VeComp_no_titlebar = true;
+	static bool VeComp_no_scrollbar = true;
+	static bool VeComp_no_menu = true;
+	static bool VeComp_no_move = true;
+	static bool VeComp_no_resize = true;
+	static bool VeComp_no_collapse = false;
+	static bool VeComp_no_close = false;
+	static bool VeComp_no_nav = true;
+	static bool VeComp_no_background = false;
+	static bool VeComp_no_bring_to_front = false;
+	static bool VeComp_unsaved_document = false;
+
+	static bool toBeMade_no_titlebar = true;
+	static bool toBeMade_no_scrollbar = true;
+	static bool toBeMade_no_menu = true;
+	static bool toBeMade_no_move = true;
+	static bool toBeMade_no_resize = true;
+	static bool toBeMade_no_collapse = false;
+	static bool toBeMade_no_close = false;
+	static bool toBeMade_no_nav = true;
+	static bool toBeMade_no_background = false;
+	static bool toBeMade_no_bring_to_front = false;
+	static bool toBeMade_unsaved_document = false;
+
+	// Demonstrate the various window flags. Typically you would just use the default!
+	static bool  no_titlebar = true;
+	static bool  no_scrollbar = true;
+	static bool  no_menu = false;
+	static bool  no_move = true;
+	static bool  no_resize = true;
+	static bool  no_collapse = false;
+	static bool  no_close = false;
+	static bool  no_nav = true;
+	static bool  no_background = false;
+	static bool  no_bring_to_front = true;
+	static bool unsaved_document = false;
 	// Initialize GLFW
 	glfwInit();
 
@@ -695,7 +830,7 @@ int main()
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	ImGui_ImplOpenGL3_Init("#version 330");
 
-	 //Variables to be changed in the ImGUI window
+	//Variables to be changed in the ImGUI window
 
 	float size = 1.0f;
 	float color[4] = { 0.8f, 0.3f, 0.02f, 1.0f };
@@ -712,10 +847,11 @@ int main()
 	double PaintChamberTemp = 0.0;
 	int PaintChamberHMD = 0;
 	double DryChamberTemp = 0.0;
-	int DryChamberHMD =0;
-	int globalTemp =0;
+	int DryChamberHMD = 0;
+	int globalTemp = 0;
 	int GlobalAir = 0;
-	
+	static int b;
+	static int c;
 	int VeComp = 0;
 	int i = 0;
 	ImVec2 center = ImGui::GetMainViewport()->GetCenter();
@@ -841,7 +977,7 @@ int main()
 		bool changeInteriorValues = true;
 
 		plant.order.loadOrder("Order.txt");
-		
+
 		readLog(&plant);
 
 		plant.vehicle.setMake(plant.order.getMake());
@@ -868,9 +1004,9 @@ int main()
 		DryChamberHMD = plant.dryingChamber.getHumidity();
 		globalTemp = plant.getGlobalTemp();
 		GlobalAir = plant.getGlobalAirQuality();
-		
+
 		VeComp = VeComp++;
-		
+
 		//Value boxes for each inventory
 //BAY 1
 		int bay1MaxExp = plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
@@ -926,22 +1062,27 @@ int main()
 		int bay2HighF150 = plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
 
 
-			while (bodyMachine) {
+		while (bodyMachine) {
 
-				glfwPollEvents();
 
-				//changing values from order to body machine.
-				if (glfwWindowShouldClose(window)) {
-					bodyMachine = false;
-					paintMachine = false;
-					chassisMachine = false;
-					interiorMachine = false;
-				}
+
+			glfwPollEvents();
+
+			//changing values from order to body machine.
+			if (glfwWindowShouldClose(window)) {
+				bodyMachine = false;
+				paintMachine = false;
+				chassisMachine = false;
+				interiorMachine = false;
+			}
+
+			
+
 
 				if (changeBodyValues) {
 
 					plant.bodyMachine.RunBodyMachine(plant.order, &plant.vehicle);
-					plant.bodyMachine.bayOne.bayInUse();
+					plant.bodyMachine.bayTwo.bayInUse();
 					changeBodyValues = false;
 				}
 				//Value boxes for each inventory
@@ -962,8 +1103,8 @@ int main()
 
 
 				//end of changing values.
-			
-				
+
+
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
 				}
@@ -1013,7 +1154,7 @@ int main()
 					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
 					IM_ASSERT(Interior);
 				}
-				
+
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 				// Clean the back buffer and assign the new color to it
@@ -1024,10 +1165,170 @@ int main()
 				ImGui_ImplGlfw_NewFrame();
 				ImGui::NewFrame();
 
+				if (plant.bodyMachine.bayOne.bayThisLineInUse()) {
+					if (plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount() == 49 ||
+						plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount() == 49 ||
+						plant.bodyMachine.bayOne.GetRegularF150InventoryAmount() == 49 ||
+						plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount() == 49 ||
+						plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount() == 49) {
+
+						check = false;
+						if (isRendered)
+							ImGui::OpenPopup("Warning Bay 1");
+
+					}
+					else if (plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount() < 1 ||
+						plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount() < 1 ||
+						plant.bodyMachine.bayOne.GetRegularF150InventoryAmount() < 1 ||
+						plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount() < 1 ||
+						plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount() < 1) {
+
+						check = false;
+
+						ImGui::OpenPopup("Critical Warning Bay 1");
+					}
+
+					// Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+
+					if (ImGui::BeginPopupModal("Warning Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("Regular Expedition = %d", plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
+						ImGui::Text("Max Expedition = %d", plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
+						ImGui::Text("Regular Cab = %d", plant.bodyMachine.bayOne.GetRegularF150InventoryAmount());
+						ImGui::Text("Super Cab = %d", plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount());
+						ImGui::Text("SuperCrew = %d", plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
+
+
+						ImGui::SetItemDefaultFocus();
+						
+						if (ImGui::Button("Dismiss", ImVec2(120, 0))) { ImGui::CloseCurrentPopup(); }
+						ImGui::EndPopup();
+					}
+					//Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					if (ImGui::BeginPopupModal("Critical Warning Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("Regular Expedition = %d", plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
+						ImGui::Text("Max Expedition = %d", plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
+						ImGui::Text("Regular Cab = %d", plant.bodyMachine.bayOne.GetRegularF150InventoryAmount());
+						ImGui::Text("Super Cab = %d", plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount());
+						ImGui::Text("SuperCrew = %d", plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
+
+
+						ImGui::SetItemDefaultFocus();
+						
+						if (ImGui::Button("Switch and Restock", ImVec2(120, 0))) {
+							ImGui::CloseCurrentPopup();
+							e = 1;
+							plant.bodyMachine.SwitchVehiclePanelsBays("BayTwo");
+							plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(500, "BayOne");
+
+
+							plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(500, "BayOne");
+
+
+							plant.bodyMachine.UpdateRegularF150InventoryAmount(500, "BayOne");
+
+
+							plant.bodyMachine.UpdateSuperCabF150InventoryAmount(500, "BayOne");
+
+
+							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(500, "BayOne");
+
+						}
+						ImGui::EndPopup();
+					}
+
+
+				}
+				else if (plant.bodyMachine.bayTwo.bayThisLineInUse()) {
+						
+						if (plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() < 50 ||
+							plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() < 50 ||
+							plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount() < 50 ||
+							plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount() < 50 ||
+							plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount() < 50) {
+
+							check = false;
+
+							ImGui::OpenPopup("Warning Bay 2");
+						}else if (plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() < 1 ||
+							plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() < 1 ||
+							plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount() < 1 ||
+							plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount() < 1 ||
+							plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount() < 1) {
+
+							check = false;
+
+							ImGui::OpenPopup("Critical Warning Bay 2");
+							}
+
+							// Always center this window when appearing
+							center = ImGui::GetMainViewport()->GetCenter();
+							ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+
+							if (ImGui::BeginPopupModal("Warning Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+							{
+								ImGui::Text("Regular Expedition = %d", plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount());
+								ImGui::Text("Max Expedition = %d", plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount());
+								ImGui::Text("Regular Cab = %d", plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount());
+								ImGui::Text("Super Cab = %d", plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount());
+								ImGui::Text("SuperCrew = %d", plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount());
+
+
+								ImGui::SetItemDefaultFocus();
+								
+								if (ImGui::Button("Dismiss", ImVec2(120, 0))) {
+									ImGui::CloseCurrentPopup();
+								}
+								ImGui::EndPopup();
+							}
+						
+					
+							// Always center this window when appearing
+							center = ImGui::GetMainViewport()->GetCenter();
+							ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+
+							if (ImGui::BeginPopupModal("Critical Warning Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+							{
+								ImGui::Text("Regular Expedition = %d", plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount());
+								ImGui::Text("Max Expedition = %d", plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount());
+								ImGui::Text("Regular Cab = %d", plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount());
+								ImGui::Text("Super Cab = %d", plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount());
+								ImGui::Text("SuperCrew = %d", plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount());
+
+
+								ImGui::SetItemDefaultFocus();
+								
+								if (ImGui::Button("Switch and Restock", ImVec2(120, 0))) {
+									ImGui::CloseCurrentPopup();
+									e = 0;
+									plant.bodyMachine.SwitchVehiclePanelsBays("BayOne");
+									plant.bodyMachine.UpdateMaxExpeditionInventoryAmount(500, "BayTwo");
+
+
+									plant.bodyMachine.UpdateRegularExpeditionInventoryAmount(500, "BayTwo");
+
+
+									plant.bodyMachine.UpdateRegularF150InventoryAmount(500, "BayTwo");
+
+
+									plant.bodyMachine.UpdateSuperCabF150InventoryAmount(500, "BayTwo");
+
+
+									plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(500, "BayTwo");
+
+								}
+								ImGui::EndPopup();
+							}
+						
+					}
 
 
 
-			
 
 
 				//BODY MACHINE================================================================================================================================================
@@ -1042,7 +1343,7 @@ int main()
 
 
 					//BAY SELECTION TOGGLE and restock button
-				
+
 
 				ImGuiWindowFlags bodyButtonflags = 1;
 				if (InvBodyButtons_no_titlebar)        bodyButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -1058,7 +1359,7 @@ int main()
 				if (InvBodyButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Body Machine Manager", open, bodyButtonflags);
+				ImGui::Begin("Body Machine Manager", NULL, bodyButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Bay Selection:");
 				//radio buttons
@@ -1074,9 +1375,10 @@ int main()
 
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (e == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
-						
+
 					}
 					else {
 						ImGui::OpenPopup("Restock Bay 1");
@@ -1105,6 +1407,7 @@ int main()
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
 						ImGui::CloseCurrentPopup();
+						check = false;
 						if (i0 > 500) {
 							i0 = 500;
 						}
@@ -1167,6 +1470,7 @@ int main()
 					ImGui::PopStyleVar();
 
 					if (ImGui::Button("OK", ImVec2(120, 0))) {
+						check = false;
 						ImGui::CloseCurrentPopup();
 						if (i0 > 500) {
 							i0 = 500;
@@ -1221,9 +1525,9 @@ int main()
 				//CONTROL MENU CREATION
 				ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.07f, 0.13f, 0.17f, 1.0f)); // Set window background to grey
 				ImGui::SetNextWindowSize(ImVec2(300, 100));
-				ImGui::Begin("Control Menu", open, controlMenuFlags);
+				ImGui::Begin("Control Menu", NULL, controlMenuFlags);
 				if (ImGui::Button("Next Machine")) {
-					
+
 					bodyMachine = false;
 					paintMachine = true;
 				}
@@ -1268,13 +1572,13 @@ int main()
 
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
-				ImGui::Begin("bay1InventoryValues", open, inventoryFlags);
+				ImGui::Begin("bay1InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
-				ImGui::Text("%d\n\n\n\n\n", bay1RegExp);
-				ImGui::Text("%d\n\n\n\n", bay1RegCab);
-				ImGui::Text("%d\n\n\n\n", bay1SupCab);
-				ImGui::Text("%d", bay1SupCrew);
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetRegularF150InventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount());
+				ImGui::Text("%d", plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -1282,13 +1586,13 @@ int main()
 
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
-				ImGui::Begin("bay2InventoryValues", open, inventoryFlags);
+				ImGui::Begin("bay2InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
-				ImGui::Text("%d\n\n\n\n\n", bay2RegExp);
-				ImGui::Text("%d\n\n\n\n", bay2RegCab);
-				ImGui::Text("%d\n\n\n\n", bay2SupCab);
-				ImGui::Text("%d", bay2SupCrew);
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount());
+				ImGui::Text("%d", plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -1300,8 +1604,8 @@ int main()
 				/// BODY IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-			
-				
+
+
 
 				ImGuiWindowFlags bodyImage_flags = 1;
 				if (BodyImage_no_titlebar)        bodyImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -1322,7 +1626,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Body Machine Image", open, bodyImage_flags))
+				if (!ImGui::Begin("Body Machine Image", NULL, bodyImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -1334,7 +1638,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -1350,7 +1654,7 @@ int main()
 
 
 
-			
+
 
 				ImGuiWindowFlags ChassisButtonflags = 1;
 				if (InvChassisButtons_no_titlebar)        ChassisButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -1366,11 +1670,11 @@ int main()
 				if (InvChassisButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Chassis Machine Manager", open, ChassisButtonflags);
+				ImGui::Begin("Chassis Machine Manager", NULL, ChassisButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Line Selection:");
 				//radio buttons
-				static int b;
+
 				ImGui::RadioButton("Line 1", &b, 0); ImGui::SameLine();
 				ImGui::RadioButton("Line 2", &b, 1);
 				if (b == 0) {
@@ -1382,7 +1686,9 @@ int main()
 
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (b == 0) {
+
 						ImGui::OpenPopup("Restock Line 2");
 					}
 					else {
@@ -1543,13 +1849,13 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 365));
 				ImGui::Begin("bay1ChassisInventoryValues", NULL, ChassisinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n", bay135LV6C);
-				ImGui::Text("%d\n\n\n\n", bay135LV6HOC);
-				ImGui::Text("%d\n\n\n", bay127LV6C);
-				ImGui::Text("%d\n\n\n", bay133LV6C);
-				ImGui::Text("%d\n\n\n\n", bay135LV6EcoC);
-				ImGui::Text("%d\n\n\n\n", bay135LV6PwrBstC);
-				ImGui::Text("%d", bay150LV8C);
+				ImGui::Text("%d\n\n", plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount());
+				ImGui::Text("%d", plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -1563,8 +1869,8 @@ int main()
 				ImGui::Text("%d\n\n\n", bay227LV6C);
 				ImGui::Text("%d\n\n\n", bay233LV6C);
 				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
-				ImGui::Text("%d\n\n\n\n", bay235LV6PwrBstC);
-				ImGui::Text("%d", bay250LV8C);
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
+				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -1574,7 +1880,7 @@ int main()
 				/// Chassis IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-		
+
 
 				ImGuiWindowFlags ChassisImage_flags = 1;
 				if (ChassisImage_no_titlebar)        ChassisImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -1595,7 +1901,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Chassis Machine Image", open, ChassisImage_flags))
+				if (!ImGui::Begin("Chassis Machine Image", NULL, ChassisImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -1617,7 +1923,7 @@ int main()
 
 
 				//BAY SELECTION TOGGLE and restock button
-				
+
 
 				ImGuiWindowFlags InteriorButtonflags = 1;
 				if (InvInteriorButtons_no_titlebar)        InteriorButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -1633,15 +1939,16 @@ int main()
 				if (InvInteriorButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Interior Machine Manager", open, InteriorButtonflags);
+				ImGui::Begin("Interior Machine Manager", NULL, InteriorButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Bay Selection:");
 				//radio buttons
-				static int c;
+
 				ImGui::RadioButton("Bay 1", &c, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &c, 1);
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (c == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
 					}
@@ -1834,7 +2141,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Interior Machine Image", open, InteriorImage_flags))
+				if (!ImGui::Begin("Interior Machine Image", NULL, InteriorImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -1855,7 +2162,7 @@ int main()
 				//START OF PAINT MACHINE
 
 
-			
+
 				ImGuiWindowFlags RedPaintVat_flags = 1;
 				if (RedPaintVat_no_titlebar)        RedPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
 				if (RedPaintVat_no_scrollbar)       RedPaintVat_flags |= ImGuiWindowFlags_NoScrollbar;
@@ -1883,14 +2190,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintRedVatVol);
 				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
 
-			
+
 
 				ImGuiWindowFlags BluePaintVat_flags = 1;
 				if (BluePaintVat_no_titlebar)        BluePaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -1919,24 +2226,13 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
 				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
 				ImGui::End();
 
 				//Green Vat
 
-				static bool GreenPaintVat_no_titlebar = true;
-				static bool GreenPaintVat_no_scrollbar = true;
-				static bool GreenPaintVat_no_menu = true;
-				static bool GreenPaintVat_no_move = true;
-				static bool GreenPaintVat_no_resize = true;
-				static bool GreenPaintVat_no_collapse = false;
-				static bool GreenPaintVat_no_close = false;
-				static bool GreenPaintVat_no_nav = true;
-				static bool GreenPaintVat_no_background = false;
-				static bool GreenPaintVat_no_bring_to_front = false;
-				static bool GreenPaintVat_unsaved_document = false;
 
 				ImGuiWindowFlags GreenPaintVat_flags = 1;
 				if (GreenPaintVat_no_titlebar)        GreenPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -1965,24 +2261,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
 				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
 				ImGui::End();
 
 				//DipTank
 
-				static bool DipTank_no_titlebar = true;
-				static bool DipTank_no_scrollbar = true;
-				static bool DipTank_no_menu = true;
-				static bool DipTank_no_move = true;
-				static bool DipTank_no_resize = true;
-				static bool DipTank_no_collapse = false;
-				static bool DipTank_no_close = false;
-				static bool DipTank_no_nav = true;
-				static bool DipTank_no_background = false;
-				static bool DipTank_no_bring_to_front = false;
-				static bool DipTank_unsaved_document = false;
+
 
 				ImGuiWindowFlags DipTank_flags = 1;
 				if (DipTank_no_titlebar)        DipTank_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2016,26 +2302,16 @@ int main()
 				char ch=248;
 			printf("Today's temperature was 23%cC",ch);
 						*/
-				
+
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
+
 				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
+
 				ImGui::End();
 
 
-				//PaintChamber
 
-				static bool PaintChamber_no_titlebar = true;
-				static bool PaintChamber_no_scrollbar = true;
-				static bool PaintChamber_no_menu = true;
-				static bool PaintChamber_no_move = true;
-				static bool PaintChamber_no_resize = true;
-				static bool PaintChamber_no_collapse = false;
-				static bool PaintChamber_no_close = false;
-				static bool PaintChamber_no_nav = true;
-				static bool PaintChamber_no_background = false;
-				static bool PaintChamber_no_bring_to_front = false;
-				static bool PaintChamber_unsaved_document = false;
 
 				ImGuiWindowFlags PaintChamber_flags = 1;
 				if (PaintChamber_no_titlebar)        PaintChamber_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2064,12 +2340,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Paint Humidity: %d", PaintChamberHMD);
 				ImGui::Text("Paint Temperature: %.2f`C", PaintChamberTemp);
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
 				ImGui::Text("Dry Temperature: %.2f`C", DryChamberTemp);
+
 				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2(PaintChamber_image_width, PaintChamber_image_height));
+
 				ImGui::End();
 
 
@@ -2077,17 +2355,7 @@ int main()
 				/// Paint IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool PaintImage_no_titlebar = true;
-				static bool PaintImage_no_scrollbar = true;
-				static bool PaintImage_no_menu = true;
-				static bool PaintImage_no_move = true;
-				static bool PaintImage_no_resize = true;
-				static bool PaintImage_no_collapse = false;
-				static bool PaintImage_no_close = false;
-				static bool PaintImage_no_nav = true;
-				static bool PaintImage_no_background = false;
-				static bool PaintImage_no_bring_to_front = false;
-				static bool PaintImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintImage_flags = 1;
 				if (PaintImage_no_titlebar)        PaintImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2108,7 +2376,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Paint Machine Image", open, PaintImage_flags))
+				if (!ImGui::Begin("Paint Machine Image", NULL, PaintImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -2119,7 +2387,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -2128,18 +2396,7 @@ int main()
 
 				ImGui::End();
 
-				//BAY SELECTION TOGGLE and restock button
-				const bool InvPaintButtons_no_titlebar = true;
-				const bool InvPaintButtons_no_scrollbar = true;
-				const bool InvPaintButtons_no_menu = true;
-				const bool InvPaintButtons_no_move = true;
-				const bool InvPaintButtons_no_resize = true;
-				const bool InvPaintButtons_no_collapse = false;
-				const bool InvPaintButtons_no_close = false;
-				const bool InvPaintButtons_no_nav = false;
-				static bool InvPaintButtons_no_bring_to_front = false;
-				const bool InvPaintButtons_no_background = false;
-				const bool InvPaintButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintButtonflags = 1;
 				if (InvPaintButtons_no_titlebar)        PaintButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -2155,9 +2412,10 @@ int main()
 				if (InvPaintButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Paint Machine Manager", open, PaintButtonflags);
+				ImGui::Begin("Paint Machine Manager", NULL, PaintButtonflags);
 				//radio buttons
 				if (ImGui::Button("Adjust Values")) {
+					check = false;
 					ImGui::OpenPopup("Paint Machine Values Adjuster");
 
 				}
@@ -2257,17 +2515,6 @@ int main()
 				/// Interior IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool GlobalTemp_no_titlebar = true;
-				static bool GlobalTemp_no_scrollbar = true;
-				static bool GlobalTemp_no_menu = true;
-				static bool GlobalTemp_no_move = true;
-				static bool GlobalTemp_no_resize = true;
-				static bool GlobalTemp_no_collapse = false;
-				static bool GlobalTemp_no_close = false;
-				static bool GlobalTemp_no_nav = true;
-				static bool GlobalTemp_no_background = false;
-				static bool GlobalTemp_no_bring_to_front = false;
-				static bool GlobalTemp_unsaved_document = false;
 
 				ImGuiWindowFlags GlobalTemp_flags = 1;
 				if (GlobalTemp_no_titlebar)        GlobalTemp_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2290,7 +2537,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Global Temp", open, GlobalTemp_flags))
+				if (!ImGui::Begin("Global Temp", NULL, GlobalTemp_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -2303,17 +2550,7 @@ int main()
 				ImGui::End();
 
 
-				static bool GlobalAir_no_titlebar = true;
-				static bool GlobalAir_no_scrollbar = true;
-				static bool GlobalAir_no_menu = true;
-				static bool GlobalAir_no_move = true;
-				static bool GlobalAir_no_resize = true;
-				static bool GlobalAir_no_collapse = false;
-				static bool GlobalAir_no_close = false;
-				static bool GlobalAir_no_nav = true;
-				static bool GlobalAir_no_background = false;
-				static bool GlobalAir_no_bring_to_front = false;
-				static bool GlobalAir_unsaved_document = false;
+
 
 				ImGuiWindowFlags GlobalAir_flags = 1;
 				if (GlobalAir_no_titlebar)        GlobalAir_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2336,7 +2573,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Global Air", open, GlobalAir_flags))
+				if (!ImGui::Begin("Global Air", NULL, GlobalAir_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -2350,17 +2587,7 @@ int main()
 
 
 
-				static bool VeQuota_no_titlebar = true;
-				static bool VeQuota_no_scrollbar = true;
-				static bool VeQuota_no_menu = true;
-				static bool VeQuota_no_move = true;
-				static bool VeQuota_no_resize = true;
-				static bool VeQuota_no_collapse = false;
-				static bool VeQuota_no_close = false;
-				static bool VeQuota_no_nav = true;
-				static bool VeQuota_no_background = false;
-				static bool VeQuota_no_bring_to_front = false;
-				static bool VeQuota_unsaved_document = false;
+
 
 				ImGuiWindowFlags VeQuota_flags = 1;
 				if (VeQuota_no_titlebar)        VeQuota_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2383,7 +2610,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Vehicle Quota", open, VeQuota_flags))
+				if (!ImGui::Begin("Vehicle Quota", NULL, VeQuota_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -2397,17 +2624,6 @@ int main()
 
 
 
-				static bool VeComp_no_titlebar = true;
-				static bool VeComp_no_scrollbar = true;
-				static bool VeComp_no_menu = true;
-				static bool VeComp_no_move = true;
-				static bool VeComp_no_resize = true;
-				static bool VeComp_no_collapse = false;
-				static bool VeComp_no_close = false;
-				static bool VeComp_no_nav = true;
-				static bool VeComp_no_background = false;
-				static bool VeComp_no_bring_to_front = false;
-				static bool VeComp_unsaved_document = false;
 
 				ImGuiWindowFlags VeComp_flags = 1;
 				if (VeComp_no_titlebar)        VeComp_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2430,7 +2646,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Vehicle Completed", open, VeComp_flags))
+				if (!ImGui::Begin("Vehicle Completed", NULL, VeComp_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -2448,18 +2664,7 @@ int main()
 				// 
 				ShowExampleAppLog(NULL);
 				//END OF LOG STUFF
-				// Demonstrate the various window flags. Typically you would just use the default!
-				static bool  no_titlebar = true;
-				static bool  no_scrollbar = true;
-				static bool  no_menu = false;
-				static bool  no_move = true;
-				static bool  no_resize = true;
-				static bool  no_collapse = false;
-				static bool  no_close = false;
-				static bool  no_nav = true;
-				static bool  no_background = false;
-				static bool  no_bring_to_front = true;
-				static bool unsaved_document = false;
+
 
 				ImGuiWindowFlags window_flags = 1;
 				if (no_titlebar)        window_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2476,11 +2681,11 @@ int main()
 
 				// We specify a default position/size in case there's no data in the .ini file.
 				// We only do it to make the demo applications a little more welcoming, but typically this isn't required.
-				
+
 				ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Ford Assembly Plant", open, window_flags))
+				if (!ImGui::Begin("Ford Assembly Plant", NULL, window_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -2505,17 +2710,7 @@ int main()
 				/// To be made image STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool toBeMade_no_titlebar = true;
-				static bool toBeMade_no_scrollbar = true;
-				static bool toBeMade_no_menu = true;
-				static bool toBeMade_no_move = true;
-				static bool toBeMade_no_resize = true;
-				static bool toBeMade_no_collapse = false;
-				static bool toBeMade_no_close = false;
-				static bool toBeMade_no_nav = true;
-				static bool toBeMade_no_background = false;
-				static bool toBeMade_no_bring_to_front = false;
-				static bool toBeMade_unsaved_document = false;
+
 
 				ImGuiWindowFlags toBeMade_flags = 1;
 				if (toBeMade_no_titlebar)        toBeMade_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2556,25 +2751,25 @@ int main()
 
 				ImGui::End();
 
-				
 
-				
+
 				ImGui::EndFrame();
 
 
 
 
-					// Renders the ImGUI elements
-					ImGui::Render();
-					ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+				// Renders the ImGUI elements
+				ImGui::Render();
+				ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-					// Swap the back buffer with the front buffer
-					glfwSwapBuffers(window);
-					// Take care of all GLFW events
+				// Swap the back buffer with the front buffer
+				glfwSwapBuffers(window);
+				// Take care of all GLFW events
 
 
-				
+
 				isRendered = false;
+
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -2583,9 +2778,9 @@ int main()
 						i = 0;
 					}
 				}
-				
+
 			}
-			
+
 			if (!bodyMachine) {
 				isRendered = true;
 			}
@@ -2619,11 +2814,11 @@ int main()
 					plant.vehicle.setColour(plant.paintingMachine.getcolour());
 					changePaintValues = false;
 				}
-					
 
-					
 
-				
+
+
+
 
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
@@ -2701,18 +2896,7 @@ int main()
 
 
 
-					//BAY SELECTION TOGGLE and restock button
-				const bool InvBodyButtons_no_titlebar = true;
-				const bool InvBodyButtons_no_scrollbar = true;
-				const bool InvBodyButtons_no_menu = true;
-				const bool InvBodyButtons_no_move = true;
-				const bool InvBodyButtons_no_resize = true;
-				const bool InvBodyButtons_no_collapse = false;
-				const bool InvBodyButtons_no_close = false;
-				const bool InvBodyButtons_no_nav = true;
-				static bool InvBodyButtons_no_bring_to_front = false;
-				const bool InvBodyButtons_no_background = false;
-				const bool InvBodyButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags bodyButtonflags = 1;
 				if (InvBodyButtons_no_titlebar)        bodyButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -2728,7 +2912,7 @@ int main()
 				if (InvBodyButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Body Machine Manager", open, bodyButtonflags);
+				ImGui::Begin("Body Machine Manager", NULL, bodyButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Bay Selection:");
 				//radio buttons
@@ -2743,6 +2927,7 @@ int main()
 				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (e == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
 					}
@@ -2752,7 +2937,7 @@ int main()
 				}
 
 
-				
+
 				ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
 				if (ImGui::BeginPopupModal("Restock Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -2888,7 +3073,7 @@ int main()
 				//CONTROL MENU CREATION
 				ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.07f, 0.13f, 0.17f, 1.0f)); // Set window background to grey
 				ImGui::SetNextWindowSize(ImVec2(300, 100));
-				ImGui::Begin("Control Menu", open, controlMenuFlags);
+				ImGui::Begin("Control Menu", NULL, controlMenuFlags);
 				if (ImGui::Button("Next Machine")) {
 					paintMachine = false;
 					chassisMachine = true;
@@ -2935,7 +3120,7 @@ int main()
 
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
-				ImGui::Begin("bay1InventoryValues", open, inventoryFlags);
+				ImGui::Begin("bay1InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
 				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
 				ImGui::Text("%d\n\n\n\n\n", bay1RegExp);
@@ -2949,7 +3134,7 @@ int main()
 
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
-				ImGui::Begin("bay2InventoryValues", open, inventoryFlags);
+				ImGui::Begin("bay2InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
 				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
 				ImGui::Text("%d\n\n\n\n\n", bay2RegExp);
@@ -2967,17 +3152,7 @@ int main()
 				/// BODY IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool BodyImage_no_titlebar = true;
-				static bool BodyImage_no_scrollbar = true;
-				static bool BodyImage_no_menu = true;
-				static bool BodyImage_no_move = true;
-				static bool BodyImage_no_resize = true;
-				static bool BodyImage_no_collapse = false;
-				static bool BodyImage_no_close = false;
-				static bool BodyImage_no_nav = true;
-				static bool BodyImage_no_background = false;
-				static bool BodyImage_no_bring_to_front = false;
-				static bool BodyImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags bodyImage_flags = 1;
 				if (BodyImage_no_titlebar)        bodyImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -2998,7 +3173,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Body Machine Image", open, bodyImage_flags))
+				if (!ImGui::Begin("Body Machine Image", NULL, bodyImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -3009,7 +3184,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -3025,18 +3200,7 @@ int main()
 
 
 
-				//BAY SELECTION TOGGLE and restock button
-				const bool InvChassisButtons_no_titlebar = true;
-				const bool InvChassisButtons_no_scrollbar = true;
-				const bool InvChassisButtons_no_menu = true;
-				const bool InvChassisButtons_no_move = true;
-				const bool InvChassisButtons_no_resize = true;
-				const bool InvChassisButtons_no_collapse = false;
-				const bool InvChassisButtons_no_close = false;
-				const bool InvChassisButtons_no_nav = false;
-				static bool InvChassisButtons_no_bring_to_front = false;
-				const bool InvChassisButtons_no_background = false;
-				const bool InvChassisButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags ChassisButtonflags = 1;
 				if (InvChassisButtons_no_titlebar)        ChassisButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -3052,11 +3216,11 @@ int main()
 				if (InvChassisButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Chassis Machine Manager", open, ChassisButtonflags);
+				ImGui::Begin("Chassis Machine Manager", NULL, ChassisButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Line Selection:");
 				//radio buttons
-				static int b;
+
 				ImGui::RadioButton("Line 1", &b, 0); ImGui::SameLine();
 				ImGui::RadioButton("Line 2", &b, 1);
 				if (b == 0) {
@@ -3068,6 +3232,7 @@ int main()
 
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (b == 0) {
 						ImGui::OpenPopup("Restock Line 2");
 					}
@@ -3229,13 +3394,13 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 365));
 				ImGui::Begin("bay1ChassisInventoryValues", NULL, ChassisinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n", bay135LV6C);
-				ImGui::Text("%d\n\n\n\n", bay135LV6HOC);
-				ImGui::Text("%d\n\n\n", bay127LV6C);
-				ImGui::Text("%d\n\n\n", bay133LV6C);
-				ImGui::Text("%d\n\n\n\n", bay135LV6EcoC);
-				ImGui::Text("%d\n\n\n\n", bay135LV6PwrBstC);
-				ImGui::Text("%d", bay150LV8C);
+				ImGui::Text("%d\n\n", plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount());
+				ImGui::Text("%d", plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -3249,28 +3414,14 @@ int main()
 				ImGui::Text("%d\n\n\n", bay227LV6C);
 				ImGui::Text("%d\n\n\n", bay233LV6C);
 				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
-				ImGui::Text("%d\n\n\n\n", bay235LV6PwrBstC);
-				ImGui::Text("%d", bay250LV8C);
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
+				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
 
 
-				/// <summary>
-				/// Chassis IMAGE STRUCTURE
-				/// </summary>
-				/// <returns></returns>
-				static bool ChassisImage_no_titlebar = true;
-				static bool ChassisImage_no_scrollbar = true;
-				static bool ChassisImage_no_menu = true;
-				static bool ChassisImage_no_move = true;
-				static bool ChassisImage_no_resize = true;
-				static bool ChassisImage_no_collapse = false;
-				static bool ChassisImage_no_close = false;
-				static bool ChassisImage_no_nav = true;
-				static bool ChassisImage_no_background = false;
-				static bool ChassisImage_no_bring_to_front = false;
-				static bool ChassisImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags ChassisImage_flags = 1;
 				if (ChassisImage_no_titlebar)        ChassisImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -3291,7 +3442,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Chassis Machine Image", open, ChassisImage_flags))
+				if (!ImGui::Begin("Chassis Machine Image", NULL, ChassisImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -3302,7 +3453,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -3318,17 +3469,7 @@ int main()
 
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvInteriorButtons_no_titlebar = true;
-				const bool InvInteriorButtons_no_scrollbar = true;
-				const bool InvInteriorButtons_no_menu = true;
-				const bool InvInteriorButtons_no_move = true;
-				const bool InvInteriorButtons_no_resize = true;
-				const bool InvInteriorButtons_no_collapse = false;
-				const bool InvInteriorButtons_no_close = false;
-				const bool InvInteriorButtons_no_nav = false;
-				static bool InvInteriorButtons_no_bring_to_front = false;
-				const bool InvInteriorButtons_no_background = false;
-				const bool InvInteriorButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags InteriorButtonflags = 1;
 				if (InvInteriorButtons_no_titlebar)        InteriorButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -3344,15 +3485,16 @@ int main()
 				if (InvInteriorButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Interior Machine Manager", open, InteriorButtonflags);
+				ImGui::Begin("Interior Machine Manager", NULL, InteriorButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Bay Selection:");
 				//radio buttons
-				static int c;
+
 				ImGui::RadioButton("Bay 1", &c, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &c, 1);
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (c == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
 					}
@@ -3524,17 +3666,7 @@ int main()
 				/// Interior IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool InteriorImage_no_titlebar = true;
-				static bool InteriorImage_no_scrollbar = true;
-				static bool InteriorImage_no_menu = true;
-				static bool InteriorImage_no_move = true;
-				static bool InteriorImage_no_resize = false;
-				static bool InteriorImage_no_collapse = false;
-				static bool InteriorImage_no_close = false;
-				static bool InteriorImage_no_nav = true;
-				static bool InteriorImage_no_background = false;
-				static bool InteriorImage_no_bring_to_front = false;
-				static bool InteriorImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags InteriorImage_flags = 1;
 				if (InteriorImage_no_titlebar)        InteriorImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -3555,7 +3687,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Interior Machine Image", open, InteriorImage_flags))
+				if (!ImGui::Begin("Interior Machine Image", NULL, InteriorImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -3566,7 +3698,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -3581,17 +3713,6 @@ int main()
 				//START OF PAINT MACHINE
 
 
-				static bool RedPaintVat_no_titlebar = true;
-				static bool RedPaintVat_no_scrollbar = true;
-				static bool RedPaintVat_no_menu = true;
-				static bool RedPaintVat_no_move = true;
-				static bool RedPaintVat_no_resize = true;
-				static bool RedPaintVat_no_collapse = false;
-				static bool RedPaintVat_no_close = false;
-				static bool RedPaintVat_no_nav = true;
-				static bool RedPaintVat_no_background = false;
-				static bool RedPaintVat_no_bring_to_front = false;
-				static bool RedPaintVat_unsaved_document = false;
 
 				ImGuiWindowFlags RedPaintVat_flags = 1;
 				if (RedPaintVat_no_titlebar)        RedPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -3620,24 +3741,12 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintRedVatVol);
 				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
-
-				static bool BluePaintVat_no_titlebar = true;
-				static bool BluePaintVat_no_scrollbar = true;
-				static bool BluePaintVat_no_menu = true;
-				static bool BluePaintVat_no_move = true;
-				static bool BluePaintVat_no_resize = true;
-				static bool BluePaintVat_no_collapse = false;
-				static bool BluePaintVat_no_close = false;
-				static bool BluePaintVat_no_nav = true;
-				static bool BluePaintVat_no_background = false;
-				static bool BluePaintVat_no_bring_to_front = false;
-				static bool BluePaintVat_unsaved_document = false;
 
 				ImGuiWindowFlags BluePaintVat_flags = 1;
 				if (BluePaintVat_no_titlebar)        BluePaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -3666,24 +3775,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
 				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
 				ImGui::End();
 
 				//Green Vat
 
-				static bool GreenPaintVat_no_titlebar = true;
-				static bool GreenPaintVat_no_scrollbar = true;
-				static bool GreenPaintVat_no_menu = true;
-				static bool GreenPaintVat_no_move = true;
-				static bool GreenPaintVat_no_resize = true;
-				static bool GreenPaintVat_no_collapse = false;
-				static bool GreenPaintVat_no_close = false;
-				static bool GreenPaintVat_no_nav = true;
-				static bool GreenPaintVat_no_background = false;
-				static bool GreenPaintVat_no_bring_to_front = false;
-				static bool GreenPaintVat_unsaved_document = false;
+
 
 				ImGuiWindowFlags GreenPaintVat_flags = 1;
 				if (GreenPaintVat_no_titlebar)        GreenPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -3712,24 +3811,13 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
 				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
 				ImGui::End();
 
 				//DipTank
 
-				static bool DipTank_no_titlebar = true;
-				static bool DipTank_no_scrollbar = true;
-				static bool DipTank_no_menu = true;
-				static bool DipTank_no_move = true;
-				static bool DipTank_no_resize = true;
-				static bool DipTank_no_collapse = false;
-				static bool DipTank_no_close = false;
-				static bool DipTank_no_nav = true;
-				static bool DipTank_no_background = false;
-				static bool DipTank_no_bring_to_front = false;
-				static bool DipTank_unsaved_document = false;
 
 				ImGuiWindowFlags DipTank_flags = 1;
 				if (DipTank_no_titlebar)        DipTank_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -3763,7 +3851,7 @@ int main()
 				char ch=248;
 			printf("Today's temperature was 23%cC",ch);
 						*/
-				
+
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
 				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
@@ -3772,17 +3860,7 @@ int main()
 
 				//PaintChamber
 
-				static bool PaintChamber_no_titlebar = true;
-				static bool PaintChamber_no_scrollbar = true;
-				static bool PaintChamber_no_menu = true;
-				static bool PaintChamber_no_move = true;
-				static bool PaintChamber_no_resize = true;
-				static bool PaintChamber_no_collapse = false;
-				static bool PaintChamber_no_close = false;
-				static bool PaintChamber_no_nav = true;
-				static bool PaintChamber_no_background = false;
-				static bool PaintChamber_no_bring_to_front = false;
-				static bool PaintChamber_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintChamber_flags = 1;
 				if (PaintChamber_no_titlebar)        PaintChamber_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -3811,12 +3889,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Paint Humidity: %d", PaintChamberHMD);
 				ImGui::Text("Paint Temperature: %.2f`C", PaintChamberTemp);
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
 				ImGui::Text("Dry Temperature: %.2f`C", DryChamberTemp);
+
 				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2(PaintChamber_image_width, PaintChamber_image_height));
+
 				ImGui::End();
 
 
@@ -3824,17 +3904,7 @@ int main()
 				/// Paint IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool PaintImage_no_titlebar = true;
-				static bool PaintImage_no_scrollbar = true;
-				static bool PaintImage_no_menu = true;
-				static bool PaintImage_no_move = true;
-				static bool PaintImage_no_resize = true;
-				static bool PaintImage_no_collapse = false;
-				static bool PaintImage_no_close = false;
-				static bool PaintImage_no_nav = true;
-				static bool PaintImage_no_background = false;
-				static bool PaintImage_no_bring_to_front = false;
-				static bool PaintImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintImage_flags = 1;
 				if (PaintImage_no_titlebar)        PaintImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -3855,7 +3925,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Paint Machine Image", open, PaintImage_flags))
+				if (!ImGui::Begin("Paint Machine Image", NULL, PaintImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -3866,7 +3936,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -3876,17 +3946,7 @@ int main()
 				ImGui::End();
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvPaintButtons_no_titlebar = true;
-				const bool InvPaintButtons_no_scrollbar = true;
-				const bool InvPaintButtons_no_menu = true;
-				const bool InvPaintButtons_no_move = true;
-				const bool InvPaintButtons_no_resize = true;
-				const bool InvPaintButtons_no_collapse = false;
-				const bool InvPaintButtons_no_close = false;
-				const bool InvPaintButtons_no_nav = false;
-				static bool InvPaintButtons_no_bring_to_front = false;
-				const bool InvPaintButtons_no_background = false;
-				const bool InvPaintButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintButtonflags = 1;
 				if (InvPaintButtons_no_titlebar)        PaintButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -3902,9 +3962,10 @@ int main()
 				if (InvPaintButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Paint Machine Manager", open, PaintButtonflags);
+				ImGui::Begin("Paint Machine Manager", NULL, PaintButtonflags);
 				//radio buttons
 				if (ImGui::Button("Adjust Values")) {
+					check = false;
 					ImGui::OpenPopup("Paint Machine Values Adjuster");
 
 				}
@@ -3932,7 +3993,7 @@ int main()
 							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
 							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
 							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
-							
+
 						}
 						else if (PaintVatitem_current == 1) {
 							plant.paintingMachine.resupplyRGBpaintVat("GREEN", 500, "RGBPaintVats.txt");
@@ -3941,7 +4002,7 @@ int main()
 							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
 							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
 							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
-							
+
 						}
 						else if (PaintVatitem_current == 2) {
 							plant.paintingMachine.resupplyRGBpaintVat("BLUE", 500, "RGBPaintVats.txt");
@@ -3950,7 +4011,7 @@ int main()
 							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
 							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
 							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
-							
+
 
 						}
 					}
@@ -4005,17 +4066,7 @@ int main()
 				/// Interior IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool GlobalTemp_no_titlebar = true;
-				static bool GlobalTemp_no_scrollbar = true;
-				static bool GlobalTemp_no_menu = true;
-				static bool GlobalTemp_no_move = true;
-				static bool GlobalTemp_no_resize = true;
-				static bool GlobalTemp_no_collapse = false;
-				static bool GlobalTemp_no_close = false;
-				static bool GlobalTemp_no_nav = true;
-				static bool GlobalTemp_no_background = false;
-				static bool GlobalTemp_no_bring_to_front = false;
-				static bool GlobalTemp_unsaved_document = false;
+
 
 				ImGuiWindowFlags GlobalTemp_flags = 1;
 				if (GlobalTemp_no_titlebar)        GlobalTemp_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -4038,7 +4089,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Global Temp", open, GlobalTemp_flags))
+				if (!ImGui::Begin("Global Temp", NULL, GlobalTemp_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -4051,17 +4102,7 @@ int main()
 				ImGui::End();
 
 
-				static bool GlobalAir_no_titlebar = true;
-				static bool GlobalAir_no_scrollbar = true;
-				static bool GlobalAir_no_menu = true;
-				static bool GlobalAir_no_move = true;
-				static bool GlobalAir_no_resize = true;
-				static bool GlobalAir_no_collapse = false;
-				static bool GlobalAir_no_close = false;
-				static bool GlobalAir_no_nav = true;
-				static bool GlobalAir_no_background = false;
-				static bool GlobalAir_no_bring_to_front = false;
-				static bool GlobalAir_unsaved_document = false;
+
 
 				ImGuiWindowFlags GlobalAir_flags = 1;
 				if (GlobalAir_no_titlebar)        GlobalAir_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -4084,7 +4125,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Global Air", open, GlobalAir_flags))
+				if (!ImGui::Begin("Global Air", NULL, GlobalAir_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -4097,18 +4138,6 @@ int main()
 				ImGui::End();
 
 
-
-				static bool VeQuota_no_titlebar = true;
-				static bool VeQuota_no_scrollbar = true;
-				static bool VeQuota_no_menu = true;
-				static bool VeQuota_no_move = true;
-				static bool VeQuota_no_resize = true;
-				static bool VeQuota_no_collapse = false;
-				static bool VeQuota_no_close = false;
-				static bool VeQuota_no_nav = true;
-				static bool VeQuota_no_background = false;
-				static bool VeQuota_no_bring_to_front = false;
-				static bool VeQuota_unsaved_document = false;
 
 				ImGuiWindowFlags VeQuota_flags = 1;
 				if (VeQuota_no_titlebar)        VeQuota_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -4131,7 +4160,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Vehicle Quota", open, VeQuota_flags))
+				if (!ImGui::Begin("Vehicle Quota", NULL, VeQuota_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -4144,18 +4173,6 @@ int main()
 				ImGui::End();
 
 
-
-				static bool VeComp_no_titlebar = true;
-				static bool VeComp_no_scrollbar = true;
-				static bool VeComp_no_menu = true;
-				static bool VeComp_no_move = true;
-				static bool VeComp_no_resize = true;
-				static bool VeComp_no_collapse = false;
-				static bool VeComp_no_close = false;
-				static bool VeComp_no_nav = true;
-				static bool VeComp_no_background = false;
-				static bool VeComp_no_bring_to_front = false;
-				static bool VeComp_unsaved_document = false;
 
 				ImGuiWindowFlags VeComp_flags = 1;
 				if (VeComp_no_titlebar)        VeComp_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -4178,7 +4195,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Vehicle Completed", open, VeComp_flags))
+				if (!ImGui::Begin("Vehicle Completed", NULL, VeComp_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -4197,17 +4214,7 @@ int main()
 				ShowExampleAppLog(NULL);
 				//END OF LOG STUFF
 				// Demonstrate the various window flags. Typically you would just use the default!
-				static bool  no_titlebar = true;
-				static bool  no_scrollbar = true;
-				static bool  no_menu = false;
-				static bool  no_move = true;
-				static bool  no_resize = true;
-				static bool  no_collapse = false;
-				static bool  no_close = false;
-				static bool  no_nav = true;
-				static bool  no_background = false;
-				static bool  no_bring_to_front = true;
-				static bool unsaved_document = false;
+
 
 				ImGuiWindowFlags window_flags = 1;
 				if (no_titlebar)        window_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -4227,7 +4234,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Ford Assembly Plant", open, window_flags))
+				if (!ImGui::Begin("Ford Assembly Plant", NULL, window_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -4238,7 +4245,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -4252,17 +4259,7 @@ int main()
 				/// To be made image STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool toBeMade_no_titlebar = true;
-				static bool toBeMade_no_scrollbar = true;
-				static bool toBeMade_no_menu = true;
-				static bool toBeMade_no_move = true;
-				static bool toBeMade_no_resize = true;
-				static bool toBeMade_no_collapse = false;
-				static bool toBeMade_no_close = false;
-				static bool toBeMade_no_nav = true;
-				static bool toBeMade_no_background = false;
-				static bool toBeMade_no_bring_to_front = false;
-				static bool toBeMade_unsaved_document = false;
+
 
 				ImGuiWindowFlags toBeMade_flags = 1;
 				if (toBeMade_no_titlebar)        toBeMade_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -4294,7 +4291,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -4303,7 +4300,7 @@ int main()
 
 				ImGui::End();
 
-		
+
 				// Renders the ImGUI elements
 				ImGui::Render();
 				ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -4311,9 +4308,10 @@ int main()
 				// Swap the back buffer with the front buffer
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
-				
+
 				isRendered = false;
 				i++;
+
 				if (check == true) {
 					if (i > 300) {
 						paintMachine = false;
@@ -4336,7 +4334,7 @@ int main()
 				}
 
 				if (changeChassisValues) {
-				
+
 					plant.chassisMachine.RunChassisMachine(plant.order, &plant.vehicle);
 					plant.chassisMachine.lineOne.lineInUse();
 					changeChassisValues = false;
@@ -4425,7 +4423,7 @@ int main()
 
 
 
-			
+
 
 
 				//BODY MACHINE================================================================================================================================================
@@ -4439,18 +4437,7 @@ int main()
 
 
 
-					//BAY SELECTION TOGGLE and restock button
-				const bool InvBodyButtons_no_titlebar = true;
-				const bool InvBodyButtons_no_scrollbar = true;
-				const bool InvBodyButtons_no_menu = true;
-				const bool InvBodyButtons_no_move = true;
-				const bool InvBodyButtons_no_resize = true;
-				const bool InvBodyButtons_no_collapse = false;
-				const bool InvBodyButtons_no_close = false;
-				const bool InvBodyButtons_no_nav = true;
-				static bool InvBodyButtons_no_bring_to_front = false;
-				const bool InvBodyButtons_no_background = false;
-				const bool InvBodyButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags bodyButtonflags = 1;
 				if (InvBodyButtons_no_titlebar)        bodyButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -4466,7 +4453,7 @@ int main()
 				if (InvBodyButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Body Machine Manager", open, bodyButtonflags);
+				ImGui::Begin("Body Machine Manager", NULL, bodyButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Bay Selection:");
 				//radio buttons
@@ -4481,6 +4468,7 @@ int main()
 				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (e == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
 					}
@@ -4504,7 +4492,7 @@ int main()
 
 					static int i0 = 123;
 					ImGui::InputInt("input int", &i0);
-				
+
 					ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
 
 					ImGui::PopStyleVar();
@@ -4566,7 +4554,7 @@ int main()
 
 					static int i0 = 123;
 					ImGui::InputInt("input int", &i0);
-					
+
 
 					ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
 
@@ -4595,8 +4583,8 @@ int main()
 						else if (bodyitem_current == 4) {
 							plant.bodyMachine.UpdateSuperCrewF150InventoryAmount(i0, "BayTwo");
 						}
-							
-				
+
+
 
 
 					}
@@ -4627,7 +4615,7 @@ int main()
 				//CONTROL MENU CREATION
 				ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.07f, 0.13f, 0.17f, 1.0f)); // Set window background to grey
 				ImGui::SetNextWindowSize(ImVec2(300, 100));
-				ImGui::Begin("Control Menu", open, controlMenuFlags);
+				ImGui::Begin("Control Menu", NULL, controlMenuFlags);
 				if (ImGui::Button("Next Machine")) {
 
 					chassisMachine = false;
@@ -4675,7 +4663,7 @@ int main()
 
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
-				ImGui::Begin("bay1InventoryValues", open, inventoryFlags);
+				ImGui::Begin("bay1InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
 				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
 				ImGui::Text("%d\n\n\n\n\n", bay1RegExp);
@@ -4689,7 +4677,7 @@ int main()
 
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
-				ImGui::Begin("bay2InventoryValues", open, inventoryFlags);
+				ImGui::Begin("bay2InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
 				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
 				ImGui::Text("%d\n\n\n\n\n", bay2RegExp);
@@ -4707,17 +4695,6 @@ int main()
 				/// BODY IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool BodyImage_no_titlebar = true;
-				static bool BodyImage_no_scrollbar = true;
-				static bool BodyImage_no_menu = true;
-				static bool BodyImage_no_move = true;
-				static bool BodyImage_no_resize = true;
-				static bool BodyImage_no_collapse = false;
-				static bool BodyImage_no_close = false;
-				static bool BodyImage_no_nav = true;
-				static bool BodyImage_no_background = false;
-				static bool BodyImage_no_bring_to_front = false;
-				static bool BodyImage_unsaved_document = false;
 
 				ImGuiWindowFlags bodyImage_flags = 1;
 				if (BodyImage_no_titlebar)        bodyImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -4738,7 +4715,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Body Machine Image", open, bodyImage_flags))
+				if (!ImGui::Begin("Body Machine Image", NULL, bodyImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -4749,7 +4726,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -4766,17 +4743,7 @@ int main()
 
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvChassisButtons_no_titlebar = true;
-				const bool InvChassisButtons_no_scrollbar = true;
-				const bool InvChassisButtons_no_menu = true;
-				const bool InvChassisButtons_no_move = true;
-				const bool InvChassisButtons_no_resize = true;
-				const bool InvChassisButtons_no_collapse = false;
-				const bool InvChassisButtons_no_close = false;
-				const bool InvChassisButtons_no_nav = false;
-				static bool InvChassisButtons_no_bring_to_front = false;
-				const bool InvChassisButtons_no_background = false;
-				const bool InvChassisButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags ChassisButtonflags = 1;
 				if (InvChassisButtons_no_titlebar)        ChassisButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -4792,11 +4759,11 @@ int main()
 				if (InvChassisButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Chassis Machine Manager", open, ChassisButtonflags);
+				ImGui::Begin("Chassis Machine Manager", NULL, ChassisButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Line Selection:");
 				//radio buttons
-				static int b;
+
 				ImGui::RadioButton("Line 1", &b, 0); ImGui::SameLine();
 				ImGui::RadioButton("Line 2", &b, 1);
 				if (b == 0) {
@@ -4805,9 +4772,10 @@ int main()
 				else {
 					plant.chassisMachine.SwitchVehicleChassisLines("LineTwo");
 				}
-				
+
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (b == 0) {
 						ImGui::OpenPopup("Restock Line 2");
 					}
@@ -4969,13 +4937,13 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 365));
 				ImGui::Begin("bay1ChassisInventoryValues", NULL, ChassisinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n", bay135LV6C);
-				ImGui::Text("%d\n\n\n\n", bay135LV6HOC);
-				ImGui::Text("%d\n\n\n", bay127LV6C);
-				ImGui::Text("%d\n\n\n", bay133LV6C);
-				ImGui::Text("%d\n\n\n\n", bay135LV6EcoC);
-				ImGui::Text("%d\n\n\n\n", bay135LV6PwrBstC);
-				ImGui::Text("%d", bay150LV8C);
+				ImGui::Text("%d\n\n", plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount());
+				ImGui::Text("%d", plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -4989,8 +4957,8 @@ int main()
 				ImGui::Text("%d\n\n\n", bay227LV6C);
 				ImGui::Text("%d\n\n\n", bay233LV6C);
 				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
-				ImGui::Text("%d\n\n\n\n", bay235LV6PwrBstC);
-				ImGui::Text("%d", bay250LV8C);
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
+				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -5000,17 +4968,6 @@ int main()
 				/// Chassis IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool ChassisImage_no_titlebar = true;
-				static bool ChassisImage_no_scrollbar = true;
-				static bool ChassisImage_no_menu = true;
-				static bool ChassisImage_no_move = true;
-				static bool ChassisImage_no_resize = true;
-				static bool ChassisImage_no_collapse = false;
-				static bool ChassisImage_no_close = false;
-				static bool ChassisImage_no_nav = true;
-				static bool ChassisImage_no_background = false;
-				static bool ChassisImage_no_bring_to_front = false;
-				static bool ChassisImage_unsaved_document = false;
 
 				ImGuiWindowFlags ChassisImage_flags = 1;
 				if (ChassisImage_no_titlebar)        ChassisImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5031,7 +4988,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Chassis Machine Image", open, ChassisImage_flags))
+				if (!ImGui::Begin("Chassis Machine Image", NULL, ChassisImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -5042,7 +4999,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -5058,17 +5015,7 @@ int main()
 
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvInteriorButtons_no_titlebar = true;
-				const bool InvInteriorButtons_no_scrollbar = true;
-				const bool InvInteriorButtons_no_menu = true;
-				const bool InvInteriorButtons_no_move = true;
-				const bool InvInteriorButtons_no_resize = true;
-				const bool InvInteriorButtons_no_collapse = false;
-				const bool InvInteriorButtons_no_close = false;
-				const bool InvInteriorButtons_no_nav = false;
-				static bool InvInteriorButtons_no_bring_to_front = false;
-				const bool InvInteriorButtons_no_background = false;
-				const bool InvInteriorButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags InteriorButtonflags = 1;
 				if (InvInteriorButtons_no_titlebar)        InteriorButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -5084,15 +5031,16 @@ int main()
 				if (InvInteriorButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Interior Machine Manager", open, InteriorButtonflags);
+				ImGui::Begin("Interior Machine Manager", NULL, InteriorButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Bay Selection:");
 				//radio buttons
-				static int c;
+
 				ImGui::RadioButton("Bay 1", &c, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &c, 1);
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (c == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
 					}
@@ -5264,17 +5212,6 @@ int main()
 				/// Interior IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool InteriorImage_no_titlebar = true;
-				static bool InteriorImage_no_scrollbar = true;
-				static bool InteriorImage_no_menu = true;
-				static bool InteriorImage_no_move = true;
-				static bool InteriorImage_no_resize = false;
-				static bool InteriorImage_no_collapse = false;
-				static bool InteriorImage_no_close = false;
-				static bool InteriorImage_no_nav = true;
-				static bool InteriorImage_no_background = false;
-				static bool InteriorImage_no_bring_to_front = false;
-				static bool InteriorImage_unsaved_document = false;
 
 				ImGuiWindowFlags InteriorImage_flags = 1;
 				if (InteriorImage_no_titlebar)        InteriorImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5295,7 +5232,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Interior Machine Image", open, InteriorImage_flags))
+				if (!ImGui::Begin("Interior Machine Image", NULL, InteriorImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -5306,7 +5243,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -5321,17 +5258,7 @@ int main()
 				//START OF PAINT MACHINE
 
 
-				static bool RedPaintVat_no_titlebar = true;
-				static bool RedPaintVat_no_scrollbar = true;
-				static bool RedPaintVat_no_menu = true;
-				static bool RedPaintVat_no_move = true;
-				static bool RedPaintVat_no_resize = true;
-				static bool RedPaintVat_no_collapse = false;
-				static bool RedPaintVat_no_close = false;
-				static bool RedPaintVat_no_nav = true;
-				static bool RedPaintVat_no_background = false;
-				static bool RedPaintVat_no_bring_to_front = false;
-				static bool RedPaintVat_unsaved_document = false;
+
 
 				ImGuiWindowFlags RedPaintVat_flags = 1;
 				if (RedPaintVat_no_titlebar)        RedPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5360,24 +5287,13 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintRedVatVol);
 				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
 
-				static bool BluePaintVat_no_titlebar = true;
-				static bool BluePaintVat_no_scrollbar = true;
-				static bool BluePaintVat_no_menu = true;
-				static bool BluePaintVat_no_move = true;
-				static bool BluePaintVat_no_resize = true;
-				static bool BluePaintVat_no_collapse = false;
-				static bool BluePaintVat_no_close = false;
-				static bool BluePaintVat_no_nav = true;
-				static bool BluePaintVat_no_background = false;
-				static bool BluePaintVat_no_bring_to_front = false;
-				static bool BluePaintVat_unsaved_document = false;
 
 				ImGuiWindowFlags BluePaintVat_flags = 1;
 				if (BluePaintVat_no_titlebar)        BluePaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5406,24 +5322,13 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
 				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
 				ImGui::End();
 
 				//Green Vat
 
-				static bool GreenPaintVat_no_titlebar = true;
-				static bool GreenPaintVat_no_scrollbar = true;
-				static bool GreenPaintVat_no_menu = true;
-				static bool GreenPaintVat_no_move = true;
-				static bool GreenPaintVat_no_resize = true;
-				static bool GreenPaintVat_no_collapse = false;
-				static bool GreenPaintVat_no_close = false;
-				static bool GreenPaintVat_no_nav = true;
-				static bool GreenPaintVat_no_background = false;
-				static bool GreenPaintVat_no_bring_to_front = false;
-				static bool GreenPaintVat_unsaved_document = false;
 
 				ImGuiWindowFlags GreenPaintVat_flags = 1;
 				if (GreenPaintVat_no_titlebar)        GreenPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5452,24 +5357,13 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
 				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
 				ImGui::End();
 
 				//DipTank
 
-				static bool DipTank_no_titlebar = true;
-				static bool DipTank_no_scrollbar = true;
-				static bool DipTank_no_menu = true;
-				static bool DipTank_no_move = true;
-				static bool DipTank_no_resize = true;
-				static bool DipTank_no_collapse = false;
-				static bool DipTank_no_close = false;
-				static bool DipTank_no_nav = true;
-				static bool DipTank_no_background = false;
-				static bool DipTank_no_bring_to_front = false;
-				static bool DipTank_unsaved_document = false;
 
 				ImGuiWindowFlags DipTank_flags = 1;
 				if (DipTank_no_titlebar)        DipTank_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5503,26 +5397,18 @@ int main()
 				char ch=248;
 			printf("Today's temperature was 23%cC",ch);
 						*/
-				
+
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
+
 				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
+
 				ImGui::End();
 
 
 				//PaintChamber
 
-				static bool PaintChamber_no_titlebar = true;
-				static bool PaintChamber_no_scrollbar = true;
-				static bool PaintChamber_no_menu = true;
-				static bool PaintChamber_no_move = true;
-				static bool PaintChamber_no_resize = true;
-				static bool PaintChamber_no_collapse = false;
-				static bool PaintChamber_no_close = false;
-				static bool PaintChamber_no_nav = true;
-				static bool PaintChamber_no_background = false;
-				static bool PaintChamber_no_bring_to_front = false;
-				static bool PaintChamber_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintChamber_flags = 1;
 				if (PaintChamber_no_titlebar)        PaintChamber_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5551,12 +5437,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Paint Humidity: %d", PaintChamberHMD);
 				ImGui::Text("Paint Temperature: %.2f`C", PaintChamberTemp);
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
 				ImGui::Text("Dry Temperature: %.2f`C", DryChamberTemp);
+
 				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2(PaintChamber_image_width, PaintChamber_image_height));
+
 				ImGui::End();
 
 
@@ -5564,17 +5452,7 @@ int main()
 				/// Paint IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool PaintImage_no_titlebar = true;
-				static bool PaintImage_no_scrollbar = true;
-				static bool PaintImage_no_menu = true;
-				static bool PaintImage_no_move = true;
-				static bool PaintImage_no_resize = true;
-				static bool PaintImage_no_collapse = false;
-				static bool PaintImage_no_close = false;
-				static bool PaintImage_no_nav = true;
-				static bool PaintImage_no_background = false;
-				static bool PaintImage_no_bring_to_front = false;
-				static bool PaintImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintImage_flags = 1;
 				if (PaintImage_no_titlebar)        PaintImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5595,7 +5473,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Paint Machine Image", open, PaintImage_flags))
+				if (!ImGui::Begin("Paint Machine Image", NULL, PaintImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -5606,7 +5484,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -5616,17 +5494,7 @@ int main()
 				ImGui::End();
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvPaintButtons_no_titlebar = true;
-				const bool InvPaintButtons_no_scrollbar = true;
-				const bool InvPaintButtons_no_menu = true;
-				const bool InvPaintButtons_no_move = true;
-				const bool InvPaintButtons_no_resize = true;
-				const bool InvPaintButtons_no_collapse = false;
-				const bool InvPaintButtons_no_close = false;
-				const bool InvPaintButtons_no_nav = false;
-				static bool InvPaintButtons_no_bring_to_front = false;
-				const bool InvPaintButtons_no_background = false;
-				const bool InvPaintButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintButtonflags = 1;
 				if (InvPaintButtons_no_titlebar)        PaintButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -5642,9 +5510,10 @@ int main()
 				if (InvPaintButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Paint Machine Manager", open, PaintButtonflags);
+				ImGui::Begin("Paint Machine Manager", NULL, PaintButtonflags);
 				//radio buttons
 				if (ImGui::Button("Adjust Values")) {
+					check = false;
 					ImGui::OpenPopup("Paint Machine Values Adjuster");
 
 				}
@@ -5744,17 +5613,7 @@ int main()
 				/// Interior IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool GlobalTemp_no_titlebar = true;
-				static bool GlobalTemp_no_scrollbar = true;
-				static bool GlobalTemp_no_menu = true;
-				static bool GlobalTemp_no_move = true;
-				static bool GlobalTemp_no_resize = true;
-				static bool GlobalTemp_no_collapse = false;
-				static bool GlobalTemp_no_close = false;
-				static bool GlobalTemp_no_nav = true;
-				static bool GlobalTemp_no_background = false;
-				static bool GlobalTemp_no_bring_to_front = false;
-				static bool GlobalTemp_unsaved_document = false;
+
 
 				ImGuiWindowFlags GlobalTemp_flags = 1;
 				if (GlobalTemp_no_titlebar)        GlobalTemp_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5777,7 +5636,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Global Temp", open, GlobalTemp_flags))
+				if (!ImGui::Begin("Global Temp", NULL, GlobalTemp_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -5790,17 +5649,7 @@ int main()
 				ImGui::End();
 
 
-				static bool GlobalAir_no_titlebar = true;
-				static bool GlobalAir_no_scrollbar = true;
-				static bool GlobalAir_no_menu = true;
-				static bool GlobalAir_no_move = true;
-				static bool GlobalAir_no_resize = true;
-				static bool GlobalAir_no_collapse = false;
-				static bool GlobalAir_no_close = false;
-				static bool GlobalAir_no_nav = true;
-				static bool GlobalAir_no_background = false;
-				static bool GlobalAir_no_bring_to_front = false;
-				static bool GlobalAir_unsaved_document = false;
+
 
 				ImGuiWindowFlags GlobalAir_flags = 1;
 				if (GlobalAir_no_titlebar)        GlobalAir_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5823,7 +5672,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Global Air", open, GlobalAir_flags))
+				if (!ImGui::Begin("Global Air", NULL, GlobalAir_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -5837,17 +5686,7 @@ int main()
 
 
 
-				static bool VeQuota_no_titlebar = true;
-				static bool VeQuota_no_scrollbar = true;
-				static bool VeQuota_no_menu = true;
-				static bool VeQuota_no_move = true;
-				static bool VeQuota_no_resize = true;
-				static bool VeQuota_no_collapse = false;
-				static bool VeQuota_no_close = false;
-				static bool VeQuota_no_nav = true;
-				static bool VeQuota_no_background = false;
-				static bool VeQuota_no_bring_to_front = false;
-				static bool VeQuota_unsaved_document = false;
+
 
 				ImGuiWindowFlags VeQuota_flags = 1;
 				if (VeQuota_no_titlebar)        VeQuota_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5870,7 +5709,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Vehicle Quota", open, VeQuota_flags))
+				if (!ImGui::Begin("Vehicle Quota", NULL, VeQuota_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -5884,17 +5723,6 @@ int main()
 
 
 
-				static bool VeComp_no_titlebar = true;
-				static bool VeComp_no_scrollbar = true;
-				static bool VeComp_no_menu = true;
-				static bool VeComp_no_move = true;
-				static bool VeComp_no_resize = true;
-				static bool VeComp_no_collapse = false;
-				static bool VeComp_no_close = false;
-				static bool VeComp_no_nav = true;
-				static bool VeComp_no_background = false;
-				static bool VeComp_no_bring_to_front = false;
-				static bool VeComp_unsaved_document = false;
 
 				ImGuiWindowFlags VeComp_flags = 1;
 				if (VeComp_no_titlebar)        VeComp_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5917,7 +5745,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Vehicle Completed", open, VeComp_flags))
+				if (!ImGui::Begin("Vehicle Completed", NULL, VeComp_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -5936,17 +5764,7 @@ int main()
 				ShowExampleAppLog(NULL);
 				//END OF LOG STUFF
 				// Demonstrate the various window flags. Typically you would just use the default!
-				static bool  no_titlebar = true;
-				static bool  no_scrollbar = true;
-				static bool  no_menu = false;
-				static bool  no_move = true;
-				static bool  no_resize = true;
-				static bool  no_collapse = false;
-				static bool  no_close = false;
-				static bool  no_nav = true;
-				static bool  no_background = false;
-				static bool  no_bring_to_front = true;
-				static bool unsaved_document = false;
+
 
 				ImGuiWindowFlags window_flags = 1;
 				if (no_titlebar)        window_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -5963,11 +5781,11 @@ int main()
 
 				// We specify a default position/size in case there's no data in the .ini file.
 				// We only do it to make the demo applications a little more welcoming, but typically this isn't required.
-	
+
 				ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Ford Assembly Plant", open, window_flags))
+				if (!ImGui::Begin("Ford Assembly Plant", NULL, window_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -5978,7 +5796,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -5992,17 +5810,7 @@ int main()
 				/// To be made image STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool toBeMade_no_titlebar = true;
-				static bool toBeMade_no_scrollbar = true;
-				static bool toBeMade_no_menu = true;
-				static bool toBeMade_no_move = true;
-				static bool toBeMade_no_resize = true;
-				static bool toBeMade_no_collapse = false;
-				static bool toBeMade_no_close = false;
-				static bool toBeMade_no_nav = true;
-				static bool toBeMade_no_background = false;
-				static bool toBeMade_no_bring_to_front = false;
-				static bool toBeMade_unsaved_document = false;
+
 
 				ImGuiWindowFlags toBeMade_flags = 1;
 				if (toBeMade_no_titlebar)        toBeMade_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -6034,7 +5842,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -6166,7 +5974,7 @@ int main()
 
 
 
-			
+
 
 
 				//BODY MACHINE================================================================================================================================================
@@ -6179,19 +5987,6 @@ int main()
 					*/
 
 
-
-					//BAY SELECTION TOGGLE and restock button
-				const bool InvBodyButtons_no_titlebar = true;
-				const bool InvBodyButtons_no_scrollbar = true;
-				const bool InvBodyButtons_no_menu = true;
-				const bool InvBodyButtons_no_move = true;
-				const bool InvBodyButtons_no_resize = true;
-				const bool InvBodyButtons_no_collapse = false;
-				const bool InvBodyButtons_no_close = false;
-				const bool InvBodyButtons_no_nav = true;
-				static bool InvBodyButtons_no_bring_to_front = false;
-				const bool InvBodyButtons_no_background = false;
-				const bool InvBodyButtons_unsaved_document = false;
 
 				ImGuiWindowFlags bodyButtonflags = 1;
 				if (InvBodyButtons_no_titlebar)        bodyButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -6207,7 +6002,7 @@ int main()
 				if (InvBodyButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Body Machine Manager", open, bodyButtonflags);
+				ImGui::Begin("Body Machine Manager", NULL, bodyButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Bay Selection:");
 				//radio buttons
@@ -6222,6 +6017,7 @@ int main()
 				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (e == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
 					}
@@ -6368,7 +6164,7 @@ int main()
 				//CONTROL MENU CREATION
 				ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.07f, 0.13f, 0.17f, 1.0f)); // Set window background to grey
 				ImGui::SetNextWindowSize(ImVec2(300, 100));
-				ImGui::Begin("Control Menu", open, controlMenuFlags);
+				ImGui::Begin("Control Menu", NULL, controlMenuFlags);
 				if (ImGui::Button("Next Machine")) {
 
 					interiorMachine = false;
@@ -6417,7 +6213,7 @@ int main()
 
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
-				ImGui::Begin("bay1InventoryValues", open, inventoryFlags);
+				ImGui::Begin("bay1InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
 				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
 				ImGui::Text("%d\n\n\n\n\n", bay1RegExp);
@@ -6431,7 +6227,7 @@ int main()
 
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
-				ImGui::Begin("bay2InventoryValues", open, inventoryFlags);
+				ImGui::Begin("bay2InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
 				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
 				ImGui::Text("%d\n\n\n\n\n", bay2RegExp);
@@ -6449,17 +6245,6 @@ int main()
 				/// BODY IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool BodyImage_no_titlebar = true;
-				static bool BodyImage_no_scrollbar = true;
-				static bool BodyImage_no_menu = true;
-				static bool BodyImage_no_move = true;
-				static bool BodyImage_no_resize = true;
-				static bool BodyImage_no_collapse = false;
-				static bool BodyImage_no_close = false;
-				static bool BodyImage_no_nav = true;
-				static bool BodyImage_no_background = false;
-				static bool BodyImage_no_bring_to_front = false;
-				static bool BodyImage_unsaved_document = false;
 
 				ImGuiWindowFlags bodyImage_flags = 1;
 				if (BodyImage_no_titlebar)        bodyImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -6480,7 +6265,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Body Machine Image", open, bodyImage_flags))
+				if (!ImGui::Begin("Body Machine Image", NULL, bodyImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -6491,7 +6276,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -6508,17 +6293,7 @@ int main()
 
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvChassisButtons_no_titlebar = true;
-				const bool InvChassisButtons_no_scrollbar = true;
-				const bool InvChassisButtons_no_menu = true;
-				const bool InvChassisButtons_no_move = true;
-				const bool InvChassisButtons_no_resize = true;
-				const bool InvChassisButtons_no_collapse = false;
-				const bool InvChassisButtons_no_close = false;
-				const bool InvChassisButtons_no_nav = false;
-				static bool InvChassisButtons_no_bring_to_front = false;
-				const bool InvChassisButtons_no_background = false;
-				const bool InvChassisButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags ChassisButtonflags = 1;
 				if (InvChassisButtons_no_titlebar)        ChassisButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -6534,11 +6309,11 @@ int main()
 				if (InvChassisButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Chassis Machine Manager", open, ChassisButtonflags);
+				ImGui::Begin("Chassis Machine Manager", NULL, ChassisButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Line Selection:");
 				//radio buttons
-				static int b;
+
 				ImGui::RadioButton("Line 1", &b, 0); ImGui::SameLine();
 				ImGui::RadioButton("Line 2", &b, 1);
 				if (b == 0) {
@@ -6550,6 +6325,7 @@ int main()
 
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (b == 0) {
 						ImGui::OpenPopup("Restock Line 2");
 					}
@@ -6711,13 +6487,13 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 365));
 				ImGui::Begin("bay1ChassisInventoryValues", NULL, ChassisinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n", bay135LV6C);
-				ImGui::Text("%d\n\n\n\n", bay135LV6HOC);
-				ImGui::Text("%d\n\n\n", bay127LV6C);
-				ImGui::Text("%d\n\n\n", bay133LV6C);
-				ImGui::Text("%d\n\n\n\n", bay135LV6EcoC);
-				ImGui::Text("%d\n\n\n\n", bay135LV6PwrBstC);
-				ImGui::Text("%d", bay150LV8C);
+				ImGui::Text("%d\n\n", plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount());
+				ImGui::Text("%d", plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -6731,8 +6507,8 @@ int main()
 				ImGui::Text("%d\n\n\n", bay227LV6C);
 				ImGui::Text("%d\n\n\n", bay233LV6C);
 				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
-				ImGui::Text("%d\n\n\n\n", bay235LV6PwrBstC);
-				ImGui::Text("%d", bay250LV8C);
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
+				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -6742,17 +6518,7 @@ int main()
 				/// Chassis IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool ChassisImage_no_titlebar = true;
-				static bool ChassisImage_no_scrollbar = true;
-				static bool ChassisImage_no_menu = true;
-				static bool ChassisImage_no_move = true;
-				static bool ChassisImage_no_resize = true;
-				static bool ChassisImage_no_collapse = false;
-				static bool ChassisImage_no_close = false;
-				static bool ChassisImage_no_nav = true;
-				static bool ChassisImage_no_background = false;
-				static bool ChassisImage_no_bring_to_front = false;
-				static bool ChassisImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags ChassisImage_flags = 1;
 				if (ChassisImage_no_titlebar)        ChassisImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -6773,7 +6539,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Chassis Machine Image", open, ChassisImage_flags))
+				if (!ImGui::Begin("Chassis Machine Image", NULL, ChassisImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -6784,7 +6550,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -6800,17 +6566,7 @@ int main()
 
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvInteriorButtons_no_titlebar = true;
-				const bool InvInteriorButtons_no_scrollbar = true;
-				const bool InvInteriorButtons_no_menu = true;
-				const bool InvInteriorButtons_no_move = true;
-				const bool InvInteriorButtons_no_resize = true;
-				const bool InvInteriorButtons_no_collapse = false;
-				const bool InvInteriorButtons_no_close = false;
-				const bool InvInteriorButtons_no_nav = false;
-				static bool InvInteriorButtons_no_bring_to_front = false;
-				const bool InvInteriorButtons_no_background = false;
-				const bool InvInteriorButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags InteriorButtonflags = 1;
 				if (InvInteriorButtons_no_titlebar)        InteriorButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -6826,11 +6582,11 @@ int main()
 				if (InvInteriorButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Interior Machine Manager", open, InteriorButtonflags);
+				ImGui::Begin("Interior Machine Manager", NULL, InteriorButtonflags);
 				// Text that appears in the window
 				ImGui::Text("Bay Selection:");
 				//radio buttons
-				static int c;
+
 				ImGui::RadioButton("Bay 1", &c, 0); ImGui::SameLine();
 				ImGui::RadioButton("Bay 2", &c, 1);
 				if (c == 0) {
@@ -6841,6 +6597,7 @@ int main()
 				}
 				ImGui::Separator();
 				if (ImGui::Button("Restock")) {
+					check = false;
 					if (c == 0) {
 						ImGui::OpenPopup("Restock Bay 2");
 					}
@@ -6874,7 +6631,7 @@ int main()
 						if (i0 > 500) {
 							i0 = 500;
 						}
-						else if(i0 < 0) {
+						else if (i0 < 0) {
 							i0 = 0;
 						}
 
@@ -7011,18 +6768,6 @@ int main()
 				/// <summary>
 				/// Interior IMAGE STRUCTURE
 				/// </summary>
-				/// <returns></returns>
-				static bool InteriorImage_no_titlebar = true;
-				static bool InteriorImage_no_scrollbar = true;
-				static bool InteriorImage_no_menu = true;
-				static bool InteriorImage_no_move = true;
-				static bool InteriorImage_no_resize = false;
-				static bool InteriorImage_no_collapse = false;
-				static bool InteriorImage_no_close = false;
-				static bool InteriorImage_no_nav = true;
-				static bool InteriorImage_no_background = false;
-				static bool InteriorImage_no_bring_to_front = false;
-				static bool InteriorImage_unsaved_document = false;
 
 				ImGuiWindowFlags InteriorImage_flags = 1;
 				if (InteriorImage_no_titlebar)        InteriorImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7043,7 +6788,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Interior Machine Image", open, InteriorImage_flags))
+				if (!ImGui::Begin("Interior Machine Image", NULL, InteriorImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -7054,7 +6799,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -7069,17 +6814,6 @@ int main()
 				//START OF PAINT MACHINE
 
 
-				static bool RedPaintVat_no_titlebar = true;
-				static bool RedPaintVat_no_scrollbar = true;
-				static bool RedPaintVat_no_menu = true;
-				static bool RedPaintVat_no_move = true;
-				static bool RedPaintVat_no_resize = true;
-				static bool RedPaintVat_no_collapse = false;
-				static bool RedPaintVat_no_close = false;
-				static bool RedPaintVat_no_nav = true;
-				static bool RedPaintVat_no_background = false;
-				static bool RedPaintVat_no_bring_to_front = false;
-				static bool RedPaintVat_unsaved_document = false;
 
 				ImGuiWindowFlags RedPaintVat_flags = 1;
 				if (RedPaintVat_no_titlebar)        RedPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7108,24 +6842,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintRedVatVol);
 				ImGui::Image((void*)(intptr_t)RedPaintVat_image_texture, ImVec2(RedPaintVat_image_width, RedPaintVat_image_height));
 				ImGui::End();
 
 				//Blue Vat
 
-				static bool BluePaintVat_no_titlebar = true;
-				static bool BluePaintVat_no_scrollbar = true;
-				static bool BluePaintVat_no_menu = true;
-				static bool BluePaintVat_no_move = true;
-				static bool BluePaintVat_no_resize = true;
-				static bool BluePaintVat_no_collapse = false;
-				static bool BluePaintVat_no_close = false;
-				static bool BluePaintVat_no_nav = true;
-				static bool BluePaintVat_no_background = false;
-				static bool BluePaintVat_no_bring_to_front = false;
-				static bool BluePaintVat_unsaved_document = false;
+
 
 				ImGuiWindowFlags BluePaintVat_flags = 1;
 				if (BluePaintVat_no_titlebar)        BluePaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7154,24 +6878,13 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintBlueVatVol);
 				ImGui::Image((void*)(intptr_t)BluePaintVat_image_texture, ImVec2(BluePaintVat_image_width, BluePaintVat_image_height));
 				ImGui::End();
 
 				//Green Vat
 
-				static bool GreenPaintVat_no_titlebar = true;
-				static bool GreenPaintVat_no_scrollbar = true;
-				static bool GreenPaintVat_no_menu = true;
-				static bool GreenPaintVat_no_move = true;
-				static bool GreenPaintVat_no_resize = true;
-				static bool GreenPaintVat_no_collapse = false;
-				static bool GreenPaintVat_no_close = false;
-				static bool GreenPaintVat_no_nav = true;
-				static bool GreenPaintVat_no_background = false;
-				static bool GreenPaintVat_no_bring_to_front = false;
-				static bool GreenPaintVat_unsaved_document = false;
 
 				ImGuiWindowFlags GreenPaintVat_flags = 1;
 				if (GreenPaintVat_no_titlebar)        GreenPaintVat_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7200,24 +6913,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Volume: %d L", paintGreenVatVol);
 				ImGui::Image((void*)(intptr_t)GreenPaintVat_image_texture, ImVec2(GreenPaintVat_image_width, GreenPaintVat_image_height));
 				ImGui::End();
 
 				//DipTank
 
-				static bool DipTank_no_titlebar = true;
-				static bool DipTank_no_scrollbar = true;
-				static bool DipTank_no_menu = true;
-				static bool DipTank_no_move = true;
-				static bool DipTank_no_resize = true;
-				static bool DipTank_no_collapse = false;
-				static bool DipTank_no_close = false;
-				static bool DipTank_no_nav = true;
-				static bool DipTank_no_background = false;
-				static bool DipTank_no_bring_to_front = false;
-				static bool DipTank_unsaved_document = false;
+
 
 				ImGuiWindowFlags DipTank_flags = 1;
 				if (DipTank_no_titlebar)        DipTank_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7251,26 +6954,17 @@ int main()
 				char ch=248;
 			printf("Today's temperature was 23%cC",ch);
 						*/
-				
+
 				ImGui::Text("Fluid Level: %d L", DipTankFluidLevel);
 				ImGui::Text("Temperature: %.2f`C", DipTankTemp);
+
 				ImGui::Image((void*)(intptr_t)DipTank_image_texture, ImVec2(DipTank_image_width, DipTank_image_height));
+
 				ImGui::End();
 
 
 				//PaintChamber
 
-				static bool PaintChamber_no_titlebar = true;
-				static bool PaintChamber_no_scrollbar = true;
-				static bool PaintChamber_no_menu = true;
-				static bool PaintChamber_no_move = true;
-				static bool PaintChamber_no_resize = true;
-				static bool PaintChamber_no_collapse = false;
-				static bool PaintChamber_no_close = false;
-				static bool PaintChamber_no_nav = true;
-				static bool PaintChamber_no_background = false;
-				static bool PaintChamber_no_bring_to_front = false;
-				static bool PaintChamber_unsaved_document = false;
 
 				ImGuiWindowFlags PaintChamber_flags = 1;
 				if (PaintChamber_no_titlebar)        PaintChamber_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7299,12 +6993,14 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 				ImGui::Text("Paint Humidity: %d", PaintChamberHMD);
 				ImGui::Text("Paint Temperature: %.2f`C", PaintChamberTemp);
 				ImGui::Text("Dry Humidity: %d", DryChamberHMD);
 				ImGui::Text("Dry Temperature: %.2f`C", DryChamberTemp);
+
 				ImGui::Image((void*)(intptr_t)PaintChamber_image_texture, ImVec2(PaintChamber_image_width, PaintChamber_image_height));
+
 				ImGui::End();
 
 
@@ -7312,17 +7008,7 @@ int main()
 				/// Paint IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool PaintImage_no_titlebar = true;
-				static bool PaintImage_no_scrollbar = true;
-				static bool PaintImage_no_menu = true;
-				static bool PaintImage_no_move = true;
-				static bool PaintImage_no_resize = true;
-				static bool PaintImage_no_collapse = false;
-				static bool PaintImage_no_close = false;
-				static bool PaintImage_no_nav = true;
-				static bool PaintImage_no_background = false;
-				static bool PaintImage_no_bring_to_front = false;
-				static bool PaintImage_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintImage_flags = 1;
 				if (PaintImage_no_titlebar)        PaintImage_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7343,7 +7029,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(350, 179));
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Paint Machine Image", open, PaintImage_flags))
+				if (!ImGui::Begin("Paint Machine Image", NULL, PaintImage_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -7354,7 +7040,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -7364,17 +7050,7 @@ int main()
 				ImGui::End();
 
 				//BAY SELECTION TOGGLE and restock button
-				const bool InvPaintButtons_no_titlebar = true;
-				const bool InvPaintButtons_no_scrollbar = true;
-				const bool InvPaintButtons_no_menu = true;
-				const bool InvPaintButtons_no_move = true;
-				const bool InvPaintButtons_no_resize = true;
-				const bool InvPaintButtons_no_collapse = false;
-				const bool InvPaintButtons_no_close = false;
-				const bool InvPaintButtons_no_nav = false;
-				static bool InvPaintButtons_no_bring_to_front = false;
-				const bool InvPaintButtons_no_background = false;
-				const bool InvPaintButtons_unsaved_document = false;
+
 
 				ImGuiWindowFlags PaintButtonflags = 1;
 				if (InvPaintButtons_no_titlebar)        PaintButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -7390,9 +7066,10 @@ int main()
 				if (InvPaintButtons_no_close)           open = NULL; // Don't pass our bool* to Begin
 
 				// ImGUI window creation
-				ImGui::Begin("Paint Machine Manager", open, PaintButtonflags);
+				ImGui::Begin("Paint Machine Manager", NULL, PaintButtonflags);
 				//radio buttons
 				if (ImGui::Button("Adjust Values")) {
+					check = false;
 					ImGui::OpenPopup("Paint Machine Values Adjuster");
 
 				}
@@ -7491,17 +7168,7 @@ int main()
 				/// Interior IMAGE STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool GlobalTemp_no_titlebar = true;
-				static bool GlobalTemp_no_scrollbar = true;
-				static bool GlobalTemp_no_menu = true;
-				static bool GlobalTemp_no_move = true;
-				static bool GlobalTemp_no_resize = true;
-				static bool GlobalTemp_no_collapse = false;
-				static bool GlobalTemp_no_close = false;
-				static bool GlobalTemp_no_nav = true;
-				static bool GlobalTemp_no_background = false;
-				static bool GlobalTemp_no_bring_to_front = false;
-				static bool GlobalTemp_unsaved_document = false;
+
 
 				ImGuiWindowFlags GlobalTemp_flags = 1;
 				if (GlobalTemp_no_titlebar)        GlobalTemp_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7524,7 +7191,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Global Temp", open, GlobalTemp_flags))
+				if (!ImGui::Begin("Global Temp", NULL, GlobalTemp_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -7537,17 +7204,7 @@ int main()
 				ImGui::End();
 
 
-				static bool GlobalAir_no_titlebar = true;
-				static bool GlobalAir_no_scrollbar = true;
-				static bool GlobalAir_no_menu = true;
-				static bool GlobalAir_no_move = true;
-				static bool GlobalAir_no_resize = true;
-				static bool GlobalAir_no_collapse = false;
-				static bool GlobalAir_no_close = false;
-				static bool GlobalAir_no_nav = true;
-				static bool GlobalAir_no_background = false;
-				static bool GlobalAir_no_bring_to_front = false;
-				static bool GlobalAir_unsaved_document = false;
+
 
 				ImGuiWindowFlags GlobalAir_flags = 1;
 				if (GlobalAir_no_titlebar)        GlobalAir_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7570,7 +7227,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Global Air", open, GlobalAir_flags))
+				if (!ImGui::Begin("Global Air", NULL, GlobalAir_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -7584,17 +7241,7 @@ int main()
 
 
 
-				static bool VeQuota_no_titlebar = true;
-				static bool VeQuota_no_scrollbar = true;
-				static bool VeQuota_no_menu = true;
-				static bool VeQuota_no_move = true;
-				static bool VeQuota_no_resize = true;
-				static bool VeQuota_no_collapse = false;
-				static bool VeQuota_no_close = false;
-				static bool VeQuota_no_nav = true;
-				static bool VeQuota_no_background = false;
-				static bool VeQuota_no_bring_to_front = false;
-				static bool VeQuota_unsaved_document = false;
+
 
 				ImGuiWindowFlags VeQuota_flags = 1;
 				if (VeQuota_no_titlebar)        VeQuota_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7617,7 +7264,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Vehicle Quota", open, VeQuota_flags))
+				if (!ImGui::Begin("Vehicle Quota", NULL, VeQuota_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -7631,17 +7278,7 @@ int main()
 
 
 
-				static bool VeComp_no_titlebar = true;
-				static bool VeComp_no_scrollbar = true;
-				static bool VeComp_no_menu = true;
-				static bool VeComp_no_move = true;
-				static bool VeComp_no_resize = true;
-				static bool VeComp_no_collapse = false;
-				static bool VeComp_no_close = false;
-				static bool VeComp_no_nav = true;
-				static bool VeComp_no_background = false;
-				static bool VeComp_no_bring_to_front = false;
-				static bool VeComp_unsaved_document = false;
+
 
 				ImGuiWindowFlags VeComp_flags = 1;
 				if (VeComp_no_titlebar)        VeComp_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7664,7 +7301,7 @@ int main()
 
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Vehicle Completed", open, VeComp_flags))
+				if (!ImGui::Begin("Vehicle Completed", NULL, VeComp_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -7683,17 +7320,6 @@ int main()
 				ShowExampleAppLog(NULL);
 				//END OF LOG STUFF
 				// Demonstrate the various window flags. Typically you would just use the default!
-				static bool  no_titlebar = true;
-				static bool  no_scrollbar = true;
-				static bool  no_menu = false;
-				static bool  no_move = true;
-				static bool  no_resize = true;
-				static bool  no_collapse = false;
-				static bool  no_close = false;
-				static bool  no_nav = true;
-				static bool  no_background = false;
-				static bool  no_bring_to_front = true;
-				static bool unsaved_document = false;
 
 				ImGuiWindowFlags window_flags = 1;
 				if (no_titlebar)        window_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7714,7 +7340,7 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(1280, 1024), ImGuiCond_FirstUseEver);
 
 				// Main body of the Demo window starts here.
-				if (!ImGui::Begin("Ford Assembly Plant", open, window_flags))
+				if (!ImGui::Begin("Ford Assembly Plant", NULL, window_flags))
 				{
 					// Early out if the window is collapsed, as an optimization.
 					ImGui::End();
@@ -7725,7 +7351,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -7739,17 +7365,7 @@ int main()
 				/// To be made image STRUCTURE
 				/// </summary>
 				/// <returns></returns>
-				static bool toBeMade_no_titlebar = true;
-				static bool toBeMade_no_scrollbar = true;
-				static bool toBeMade_no_menu = true;
-				static bool toBeMade_no_move = true;
-				static bool toBeMade_no_resize = true;
-				static bool toBeMade_no_collapse = false;
-				static bool toBeMade_no_close = false;
-				static bool toBeMade_no_nav = true;
-				static bool toBeMade_no_background = false;
-				static bool toBeMade_no_bring_to_front = false;
-				static bool toBeMade_unsaved_document = false;
+
 
 				ImGuiWindowFlags toBeMade_flags = 1;
 				if (toBeMade_no_titlebar)        toBeMade_flags |= ImGuiWindowFlags_NoTitleBar;
@@ -7781,7 +7397,7 @@ int main()
 				// e.g. Use 2/3 of the space for widgets and 1/3 for labels (right align)
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
-				
+
 
 
 
@@ -7790,7 +7406,7 @@ int main()
 
 				ImGui::End();
 
-				
+
 				// Renders the ImGUI elements
 				ImGui::Render();
 				ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -7798,7 +7414,7 @@ int main()
 				// Swap the back buffer with the front buffer
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
-			
+
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -7808,13 +7424,13 @@ int main()
 					}
 				}
 				isRendered = false;
-						
+
 			}
 			isRendered = true;
 
 
 			if (plant.vehicle.checkQAQC()) {
-				
+
 				plant.vehicle.generateCount("completedVehicles.txt");
 
 				time_t now = time(0);
@@ -7822,18 +7438,19 @@ int main()
 				dateAndTime.erase(std::remove(dateAndTime.begin(), dateAndTime.end(), '\n'), dateAndTime.cend());
 				plant.vehicle.setVIN(plant.vehicle.GenerateVIN());
 				plant.vehicle.setDate(dateAndTime);
-				
+
 				plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
 
 				/*plant.setNumVehicleToday(VeComp++);*/
 			}
-			
-			
+
+
 
 			updateLog(&plant);
 			cout << "plant log  and of loop" << endl;
-	}
-	
+		}
+
+
 		// Deletes all ImGUI instances
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
@@ -7845,9 +7462,12 @@ int main()
 
 		// Terminate GLFW before ending the program
 		glfwTerminate();
-	
-	return 0;
+
+		return 0;
 }
+
+
+
 
 
 
