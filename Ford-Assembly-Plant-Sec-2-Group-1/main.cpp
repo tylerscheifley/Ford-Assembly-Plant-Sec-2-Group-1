@@ -1,5 +1,3 @@
-#include "plant.h"
-#include "plantFiles.h"
 #include "GUILog.h"
 
 Log readFileLogs;
@@ -315,22 +313,10 @@ string loadOrderImage(Order order)
 	return startOfPath + order.getYear() + " " + order.getModel() + " " + order.getTrim() + convertBodyPanelSetToFileName(order.getBodyPanelSet(), order) + order.getColour() + ".jpg";
 }
 
-
-
 int main()
 {
 	Plant plant;
 	sampleDataCreator();
-
-	//
-
-
-	//PAINT MACHINE DATA FLOW
-	/*plant.paintingMachine.identifyRGBvalues("PlantColours.txt");*/ // each machine loop
-
-
-
-
 
 	static int e = 0;
 	static bool check = true;
@@ -793,13 +779,18 @@ int main()
 	bool isRenderedBay2 = true;
 	readLog(&plant);
 	int VeQuota = plant.getVehicleQuota();
+	bool changePaintValues = true;
+	bool changeBodyValues = true;
+	bool changeChassisValues = true;
+	bool changeInteriorValues = true;
+	
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{
-		bool changePaintValues = true;
-		bool changeBodyValues = true;
-		bool changeChassisValues = true;
-		bool changeInteriorValues = true;
+		changePaintValues = true;
+		changeBodyValues = true;
+		changeChassisValues = true;
+		changeInteriorValues = true;
 
 		plant.order.loadOrder("Order.txt");
 
@@ -829,8 +820,6 @@ int main()
 		VeComp = VeComp++;
 
 		while (bodyMachine) {
-
-
 
 			glfwPollEvents();
 
@@ -1664,7 +1653,6 @@ int main()
 
 
 				ImGui::Image((void*)(intptr_t)chassis_image_texture, ImVec2((float)chassis_image_width, (float)chassis_image_height));
-
 
 				ImGui::End();
 
@@ -2534,13 +2522,13 @@ int main()
 					}
 				}
 
-			}
+		}
+		
+		if (!bodyMachine) {
+			isRendered = true;
+		}
 
-			if (!bodyMachine) {
-				isRendered = true;
-			}
-
-			while (paintMachine) {
+		while (paintMachine) {
 				glfwPollEvents();
 
 
@@ -4164,11 +4152,12 @@ int main()
 					}
 				}
 			}
-			if (!paintMachine) {
-				isRendered = true;
-			}
+			
+		if (!paintMachine) {
+			isRendered = true;
+		}
 
-			while (chassisMachine) {
+		while (chassisMachine) {
 				glfwPollEvents();
 				if (glfwWindowShouldClose(window)) {
 					bodyMachine = false;
@@ -5862,12 +5851,13 @@ int main()
 				}
 
 			}
-			if (!chassisMachine) {
-				isRendered = true;
+			
+		if (!chassisMachine) {
+			isRendered = true;
 
-			}
+		}
 
-			while (interiorMachine) {
+		while (interiorMachine) {
 
 				glfwPollEvents();
 				if (glfwWindowShouldClose(window)) {
@@ -7563,49 +7553,48 @@ int main()
 
 
 			}
+		
+		if (!interiorMachine) {
 			isRendered = true;
-			isRenderedBay2 = true;
-
-
-			if (plant.vehicle.checkQAQC()) {
-
-				plant.vehicle.setMake(plant.order.getMake());
-				plant.vehicle.setModel(plant.order.getModel());
-				plant.vehicle.setYear(plant.order.getYear());
-				plant.vehicle.setTrim(plant.order.getTrim());
-				plant.vehicle.setOrder(plant.order);
-
-				plant.vehicle.generateCount("completedVehicles.txt");
-
-				time_t now = time(0);
-				string dateAndTime = ctime(&now);
-				dateAndTime.erase(std::remove(dateAndTime.begin(), dateAndTime.end(), '\n'), dateAndTime.cend());
-				plant.vehicle.setVIN(plant.vehicle.GenerateVIN());
-				plant.vehicle.setDate(dateAndTime);
-
-				plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
-
-				/*plant.setNumVehicleToday(VeComp++);*/
-			}
-
-
-
-			updateLog(&plant);
-			cout << "plant log  and of loop" << endl;
+ 			isRenderedBay2 = true;
 		}
 
 
-		// Deletes all ImGUI instances
-		ImGui_ImplOpenGL3_Shutdown();
-		ImGui_ImplGlfw_Shutdown();
-		ImGui::DestroyContext();
+		if (plant.vehicle.checkQAQC()) {
+
+			plant.vehicle.setMake(plant.order.getMake());
+			plant.vehicle.setModel(plant.order.getModel());
+			plant.vehicle.setYear(plant.order.getYear());
+			plant.vehicle.setTrim(plant.order.getTrim());
+			plant.vehicle.setOrder(plant.order);
+
+			plant.vehicle.generateCount("completedVehicles.txt");
+
+			time_t now = time(0);
+			string dateAndTime = ctime(&now);
+			dateAndTime.erase(std::remove(dateAndTime.begin(), dateAndTime.end(), '\n'), dateAndTime.cend());
+			plant.vehicle.setVIN(plant.vehicle.GenerateVIN());
+			plant.vehicle.setDate(dateAndTime);
+
+			plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
+		}
 
 
-		// Delete window before ending the program
-		glfwDestroyWindow(window);
+		updateLog(&plant);
+		cout << "plant log  and of loop" << endl;
+	}
 
-		// Terminate GLFW before ending the program
-		glfwTerminate();
 
-		return 0;
+	// Deletes all ImGUI instances
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
+
+	// Delete window before ending the program
+	glfwDestroyWindow(window);
+
+	// Terminate GLFW before ending the program
+	glfwTerminate();
+
+	return 0;
 }

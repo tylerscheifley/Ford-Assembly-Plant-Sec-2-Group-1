@@ -1,5 +1,7 @@
 #pragma once
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #ifdef _WIN32
 #include <Windows.h>
 #else
@@ -13,6 +15,9 @@
 #include<iostream>
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
+
+#include "plant.h"
+#include "plantFiles.h"
 
 // Vertex Shader source code
 const char* vertexShaderSource = "#version 330 core\n"
@@ -31,9 +36,8 @@ const char* fragmentShaderSource = "#version 330 core\n"
 "   FragColor = color;\n"
 "}\n\0";
 
-
-
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
 using namespace std;
+
