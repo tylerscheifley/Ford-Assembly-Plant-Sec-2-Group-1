@@ -1245,439 +1245,312 @@
 (A) Inventory Level Update @ Mon Nov 28 17:19:48 2022
     Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 363 RegExpInvLvl: 99 MaxExpInvLvl: 500
     Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 497 SprCrF150InvLvl: 499 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:16:56 2022
-    Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 362 RegExpInvLvl: 99 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:19:27 2022
+    Bay 1: RegF150InvLvl: 414 SprCaF150InvLvl: 411 SprCrF150InvLvl: 363 RegExpInvLvl: 99 MaxExpInvLvl: 500
     Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:16:57 2022
-    Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 361 RegExpInvLvl: 99 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:19:44 2022
+    Bay 1: RegF150InvLvl: 414 SprCaF150InvLvl: 410 SprCrF150InvLvl: 363 RegExpInvLvl: 99 MaxExpInvLvl: 500
     Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:17:28 2022
-    Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 361 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:17:29 2022
-    Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 361 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:17:30 2022
-    Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 361 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:17:31 2022
-    Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 361 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 494 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:17:40 2022
-    Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 361 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:18:08 2022
-    Bay 1: RegF150InvLvl: 415 SprCaF150InvLvl: 411 SprCrF150InvLvl: 360 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:18:19 2022
-    Bay 1: RegF150InvLvl: 414 SprCaF150InvLvl: 411 SprCrF150InvLvl: 360 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:18:23 2022
-    Bay 1: RegF150InvLvl: 413 SprCaF150InvLvl: 411 SprCrF150InvLvl: 360 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:18:25 2022
+(A) Inventory Level Update @ Mon Nov 28 20:19:48 2022
+    Bay 1: RegF150InvLvl: 414 SprCaF150InvLvl: 410 SprCrF150InvLvl: 362 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:19:55 2022
+    Bay 1: RegF150InvLvl: 414 SprCaF150InvLvl: 410 SprCrF150InvLvl: 361 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:19:59 2022
+    Bay 1: RegF150InvLvl: 414 SprCaF150InvLvl: 410 SprCrF150InvLvl: 360 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:20:03 2022
     Bay 1: RegF150InvLvl: 413 SprCaF150InvLvl: 410 SprCrF150InvLvl: 360 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:18:26 2022
-    Bay 1: RegF150InvLvl: 413 SprCaF150InvLvl: 410 SprCrF150InvLvl: 359 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:18:27 2022
-    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 410 SprCrF150InvLvl: 359 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:18:28 2022
-    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 409 SprCrF150InvLvl: 359 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:18:29 2022
-    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 408 SprCrF150InvLvl: 359 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:19:07 2022
-    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 408 SprCrF150InvLvl: 358 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:19:35 2022
-    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 408 SprCrF150InvLvl: 357 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:19:38 2022
-    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 408 SprCrF150InvLvl: 356 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:19:40 2022
-    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 408 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:19:41 2022
-    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 407 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:19:42 2022
-    Bay 1: RegF150InvLvl: 411 SprCaF150InvLvl: 407 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:30:57 2022
-    Bay 1: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 20:33:31 2022
-    Bay 1: RegF150InvLvl: 1 SprCaF150InvLvl: 1 SprCrF150InvLvl: 0 RegExpInvLvl: 1 MaxExpInvLvl: 1
-    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 494 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(M) Max Expedition Inventory Level Amount Updated To: 500 In: BayOne @ Mon Nov 28 20:33:45 2022
-(M) Regular Expedition Inventory Level Amount Updated To: 500 In: BayOne @ Mon Nov 28 20:33:45 2022
-(M) Regular F150 Inventory Level Amount Updated To: 500 In: BayOne @ Mon Nov 28 20:33:45 2022
-(M) SuperCab F150 Inventory Level Amount Updated To: 500 In: BayOne @ Mon Nov 28 20:33:45 2022
-(M) SuperCrew F150 Inventory Level Amount Updated To: 500 In: BayOne @ Mon Nov 28 20:33:45 2022
-(A) Inventory Level Update @ Mon Nov 28 20:37:46 2022
-    Bay 1: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 499 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:37:55 2022
-    Bay 1: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 499 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:38:59 2022
-    Bay 1: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 498 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:41:58 2022
-    Bay 1: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:06 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 500 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:09 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 500 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:10 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:19 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 49 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:19 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 49 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:20 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 49 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:28 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 49 SprCaF150InvLvl: 49 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:29 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 49 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:30 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 49 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:31 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 47 SprCaF150InvLvl: 49 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:32 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 47 SprCaF150InvLvl: 49 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:33 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 46 SprCaF150InvLvl: 49 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:34 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 45 SprCaF150InvLvl: 49 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:35 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 49 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:37 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 43 SprCaF150InvLvl: 49 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:38 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 43 SprCaF150InvLvl: 49 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:39 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 43 SprCaF150InvLvl: 49 SprCrF150InvLvl: 43 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:43 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 49 SprCrF150InvLvl: 43 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:45 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 48 SprCrF150InvLvl: 43 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:42:46 2022
-    Bay 1: RegF150InvLvl: 499 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 47 SprCrF150InvLvl: 43 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:51:23 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:51:36 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 49 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:30 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 49 SprCaF150InvLvl: 49 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:34 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 49 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:36 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 49 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:39 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 49 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:20:10 2022
+    Bay 1: RegF150InvLvl: 412 SprCaF150InvLvl: 410 SprCrF150InvLvl: 360 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:20:14 2022
+    Bay 1: RegF150InvLvl: 411 SprCaF150InvLvl: 410 SprCrF150InvLvl: 360 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 20:52:40 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 47 SprCaF150InvLvl: 49 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:41 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 47 SprCaF150InvLvl: 49 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:42 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 46 SprCaF150InvLvl: 49 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:43 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 46 SprCaF150InvLvl: 48 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:47 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 46 SprCaF150InvLvl: 48 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 1: RegF150InvLvl: 410 SprCaF150InvLvl: 410 SprCrF150InvLvl: 360 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:52:44 2022
+    Bay 1: RegF150InvLvl: 410 SprCaF150InvLvl: 410 SprCrF150InvLvl: 359 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 20:52:48 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 45 SprCaF150InvLvl: 48 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:49 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 45 SprCaF150InvLvl: 47 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:50 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 45 SprCaF150InvLvl: 46 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:51 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 46 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:53 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 46 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:54 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 46 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 1: RegF150InvLvl: 410 SprCaF150InvLvl: 409 SprCrF150InvLvl: 359 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 20:52:55 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 45 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:52:57 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 43 SprCaF150InvLvl: 45 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 1: RegF150InvLvl: 409 SprCaF150InvLvl: 409 SprCrF150InvLvl: 359 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 20:52:59 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 43 SprCaF150InvLvl: 44 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 1: RegF150InvLvl: 408 SprCaF150InvLvl: 409 SprCrF150InvLvl: 359 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 20:53:02 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 44 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:54:27 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 43 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:54:30 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 42 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 1: RegF150InvLvl: 408 SprCaF150InvLvl: 409 SprCrF150InvLvl: 358 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:53:06 2022
+    Bay 1: RegF150InvLvl: 407 SprCaF150InvLvl: 409 SprCrF150InvLvl: 358 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:53:10 2022
+    Bay 1: RegF150InvLvl: 407 SprCaF150InvLvl: 409 SprCrF150InvLvl: 357 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:53:14 2022
+    Bay 1: RegF150InvLvl: 407 SprCaF150InvLvl: 409 SprCrF150InvLvl: 356 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:53:29 2022
+    Bay 1: RegF150InvLvl: 407 SprCaF150InvLvl: 409 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:53:36 2022
+    Bay 1: RegF150InvLvl: 406 SprCaF150InvLvl: 409 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:53:44 2022
+    Bay 1: RegF150InvLvl: 405 SprCaF150InvLvl: 409 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:53:53 2022
+    Bay 1: RegF150InvLvl: 405 SprCaF150InvLvl: 408 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:53:56 2022
+    Bay 1: RegF150InvLvl: 405 SprCaF150InvLvl: 407 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:54:15 2022
+    Bay 1: RegF150InvLvl: 404 SprCaF150InvLvl: 407 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:54:18 2022
+    Bay 1: RegF150InvLvl: 403 SprCaF150InvLvl: 407 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 20:54:31 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 41 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:54:33 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 40 SprCrF150InvLvl: 44 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 1: RegF150InvLvl: 403 SprCaF150InvLvl: 406 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 20:54:34 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 40 SprCrF150InvLvl: 43 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:54:38 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 42 SprCaF150InvLvl: 39 SprCrF150InvLvl: 43 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:54:41 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 41 SprCaF150InvLvl: 39 SprCrF150InvLvl: 43 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:54:42 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 41 SprCaF150InvLvl: 39 SprCrF150InvLvl: 42 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:54:43 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 41 SprCaF150InvLvl: 39 SprCrF150InvLvl: 41 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 1: RegF150InvLvl: 402 SprCaF150InvLvl: 406 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:54:37 2022
+    Bay 1: RegF150InvLvl: 402 SprCaF150InvLvl: 405 SprCrF150InvLvl: 355 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:54:40 2022
+    Bay 1: RegF150InvLvl: 402 SprCaF150InvLvl: 405 SprCrF150InvLvl: 354 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:54:45 2022
+    Bay 1: RegF150InvLvl: 402 SprCaF150InvLvl: 404 SprCrF150InvLvl: 354 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:54:51 2022
+    Bay 1: RegF150InvLvl: 401 SprCaF150InvLvl: 404 SprCrF150InvLvl: 354 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 20:54:54 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 40 SprCaF150InvLvl: 39 SprCrF150InvLvl: 41 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:55:05 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 39 SprCaF150InvLvl: 39 SprCrF150InvLvl: 41 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:55:07 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 38 SprCaF150InvLvl: 39 SprCrF150InvLvl: 41 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:55:09 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 38 SprCaF150InvLvl: 38 SprCrF150InvLvl: 41 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:55:11 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 38 SprCaF150InvLvl: 37 SprCrF150InvLvl: 41 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:57:35 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:57:44 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 49 SprCaF150InvLvl: 50 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:57:46 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 50 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:57:47 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 49 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:57:50 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 47 SprCaF150InvLvl: 49 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:57:56 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 46 SprCaF150InvLvl: 49 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:57:59 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 46 SprCaF150InvLvl: 49 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:58:00 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 45 SprCaF150InvLvl: 49 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:59:55 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 49 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 20:59:58 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 49 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:00 2022
-    Bay 1: RegF150InvLvl: 498 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 48 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:03 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 48 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:04 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 494 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 48 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:05 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 48 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:06 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 48 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:14 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 48 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:15 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 47 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:17 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 46 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:18 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 46 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:19 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 44 SprCaF150InvLvl: 45 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:00:21 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 499 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 43 SprCaF150InvLvl: 45 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:03:51 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 50 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:03:56 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 50 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:11 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 50 SprCaF150InvLvl: 49 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:15 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 49 SprCaF150InvLvl: 49 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:19 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 49 SprCaF150InvLvl: 48 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:22 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 48 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:25 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 47 SprCrF150InvLvl: 49 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:29 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 47 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
+    Bay 1: RegF150InvLvl: 401 SprCaF150InvLvl: 403 SprCrF150InvLvl: 354 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:54:56 2022
+    Bay 1: RegF150InvLvl: 401 SprCaF150InvLvl: 403 SprCrF150InvLvl: 353 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:57:10 2022
+    Bay 1: RegF150InvLvl: 401 SprCaF150InvLvl: 402 SprCrF150InvLvl: 353 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:57:21 2022
+    Bay 1: RegF150InvLvl: 401 SprCaF150InvLvl: 402 SprCrF150InvLvl: 352 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:57:29 2022
+    Bay 1: RegF150InvLvl: 401 SprCaF150InvLvl: 402 SprCrF150InvLvl: 351 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:57:31 2022
+    Bay 1: RegF150InvLvl: 401 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:07 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 498 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:15 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 497 SprCaF150InvLvl: 495 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:20 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 497 SprCaF150InvLvl: 494 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:23 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 496 SprCaF150InvLvl: 494 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:28 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 494 SprCrF150InvLvl: 497 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:33 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 494 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:41 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 493 SprCrF150InvLvl: 496 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:43 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 493 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:56 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 492 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 20:59:59 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 491 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:07 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 490 SprCrF150InvLvl: 495 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:09 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 490 SprCrF150InvLvl: 494 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:20 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 495 SprCaF150InvLvl: 489 SprCrF150InvLvl: 494 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:27 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 494 SprCaF150InvLvl: 489 SprCrF150InvLvl: 494 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:30 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 494 SprCaF150InvLvl: 489 SprCrF150InvLvl: 493 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:38 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 494 SprCaF150InvLvl: 489 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:43 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 494 SprCaF150InvLvl: 489 SprCrF150InvLvl: 491 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:45 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 491 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:00:48 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 350 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:03:36 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 402 SprCrF150InvLvl: 349 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:03:41 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 401 SprCrF150InvLvl: 349 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:04:13 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 401 SprCrF150InvLvl: 348 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
 (A) Inventory Level Update @ Mon Nov 28 21:04:30 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 46 SprCrF150InvLvl: 48 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:35 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 46 SprCrF150InvLvl: 47 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:36 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 46 SprCrF150InvLvl: 46 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:38 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 48 SprCaF150InvLvl: 46 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:04:39 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 47 SprCaF150InvLvl: 46 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:05:15 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 47 SprCaF150InvLvl: 45 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:05:17 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 47 SprCaF150InvLvl: 44 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:05:19 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 46 SprCaF150InvLvl: 44 SprCrF150InvLvl: 45 RegExpInvLvl: 50 MaxExpInvLvl: 50
-(A) Inventory Level Update @ Mon Nov 28 21:07:38 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 2 SprCaF150InvLvl: 2 SprCrF150InvLvl: 1 RegExpInvLvl: 2 MaxExpInvLvl: 2
-(A) Inventory Level Update @ Mon Nov 28 21:07:39 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 1 SprCaF150InvLvl: 2 SprCrF150InvLvl: 1 RegExpInvLvl: 2 MaxExpInvLvl: 2
-(A) Inventory Level Update @ Mon Nov 28 21:07:40 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 1 SprCaF150InvLvl: 1 SprCrF150InvLvl: 1 RegExpInvLvl: 2 MaxExpInvLvl: 2
-(A) Inventory Level Update @ Mon Nov 28 21:07:45 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 492 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 1 SprCaF150InvLvl: 1 SprCrF150InvLvl: 0 RegExpInvLvl: 2 MaxExpInvLvl: 2
-(M) Max Expedition Inventory Level Amount Updated To: 500 In: BayTwo @ Mon Nov 28 21:07:51 2022
-(M) Regular Expedition Inventory Level Amount Updated To: 500 In: BayTwo @ Mon Nov 28 21:07:51 2022
-(M) Regular F150 Inventory Level Amount Updated To: 500 In: BayTwo @ Mon Nov 28 21:07:51 2022
-(M) SuperCab F150 Inventory Level Amount Updated To: 500 In: BayTwo @ Mon Nov 28 21:07:51 2022
-(M) SuperCrew F150 Inventory Level Amount Updated To: 500 In: BayTwo @ Mon Nov 28 21:07:51 2022
-(A) Inventory Level Update @ Mon Nov 28 21:07:56 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 491 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:07:59 2022
-    Bay 1: RegF150InvLvl: 497 SprCaF150InvLvl: 498 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:13 2022
-    Bay 1: RegF150InvLvl: 496 SprCaF150InvLvl: 498 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:18 2022
-    Bay 1: RegF150InvLvl: 496 SprCaF150InvLvl: 498 SprCrF150InvLvl: 489 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:22 2022
-    Bay 1: RegF150InvLvl: 496 SprCaF150InvLvl: 497 SprCrF150InvLvl: 489 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:22 2022
-    Bay 1: RegF150InvLvl: 496 SprCaF150InvLvl: 496 SprCrF150InvLvl: 489 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:23 2022
-    Bay 1: RegF150InvLvl: 496 SprCaF150InvLvl: 496 SprCrF150InvLvl: 488 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:26 2022
-    Bay 1: RegF150InvLvl: 495 SprCaF150InvLvl: 496 SprCrF150InvLvl: 488 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:27 2022
-    Bay 1: RegF150InvLvl: 495 SprCaF150InvLvl: 496 SprCrF150InvLvl: 487 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:28 2022
-    Bay 1: RegF150InvLvl: 495 SprCaF150InvLvl: 496 SprCrF150InvLvl: 486 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:30 2022
-    Bay 1: RegF150InvLvl: 495 SprCaF150InvLvl: 496 SprCrF150InvLvl: 485 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:31 2022
-    Bay 1: RegF150InvLvl: 495 SprCaF150InvLvl: 496 SprCrF150InvLvl: 484 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:32 2022
-    Bay 1: RegF150InvLvl: 495 SprCaF150InvLvl: 496 SprCrF150InvLvl: 483 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:44 2022
-    Bay 1: RegF150InvLvl: 495 SprCaF150InvLvl: 495 SprCrF150InvLvl: 483 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:45 2022
-    Bay 1: RegF150InvLvl: 495 SprCaF150InvLvl: 494 SprCrF150InvLvl: 483 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:47 2022
-    Bay 1: RegF150InvLvl: 494 SprCaF150InvLvl: 494 SprCrF150InvLvl: 483 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:53 2022
-    Bay 1: RegF150InvLvl: 493 SprCaF150InvLvl: 494 SprCrF150InvLvl: 483 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:54 2022
-    Bay 1: RegF150InvLvl: 492 SprCaF150InvLvl: 494 SprCrF150InvLvl: 483 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
-(A) Inventory Level Update @ Mon Nov 28 21:14:56 2022
-    Bay 1: RegF150InvLvl: 492 SprCaF150InvLvl: 493 SprCrF150InvLvl: 483 RegExpInvLvl: 500 MaxExpInvLvl: 500
-    Bay 2: RegF150InvLvl: 500 SprCaF150InvLvl: 500 SprCrF150InvLvl: 500 RegExpInvLvl: 500 MaxExpInvLvl: 500
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 400 SprCrF150InvLvl: 348 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:04:45 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 399 SprCrF150InvLvl: 348 RegExpInvLvl: 99 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:19:42 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 399 SprCrF150InvLvl: 348 RegExpInvLvl: 98 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:19:45 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 399 SprCrF150InvLvl: 347 RegExpInvLvl: 98 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:19:49 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 399 SprCrF150InvLvl: 347 RegExpInvLvl: 97 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:19:52 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 398 SprCrF150InvLvl: 347 RegExpInvLvl: 97 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:19:56 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 398 SprCrF150InvLvl: 346 RegExpInvLvl: 97 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:00 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 398 SprCrF150InvLvl: 346 RegExpInvLvl: 96 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:03 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 96 MaxExpInvLvl: 500
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:07 2022
+    Bay 1: RegF150InvLvl: 400 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 96 MaxExpInvLvl: 499
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:10 2022
+    Bay 1: RegF150InvLvl: 399 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 96 MaxExpInvLvl: 499
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:14 2022
+    Bay 1: RegF150InvLvl: 399 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 96 MaxExpInvLvl: 498
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:17 2022
+    Bay 1: RegF150InvLvl: 399 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 96 MaxExpInvLvl: 497
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:21 2022
+    Bay 1: RegF150InvLvl: 398 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 96 MaxExpInvLvl: 497
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:24 2022
+    Bay 1: RegF150InvLvl: 398 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 95 MaxExpInvLvl: 497
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:28 2022
+    Bay 1: RegF150InvLvl: 397 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 95 MaxExpInvLvl: 497
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:31 2022
+    Bay 1: RegF150InvLvl: 397 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 95 MaxExpInvLvl: 496
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:35 2022
+    Bay 1: RegF150InvLvl: 397 SprCaF150InvLvl: 398 SprCrF150InvLvl: 345 RegExpInvLvl: 94 MaxExpInvLvl: 496
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:38 2022
+    Bay 1: RegF150InvLvl: 397 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 94 MaxExpInvLvl: 496
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:42 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 94 MaxExpInvLvl: 496
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:45 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 496
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:49 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 500
+(A) Inventory Level Update @ Mon Nov 28 21:20:52 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 499
+(A) Inventory Level Update @ Mon Nov 28 21:20:56 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 490 RegExpInvLvl: 500 MaxExpInvLvl: 498
+(A) Inventory Level Update @ Mon Nov 28 21:20:59 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 489 RegExpInvLvl: 500 MaxExpInvLvl: 498
+(A) Inventory Level Update @ Mon Nov 28 21:21:03 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 488 RegExpInvLvl: 500 MaxExpInvLvl: 498
+(A) Inventory Level Update @ Mon Nov 28 21:21:06 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 489 SprCrF150InvLvl: 487 RegExpInvLvl: 500 MaxExpInvLvl: 498
+(A) Inventory Level Update @ Mon Nov 28 21:21:10 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 493 SprCaF150InvLvl: 488 SprCrF150InvLvl: 487 RegExpInvLvl: 500 MaxExpInvLvl: 498
+(A) Inventory Level Update @ Mon Nov 28 21:21:14 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 492 SprCaF150InvLvl: 488 SprCrF150InvLvl: 487 RegExpInvLvl: 500 MaxExpInvLvl: 498
+(A) Inventory Level Update @ Mon Nov 28 21:21:17 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 487 RegExpInvLvl: 500 MaxExpInvLvl: 498
+(A) Inventory Level Update @ Mon Nov 28 21:21:21 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 487 RegExpInvLvl: 500 MaxExpInvLvl: 497
+(A) Inventory Level Update @ Mon Nov 28 21:21:25 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 487 RegExpInvLvl: 500 MaxExpInvLvl: 496
+(A) Inventory Level Update @ Mon Nov 28 21:21:28 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 487 RegExpInvLvl: 499 MaxExpInvLvl: 496
+(A) Inventory Level Update @ Mon Nov 28 21:21:32 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 486 RegExpInvLvl: 499 MaxExpInvLvl: 496
+(A) Inventory Level Update @ Mon Nov 28 21:21:35 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 499 MaxExpInvLvl: 496
+(A) Inventory Level Update @ Mon Nov 28 21:21:39 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 498 MaxExpInvLvl: 496
+(A) Inventory Level Update @ Mon Nov 28 21:21:42 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 497 MaxExpInvLvl: 496
+(A) Inventory Level Update @ Mon Nov 28 21:21:46 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 497 MaxExpInvLvl: 495
+(A) Inventory Level Update @ Mon Nov 28 21:21:50 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 495
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 496 MaxExpInvLvl: 495
+(A) Inventory Level Update @ Mon Nov 28 21:23:13 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 93 MaxExpInvLvl: 494
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 496 MaxExpInvLvl: 495
+(A) Inventory Level Update @ Mon Nov 28 21:23:17 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 92 MaxExpInvLvl: 494
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 496 MaxExpInvLvl: 495
+(A) Inventory Level Update @ Mon Nov 28 21:23:21 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 92 MaxExpInvLvl: 493
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 496 MaxExpInvLvl: 495
+(A) Inventory Level Update @ Mon Nov 28 21:23:24 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 92 MaxExpInvLvl: 492
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 496 MaxExpInvLvl: 495
+(A) Inventory Level Update @ Mon Nov 28 21:23:28 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 397 SprCrF150InvLvl: 345 RegExpInvLvl: 92 MaxExpInvLvl: 491
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 496 MaxExpInvLvl: 495
+(A) Inventory Level Update @ Mon Nov 28 21:23:32 2022
+    Bay 1: RegF150InvLvl: 396 SprCaF150InvLvl: 396 SprCrF150InvLvl: 345 RegExpInvLvl: 92 MaxExpInvLvl: 491
+    Bay 2: RegF150InvLvl: 491 SprCaF150InvLvl: 488 SprCrF150InvLvl: 485 RegExpInvLvl: 496 MaxExpInvLvl: 495

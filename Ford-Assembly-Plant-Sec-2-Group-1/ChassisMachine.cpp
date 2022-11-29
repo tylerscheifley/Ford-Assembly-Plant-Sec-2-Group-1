@@ -294,7 +294,7 @@ bool ChassisMachine::RunChassisMachine(Order givenOrder, Vehicle* vehiclePlaceHo
 	//update the vehicle to have the right body
 	vehiclePlaceHolder->setChassis(chassisType);
 
-	bool didAdd = false;;
+	bool didAdd = false;
 
 	//update inventory levels
 	if (vehiclePlaceHolder->getChassis() == "Expedition35LV6C")

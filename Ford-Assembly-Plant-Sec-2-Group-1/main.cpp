@@ -808,69 +808,6 @@ int main()
 	// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
 	glViewport(0, 0, 1920, 1080);
 
-
-
-
-
-
-
-	//Value boxes for each inventory
-//BAY 1
-	int bay1MaxExp = 1; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-	int bay1RegExp = 2; // INVENTORY LEVELS FOR bay 1 Reg Expedition
-	int bay1RegCab = 3; // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-	int bay1SupCab = 4; // INVENTORY LEVELS For bay 1 Super Cab f150
-	int bay1SupCrew = 5; // INVENTORY LEVELS for bay 1 super crew f150
-	//Value boxes for each inventory
-			//BAY 2
-	int bay2MaxExp = 1; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-	int bay2RegExp = 2; // INVENTORY LEVELS FOR bay 1 Reg Expedition
-	int bay2RegCab = 3; // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-	int bay2SupCab = 4; // INVENTORY LEVELS For bay 1 Super Cab f150
-	int bay2SupCrew = 5; // INVENTORY LEVELS for bay 1 super crew f150
-
-
-	//Value boxes for each inventory
-//BAY 1
-	int bay135LV6C = 1; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-	int bay135LV6HOC = 2; // INVENTORY LEVELS FOR bay 1 Reg Expedition
-	int bay127LV6C = 3; // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-	int bay133LV6C = 4; // INVENTORY LEVELS For bay 1 Super Cab f150
-	int bay135LV6EcoC = 5; // INVENTORY LEVELS for bay 1 super crew f150
-	int bay135LV6PwrBstC = 6; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-	int bay150LV8C = 7; // INVENTORY LEVELS FOR bay 1 Reg Expedition
-	//Value boxes for each inventory
-			//BAY 2
-	int bay235LV6C = 1; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-	int bay235LV6HOC = 2; // INVENTORY LEVELS FOR bay 1 Reg Expedition
-	int bay227LV6C = 3; // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-	int bay233LV6C = 4; // INVENTORY LEVELS For bay 1 Super Cab f150
-	int bay235LV6EcoC = 5; // INVENTORY LEVELS for bay 1 super crew f150
-	int bay235LV6PwrBstC = 6; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-	int bay250LV8C = 7; // INVENTORY LEVELS FOR bay 1 Reg Expedition
-
-
-	//Value boxes for each inventory
-//BAY 1
-	int bay1BaseExp = 1; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-	int bay1MidExp = 2; // INVENTORY LEVELS FOR bay 1 Reg Expedition
-	int bay1HighExp = 3; // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-	int bay1BaseF150 = 4; // INVENTORY LEVELS For bay 1 Super Cab f150
-	int bay1MidF150 = 5; // INVENTORY LEVELS for bay 1 super crew f150
-	int bay1HighF150 = 6; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-
-	//Value boxes for each inventory
-			//BAY 2
-	int bay2BaseExp = 1; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-	int bay2MidExp = 2; // INVENTORY LEVELS FOR bay 1 Reg Expedition
-	int bay2HighExp = 3; // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-	int bay2BaseF150 = 4; // INVENTORY LEVELS For bay 1 Super Cab f150
-	int bay2MidF150 = 5; // INVENTORY LEVELS for bay 1 super crew f150
-	int bay2HighF150 = 6; // INVENTORY LEVELS FOR Bay 1 Max Expedition
-
-
-
-
 	// Initialize ImGUI
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
@@ -1057,61 +994,6 @@ int main()
 
 		VeComp = VeComp++;
 
-		//Value boxes for each inventory
-//BAY 1
-		int bay1MaxExp = plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-		int bay1RegExp = plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-		int bay1RegCab = plant.bodyMachine.bayOne.GetRegularF150InventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-		int bay1SupCab = plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-		int bay1SupCrew = plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-		//Value boxes for each inventory
-				//BAY 2
-		int bay2MaxExp = plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-		int bay2RegExp = plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-		int bay2RegCab = plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-		int bay2SupCab = plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-		int bay2SupCrew = plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-
-
-		//Value boxes for each inventory
-	//BAY 1
-		int bay135LV6C = plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-		int bay135LV6HOC = plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-		int bay127LV6C = plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-		int bay133LV6C = plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-		int bay135LV6EcoC = plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-		int bay135LV6PwrBstC = plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-		int bay150LV8C = plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-		//Value boxes for each inventory
-				//BAY 2
-		int bay235LV6C = plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-		int bay235LV6HOC = plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-		int bay227LV6C = plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-		int bay233LV6C = plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-		int bay235LV6EcoC = plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-		int bay235LV6PwrBstC = plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-		int bay250LV8C = plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-
-
-		//Value boxes for each inventory
-	//BAY 1
-		int bay1BaseExp = plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-		int bay1MidExp = plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-		int bay1HighExp = plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-		int bay1BaseF150 = plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-		int bay1MidF150 = plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-		int bay1HighF150 = plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-
-		//Value boxes for each inventory
-				//BAY 2
-		int bay2BaseExp = plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-		int bay2MidExp = plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-		int bay2HighExp = plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-		int bay2BaseF150 = plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-		int bay2MidF150 = plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-		int bay2HighF150 = plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-
-
 		while (bodyMachine) {
 
 
@@ -1126,31 +1008,12 @@ int main()
 				interiorMachine = false;
 			}
 
-			
-
-
 				if (changeBodyValues) {
 
 					plant.bodyMachine.RunBodyMachine(plant.order, &plant.vehicle);
-					plant.bodyMachine.bayOne.bayInUse();
+					plant.bodyMachine.SwitchVehiclePanelsBays("BayOne");
 					changeBodyValues = false;
 				}
-				//Value boxes for each inventory
-//BAY 1
-				bay1MaxExp = plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-				bay1RegExp = plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-				bay1RegCab = plant.bodyMachine.bayOne.GetRegularF150InventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-				bay1SupCab = plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-				bay1SupCrew = plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-				//Value boxes for each inventory
-						//BAY 2
-				bay2MaxExp = plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-				bay2RegExp = plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-				bay2RegCab = plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-				bay2SupCab = plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-				bay2SupCrew = plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-
-
 
 				//end of changing values.
 
@@ -1919,11 +1782,11 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2ChassisInventoryValues", NULL, ChassisinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n", bay235LV6C);
-				ImGui::Text("%d\n\n\n\n", bay235LV6HOC);
-				ImGui::Text("%d\n\n\n", bay227LV6C);
+				ImGui::Text("%d\n\n", plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount());
 				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount());
-				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount());
 				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
 				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
 				/*ImGui::PopStyleColor();*/
@@ -2144,12 +2007,12 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 365));
 				ImGui::Begin("bay1InteriorInventoryValues", NULL, InteriorinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n\n", bay1BaseExp);
-				ImGui::Text("%d\n\n\n\n", bay1MidExp);
-				ImGui::Text("%d\n\n\n", bay1HighExp);
-				ImGui::Text("%d\n\n\n\n", bay1BaseF150);
-				ImGui::Text("%d\n\n\n\n\n", bay1MidF150);
-				ImGui::Text("%d", bay1HighF150);
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount());
+				ImGui::Text("%d", plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -2158,12 +2021,12 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2InteriorInventoryValues", NULL, InteriorinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n\n", bay2BaseExp);
-				ImGui::Text("%d\n\n\n\n", bay2MidExp);
-				ImGui::Text("%d\n\n\n", bay2HighExp);
-				ImGui::Text("%d\n\n\n\n", bay2BaseF150);
-				ImGui::Text("%d\n\n\n\n\n", bay2MidF150);
-				ImGui::Text("%d", bay2HighF150);
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount());
+				ImGui::Text("%d", plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -3180,11 +3043,11 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
 				ImGui::Begin("bay1InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
-				ImGui::Text("%d\n\n\n\n\n", bay1RegExp);
-				ImGui::Text("%d\n\n\n\n", bay1RegCab);
-				ImGui::Text("%d\n\n\n\n", bay1SupCab);
-				ImGui::Text("%d", bay1SupCrew);
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetRegularF150InventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount());
+				ImGui::Text("%d", plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -3194,11 +3057,11 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
-				ImGui::Text("%d\n\n\n\n\n", bay2RegExp);
-				ImGui::Text("%d\n\n\n\n", bay2RegCab);
-				ImGui::Text("%d\n\n\n\n", bay2SupCab);
-				ImGui::Text("%d", bay2SupCrew);
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount());
+				ImGui::Text("%d", plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -3467,11 +3330,11 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2ChassisInventoryValues", NULL, ChassisinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n", bay235LV6C);
-				ImGui::Text("%d\n\n\n\n", bay235LV6HOC);
-				ImGui::Text("%d\n\n\n", bay227LV6C);
-				ImGui::Text("%d\n\n\n", bay233LV6C);
-				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
+				ImGui::Text("%d\n\n", plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount());
 				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
 				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
 				/*ImGui::PopStyleColor();*/
@@ -3693,12 +3556,12 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 365));
 				ImGui::Begin("bay1InteriorInventoryValues", NULL, InteriorinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n\n", bay1BaseExp);
-				ImGui::Text("%d\n\n\n\n", bay1MidExp);
-				ImGui::Text("%d\n\n\n", bay1HighExp);
-				ImGui::Text("%d\n\n\n\n", bay1BaseF150);
-				ImGui::Text("%d\n\n\n\n\n", bay1MidF150);
-				ImGui::Text("%d", bay1HighF150);
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount());
+				ImGui::Text("%d", plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -3707,12 +3570,12 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2InteriorInventoryValues", NULL, InteriorinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n\n", bay2BaseExp);
-				ImGui::Text("%d\n\n\n\n", bay2MidExp);
-				ImGui::Text("%d\n\n\n", bay2HighExp);
-				ImGui::Text("%d\n\n\n\n", bay2BaseF150);
-				ImGui::Text("%d\n\n\n\n\n", bay2MidF150);
-				ImGui::Text("%d", bay2HighF150);
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount());
+				ImGui::Text("%d", plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -4394,30 +4257,9 @@ int main()
 				if (changeChassisValues) {
 
 					plant.chassisMachine.RunChassisMachine(plant.order, &plant.vehicle);
-					plant.chassisMachine.lineOne.lineInUse();
+					plant.chassisMachine.SwitchVehicleChassisLines("LineOne");
 					changeChassisValues = false;
 				}
-
-				//Value boxes for each inventory
-//BAY 1
-				bay135LV6C = plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-				bay135LV6HOC = plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-				bay127LV6C = plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-				bay133LV6C = plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-				bay135LV6EcoC = plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-				bay135LV6PwrBstC = plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-				bay150LV8C = plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-				//Value boxes for each inventory
-						//BAY 2
-				bay235LV6C = plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-				bay235LV6HOC = plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-				bay227LV6C = plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-				bay233LV6C = plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-				bay235LV6EcoC = plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-				bay235LV6PwrBstC = plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-				bay250LV8C = plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-
-
 
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
@@ -4723,11 +4565,11 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
 				ImGui::Begin("bay1InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
-				ImGui::Text("%d\n\n\n\n\n", bay1RegExp);
-				ImGui::Text("%d\n\n\n\n", bay1RegCab);
-				ImGui::Text("%d\n\n\n\n", bay1SupCab);
-				ImGui::Text("%d", bay1SupCrew);
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetRegularF150InventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount());
+				ImGui::Text("%d", plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -4737,11 +4579,11 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
-				ImGui::Text("%d\n\n\n\n\n", bay2RegExp);
-				ImGui::Text("%d\n\n\n\n", bay2RegCab);
-				ImGui::Text("%d\n\n\n\n", bay2SupCab);
-				ImGui::Text("%d", bay2SupCrew);
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount());
+				ImGui::Text("%d", plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -5010,11 +4852,11 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2ChassisInventoryValues", NULL, ChassisinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n", bay235LV6C);
-				ImGui::Text("%d\n\n\n\n", bay235LV6HOC);
-				ImGui::Text("%d\n\n\n", bay227LV6C);
-				ImGui::Text("%d\n\n\n", bay233LV6C);
-				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
+				ImGui::Text("%d\n\n", plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount());
 				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
 				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
 				/*ImGui::PopStyleColor();*/
@@ -5239,12 +5081,12 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 365));
 				ImGui::Begin("bay1InteriorInventoryValues", NULL, InteriorinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n\n", bay1BaseExp);
-				ImGui::Text("%d\n\n\n\n", bay1MidExp);
-				ImGui::Text("%d\n\n\n", bay1HighExp);
-				ImGui::Text("%d\n\n\n\n", bay1BaseF150);
-				ImGui::Text("%d\n\n\n\n\n", bay1MidF150);
-				ImGui::Text("%d", bay1HighF150);
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount());
+				ImGui::Text("%d", plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -5253,12 +5095,12 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2InteriorInventoryValues", NULL, InteriorinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n\n", bay2BaseExp);
-				ImGui::Text("%d\n\n\n\n", bay2MidExp);
-				ImGui::Text("%d\n\n\n", bay2HighExp);
-				ImGui::Text("%d\n\n\n\n", bay2BaseF150);
-				ImGui::Text("%d\n\n\n\n\n", bay2MidF150);
-				ImGui::Text("%d", bay2HighF150);
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount());
+				ImGui::Text("%d", plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -5946,28 +5788,9 @@ int main()
 
 				if (changeInteriorValues) {
 					plant.interiorMachine.RunInteriorMachine(plant.order, &plant.vehicle);
-					plant.interiorMachine.bayOne.bayInUse();
+					plant.interiorMachine.SwitchVehicleInteriorsBays("BayOne");
 					changeInteriorValues = false;
 				}
-
-				//Value boxes for each inventory
-//BAY 1
-				bay1BaseExp = plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-				bay1MidExp = plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-				bay1HighExp = plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-				bay1BaseF150 = plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-				bay1MidF150 = plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-				bay1HighF150 = plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-
-				//Value boxes for each inventory
-						//BAY 2
-				bay2BaseExp = plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-				bay2MidExp = plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Expedition
-				bay2HighExp = plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount(); // INVENTORY LEVELS FOR bay 1 Reg Cab f150
-				bay2BaseF150 = plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount(); // INVENTORY LEVELS For bay 1 Super Cab f150
-				bay2MidF150 = plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount(); // INVENTORY LEVELS for bay 1 super crew f150
-				bay2HighF150 = plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount(); // INVENTORY LEVELS FOR Bay 1 Max Expedition
-
 
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
@@ -6273,11 +6096,11 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
 				ImGui::Begin("bay1InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
-				ImGui::Text("%d\n\n\n\n\n", bay1RegExp);
-				ImGui::Text("%d\n\n\n\n", bay1RegCab);
-				ImGui::Text("%d\n\n\n\n", bay1SupCab);
-				ImGui::Text("%d", bay1SupCrew);
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetRegularF150InventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount());
+				ImGui::Text("%d", plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -6287,11 +6110,11 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n", bay1MaxExp);
-				ImGui::Text("%d\n\n\n\n\n", bay2RegExp);
-				ImGui::Text("%d\n\n\n\n", bay2RegCab);
-				ImGui::Text("%d\n\n\n\n", bay2SupCab);
-				ImGui::Text("%d", bay2SupCrew);
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetMaxExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount());
+				ImGui::Text("%d", plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -6560,11 +6383,11 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2ChassisInventoryValues", NULL, ChassisinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n", bay235LV6C);
-				ImGui::Text("%d\n\n\n\n", bay235LV6HOC);
-				ImGui::Text("%d\n\n\n", bay227LV6C);
-				ImGui::Text("%d\n\n\n", bay233LV6C);
-				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
+				ImGui::Text("%d\n\n", plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount());
 				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
 				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
 				/*ImGui::PopStyleColor();*/
@@ -6796,12 +6619,12 @@ int main()
 				ImGui::SetNextWindowSize(ImVec2(50, 365));
 				ImGui::Begin("bay1InteriorInventoryValues", NULL, InteriorinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n\n", bay1BaseExp);
-				ImGui::Text("%d\n\n\n\n", bay1MidExp);
-				ImGui::Text("%d\n\n\n", bay1HighExp);
-				ImGui::Text("%d\n\n\n\n", bay1BaseF150);
-				ImGui::Text("%d\n\n\n\n\n", bay1MidF150);
-				ImGui::Text("%d", bay1HighF150);
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount());
+				ImGui::Text("%d", plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount());
 				/*	ImGui::PopStyleColor();*/
 				ImGui::End();
 
@@ -6810,12 +6633,12 @@ int main()
 				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
 				ImGui::Begin("bay2InteriorInventoryValues", NULL, InteriorinventoryFlags);
 				/*ImGui::SetWindowFocus();*/
-				ImGui::Text("%d\n\n\n\n\n", bay2BaseExp);
-				ImGui::Text("%d\n\n\n\n", bay2MidExp);
-				ImGui::Text("%d\n\n\n", bay2HighExp);
-				ImGui::Text("%d\n\n\n\n", bay2BaseF150);
-				ImGui::Text("%d\n\n\n\n\n", bay2MidF150);
-				ImGui::Text("%d", bay2HighF150);
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n", plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n", plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount());
+				ImGui::Text("%d\n\n\n\n\n", plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount());
+				ImGui::Text("%d", plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount());
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
