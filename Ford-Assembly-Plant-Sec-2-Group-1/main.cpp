@@ -2802,7 +2802,89 @@ int main()
 				ImGui_ImplGlfw_NewFrame();
 				ImGui::NewFrame();
 
+				
+					if (DipTankFluidLevel < 100||DipTankTemp < 19.0 || DipTankTemp > 24.0 ||PaintChamberTemp < 19.0|| PaintChamberTemp > 24.0 || PaintChamberHMD< 40 || PaintChamberHMD > 50||DryChamberTemp <= 19.0 || DryChamberTemp > 24.0 || DryChamberHMD <= 40 || DryChamberHMD >= 50|| paintRedVatVol <= 5 || paintRedVatVol < 5|| paintRedVatVol <= 5)
+					{
 
+						
+						ImGui::OpenPopup("Adjust Everything 1");
+					
+					}
+
+					// Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Adjust Everything 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("Dip Tank Fluid Level = %d", plant.dipTank.getfluidLevel());
+						ImGui::Text("Dip Tank Temperature = %f", plant.dipTank.getTemperature());
+						ImGui::Text("Paint Chamber Temperature = % f", plant.paintChamber.getTemperature());
+						ImGui::Text("Paint Chamber Humidity = %d", plant.paintChamber.getHumidity());
+						ImGui::Text("Green Volume = %d", plant.paintingMachine.getpaintVolumeGREEN());
+						ImGui::Text("Red Volume = %d", plant.paintingMachine.getpaintVolumeRED());
+						ImGui::Text("Blue Volume = %d", plant.paintingMachine.getpaintVolumeBLUE());
+
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Regulate Values", ImVec2(120, 0))) { ImGui::CloseCurrentPopup(); 
+
+						
+							plant.paintingMachine.resupplyRGBpaintVat("RED", 500, "RGBPaintVats.txt");
+
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
+					
+							plant.paintingMachine.resupplyRGBpaintVat("GREEN", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
+					
+							plant.paintingMachine.resupplyRGBpaintVat("BLUE", 500, "RGBPaintVats.txt");
+							plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
+
+							paintRedVatVol = plant.paintingMachine.getpaintVolumeRED();
+							paintGreenVatVol = plant.paintingMachine.getpaintVolumeGREEN();
+							paintBlueVatVol = plant.paintingMachine.getpaintVolumeBLUE();
+
+
+
+					
+						DipTankFluidLevel = 1000;
+							
+							
+						DipTankTemp = 20.0;
+							
+							
+						PaintChamberTemp = 20.0;
+							
+							
+						PaintChamberHMD = 45;
+							
+							
+						DryChamberTemp = 20.0;
+							
+							
+						DryChamberHMD = 45;
+							
+						
+						
+						}
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+				
+				
+
+			
 
 
 
@@ -4230,7 +4312,9 @@ int main()
 				glfwSwapBuffers(window);
 				// Take care of all GLFW events
 
-				isRendered = false;
+				if (plant.bodyMachine.bayOne.bayThisLineInUse()) {
+					isRendered = false;
+				}
 				i++;
 
 				if (check == true) {
@@ -4321,6 +4405,174 @@ int main()
 				ImGui_ImplGlfw_NewFrame();
 				ImGui::NewFrame();
 
+				if (plant.chassisMachine.lineOne.isThisLineInUse()) {
+					if (plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount() == 49 ||
+						plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount() == 49 ||
+						plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount() == 49 ||
+						plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount() == 49 ||
+						plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount() == 49 ||
+						plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount() == 49
+						|| plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount() == 49) {
+
+						check = false;
+						if (isRendered) {
+							ImGui::OpenPopup("Warning Line 1");
+						}
+
+					}
+					else if (plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount() < 1 ||
+						plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount() < 1 ||
+						plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount() < 1 ||
+						plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount() < 1 ||
+						plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount() < 1 ||
+						plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount() < 1
+						|| plant.chassisMachine.lineOne.GetF15050LV8CInventoryAmount() < 1) {
+
+						check = false;
+
+						ImGui::OpenPopup("Critical Warning Line 1");
+					}
+
+					// Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Warning Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("35LV6C = %d", plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount());
+						ImGui::Text("35LV6HOC = %d", plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount());
+						ImGui::Text("27LV6C = %d", plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount());
+						ImGui::Text("33LV6C = %d", plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount());
+						ImGui::Text("35LV6EcoC = %d", plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount());
+						ImGui::Text("35LV6PwrBstC = %d", plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount());
+
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Dismiss", ImVec2(120, 0))) { ImGui::CloseCurrentPopup(); }
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+					//Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Critical Warning Line 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("35LV6C = %d", plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount());
+						ImGui::Text("35LV6HOC = %d", plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount());
+						ImGui::Text("27LV6C = %d", plant.chassisMachine.lineOne.GetF15027LV6CInventoryAmount());
+						ImGui::Text("33LV6C = %d", plant.chassisMachine.lineOne.GetF15033LV6CInventoryAmount());
+						ImGui::Text("35LV6EcoC = %d", plant.chassisMachine.lineOne.GetF15035LV6EcoCInventoryAmount());
+						ImGui::Text("35LV6PwrBstC = %d", plant.chassisMachine.lineOne.GetF15035LV6PwrBstCInventoryAmount());
+
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Switch and Restock", ImVec2(120, 0))) {
+							ImGui::CloseCurrentPopup();
+							b = 1;
+							plant.chassisMachine.SwitchVehicleChassisLines("LineTwo");
+
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(500, "LineOne");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(500, "LineOne");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(500, "LineOne");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(500, "LineOne");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(500, "LineOne");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(500, "LineOne");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(500, "LineOne");
+						}
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+
+				}
+				else if (plant.chassisMachine.lineTwo.isThisLineInUse()) {
+
+					if (plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount() == 49 ||
+						plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount() == 49 ||
+						plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount() == 49 ||
+						plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount() == 49 ||
+						plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount() == 49 ||
+						plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount() == 49
+						|| plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount() == 49) {
+
+						check = false;
+						if (isRenderedBay2) {
+							ImGui::OpenPopup("Warning Line 2");
+							isRenderedBay2 = false;
+						}
+					}
+					else if (plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount() < 1 ||
+						plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount() < 1 ||
+						plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount() < 1 ||
+						plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount() < 1 ||
+						plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount() < 1 ||
+						plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount() < 1
+						|| plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount() < 1) {
+
+						check = false;
+
+						ImGui::OpenPopup("Critical Warning Line 2");
+
+
+					}
+
+					// Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Warning Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("35LV6C = %d", plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount());
+						ImGui::Text("35LV6HOC = %d", plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount());
+						ImGui::Text("27LV6C = %d", plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount());
+						ImGui::Text("33LV6C = %d", plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount());
+						ImGui::Text("35LV6EcoC = %d", plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount());
+						ImGui::Text("35LV6PwrBstC = %d", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Dismiss", ImVec2(120, 0))) {
+							ImGui::CloseCurrentPopup();
+						}
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+
+					// Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Critical Warning Line 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("35LV6C = %d", plant.chassisMachine.lineTwo.GetExpedition35LV6CInventoryAmount());
+						ImGui::Text("35LV6HOC = %d", plant.chassisMachine.lineTwo.GetExpedition35LV6HOCInventoryAmount());
+						ImGui::Text("27LV6C = %d", plant.chassisMachine.lineTwo.GetF15027LV6CInventoryAmount());
+						ImGui::Text("33LV6C = %d", plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount());
+						ImGui::Text("35LV6EcoC = %d", plant.chassisMachine.lineTwo.GetF15035LV6EcoCInventoryAmount());
+						ImGui::Text("35LV6PwrBstC = %d", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Switch and Restock", ImVec2(120, 0))) {
+							ImGui::CloseCurrentPopup();
+							b = 0;
+							plant.chassisMachine.SwitchVehicleChassisLines("LineOne");
+
+							plant.chassisMachine.UpdateExpedition35LV6CInventoryAmount(500, "LineTwo");
+							plant.chassisMachine.UpdateExpedition35LV6HOCInventoryAmount(500, "LineTwo");
+							plant.chassisMachine.UpdateF15027LV6CInventoryAmount(500, "LineTwo");
+							plant.chassisMachine.UpdateF15033LV6CInventoryAmount(500, "LineTwo");
+							plant.chassisMachine.UpdateF15035LV6EcoCInventoryAmount(500, "LineTwo");
+							plant.chassisMachine.UpdateF15035LV6PwrBstCInventoryAmount(500, "LineTwo");
+							plant.chassisMachine.UpdateF15050LV8CInventoryAmount(500, "LineTwo");
+
+						}
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+				}
 
 
 
@@ -5851,7 +6103,167 @@ int main()
 				ImGui_ImplOpenGL3_NewFrame();
 				ImGui_ImplGlfw_NewFrame();
 				ImGui::NewFrame();
+				
+				if (plant.interiorMachine.bayOne.bayThisLineInUse()) {
+					if (plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount() == 49){
 
+						check = false;
+						if (isRendered) {
+							ImGui::OpenPopup("Warning Bay 1");
+						}
+
+					}
+					else if (plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount() < 1) {
+
+						check = false;
+
+						ImGui::OpenPopup("Critical Warning Bay 1");
+					}
+
+					// Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Warning Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("Base Expedition = %d", plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount());
+						ImGui::Text("Mid Expedition = %d", plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount());
+						ImGui::Text("High Expedition = %d", plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount());
+						ImGui::Text("Base F150 = %d", plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount());
+						ImGui::Text("Mid F150 = %d", plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount());
+						ImGui::Text("High F150 = %d", plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount());
+
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Dismiss", ImVec2(120, 0))) { ImGui::CloseCurrentPopup(); }
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+					//Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Critical Warning Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("Base Expedition = %d", plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount());
+						ImGui::Text("Mid Expedition = %d", plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount());
+						ImGui::Text("High Expedition = %d", plant.interiorMachine.bayOne.GetHighExpeditionInteriorInventoryAmount());
+						ImGui::Text("Base F150 = %d", plant.interiorMachine.bayOne.GetBaseF150InteriorInventoryAmount());
+						ImGui::Text("Mid F150 = %d", plant.interiorMachine.bayOne.GetMidF150InteriorInventoryAmount());
+						ImGui::Text("High F150 = %d", plant.interiorMachine.bayOne.GetHighF150InteriorInventoryAmount());
+
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Switch and Restock", ImVec2(120, 0))) {
+							ImGui::CloseCurrentPopup();
+							c = 1;
+							plant.interiorMachine.SwitchVehicleInteriorsBays("BayTwo");
+							
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(500, "BayOne");
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(500, "BayOne");
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(500, "BayOne");
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(500, "BayOne");
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(500, "BayOne");
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(500, "BayOne");
+						}
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+
+				}
+				else if (plant.interiorMachine.bayTwo.bayThisLineInUse()) {
+
+					if (plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount() == 49 ||
+						plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount() == 49) {
+
+						check = false;
+						if (isRenderedBay2) {
+							ImGui::OpenPopup("Warning Bay 2");
+							isRenderedBay2 = false;
+						}
+					}
+					else if (plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount() < 1 ||
+						plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount() < 1) {
+						check = false;
+
+						ImGui::OpenPopup("Critical Warning Bay 2");
+					
+					
+					}
+
+					// Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Warning Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("Base Expedition = %d", plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount());
+						ImGui::Text("Mid Expedition = %d", plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount());
+						ImGui::Text("High Expedition = %d", plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount());
+						ImGui::Text("Base F150 = %d", plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount());
+						ImGui::Text("Mid F150 = %d", plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount());
+						ImGui::Text("High F150 = %d", plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount());
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Dismiss", ImVec2(120, 0))) {
+							ImGui::CloseCurrentPopup();
+						}
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+
+					// Always center this window when appearing
+					center = ImGui::GetMainViewport()->GetCenter();
+					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+					if (ImGui::BeginPopupModal("Critical Warning Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
+					{
+						ImGui::Text("Base Expedition = %d", plant.interiorMachine.bayTwo.GetBaseExpeditionInteriorInventoryAmount());
+						ImGui::Text("Mid Expedition = %d", plant.interiorMachine.bayTwo.GetMidExpeditionInteriorInventoryAmount());
+						ImGui::Text("High Expedition = %d", plant.interiorMachine.bayTwo.GetHighExpeditionInteriorInventoryAmount());
+						ImGui::Text("Base F150 = %d", plant.interiorMachine.bayTwo.GetBaseF150InteriorInventoryAmount());
+						ImGui::Text("Mid F150 = %d", plant.interiorMachine.bayTwo.GetMidF150InteriorInventoryAmount());
+						ImGui::Text("High F150 = %d", plant.interiorMachine.bayTwo.GetHighF150InteriorInventoryAmount());
+
+						ImGui::SetItemDefaultFocus();
+
+						if (ImGui::Button("Switch and Restock", ImVec2(120, 0))) {
+							ImGui::CloseCurrentPopup();
+							c = 0;
+							plant.interiorMachine.SwitchVehicleInteriorsBays("BayOne");
+
+							plant.interiorMachine.UpdateBaseInteriorExpeditionInventoryAmount(500, "BayTwo");
+							plant.interiorMachine.UpdateMidInteriorExpeditionInventoryAmount(500, "BayTwo");
+							plant.interiorMachine.UpdateHighInteriorExpeditionInventoryAmount(500, "BayTwo");
+							plant.interiorMachine.UpdateBaseInteriorF150InventoryAmount(500, "BayTwo");
+							plant.interiorMachine.UpdateMidInteriorF150InventoryAmount(500, "BayTwo");
+							plant.interiorMachine.UpdateHighInteriorF150InventoryAmount(500, "BayTwo");
+						}
+						ImGui::EndPopup();
+					}
+					ImGui::PopStyleColor();
+				}
 
 
 
@@ -7304,7 +7716,12 @@ int main()
 						i = 0;
 					}
 				}
-				isRendered = false;
+				
+
+				if (plant.bodyMachine.bayOne.bayThisLineInUse()) {
+					isRendered = false;
+				}
+
 
 			}
 			isRendered = true;
