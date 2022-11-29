@@ -344,7 +344,7 @@ bool ChassisMachine::RunChassisMachine(Order givenOrder, Vehicle* vehiclePlaceHo
 	if (didAdd == true)
 	{
 		//update line levels in text file
-		void UpdateLineLevelsInFile();
+		UpdateLineLevelsInFile();
 		return true;
 	}
 	else
@@ -422,7 +422,7 @@ bool ChassisMachine::UpdateF15033LV6CInventoryAmount(int setInvLevelTo, string g
 		}
 
 		//update line levels in text file
-		void UpdateLineLevelsInFile();
+		UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -488,7 +488,7 @@ bool ChassisMachine::UpdateF15027LV6CInventoryAmount(int setInvLevelTo, string g
 		}
 
 		//update line levels in text file
-		void UpdateLineLevelsInFile();
+		UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -554,7 +554,7 @@ bool ChassisMachine::UpdateF15050LV8CInventoryAmount(int setInvLevelTo, string g
 		}
 
 		//update line levels in text file
-		void UpdateLineLevelsInFile();
+		UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -620,7 +620,7 @@ bool ChassisMachine::UpdateF15035LV6EcoCInventoryAmount(int setInvLevelTo, strin
 		}
 
 		//update line levels in text file
-		void UpdateLineLevelsInFile();
+		UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -686,7 +686,7 @@ bool ChassisMachine::UpdateF15035LV6PwrBstCInventoryAmount(int setInvLevelTo, st
 		}
 
 		//update line levels in text file
-		void UpdateLineLevelsInFile();
+		UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -752,7 +752,7 @@ bool ChassisMachine::UpdateExpedition35LV6CInventoryAmount(int setInvLevelTo, st
 		}
 
 		//update line levels in text file
-		void UpdateLineLevelsInFile();
+		UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);
@@ -818,7 +818,7 @@ bool ChassisMachine::UpdateExpedition35LV6HOCInventoryAmount(int setInvLevelTo, 
 		}
 
 		//update line levels in text file
-		void UpdateLineLevelsInFile();
+		UpdateLineLevelsInFile();
 
 		//get current data and time to use in our log
 		time_t now = time(0);

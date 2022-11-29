@@ -757,7 +757,6 @@ namespace FordAssemblyPlantIntegrationTests
 			Assert::IsFalse(newInteriorMachine.bayTwo.bayThisLineInUse());
 		}
 
-
 		TEST_METHOD(PaintMachine_Read_RGB_Values_INT_TEST)
 		{
 			// Testing the PaintMachine class reading from the PlantColours.txt
@@ -986,6 +985,143 @@ namespace FordAssemblyPlantIntegrationTests
 			Assert::AreEqual(expectedMINhumidity, paintChamber.getminimumHumidity());
 			Assert::AreEqual(expectedMAXtemp, paintChamber.getmaximumTemperature());
 			Assert::AreEqual(expectedMINtemp, paintChamber.getminimumTemperature());
+		}
+
+		TEST_METHOD(Plant_GetSetDate_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			string date = "2022-11-28";
+
+			plant->setDate(date);
+
+			Assert::AreEqual(date, plant->getDate());
+
+		}
+
+		TEST_METHOD(Plant_GetSetGlobalAirQuality_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			int globalAirQuality = 50;
+
+			plant->setGlobalAirQuality(globalAirQuality);
+
+			Assert::AreEqual(globalAirQuality, plant->getGlobalAirQuality());
+		}
+
+		TEST_METHOD(Plant_GetSetNumVehicleToday_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			int numVehicleToday = 1560;
+
+			plant->setNumVehicleToday(numVehicleToday);
+
+			Assert::AreEqual(numVehicleToday, plant->getNumVehicleToday());
+		}
+
+		TEST_METHOD(Plant_GetSetVehicleQuota_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			int vehicleQuota = 50;
+
+			plant->setVehicleQuota(vehicleQuota);
+
+			Assert::AreEqual(vehicleQuota, plant->getVehicleQuota());
+		}
+
+		TEST_METHOD(Plant_GetSetGlobalHumidity_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			double globalHumidity = 74.38;
+
+			plant->setGlobalHumidity(globalHumidity);
+
+			Assert::AreEqual(globalHumidity, plant->getGlobalHumidity());
+		}
+
+		TEST_METHOD(Plant_GetSetGlobalTemp_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			double globalTemp = 65.74;
+
+			plant->setGlobalTemp(globalTemp);
+
+			Assert::AreEqual(globalTemp, plant->getGlobalTemp());
+		}
+
+		// assemblyLineStatus is set to false by the constructor
+		TEST_METHOD(Plant_GetSetAssemblyLineStatus_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			bool assemblyLineStatus = true;
+
+			plant->setAssemblyLineStatus(assemblyLineStatus);
+
+			Assert::AreEqual(assemblyLineStatus, plant->getAssemblyLineStatus());
+		}
+
+		TEST_METHOD(Plant_NestedBodyMachine_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			string bodyType = "N/A";
+
+			Assert::AreEqual(bodyType, plant->bodyMachine.GetBodyType());
+		}
+
+		TEST_METHOD(Plant_NestedChassisMachine_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			string chassisType = "N/A";
+
+			Assert::AreEqual(chassisType, plant->chassisMachine.GetChassisType());
+		}
+
+		TEST_METHOD(Plant_NestedInteriorMachine_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			string interiorType = "N/A";
+
+			Assert::AreEqual(interiorType, plant->interiorMachine.GetInteriorType());
+		}
+
+		TEST_METHOD(Plant_NestedDipTank_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			Assert::AreEqual(0, plant->dipTank.getfluidLevel());
+
+		}
+
+		TEST_METHOD(Plant_NestedDryingChamber_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			Assert::AreEqual(0, plant->dryingChamber.getHumidity());
+		}
+
+		TEST_METHOD(Plant_NestedPaintChamber_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			Assert::AreEqual(0, plant->paintChamber.getHumidity());
+		}
+
+		TEST_METHOD(Plant_NestedPaintMachine_IntegrationTest)
+		{
+			Plant* plant = new Plant();
+
+			string colour = "N/A";
+
+			Assert::AreEqual(colour, plant->paintingMachine.getcolour());
 		}
 	};
 }
