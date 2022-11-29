@@ -171,7 +171,7 @@ bool BodyMachine::RunBodyMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 			return false;
 		}
 	}
-	else if (bodyType == "RegularExpedition")
+	else if (bodyType == "REGExpedition")
 	{
 		if (currentBay->GetRegularExpeditionInventoryAmount() == 0)
 		{
@@ -181,7 +181,7 @@ bool BodyMachine::RunBodyMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 			return false;
 		}
 	}
-	else if (bodyType == "MaxExpedition")
+	else if (bodyType == "MAXExpedition")
 	{
 		if (currentBay->GetMaxExpeditionInventoryAmount() == 0)
 		{
@@ -271,13 +271,13 @@ bool BodyMachine::RunBodyMachine(Order givenOrder, Vehicle* vehiclePlaceHolder)
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->getBody() == "RegularExpedition")
+	else if (vehiclePlaceHolder->getBody() == "REGExpedition")
 	{
 		currentBay->SetRegularExpeditionInventoryAmount((currentBay->GetRegularExpeditionInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
 		didAdd = true;
 	}
-	else if (vehiclePlaceHolder->getBody() == "MaxExpedition")
+	else if (vehiclePlaceHolder->getBody() == "MAXExpedition")
 	{
 		currentBay->SetMaxExpeditionInventoryAmount((currentBay->GetMaxExpeditionInventoryAmount() - 1));
 		WriteTakenInventoryToLog();
