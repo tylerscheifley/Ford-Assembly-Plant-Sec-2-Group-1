@@ -2806,7 +2806,7 @@ int main()
 					if (DipTankFluidLevel < 100||DipTankTemp < 19.0 || DipTankTemp > 24.0 ||PaintChamberTemp < 19.0|| PaintChamberTemp > 24.0 || PaintChamberHMD< 40 || PaintChamberHMD > 50||DryChamberTemp < 19.0 || DryChamberTemp > 24.0 || DryChamberHMD < 40 || DryChamberHMD > 50|| paintRedVatVol <= 5 || paintRedVatVol <= 5|| paintRedVatVol <= 5)
 					{
 
-						
+						check = false;
 						ImGui::OpenPopup("Adjust Everything 1");
 					
 					}
