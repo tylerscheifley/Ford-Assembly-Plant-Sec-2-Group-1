@@ -6669,3 +6669,123 @@
  Plant's global humidity: 79%
  Assembly line running:0
  --------------------
+
+ --------------------
+ Date: 20/11/2022
+ CO2 Concentration: 253ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  430
+ Plant's global temperature: 11F
+ Plant's global humidity: 54%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 26/10/2022
+ CO2 Concentration: 41ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  1507
+ Plant's global temperature: 36F
+ Plant's global humidity: 42%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 3/4/2022
+ CO2 Concentration: 39ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  1051
+ Plant's global temperature: 5F
+ Plant's global humidity: 61%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 6/9/2022
+ CO2 Concentration: 248ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  716
+ Plant's global temperature: 3F
+ Plant's global humidity: 52%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 16/10/2022
+ CO2 Concentration: 149ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  1538
+ Plant's global temperature: 71F
+ Plant's global humidity: 65%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 3/1/2022
+ CO2 Concentration: 154ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  1021
+ Plant's global temperature: 69F
+ Plant's global humidity: 98%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 27/5/2022
+ CO2 Concentration: 325ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  1622
+ Plant's global temperature: 104F
+ Plant's global humidity: 52%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 26/12/2022
+ CO2 Concentration: 70ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  1195
+ Plant's global temperature: 18F
+ Plant's global humidity: 88%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 18/7/2022
+ CO2 Concentration: 269ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  46
+ Plant's global temperature: 66F
+ Plant's global humidity: 78%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 10/5/2022
+ CO2 Concentration: 32ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  422
+ Plant's global temperature: 93F
+ Plant's global humidity: 46%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 24/9/2022
+ CO2 Concentration: 226ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  154
+ Plant's global temperature: 34F
+ Plant's global humidity: 48%
+ Assembly line running:0
+ --------------------
+
+ --------------------
+ Date: 3/7/2022
+ CO2 Concentration: 160ppm
+ Number of vehicles made today: 0
+ Today's vehicle quota:  1503
+ Plant's global temperature: 14F
+ Plant's global humidity: 58%
+ Assembly line running:0
+ --------------------

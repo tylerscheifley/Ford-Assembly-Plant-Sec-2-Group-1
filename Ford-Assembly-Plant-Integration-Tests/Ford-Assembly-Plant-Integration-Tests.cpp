@@ -1123,5 +1123,210 @@ namespace FordAssemblyPlantIntegrationTests
 
 			Assert::AreEqual(colour, plant->paintingMachine.getcolour());
 		}
+
+
+		TEST_METHOD(Order_FullyFormed_Vehicle_Order_INT_TEST) {
+			Order order1;
+			Vehicle vehicle1;
+
+			order1.setMake("FORD");
+			order1.setYear("2023");
+			order1.setModel("Expedition");
+			order1.setTrim("PLATINUM");
+			order1.setBodyPanelSet("MAX");
+			order1.setColour("Iconic Silver");
+			order1.setEngineType("35LV6HOC");
+			order1.setInteriorLevel("high");
+			order1.setDestination("Harriston");
+
+
+			vehicle1.setOrder(order1);
+
+			Assert::AreEqual(order1.getMake(), vehicle1.getOrder().getMake());
+			Assert::AreEqual(order1.getYear(), vehicle1.getOrder().getYear());
+			Assert::AreEqual(order1.getModel(), vehicle1.getOrder().getModel());
+			Assert::AreEqual(order1.getTrim(), vehicle1.getOrder().getTrim());
+			Assert::AreEqual(order1.getBodyPanelSet(), vehicle1.getOrder().getBodyPanelSet());
+			Assert::AreEqual(order1.getColour(), vehicle1.getOrder().getColour());
+			Assert::AreEqual(order1.getEngineType(), vehicle1.getOrder().getEngineType());
+			Assert::AreEqual(order1.getInteriorLevel(), vehicle1.getOrder().getInteriorLevel());
+			Assert::AreEqual(order1.getDestination(), vehicle1.getOrder().getDestination());
+
+
+		}
+
+
+		TEST_METHOD(PaintMachine_Colour_From_Order_INT_TEST) {
+			Order order1;
+			Vehicle vehicle1;
+
+			
+			order1.setColour("Atlas Blue Metallic");
+			
+
+			DipTank dipTank = DipTank();
+			DryingChamber dryingChamber = DryingChamber();
+			PaintChamber paintChamber = PaintChamber();
+			PaintMachine paintingMachine = PaintMachine(&dryingChamber, &paintChamber, &dipTank);
+
+			paintingMachine.setcolour(order1.getColour());
+
+		
+			Assert::AreEqual(order1.getColour(), paintingMachine.getcolour());
+	
+
+
+		}
+
+		TEST_METHOD(BodyMachine_bodyPanelSet_From_Order_INT_TEST) {
+			Order order1;
+			Vehicle vehicle1;
+			BodyMachine bodyMachine;
+
+			order1.setModel("F150");
+			order1.setBodyPanelSet("SuperCrew");
+			bodyMachine.RunBodyMachine(order1, &vehicle1);
+
+
+
+			Assert::AreEqual(order1.getBodyPanelSet() + order1.getModel(), vehicle1.getBody());
+
+
+
+		}
+
+
+		TEST_METHOD(ChassisMachine_engineType_From_Order_INT_TEST) {
+			Order order1;
+			Vehicle vehicle1;
+			ChassisMachine chaMachine;
+
+			order1.setModel("F150");
+			order1.setEngineType("50LV8C");
+			chaMachine.RunChassisMachine(order1, &vehicle1);
+
+
+
+			Assert::AreEqual( order1.getModel() + order1.getEngineType() , vehicle1.getChassis());
+
+
+
+		}
+
+		TEST_METHOD(InteriorMachine_InteriorLevel_From_Order_INT_TEST) {
+			Order order1;
+			Vehicle vehicle1;
+			InteriorMachine intMachine;
+
+			order1.setModel("F150");
+			order1.setInteriorLevel("mid");
+			intMachine.RunInteriorMachine(order1, &vehicle1);
+
+
+
+			Assert::AreEqual(order1.getInteriorLevel() + order1.getModel(), vehicle1.getInterior());
+
+
+
+		}
+
+		TEST_METHOD(Order_ProperVinGeneration_From_Vehicle_INT_TEST) {
+			Order order1;
+			Vehicle vehicle1;
+			
+
+			order1.setModel("F150");
+			order1.setYear("2022");
+			
+			vehicle1.setCount(5);
+			vehicle1.setYear("2022");
+			vehicle1.setModel("F150");
+
+			vehicle1.setVIN(vehicle1.GenerateVIN());
+
+			string ExpectedValue = "F1502022000000005";
+
+			Assert::AreEqual(ExpectedValue, vehicle1.getVIN());
+
+
+
+		}
+		TEST_METHOD(Order_Save_And_Load_INT_TEST){
+			
+
+			Order order1;
+			Order order2;
+			order1.setMake("FORD");
+			order1.setYear("2023");
+			order1.setModel("Expedition");
+			order1.setTrim("PLATINUM");
+			order1.setBodyPanelSet("MAX");
+			order1.setColour("Iconic Silver");
+			order1.setEngineType("35LV6HOC");
+			order1.setInteriorLevel("high");
+			order1.setDestination("Harriston");
+			string file = "testingVehicleFiles.txt";
+			order1.saveOrder(file);
+
+			order2.loadOrder(file);
+
+			Assert::AreEqual(order1.getMake(), order2.getMake());
+			Assert::AreEqual(order1.getYear(), order2.getYear());
+			Assert::AreEqual(order1.getModel(), order2.getModel());
+			Assert::AreEqual(order1.getTrim(), order2.getTrim());
+			Assert::AreEqual(order1.getBodyPanelSet(), order2.getBodyPanelSet());
+			Assert::AreEqual(order1.getColour(), order2.getColour());
+			Assert::AreEqual(order1.getEngineType(), order2.getEngineType());
+			Assert::AreEqual(order1.getInteriorLevel(), order2.getInteriorLevel());
+			Assert::AreEqual(order1.getDestination(), order2.getDestination());
+
+		}
+
+		TEST_METHOD(CheckQAQC_INT_TEST) {
+
+
+			Order order1;
+			Vehicle Vehicle1;
+			order1.setMake("FORD");
+			order1.setYear("2023");
+			order1.setModel("Expedition");
+			order1.setTrim("KING RANCH");
+			order1.setBodyPanelSet("REG");
+			order1.setColour("Jewel Red Metallic Tinted Clearcoat");
+			order1.setEngineType("35LV6C");
+			order1.setInteriorLevel("base");
+			order1.setDestination("Walkerton");
+
+			BodyMachine bodymachine;
+			bodymachine.RunBodyMachine(order1, &Vehicle1);
+
+			DipTank dipTank = DipTank();
+			DryingChamber dryingChamber = DryingChamber();
+			PaintChamber paintChamber = PaintChamber();
+			PaintMachine paintingMachine = PaintMachine(&dryingChamber, &paintChamber, &dipTank);
+
+			paintingMachine.setcolour(order1.getColour());
+
+			ChassisMachine chassisMachine;
+			chassisMachine.RunChassisMachine(order1, &Vehicle1);
+
+
+			InteriorMachine interiorMachine;
+			interiorMachine.RunInteriorMachine(order1, &Vehicle1);
+
+			Vehicle1.setMake("FORD");
+			Vehicle1.setYear("2023");
+			Vehicle1.setModel("Expedition");
+			Vehicle1.setTrim("KING RANCH");
+			Vehicle1.setColour("Jewel Red Metallic Tinted Clearcoat");
+
+			Vehicle1.setOrder(order1);
+
+
+			Assert::IsTrue(Vehicle1.checkQAQC());
+
+		}
+
+
 	};
 }
