@@ -1015,6 +1015,7 @@ int main()
 	bool ClosedHMI = false;
 
 	bool isRendered = true;
+	bool isRenderedBay2 = true;
 	readLog(&plant);
 	int VeQuota = plant.getVehicleQuota();
 	// Main while loop
@@ -1131,7 +1132,7 @@ int main()
 				if (changeBodyValues) {
 
 					plant.bodyMachine.RunBodyMachine(plant.order, &plant.vehicle);
-					plant.bodyMachine.bayTwo.bayInUse();
+					plant.bodyMachine.bayOne.bayInUse();
 					changeBodyValues = false;
 				}
 				//Value boxes for each inventory
@@ -1222,8 +1223,9 @@ int main()
 						plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount() == 49) {
 
 						check = false;
-						if (isRendered)
+						if (isRendered) {
 							ImGui::OpenPopup("Warning Bay 1");
+						}
 
 					}
 					else if (plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount() < 1 ||
@@ -1240,7 +1242,7 @@ int main()
 					// Always center this window when appearing
 					center = ImGui::GetMainViewport()->GetCenter();
 					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
-
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.0f, 1.0f));
 					if (ImGui::BeginPopupModal("Warning Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 					{
 						ImGui::Text("Regular Expedition = %d", plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
@@ -1255,9 +1257,11 @@ int main()
 						if (ImGui::Button("Dismiss", ImVec2(120, 0))) { ImGui::CloseCurrentPopup(); }
 						ImGui::EndPopup();
 					}
+						ImGui::PopStyleColor();
 					//Always center this window when appearing
 					center = ImGui::GetMainViewport()->GetCenter();
 					ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
 					if (ImGui::BeginPopupModal("Critical Warning Bay 1", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 					{
 						ImGui::Text("Regular Expedition = %d", plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
@@ -1290,20 +1294,22 @@ int main()
 						}
 						ImGui::EndPopup();
 					}
-
+					ImGui::PopStyleColor();
 
 				}
 				else if (plant.bodyMachine.bayTwo.bayThisLineInUse()) {
 						
-						if (plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() < 50 ||
-							plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() < 50 ||
-							plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount() < 50 ||
-							plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount() < 50 ||
-							plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount() < 50) {
+						if (plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() == 49 ||
+							plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() == 49 ||
+							plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount() == 49 ||
+							plant.bodyMachine.bayTwo.GetSuperCabF150InventoryAmount() == 49 ||
+							plant.bodyMachine.bayTwo.GetSuperCrewF150InventoryAmount() == 49) {
 
 							check = false;
-
-							ImGui::OpenPopup("Warning Bay 2");
+							if (isRenderedBay2) {
+								ImGui::OpenPopup("Warning Bay 2");
+								isRenderedBay2 = false;
+							}
 						}else if (plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() < 1 ||
 							plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount() < 1 ||
 							plant.bodyMachine.bayTwo.GetRegularF150InventoryAmount() < 1 ||
@@ -1318,7 +1324,7 @@ int main()
 							// Always center this window when appearing
 							center = ImGui::GetMainViewport()->GetCenter();
 							ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
-
+							ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 0.0f, 1.0f));
 							if (ImGui::BeginPopupModal("Warning Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 							{
 								ImGui::Text("Regular Expedition = %d", plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount());
@@ -1335,12 +1341,12 @@ int main()
 								}
 								ImGui::EndPopup();
 							}
-						
+							ImGui::PopStyleColor();
 					
 							// Always center this window when appearing
 							center = ImGui::GetMainViewport()->GetCenter();
 							ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
-
+							ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
 							if (ImGui::BeginPopupModal("Critical Warning Bay 2", NULL, ImGuiWindowFlags_AlwaysAutoResize))
 							{
 								ImGui::Text("Regular Expedition = %d", plant.bodyMachine.bayTwo.GetRegularExpeditionInventoryAmount());
@@ -1373,7 +1379,7 @@ int main()
 								}
 								ImGui::EndPopup();
 							}
-						
+							ImGui::PopStyleColor();
 					}
 
 
@@ -1619,7 +1625,7 @@ int main()
 				if (InvBody1_unsaved_document)   inventoryFlags |= ImGuiWindowFlags_UnsavedDocument;
 				if (InvBody1_no_close)           open = NULL; // Don't pass our bool* to Begin
 
-				//ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.788f, 0.788f, 0.788f, 1.0f)); // Set window background to grey
+				
 				ImGui::SetNextWindowSize(ImVec2(50, 300));
 				ImGui::Begin("bay1InventoryValues", NULL, inventoryFlags);
 				/*ImGui::SetWindowFocus();*/
@@ -1628,7 +1634,7 @@ int main()
 				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetRegularF150InventoryAmount());
 				ImGui::Text("%d\n\n\n\n", plant.bodyMachine.bayOne.GetSuperCabF150InventoryAmount());
 				ImGui::Text("%d", plant.bodyMachine.bayOne.GetSuperCrewF150InventoryAmount());
-				/*	ImGui::PopStyleColor();*/
+			
 				ImGui::End();
 
 
@@ -1916,7 +1922,7 @@ int main()
 				ImGui::Text("%d\n\n", bay235LV6C);
 				ImGui::Text("%d\n\n\n\n", bay235LV6HOC);
 				ImGui::Text("%d\n\n\n", bay227LV6C);
-				ImGui::Text("%d\n\n\n", bay233LV6C);
+				ImGui::Text("%d\n\n\n", plant.chassisMachine.lineTwo.GetF15033LV6CInventoryAmount());
 				ImGui::Text("%d\n\n\n\n", bay235LV6EcoC);
 				ImGui::Text("%d\n\n\n\n", plant.chassisMachine.lineTwo.GetF15035LV6PwrBstCInventoryAmount());
 				ImGui::Text("%d", plant.chassisMachine.lineTwo.GetF15050LV8CInventoryAmount());
@@ -2816,9 +2822,12 @@ int main()
 				// Take care of all GLFW events
 
 
-
-				isRendered = false;
-
+				if (plant.bodyMachine.bayOne.bayThisLineInUse()) {
+					isRendered = false;
+				}
+				
+				
+				
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -7476,6 +7485,7 @@ int main()
 
 			}
 			isRendered = true;
+			isRenderedBay2 = true;
 
 
 			if (plant.vehicle.checkQAQC()) {
