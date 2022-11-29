@@ -123,7 +123,7 @@ namespace BodyMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.setBodyPanelSet("Regular");
+			placedOrder.setBodyPanelSet("REG");
 			placedOrder.setModel("Expedition");
 			vehiclePlaceholder.setBody("N/A");
 
@@ -138,7 +138,7 @@ namespace BodyMachineTests
 			//confirm that the correct body type was added to the correct spot (The vehicle)
 			//also confirm that the correct inventory levels and amount was edited
 
-			string expectedBody = "RegularExpedition";
+			string expectedBody = "REGExpedition";
 
 			Assert::AreEqual(expectedBody, vehiclePlaceholder.getBody());
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetRegularExpeditionInventoryAmount());
@@ -153,7 +153,7 @@ namespace BodyMachineTests
 			Order placedOrder;
 			Vehicle vehiclePlaceholder;
 
-			placedOrder.setBodyPanelSet("Max");
+			placedOrder.setBodyPanelSet("MAX");
 			placedOrder.setModel("Expedition");
 			vehiclePlaceholder.setBody("N/A");
 
@@ -168,7 +168,7 @@ namespace BodyMachineTests
 			//confirm that the correct body type was added to the correct spot (The vehicle)
 			//also confirm that the correct inventory levels and amount was edited
 
-			string expectedBody = "MaxExpedition";
+			string expectedBody = "MAXExpedition";
 
 			Assert::AreEqual(expectedBody, vehiclePlaceholder.getBody());
 			Assert::AreEqual(99, newBodyMachine.bayOne.GetMaxExpeditionInventoryAmount());
