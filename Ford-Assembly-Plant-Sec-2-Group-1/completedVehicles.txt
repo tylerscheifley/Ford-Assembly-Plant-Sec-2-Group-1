@@ -57,3 +57,32 @@ FORD|2023|Expedition|KING RANCH|MAXExpedition|Jewel Red Metallic Tinted Clearcoa
 FORD|2023|Expedition|LIMITED|MAXExpedition|Star White Platinum Metallic Tri-Coat|Expedition35LV6C|midExpedition|EXP20230000000028|Mon Nov 28 23:31:08 2022
 FORD|2022|F150|KING RANCH|SuperCrewF150|Stone Grey Metallic|F15033LV6C|baseF150|F1502022000000028|Mon Nov 28 23:31:12 2022
 FORD|2022|F150|XLT|RegularF150|Iconic Silver Metallic|F15033LV6C|baseF150|F1502022000000029|Mon Nov 28 23:31:15 2022
+FORD|2022|F150|LIMITED|SuperCrewF150|Iconic Silver Metallic|F15033LV6C|midF150|F1502022000000030|Tue Nov 29 09:59:45 2022
+FORD|2023|Expedition|TIMBERLINE|REGExpedition|Forged Green Metallic|Expedition35LV6HOC|highExpedition|EXP20230000000029|Tue Nov 29 09:59:47 2022
+FORD|2023|Expedition|KING RANCH|MAXExpedition|Infinite Blue Metallic Tinted Clearcoat|Expedition35LV6C|highExpedition|EXP20230000000030|Tue Nov 29 09:59:50 2022
+FORD|2022|F150|LARIAT|SuperCabF150|Stone Grey Metallic|F15035LV6EcoC|baseF150|F1502022000000031|Tue Nov 29 09:59:52 2022
+FORD|2023|Expedition|PLATINUM|MAXExpedition|Jewel Red Metallic Tinted Clearcoat|Expedition35LV6C|baseExpedition|EXP20230000000031|Tue Nov 29 09:59:54 2022
+FORD|2022|F150|XLT|RegularF150|Oxford White|F15050LV8C|midF150|F1502022000000032|Tue Nov 29 09:59:58 2022
+FORD|2023|Expedition|TIMBERLINE|REGExpedition|Agate Black|Expedition35LV6HOC|midExpedition|EXP20230000000032|Tue Nov 29 10:00:02 2022
+FORD|2022|F150|LARIAT|SuperCrewF150|Carbonized Grey Metallic|F15027LV6C|highF150|F1502022000000033|Tue Nov 29 10:00:10 2022
+FORD|2023|Expedition|KING RANCH|MAXExpedition|Star White Platinum Metallic Tri-Coat|Expedition35LV6HOC|highExpedition|EXP20230000000033|Tue Nov 29 10:00:12 2022
+FORD|2023|Expedition|LIMITED|REGExpedition|Dark Matter Metallic|Expedition35LV6C|highExpedition|EXP20230000000034|Tue Nov 29 10:00:14 2022
+FORD|2023|Expedition|KING RANCH|REGExpedition|Star White Platinum Metallic Tri-Coat|Expedition35LV6HOC|baseExpedition|EXP20230000000035|Tue Nov 29 10:00:16 2022
+FORD|2022|F150|LARIAT|SuperCrewF150|Iconic Silver Metallic|F15035LV6PwrBstC|baseF150|F1502022000000034|Tue Nov 29 10:00:18 2022
+FORD|2023|Expedition|LIMITED|REGExpedition|Star White Platinum Metallic Tri-Coat|Expedition35LV6C|baseExpedition|EXP20230000000036|Tue Nov 29 10:00:20 2022
+FORD|2023|Expedition|KING RANCH|REGExpedition|Jewel Red Metallic Tinted Clearcoat|Expedition35LV6C|baseExpedition|EXP20230000000037|Tue Nov 29 10:00:21 2022
+FORD|2023|Expedition|PLATINUM|REGExpedition|Star White Platinum Metallic Tri-Coat|Expedition35LV6C|baseExpedition|EXP20230000000038|Tue Nov 29 10:00:22 2022
+FORD|2023|Expedition|PLATINUM|MAXExpedition|Jewel Red Metallic Tinted Clearcoat|Expedition35LV6HOC|midExpedition|EXP20230000000039|Tue Nov 29 10:00:23 2022
+FORD|2022|F150|XL|SuperCabF150|Carbonized Grey Metallic|F15035LV6PwrBstC|baseF150|F1502022000000035|Tue Nov 29 10:00:24 2022
+FORD|2023|Expedition|XLT|REGExpedition|Iconic Silver|Expedition35LV6C|baseExpedition|EXP20230000000040|Tue Nov 29 10:00:26 2022
+FORD|2022|F150|LARIAT|SuperCrewF150|Iconic Silver Metallic|F15027LV6C|highF150|F1502022000000036|Tue Nov 29 10:00:29 2022
+FORD|2022|F150|PLATINUM|SuperCrewF150|Iconic Silver Metallic|F15027LV6C|midF150|F1502022000000037|Tue Nov 29 10:01:00 2022
+FORD|2023|Expedition|LIMITED|REGExpedition|Forged Green Metallic|Expedition35LV6C|highExpedition|EXP20230000000041|Tue Nov 29 10:49:18 2022
+FORD|2023|Expedition|LIMITED|REGExpedition|Dark Matter Metallic|Expedition35LV6HOC|highExpedition|EXP20230000000042|Tue Nov 29 10:49:38 2022
+FORD|2022|F150|LIMITED|SuperCrewF150|Iconic Silver Metallic|F15050LV8C|highF150|F1502022000000038|Tue Nov 29 10:49:59 2022
+FORD|2023|Expedition|PLATINUM|REGExpedition|Star White Platinum Metallic Tri-Coat|Expedition35LV6C|baseExpedition|EXP20230000000043|Tue Nov 29 11:01:54 2022
+FORD|2023|Expedition|LIMITED|MAXExpedition|Agate Black|Expedition35LV6HOC|highExpedition|EXP20230000000044|Tue Nov 29 11:02:57 2022
+FORD|2023|Expedition|TIMBERLINE|REGExpedition|Oxford White|Expedition35LV6C|highExpedition|EXP20230000000045|Tue Nov 29 11:02:58 2022
+FORD|2023|Expedition|PLATINUM|REGExpedition|Iconic Silver|Expedition35LV6HOC|midExpedition|EXP20230000000046|Tue Nov 29 11:02:59 2022
+FORD|2023|Expedition|XLT|REGExpedition|Forged Green Metallic|Expedition35LV6C|midExpedition|EXP20230000000047|Tue Nov 29 11:02:59 2022
+FORD|2022|F150|KING RANCH|SuperCrewF150|Rapid Red Metallic Tinted Clearcoat|F15033LV6C|highF150|F1502022000000039|Tue Nov 29 11:03:00 2022

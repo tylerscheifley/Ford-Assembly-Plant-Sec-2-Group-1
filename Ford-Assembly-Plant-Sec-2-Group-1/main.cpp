@@ -967,11 +967,7 @@ int main()
 
 		readLog(&plant);
 
-		plant.vehicle.setMake(plant.order.getMake());
-		plant.vehicle.setModel(plant.order.getModel());
-		plant.vehicle.setYear(plant.order.getYear());
-		plant.vehicle.setTrim(plant.order.getTrim());
-		plant.vehicle.setOrder(plant.order);
+		
 		plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
 		plant.dipTank.readTemperature("DipTankTemperature.txt");
 		plant.dipTank.readfluidLevel("DipTankFluidLevel.txt");
@@ -2803,7 +2799,12 @@ int main()
 				ImGui::NewFrame();
 
 				
-					if ((DipTankFluidLevel < 100) || (DipTankTemp < 19.0) || (DipTankTemp > 24.0) || (PaintChamberTemp < 19.0) || (PaintChamberTemp > 24.0) || (PaintChamberHMD < 40) || (PaintChamberHMD > 50) || (DryChamberTemp < 19.0) || (DryChamberTemp > 24.0) || (DryChamberHMD < 40) || (DryChamberHMD > 50) || (paintGreenVatVol <= 5) || (paintBlueVatVol <= 5) || (paintRedVatVol <= 5))
+					if ((DipTankFluidLevel < 100) || (DipTankTemp < 19.0) || (DipTankTemp > 24.0) ||
+						(PaintChamberTemp < 19.0) || (PaintChamberTemp > 24.0) || 
+						(PaintChamberHMD < 40) || (PaintChamberHMD > 50) || 
+						(DryChamberTemp < 19.0) || (DryChamberTemp > 24.0) || 
+						(DryChamberHMD < 40) || (DryChamberHMD > 50) || (paintGreenVatVol <= 5) || 
+						(paintBlueVatVol <= 5) || (paintRedVatVol <= 5))
 					{
 
 						check = false;
@@ -7729,6 +7730,12 @@ int main()
 
 
 			if (plant.vehicle.checkQAQC()) {
+
+				plant.vehicle.setMake(plant.order.getMake());
+				plant.vehicle.setModel(plant.order.getModel());
+				plant.vehicle.setYear(plant.order.getYear());
+				plant.vehicle.setTrim(plant.order.getTrim());
+				plant.vehicle.setOrder(plant.order);
 
 				plant.vehicle.generateCount("completedVehicles.txt");
 
