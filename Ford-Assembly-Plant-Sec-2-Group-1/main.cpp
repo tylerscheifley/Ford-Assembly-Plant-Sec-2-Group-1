@@ -28,6 +28,7 @@ extern void ShowReadLogs(bool* p_open)
 	if (Log_no_bring_to_front)  Log_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus;
 	if (Log_unsaved_document)   Log_flags |= ImGuiWindowFlags_UnsavedDocument;
 
+	
 	//Print all log files to the GUI log - with proper logs
 	ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
 	ImGui::Begin("Log", p_open, Log_flags);
@@ -639,7 +640,7 @@ int main()
 	ImGui::StyleColorsDark();
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	ImGui_ImplOpenGL3_Init("#version 330");
-
+	
 	//Variables to be changed in the ImGUI window
 
 	float size = 1.0f;
@@ -900,6 +901,8 @@ int main()
 				ImGui_ImplOpenGL3_NewFrame();
 				ImGui_ImplGlfw_NewFrame();
 				ImGui::NewFrame();
+
+				ImGui::GetIO().ConfigMemoryCompactTimer = 0.0f;
 
 				if (plant.bodyMachine.bayOne.bayThisLineInUse()) {
 					if (plant.bodyMachine.bayOne.GetRegularExpeditionInventoryAmount() == 49 ||
@@ -2623,7 +2626,7 @@ int main()
 				ImGui_ImplOpenGL3_NewFrame();
 				ImGui_ImplGlfw_NewFrame();
 				ImGui::NewFrame();
-
+				ImGui::GetIO().ConfigMemoryCompactTimer = 0.0f;
 				
 					if ((DipTankFluidLevel < 100) || (DipTankTemp < 19.0) || (DipTankTemp > 24.0) ||
 						(PaintChamberTemp < 19.0) || (PaintChamberTemp > 24.0) || 
@@ -4232,7 +4235,7 @@ int main()
 				ImGui_ImplOpenGL3_NewFrame();
 				ImGui_ImplGlfw_NewFrame();
 				ImGui::NewFrame();
-
+				ImGui::GetIO().ConfigMemoryCompactTimer = 0.0f;
 				if (plant.chassisMachine.lineOne.isThisLineInUse()) {
 					if (plant.chassisMachine.lineOne.GetExpedition35LV6CInventoryAmount() == 49 ||
 						plant.chassisMachine.lineOne.GetExpedition35LV6HOCInventoryAmount() == 49 ||
@@ -5932,7 +5935,7 @@ int main()
 				ImGui_ImplOpenGL3_NewFrame();
 				ImGui_ImplGlfw_NewFrame();
 				ImGui::NewFrame();
-				
+				ImGui::GetIO().ConfigMemoryCompactTimer = 0.0f;
 				if (plant.interiorMachine.bayOne.bayThisLineInUse()) {
 					if (plant.interiorMachine.bayOne.GetBaseExpeditionInteriorInventoryAmount() == 49 ||
 						plant.interiorMachine.bayOne.GetMidExpeditionInteriorInventoryAmount() == 49 ||
