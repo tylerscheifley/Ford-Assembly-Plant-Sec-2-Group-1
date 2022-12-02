@@ -1,3 +1,19 @@
+//CSCN72030 - Ford Assembly Line HMI Project
+//
+//This is a simulated HMI for a Ford Assembly Line
+//This simulates the building of the body, paint, chassis, and interior of F150 and Expedition models
+//
+//This project uses the Graphical User Interface ImGui and relies opengl and glfw as a backend for the interface
+//https://github.com/ocornut/imgui
+//
+//December 2nd, 2022
+//
+//Authors
+//Brodin Collins-Robb
+//Owen Garland
+//Tyler Scheifley
+//Zebadiah Lake
+
 #include "GUILog.h"
 
 Log readFileLogs;
@@ -468,7 +484,6 @@ int main()
 	static bool RedPaintVat_no_bring_to_front = false;
 	static bool RedPaintVat_unsaved_document = false;
 
-
 	static bool GreenPaintVat_no_titlebar = true;
 	static bool GreenPaintVat_no_scrollbar = true;
 	static bool GreenPaintVat_no_menu = true;
@@ -492,8 +507,8 @@ int main()
 	static bool DipTank_no_background = false;
 	static bool DipTank_no_bring_to_front = false;
 	static bool DipTank_unsaved_document = false;
+	
 	//PaintChamber
-
 	static bool PaintChamber_no_titlebar = true;
 	static bool PaintChamber_no_scrollbar = true;
 	static bool PaintChamber_no_menu = true;
@@ -566,7 +581,6 @@ int main()
 	static bool VeQuota_no_background = false;
 	static bool VeQuota_no_bring_to_front = false;
 	static bool VeQuota_unsaved_document = false;
-
 
 	static bool VeComp_no_titlebar = true;
 	static bool VeComp_no_scrollbar = true;
