@@ -1069,11 +1069,7 @@ int main()
 								ImGui::EndPopup();
 							}
 							ImGui::PopStyleColor();
-					}
-
-
-
-
+				}
 
 				//BODY MACHINE================================================================================================================================================
 					/*
@@ -1087,7 +1083,6 @@ int main()
 
 
 					//BAY SELECTION TOGGLE and restock button
-
 
 				ImGuiWindowFlags bodyButtonflags = 1;
 				if (InvBodyButtons_no_titlebar)        bodyButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -1263,7 +1258,7 @@ int main()
 				if (controlMenu_unsaved_document)   controlMenuFlags |= ImGuiWindowFlags_UnsavedDocument;
 				if (controlMenu_no_close)           open = NULL; // Don't pass our bool* to Begin
 				// Exceptionally add an extra assert here for people confused about initial Dear ImGui setup
-			// Most functions would normally just crash if the context is missing.
+				// Most functions would normally just crash if the context is missing.
 				IM_ASSERT(ImGui::GetCurrentContext() != NULL && "Missing dear imgui context. Refer to examples app!");
 
 				//CONTROL MENU CREATION
@@ -1340,17 +1335,6 @@ int main()
 				/*ImGui::PopStyleColor();*/
 				ImGui::End();
 
-
-
-
-
-				/// <summary>
-				/// BODY IMAGE STRUCTURE
-				/// </summary>
-				/// <returns></returns>
-
-
-
 				ImGuiWindowFlags bodyImage_flags = 1;
 				if (BodyImage_no_titlebar)        bodyImage_flags |= ImGuiWindowFlags_NoTitleBar;
 				if (BodyImage_no_scrollbar)       bodyImage_flags |= ImGuiWindowFlags_NoScrollbar;
@@ -1383,22 +1367,13 @@ int main()
 				//ImGui::PushItemWidth(-ImGui::GetWindowWidth() * 0.35f);
 				// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
 
-
-
-
 				ImGui::Image((void*)(intptr_t)body_image_texture, ImVec2((float)body_image_width, (float)body_image_height));
-
 
 				ImGui::End();
 
-
 				//END OF BODY
 
-			//	//CHASSIS MACHINE======================================================================
-
-
-
-
+				//CHASSIS MACHINE======================================================================
 
 				ImGuiWindowFlags ChassisButtonflags = 1;
 				if (InvChassisButtons_no_titlebar)        ChassisButtonflags |= ImGuiWindowFlags_NoTitleBar;
@@ -1439,7 +1414,6 @@ int main()
 						ImGui::OpenPopup("Restock Line 1");
 					}
 				}
-
 
 				// Always center this window when appearing
 				center = ImGui::GetMainViewport()->GetCenter();
@@ -5857,7 +5831,6 @@ int main()
 			
 		if (!chassisMachine) {
 			isRendered = true;
-
 		}
 
 		while (interiorMachine) {
@@ -7562,7 +7535,6 @@ int main()
  			isRenderedBay2 = true;
 		}
 
-
 		if (plant.vehicle.checkQAQC()) {
 
 			plant.vehicle.setMake(plant.order.getMake());
@@ -7581,7 +7553,6 @@ int main()
 
 			plant.vehicle.LogCompletedVehicle("completedVehicles.txt");
 		}
-
 
 		updateLog(&plant);
 		cout << "plant log  and of loop" << endl;
