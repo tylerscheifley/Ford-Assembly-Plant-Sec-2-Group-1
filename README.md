@@ -71,4 +71,9 @@ Owen Garland |
 Tyler Scheifley |
 Zebadiah Lake
 
+Interface Library Used:
+
+This project uses the Graphical User Interface ImGui and relies opengl and glfw as a backend for the interface
+https://github.com/ocornut/imgui
+
 ---------------------------------------------------------------------------------------------------------------------
