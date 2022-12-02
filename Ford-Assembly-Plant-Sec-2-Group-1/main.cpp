@@ -797,7 +797,6 @@ int main()
 		plant.order.loadOrder("Order.txt");
 
 		readLog(&plant);
-
 		
 		plant.paintingMachine.readRGBpaintVat("RGBPaintVats.txt");
 		plant.dipTank.readTemperature("DipTankTemperature.txt");
@@ -842,55 +841,63 @@ int main()
 
 				//end of changing values.
 
-
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 				else if (paintRedVatVol >= 100 && paintRedVatVol <= 249) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpainthalf.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 				else if (paintRedVatVol <= 99 && paintRedVatVol >= 0) {
 					RedPaintVat = LoadTextureFromFile("Images/redpaintlow.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 
 				if (paintGreenVatVol >= 250) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpaintfull.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
 				else if (paintGreenVatVol >= 100 && paintGreenVatVol <= 249) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpainthalf.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
 				else if (paintGreenVatVol <= 99 && paintGreenVatVol >= 0) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpaintlow.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
+				
 				if (paintBlueVatVol >= 250) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintfull.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				else if (paintBlueVatVol >= 100 && paintBlueVatVol <= 249) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepainthalf.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				
-					bool body = LoadTextureFromFile(loadBodyMachineImage(plant.order).c_str(), &body_image_texture, &body_image_width, &body_image_height);
-					IM_ASSERT(body);
+				bool body = LoadTextureFromFile(loadBodyMachineImage(plant.order).c_str(), &body_image_texture, &body_image_width, &body_image_height);
+				IM_ASSERT(body);
 
-					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
-					cout << loadOrderImage(plant.order) << endl;
-					IM_ASSERT(toBeMade);
+				bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+				IM_ASSERT(toBeMade);
 
-					//Set to blank
-					bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
-					IM_ASSERT(chassis);
+				//Set to blank
+				bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+				IM_ASSERT(chassis);
 
 
-					//set to blank
-					bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
-					IM_ASSERT(Paint);
+				//set to blank
+				bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+				IM_ASSERT(Paint);
 
-					//set to blank
-					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
-					IM_ASSERT(Interior);
+				//set to blank
+				bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+				IM_ASSERT(Interior);
 				
 
 				// Specify the color of the background
@@ -2517,8 +2524,6 @@ int main()
 		
 		if (!bodyMachine) {
 			isRendered = true;
-			
-
 		}
 
 		while (paintMachine) {
@@ -2551,61 +2556,64 @@ int main()
 					changePaintValues = false;
 				}
 
-
-
-
-
-
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 				else if (paintRedVatVol >= 100 && paintRedVatVol <= 249) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpainthalf.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 				else if (paintRedVatVol <= 99 && paintRedVatVol >= 0) {
 					RedPaintVat = LoadTextureFromFile("Images/redpaintlow.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 
 				if (paintGreenVatVol >= 250) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpaintfull.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
 				else if (paintGreenVatVol >= 100 && paintGreenVatVol <= 249) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpainthalf.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
 				else if (paintGreenVatVol <= 99 && paintGreenVatVol >= 0) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpaintlow.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
+
 				if (paintBlueVatVol >= 250) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintfull.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				else if (paintBlueVatVol >= 100 && paintBlueVatVol <= 249) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepainthalf.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				
-					//Set to blank
-					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
-					IM_ASSERT(body);
+				//Set to blank
+				bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
+				IM_ASSERT(body);
 
-					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
-					IM_ASSERT(toBeMade);
-
-
-					bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
-					IM_ASSERT(chassis);
+				bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+				IM_ASSERT(toBeMade);
 
 
-					//set to blank
-					bool Paint = LoadTextureFromFile(loadPaintMachineImage(plant.order).c_str(), &Paint_image_texture, &Paint_image_width, &Paint_image_height);
-					cout << loadPaintMachineImage(plant.order).c_str() << endl;
-					IM_ASSERT(Paint);
+				bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+				IM_ASSERT(chassis);
 
-					//set to blank
-					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
-					IM_ASSERT(Interior);
-				
+
+				//set to blank
+				bool Paint = LoadTextureFromFile(loadPaintMachineImage(plant.order).c_str(), &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+				IM_ASSERT(Paint);
+
+				//set to blank
+				bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+				IM_ASSERT(Interior);
 
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -4184,53 +4192,63 @@ int main()
 
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 				else if (paintRedVatVol >= 100 && paintRedVatVol <= 249) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpainthalf.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 				else if (paintRedVatVol <= 99 && paintRedVatVol >= 0) {
 					RedPaintVat = LoadTextureFromFile("Images/redpaintlow.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 
 				if (paintGreenVatVol >= 250) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpaintfull.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
 				else if (paintGreenVatVol >= 100 && paintGreenVatVol <= 249) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpainthalf.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
 				else if (paintGreenVatVol <= 99 && paintGreenVatVol >= 0) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpaintlow.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
+
 				if (paintBlueVatVol >= 250) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintfull.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				else if (paintBlueVatVol >= 100 && paintBlueVatVol <= 249) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepainthalf.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
+
 				//Set to blank
 				
-					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
-					IM_ASSERT(body);
+				bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
+				IM_ASSERT(body);
 
-					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
-					IM_ASSERT(toBeMade);
-
-
-					bool chassis = LoadTextureFromFile(loadChassisMachineImage(plant.order).c_str(), &chassis_image_texture, &chassis_image_width, &chassis_image_height);
-					IM_ASSERT(chassis);
+				bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+				IM_ASSERT(toBeMade);
 
 
-					//set to blank
-					bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
-					IM_ASSERT(Paint);
+				bool chassis = LoadTextureFromFile(loadChassisMachineImage(plant.order).c_str(), &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+				IM_ASSERT(chassis);
 
-					//set to blank
-					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
-					IM_ASSERT(Interior);
-				
+
+				//set to blank
+				bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+				IM_ASSERT(Paint);
+
+				//set to blank
+				bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+				IM_ASSERT(Interior);
 
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -5899,53 +5917,62 @@ int main()
 
 				if (paintRedVatVol >= 250) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpaintfull.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 				else if (paintRedVatVol >= 100 && paintRedVatVol <= 249) {
 					RedPaintVat = LoadTextureFromFile("Images/Redpainthalf.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 				else if (paintRedVatVol <= 99 && paintRedVatVol >= 0) {
 					RedPaintVat = LoadTextureFromFile("Images/redpaintlow.png", &RedPaintVat_image_texture, &RedPaintVat_image_width, &RedPaintVat_image_height);
+					IM_ASSERT(RedPaintVat);
 				}
 
 				if (paintGreenVatVol >= 250) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpaintfull.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
 				else if (paintGreenVatVol >= 100 && paintGreenVatVol <= 249) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpainthalf.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
 				else if (paintGreenVatVol <= 99 && paintGreenVatVol >= 0) {
 					GreenPaintVat = LoadTextureFromFile("Images/greenpaintlow.png", &GreenPaintVat_image_texture, &GreenPaintVat_image_width, &GreenPaintVat_image_height);
+					IM_ASSERT(GreenPaintVat);
 				}
+
 				if (paintBlueVatVol >= 250) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintfull.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				else if (paintBlueVatVol >= 100 && paintBlueVatVol <= 249) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepainthalf.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
+					IM_ASSERT(BluePaintVat);
 				}
 				
-					//Set to blank
-					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
-					IM_ASSERT(body);
+				//Set to blank
+				bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
+				IM_ASSERT(body);
 
-					bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
-					IM_ASSERT(toBeMade);
-
-
-					bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
-					IM_ASSERT(chassis);
+				bool toBeMade = LoadTextureFromFile(loadOrderImage(plant.order).c_str(), &toBeMade_image_texture, &toBeMade_image_width, &toBeMade_image_height);
+				IM_ASSERT(toBeMade);
 
 
-					//set to blank
-					bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
-					IM_ASSERT(Paint);
+				bool chassis = LoadTextureFromFile("Images/Blank.png", &chassis_image_texture, &chassis_image_width, &chassis_image_height);
+				IM_ASSERT(chassis);
 
-					//set to blank
-					bool Interior = LoadTextureFromFile(loadInteriorMachineImage(plant.order).c_str(), &Interior_image_texture, &Interior_image_width, &Interior_image_height);
-					IM_ASSERT(Interior);
 
+				//set to blank
+				bool Paint = LoadTextureFromFile("Images/Blank.png", &Paint_image_texture, &Paint_image_width, &Paint_image_height);
+				IM_ASSERT(Paint);
+
+				//set to blank
+				bool Interior = LoadTextureFromFile(loadInteriorMachineImage(plant.order).c_str(), &Interior_image_texture, &Interior_image_width, &Interior_image_height);
+				IM_ASSERT(Interior);
 				
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -7617,7 +7644,6 @@ int main()
 		}
 
 		updateLog(&plant);
-		cout << "plant log  and of loop" << endl;
 	}
 
 
