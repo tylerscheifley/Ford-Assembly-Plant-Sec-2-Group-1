@@ -771,9 +771,9 @@ int main()
 
 
 	bool bodyMachine = true;
-	bool paintMachine = true;
-	bool chassisMachine = true;
-	bool interiorMachine = true;
+	bool paintMachine = false;
+	bool chassisMachine = false;
+	bool interiorMachine = false;
 	bool ClosedHMI = false;
 
 	bool isRendered = true;
@@ -784,7 +784,8 @@ int main()
 	bool changeBodyValues = true;
 	bool changeChassisValues = true;
 	bool changeInteriorValues = true;
-	
+	int count = 0;
+	int secondaryCount = 1;
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{
@@ -870,7 +871,7 @@ int main()
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
-				if (isRendered) {
+				
 					bool body = LoadTextureFromFile(loadBodyMachineImage(plant.order).c_str(), &body_image_texture, &body_image_width, &body_image_height);
 					IM_ASSERT(body);
 
@@ -890,7 +891,7 @@ int main()
 					//set to blank
 					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
 					IM_ASSERT(Interior);
-				}
+				
 
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -2514,7 +2515,20 @@ int main()
 					isRendered = false;
 				}
 				
-				
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &body_image_texture);
+				glDeleteTextures(1, &toBeMade_image_texture);
+				glDeleteTextures(1, &chassis_image_texture);
+				glDeleteTextures(1, &Paint_image_texture);
+				glDeleteTextures(1, &Interior_image_texture);
 				
 				i++;
 				if (check == true) {
@@ -2529,6 +2543,8 @@ int main()
 		
 		if (!bodyMachine) {
 			isRendered = true;
+			
+
 		}
 
 		while (paintMachine) {
@@ -2594,7 +2610,7 @@ int main()
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
-				if (isRendered) {
+				
 					//Set to blank
 					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
 					IM_ASSERT(body);
@@ -2615,7 +2631,7 @@ int main()
 					//set to blank
 					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
 					IM_ASSERT(Interior);
-				}
+				
 
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -4145,6 +4161,22 @@ int main()
 				if (plant.bodyMachine.bayOne.bayThisLineInUse()) {
 					isRendered = false;
 				}
+				
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &body_image_texture);
+				glDeleteTextures(1, &toBeMade_image_texture);
+				glDeleteTextures(1, &chassis_image_texture);
+				glDeleteTextures(1, &Paint_image_texture);
+				glDeleteTextures(1, &Interior_image_texture);
+
 				i++;
 
 				if (check == true) {
@@ -4205,7 +4237,7 @@ int main()
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
 				//Set to blank
-				if (isRendered) {
+				
 					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
 					IM_ASSERT(body);
 
@@ -4224,7 +4256,7 @@ int main()
 					//set to blank
 					bool Interior = LoadTextureFromFile("Images/Blank.png", &Interior_image_texture, &Interior_image_width, &Interior_image_height);
 					IM_ASSERT(Interior);
-				}
+				
 
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -5843,6 +5875,22 @@ int main()
 				// Take care of all GLFW events
 
 				isRendered = false;
+
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &body_image_texture);
+				glDeleteTextures(1, &toBeMade_image_texture);
+				glDeleteTextures(1, &chassis_image_texture);
+				glDeleteTextures(1, &Paint_image_texture);
+				glDeleteTextures(1, &Interior_image_texture);
+
 				i++;
 				if (check == true) {
 					if (i > 300) {
@@ -5904,7 +5952,7 @@ int main()
 				else if (paintBlueVatVol <= 99 && paintBlueVatVol >= 0) {
 					BluePaintVat = LoadTextureFromFile("Images/bluepaintlow.png", &BluePaintVat_image_texture, &BluePaintVat_image_width, &BluePaintVat_image_height);
 				}
-				if (isRendered) {
+				
 					//Set to blank
 					bool body = LoadTextureFromFile("Images/Blank.png", &body_image_texture, &body_image_width, &body_image_height);
 					IM_ASSERT(body);
@@ -5925,7 +5973,7 @@ int main()
 					bool Interior = LoadTextureFromFile(loadInteriorMachineImage(plant.order).c_str(), &Interior_image_texture, &Interior_image_width, &Interior_image_height);
 					IM_ASSERT(Interior);
 
-				}
+				
 				// Specify the color of the background
 				glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 				// Clean the back buffer and assign the new color to it
@@ -7549,6 +7597,20 @@ int main()
 					}
 				}
 				
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &RedPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &GreenPaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &BluePaintVat_image_texture);
+				glDeleteTextures(1, &body_image_texture);
+				glDeleteTextures(1, &toBeMade_image_texture);
+				glDeleteTextures(1, &chassis_image_texture);
+				glDeleteTextures(1, &Paint_image_texture);
+				glDeleteTextures(1, &Interior_image_texture);
 
 				if (plant.bodyMachine.bayOne.bayThisLineInUse()) {
 					isRendered = false;

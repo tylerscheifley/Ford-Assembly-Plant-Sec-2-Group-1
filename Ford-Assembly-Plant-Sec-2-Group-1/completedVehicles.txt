@@ -230,3 +230,15 @@ FORD|2023|Expedition|PLATINUM|MAXExpedition|Agate Black|Expedition35LV6C|highExp
 FORD|2022|F150|LARIAT|SuperCrewF150|Oxford White|F15050LV8C|midF150|F1502022000000117|Tue Nov 29 16:11:46 2022
 FORD|2022|F150|XLT|RegularF150|Stone Grey Metallic|||F1502022000000118|Tue Nov 29 16:15:59 2022
 FORD|2023|Expedition|XLT|REGExpedition|Jewel Red Metallic Tinted Clearcoat|Expedition35LV6C|baseExpedition|EXP20230000000112|Tue Nov 29 16:16:54 2022
+FORD|2022|F150|LARIAT|SuperCabF150|Stone Grey Metallic|F15050LV8C|highF150|F1502022000000119|Thu Dec  1 10:24:19 2022
+FORD|2023|Expedition|KING RANCH|REGExpedition|Oxford White|Expedition35LV6HOC|baseExpedition|EXP20230000000113|Thu Dec  1 10:24:20 2022
+FORD|2023|Expedition|KING RANCH|REGExpedition|Infinite Blue Metallic Tinted Clearcoat|Expedition35LV6C|midExpedition|EXP20230000000114|Thu Dec  1 10:24:21 2022
+FORD|2022|F150|XLT|SuperCabF150|Atlas Blue Metallic|F15027LV6C|baseF150|F1502022000000120|Thu Dec  1 10:24:22 2022
+FORD|2022|F150|LARIAT|SuperCabF150|Antimatter Blue Metallic|F15050LV8C|baseF150|F1502022000000121|Thu Dec  1 10:24:23 2022
+FORD|2023|Expedition|KING RANCH|REGExpedition|Jewel Red Metallic Tinted Clearcoat|Expedition35LV6C|baseExpedition|EXP20230000000115|Fri Dec  2 11:34:28 2022
+FORD|2022|F150|RAPTOR|SuperCrewF150|Antimatter Blue Metallic|F15027LV6C|highF150|F1502022000000122|Fri Dec  2 11:34:29 2022
+FORD|2022|F150|RAPTOR|SuperCrewF150|Antimatter Blue Metallic|F15027LV6C|highF150|F1502022000000123|Fri Dec  2 11:34:30 2022
+FORD|2023|Expedition|KING RANCH|REGExpedition|Oxford White|Expedition35LV6C|highExpedition|EXP20230000000116|Fri Dec  2 11:43:57 2022
+FORD|2023|Expedition|KING RANCH|REGExpedition|Infinite Blue Metallic Tinted Clearcoat|Expedition35LV6C|midExpedition|EXP20230000000117|Fri Dec  2 11:50:28 2022
+FORD|2022|F150|XLT|RegularF150|Atlas Blue Metallic|F15035LV6PwrBstC|midF150|F1502022000000124|Fri Dec  2 11:51:08 2022
+FORD|2023|Expedition|KING RANCH|REGExpedition|Star White Platinum Metallic Tri-Coat|F15035LV6PwrBstC|midF150|EXP20230000000118|Fri Dec  2 11:51:24 2022
